@@ -1,11 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="top"
     android:background="#FFDAB9"> <!-- Peach background color -->
 
+    <!-- Background ImageView -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/homepagebackground"
+        android:alpha="0.4" />
+
+    <!-- Complaint ImageView with border radius -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="योजना" />
+
+    <ImageView
+        android:id="@+id/image_complaint"
+        android:layout_width="98dp"
+        android:layout_height="98dp"
+        android:layout_gravity="top|left"
+        android:layout_marginTop="105dp"
+        android:layout_marginLeft="50dp"
+        android:src="@drawable/complaintfileicon"
+        android:gravity="center"/>
+
+    <!-- TextView for "समस्या नोंदवा" -->
+    <TextView
+        android:id="@+id/text_problem_report"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|left"
+        android:layout_marginTop="208dp"
+        android:layout_marginLeft="60dp"
+        android:text="समस्या नोंदवा"
+        android:textSize="16sp"
+        android:textColor="#000000" />
+
+    <ImageView
+        android:id="@+id/image_certificate1"
+        android:layout_width="98dp"
+        android:layout_height="98dp"
+        android:layout_gravity="top|left"
+        android:layout_marginTop="105dp"
+        android:layout_marginLeft="245dp"
+        android:src="@drawable/certificatesapplicationicon"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/text_apply_certificate1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|left"
+        android:layout_marginTop="208dp"
+        android:layout_marginLeft="260dp"
+        android:text="प्रमाणपत्र अर्ज"
+        android:textSize="16sp"
+        android:textColor="#000000" />
+    <ImageView
+        android:id="@+id/image_certificate"
+        android:layout_width="98dp"
+        android:layout_height="98dp"
+        android:layout_gravity="top|left"
+        android:layout_marginTop="281dp"
+        android:layout_marginLeft="50dp"
+        android:src="@drawable/governmentschemesicon"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/text_apply_certificate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|left"
+        android:layout_marginTop="387dp"
+        android:layout_marginLeft="80dp"
+        android:text="योजना"
+        android:textSize="16sp"
+        android:textColor="#000000" />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="65dp"
@@ -19,14 +95,26 @@
             android:layout_marginLeft="22dp"
             android:layout_marginTop="17dp"
             android:src="@drawable/accountinfo" /> <!-- Reference to the vector drawable -->
+
+        <!-- TextView for "ग्रामपंचायत कौठाली" -->
+        <TextView
+            android:id="@+id/text_gram_panchayat"
+            android:layout_width="140dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="20dp"
+            android:text="ग्रामपंचायत कौठाली"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/icon_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="325dp"
+            android:layout_marginTop="17dp"
+            android:src="@drawable/notificationicon" />
     </RelativeLayout>
 
-    <ImageView
-        android:id="@+id/background_image"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/homepagebackground"
-        android:alpha="0.6" />
-</LinearLayout>
+</FrameLayout>
