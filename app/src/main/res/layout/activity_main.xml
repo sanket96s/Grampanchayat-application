@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="top"
+    android:background="#FFDAB9"> <!-- Peach background color -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#A9A9A9"> <!-- Dark gray color -->
+
+        <!-- Icon in the center of the box -->
+        <ImageView
+            android:id="@+id/icon_account_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="17dp"
+            android:src="@drawable/accountinfo" /> <!-- Reference to the vector drawable -->
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/homepagebackground"
+        android:alpha="0.6" />
+</LinearLayout>
