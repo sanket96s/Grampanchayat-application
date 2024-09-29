@@ -2,9 +2,8 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFDAB9"> <!-- Peach background color -->
+    android:background="#FFDAB9">
 
-    <!-- Background ImageView -->
     <ImageView
         android:id="@+id/background_image"
         android:layout_width="match_parent"
@@ -13,7 +12,6 @@
         android:src="@drawable/homepagebackground"
         android:alpha="0.4" />
 
-    <!-- Complaint ImageView with border radius -->
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -30,7 +28,6 @@
         android:src="@drawable/complaintfileicon"
         android:gravity="center"/>
 
-    <!-- TextView for "समस्या नोंदवा" -->
     <TextView
         android:id="@+id/text_problem_report"
         android:layout_width="wrap_content"
@@ -43,7 +40,7 @@
         android:textColor="#000000" />
 
     <ImageView
-        android:id="@+id/image_certificate1"
+        android:id="@+id/image_certificate"
         android:layout_width="98dp"
         android:layout_height="98dp"
         android:layout_gravity="top|left"
@@ -53,7 +50,7 @@
         android:gravity="center"/>
 
     <TextView
-        android:id="@+id/text_apply_certificate1"
+        android:id="@+id/text_apply_certificate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="top|left"
@@ -62,8 +59,9 @@
         android:text="प्रमाणपत्र अर्ज"
         android:textSize="16sp"
         android:textColor="#000000" />
+
     <ImageView
-        android:id="@+id/image_certificate"
+        android:id="@+id/image_government_schemes"
         android:layout_width="98dp"
         android:layout_height="98dp"
         android:layout_gravity="top|left"
@@ -73,7 +71,7 @@
         android:gravity="center"/>
 
     <TextView
-        android:id="@+id/text_apply_certificate"
+        android:id="@+id/text_government_schemes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="top|left"
@@ -82,21 +80,83 @@
         android:text="योजना"
         android:textSize="16sp"
         android:textColor="#000000" />
+
+    <ImageView
+        android:id="@+id/image_events"
+        android:layout_width="98dp"
+        android:layout_height="98dp"
+        android:layout_gravity="top|left"
+        android:layout_marginTop="281dp"
+        android:layout_marginLeft="245dp"
+        android:src="@drawable/eventsicon"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/text_events"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|left"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="387dp"
+        android:text="ग्रामसभा"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/image_projects"
+        android:layout_width="98dp"
+        android:layout_height="98dp"
+        android:layout_gravity="top|left"
+        android:layout_marginTop="454dp"
+        android:layout_marginLeft="50dp"
+        android:src="@drawable/projectsicon"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/text_projects"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|left"
+        android:layout_marginLeft="82dp"
+        android:layout_marginTop="560dp"
+        android:text="प्रकल्प"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/image_village_information"
+        android:layout_width="98dp"
+        android:layout_height="98dp"
+        android:layout_gravity="top|left"
+        android:layout_marginTop="454dp"
+        android:layout_marginLeft="245dp"
+        android:src="@drawable/villageinformationicon"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/text_village_information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|left"
+        android:layout_marginLeft="253dp"
+        android:layout_marginTop="560dp"
+        android:text="गावाची माहिती"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:background="#A9A9A9"> <!-- Dark gray color -->
+        android:background="#A9A9A9">
 
-        <!-- Icon in the center of the box -->
         <ImageView
             android:id="@+id/icon_account_circle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="22dp"
             android:layout_marginTop="17dp"
-            android:src="@drawable/accountinfo" /> <!-- Reference to the vector drawable -->
+            android:src="@drawable/accountinfo" />
 
-        <!-- TextView for "ग्रामपंचायत कौठाली" -->
         <TextView
             android:id="@+id/text_gram_panchayat"
             android:layout_width="140dp"
