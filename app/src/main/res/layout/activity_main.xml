@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFDAB9"
+    android:fillViewport="true">
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -198,6 +203,16 @@
             android:layout_marginLeft="325dp"
             android:layout_marginTop="17dp"
             android:src="@drawable/notificationicon" />
+        <Button
+            android:id="@+id/sign_in_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:layout_below="@id/icon_notification"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true" />
+
     </RelativeLayout>
 
 </FrameLayout>
+</ScrollView>
