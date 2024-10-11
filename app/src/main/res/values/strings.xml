@@ -6,6 +6,9 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <!-- Replace with your own values -->
+    <string name="default_web_client_id">181236633370-7gf29i4la3lnrjb6kf3rjgpbu2k9216s.apps.googleusercontent.com</string>
+
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
