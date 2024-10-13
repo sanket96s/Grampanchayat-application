@@ -8,7 +8,11 @@
     <string name="previous">Previous</string>
     <!-- Replace with your own values -->
     <string name="default_web_client_id">181236633370-7gf29i4la3lnrjb6kf3rjgpbu2k9216s.apps.googleusercontent.com</string>
-
+<!--    <string name="app_name">MyApp</string>-->
+    <string name="nav_header_desc">Account</string>
+    <string name="nav_header_title">User Name</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
