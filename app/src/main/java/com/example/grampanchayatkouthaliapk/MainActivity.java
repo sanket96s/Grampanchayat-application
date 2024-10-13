@@ -1,142 +1,75 @@
 package com.example.grampanchayatkouthaliapk;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
+import android.widget.VideoView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.auth.api.Auth;
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.auth.api.signin.GoogleSignInClient;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.api.ApiException;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.GoogleAuthProvider;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
-    private static final int RC_SIGN_IN = 9001;
-    private FirebaseFirestore db;
+    private VideoView videoView;
     private FirebaseAuth mAuth;
-    private GoogleSignInClient mGoogleSignInClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
-        FirebaseUser currentUser = mAuth.getCurrentUser();
 
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
-                .requestEmail()
-                .build();
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-
-        if (currentUser != null) {
-            // User is authenticated
-            setContentView(R.layout.activity_main);
-        } else {
-            // User is not authenticated
-            setContentView(R.layout.login_main);
-            initLoginActivity();
-        }
+        // Show splash screen with video
+        setContentView(R.layout.activity_splash);
+        playSplashVideo();
     }
 
-    private void initLoginActivity() {
-        Button loginButton = findViewById(R.id.login_button);
-        Button googleSignInButton = findViewById(R.id.google_sign_in_button);
+    private void playSplashVideo() {
+        videoView = findViewById(R.id.videoView);
+        Uri video = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.redirectpage);
+        videoView.setVideoURI(video);
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String email = ((EditText) findViewById(R.id.email)).getText().toString();
-                String password = ((EditText) findViewById(R.id.password)).getText().toString();
-                if (email.isEmpty() || password.isEmpty()) {
-                    Toast.makeText(MainActivity.this, "Please enter email and password", Toast.LENGTH_SHORT).show();
-                } else {
-                    signIn(email, password);
-                }
-            }
+        videoView.setOnPreparedListener(mp -> videoView.start());
+
+        // Handle errors during playback
+        videoView.setOnErrorListener((mp, what, extra) -> {
+            proceedToCheckAuthentication();
+            return true; // indicates that we handled the error
         });
 
-        googleSignInButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                signInWithGoogle();
-            }
-        });
-    }
-
-    private void signIn(String email, String password) {
-        mAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, task -> {
-                    if (task.isSuccessful()) {
-                        // Sign in success
-                        Log.d(TAG, "signInWithEmail:success");
-                        FirebaseUser user = mAuth.getCurrentUser();
-                        Toast.makeText(MainActivity.this, "Authentication Successful.", Toast.LENGTH_SHORT).show();
-                        setContentView(R.layout.activity_main);
-                    } else {
-                        // If sign in fails, display a message to the user.
-                        Log.w(TAG, "signInWithEmail:failure", task.getException());
-                        Toast.makeText(MainActivity.this, "Authentication Failed.", Toast.LENGTH_SHORT).show();
-                    }
-                });
-    }
-
-    private void signInWithGoogle() {
-        Intent signInIntent = mGoogleSignInClient.getSignInIntent();
-        startActivityForResult(signInIntent, RC_SIGN_IN);
+        // Transition after video playback ends or after 5 seconds
+        videoView.setOnCompletionListener(mp -> proceedToCheckAuthentication());
+        new Handler().postDelayed(this::proceedToCheckAuthentication, 5000); // 5000 milliseconds = 5 seconds
     }
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == RC_SIGN_IN) {
-            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-            try {
-                // Google Sign-In was successful, authenticate with Firebase
-                GoogleSignInAccount account = task.getResult(ApiException.class);
-                firebaseAuthWithGoogle(account);
-            } catch (ApiException e) {
-                // Google Sign-In failed
-                Log.w(TAG, "Google sign in failed", e);
-                Toast.makeText(this, "Google sign-in failed.", Toast.LENGTH_SHORT).show();
-            }
+    protected void onPause() {
+        super.onPause();
+        if (videoView != null) {
+            videoView.pause(); // Pause video when activity is paused
         }
     }
 
-    private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
-        Log.d(TAG, "firebaseAuthWithGoogle:" + acct.getId());
+    private void proceedToCheckAuthentication() {
+        FirebaseUser currentUser = mAuth.getCurrentUser();
 
-        AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
-        mAuth.signInWithCredential(credential)
-                .addOnCompleteListener(this, task -> {
-                    if (task.isSuccessful()) {
-                        // Sign in success
-                        Log.d(TAG, "signInWithCredential:success");
-                        FirebaseUser user = mAuth.getCurrentUser();
-                        Toast.makeText(MainActivity.this, "Google sign-in successful.", Toast.LENGTH_SHORT).show();
-                        setContentView(R.layout.activity_main);
-                    } else {
-                        // If sign in fails, display a message to the user.
-                        Log.w(TAG, "signInWithCredential:failure", task.getException());
-                        Toast.makeText(MainActivity.this, "Google sign-in failed.", Toast.LENGTH_SHORT).show();
-                    }
-                });
+        Intent intent;
+        if (currentUser == null) {
+            // User is not authenticated, go to login page
+            intent = new Intent(MainActivity.this, LoginActivity.class);
+        } else {
+            // User is authenticated, go to main page
+            intent = new Intent(MainActivity.this, MainPageActivity.class);
+        }
+        startActivity(intent);
+        finish(); // Close this activity
     }
 }
