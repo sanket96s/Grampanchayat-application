@@ -184,12 +184,14 @@
                 android:background="#A9A9A9">
 
                 <ImageView
-                    android:id="@+id/icon_account_circle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="22dp"
-                    android:layout_marginTop="17dp"
-                    android:src="@drawable/accountinfo" />
+                    android:id="@+id/home_profile_image"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/accountinfo"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/circle_background" />
 
                 <TextView
                     android:id="@+id/text_gram_panchayat"
@@ -227,7 +229,7 @@
     <!-- Navigation drawer -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_view"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
