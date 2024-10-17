@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_profile"
+        android:title="प्रोफाइल" />
+    <item
+        android:id="@+id/help_and_support"
+        android:title="मदत आणि समर्थन" />
+    <item
+        android:id="@+id/nav_settings"
+        android:title="सेटिंग" />
+    <item
+        android:id="@+id/nav_logout"
+        android:title="बाहेर पडणे" />
+</menu>
