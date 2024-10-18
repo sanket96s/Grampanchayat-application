@@ -1,5 +1,6 @@
 package com.example.grampanchayatkouthaliapk;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,6 +19,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.squareup.picasso.Picasso;
 
 public class MainPageActivity extends AppCompatActivity {
@@ -27,11 +30,14 @@ public class MainPageActivity extends AppCompatActivity {
     private ImageView homeProfileImage;
     private TextView navUsername;
     private GoogleSignInClient mGoogleSignInClient;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mAuth = FirebaseAuth.getInstance();
 
         drawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.navigation_view);
@@ -57,15 +63,14 @@ public class MainPageActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
 
-                if (id == R.id.nav_home) {
-                    Toast.makeText(MainPageActivity.this, "Home Selected", Toast.LENGTH_SHORT).show();
-                } else if (id == R.id.nav_profile) {
+                if (id == R.id.nav_profile) {
                     Toast.makeText(MainPageActivity.this, "Profile Selected", Toast.LENGTH_SHORT).show();
+                } else if (id == R.id.help_and_support) {
+                    Toast.makeText(MainPageActivity.this, "Help and Support Selected", Toast.LENGTH_SHORT).show();
                 } else if (id == R.id.nav_settings) {
                     Toast.makeText(MainPageActivity.this, "Settings Selected", Toast.LENGTH_SHORT).show();
                 } else if (id == R.id.nav_logout) {
                     signOut();
-                    Toast.makeText(MainPageActivity.this, "Logout Selected", Toast.LENGTH_SHORT).show();
                 } else {
                     return false;
                 }
@@ -114,10 +119,20 @@ public class MainPageActivity extends AppCompatActivity {
     }
 
     private void signOut() {
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
+            mAuth.signOut();
+            currentUser = null;
+        }
+
         mGoogleSignInClient.signOut().addOnCompleteListener(this, new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 updateUI(null);
+                Intent intent = new Intent(MainPageActivity.this, LoginActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
             }
         });
     }

@@ -235,6 +235,8 @@
         android:fitsSystemWindows="true"
         android:background="#FFFFFF"
         app:headerLayout="@layout/nav_header"
-        app:menu="@menu/nav_menu" />
+        app:menu="@menu/nav_menu"
+        app:itemTextAppearance="@style/NavigationViewTextStyle" />
+
 
 </androidx.drawerlayout.widget.DrawerLayout>
