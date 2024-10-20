@@ -37,20 +37,36 @@
             android:padding="8dp"
             android:layout_marginBottom="16dp"/>
 
-        <Button
-            android:id="@+id/login_button"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="लॉगिन करा"
-            android:backgroundTint="#000000"
-            android:textColor="#FFFFFF"
-            android:layout_marginBottom="8dp"/>
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
 
-        <Button
-            android:id="@+id/google_sign_in_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="गूगल सह लॉगिन"
-            android:backgroundTint="#4285F4"
-            android:textColor="#FFFFFF"/>
+                <Button
+                    android:id="@+id/login_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="लॉगिन करा"
+                    android:backgroundTint="#000000"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/register_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="नोंदणी करा"
+                    android:backgroundTint="#000000"
+                    android:textColor="#FFFFFF"/>
+
+                <Button
+                    android:id="@+id/google_sign_in_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="गूगल सह लॉगिन"
+                    android:backgroundTint="#4285F4"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginStart="8dp"/>
+        </LinearLayout>
 </LinearLayout>

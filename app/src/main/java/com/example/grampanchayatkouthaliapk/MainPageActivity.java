@@ -88,6 +88,15 @@ public class MainPageActivity extends AppCompatActivity {
 
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
         updateUI(account);
+
+        TextView textPayTax = findViewById(R.id.text_pay_tax);
+        textPayTax.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, TaxPayActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
