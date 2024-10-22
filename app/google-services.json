@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "181236633370-59v0fv81pqivja6etthgeelusn7b3i6q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.grampanchayatkouthaliapk",
+            "certificate_hash": "bbf772a2a55a1d0f11e315922be4416015fc0038"
+          }
+        },
+        {
           "client_id": "181236633370-ajm3j5nqkfp54b5rv2koll3igifla8gq.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
