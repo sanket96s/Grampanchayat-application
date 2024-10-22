@@ -13,7 +13,14 @@
     <string name="nav_header_title">User Name</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
+    <string name="enter_details">Enter Details</string>
+    <string name="please_enter_valid_house_number">Please enter a valid house number.</string>
+    <string name="total_bill_not_found">Total bill not found.</string>
+    <string name="record_not_found">Record not found for the given details.</string>
+    <string name="database_error">Database error: %1$s</string>
+    <string name="name">Name: %1$s</string>
+    <string name="house_number">House Number: %1$d</string>
+    <string name="total_bill">Total Bill: %1$d</string>
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
