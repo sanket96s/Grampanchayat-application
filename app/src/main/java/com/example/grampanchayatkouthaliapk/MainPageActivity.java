@@ -90,7 +90,16 @@ public class MainPageActivity extends AppCompatActivity {
         updateUI(account);
 
         TextView textPayTax = findViewById(R.id.text_pay_tax);
+        ImageView imgPayTax = findViewById(R.id.image_pay_tax);
         textPayTax.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, TaxPayActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imgPayTax.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainPageActivity.this, TaxPayActivity.class);
