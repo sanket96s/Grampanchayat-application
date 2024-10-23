@@ -1,0 +1,80 @@
+{
+  "project_info": {
+    "project_number": "181236633370",
+    "firebase_url": "https://grampanchayat-application-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "grampanchayat-application",
+    "storage_bucket": "grampanchayat-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:181236633370:android:4b45ecaf6b0be0a98d66a3",
+        "android_client_info": {
+          "package_name": "com.example.grampanchayatkouthaliapk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "181236633370-0sip2ai11tdieqigg3camlknremv7n3t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.grampanchayatkouthaliapk",
+            "certificate_hash": "ab8d379acfca70a22a4477b294925dcdd6d3c17c"
+          }
+        },
+        {
+          "client_id": "181236633370-29iin85n24873t9hmslbuk3857c8dd7h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.grampanchayatkouthaliapk",
+            "certificate_hash": "8021611139b87b92b2e9983d20cecfcb3990f180"
+          }
+        },
+        {
+          "client_id": "181236633370-59v0fv81pqivja6etthgeelusn7b3i6q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.grampanchayatkouthaliapk",
+            "certificate_hash": "bbf772a2a55a1d0f11e315922be4416015fc0038"
+          }
+        },
+        {
+          "client_id": "181236633370-ajm3j5nqkfp54b5rv2koll3igifla8gq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.grampanchayatkouthaliapk",
+            "certificate_hash": "9a5a63e37cf51362abf2dc31603e0c8f5f85b6db"
+          }
+        },
+        {
+          "client_id": "181236633370-kpsomdjffirvm4kvue9cblt91nvttklr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.grampanchayatkouthaliapk",
+            "certificate_hash": "8ebe3e9a2e1ee36b97a495fe474ed167e9e20ced"
+          }
+        },
+        {
+          "client_id": "181236633370-7gf29i4la3lnrjb6kf3rjgpbu2k9216s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZLhO2T89g3uFE1BGoH5VsZetH4H8F6Ew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "181236633370-7gf29i4la3lnrjb6kf3rjgpbu2k9216s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
