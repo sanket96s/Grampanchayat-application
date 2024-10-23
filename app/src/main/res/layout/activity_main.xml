@@ -81,7 +81,8 @@
                 android:layout_marginTop="281dp"
                 android:layout_marginLeft="50dp"
                 android:src="@drawable/governmentschemesicon"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:onClick="openGovernmentSchemesPage"/>
 
             <TextView
                 android:id="@+id/text_government_schemes"

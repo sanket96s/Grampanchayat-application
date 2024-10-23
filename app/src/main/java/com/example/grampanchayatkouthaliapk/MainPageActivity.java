@@ -97,6 +97,13 @@ public class MainPageActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        ImageView imageGovernmentSchemes = findViewById(R.id.image_government_schemes);
+        imageGovernmentSchemes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openGovernmentSchemesPage(v);
+            }
+        });
     }
 
     @Override
@@ -154,4 +161,9 @@ public class MainPageActivity extends AppCompatActivity {
             super.onBackPressed();
         }
     }
+    public void openGovernmentSchemesPage(View view) {
+        Intent intent = new Intent(MainPageActivity.this, GovernmentSchemesActivity.class);
+        startActivity(intent);
+    }
 }
+

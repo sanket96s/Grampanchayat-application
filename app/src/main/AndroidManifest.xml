@@ -30,7 +30,8 @@
 
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainPageActivity" />
-        <activity android:name=".TaxPayActivity"></activity>
+        <activity android:name=".TaxPayActivity" />
+        <activity android:name=".GovernmentSchemesActivity"></activity>
     </application>
 
 </manifest>
