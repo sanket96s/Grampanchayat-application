@@ -61,16 +61,8 @@
         android:layout_marginTop="550dp"
         app:srcCompat="@drawable/scheme5" />
 
+
         <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="324dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="14dp"
-            app:srcCompat="@drawable/searchbar" />
-
-
-    <ImageView
         android:id="@+id/imageView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -79,15 +71,7 @@
 
         app:srcCompat="@drawable/adv" />
 
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="302dp"
-        android:layout_marginTop="20dp"
-        app:srcCompat="@drawable/close" />
-
-    <ImageView
+        <ImageView
         android:id="@+id/imageView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -95,12 +79,5 @@
         android:layout_marginTop="176dp"
         app:srcCompat="@drawable/more_horiz" />
 
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="wrap_content"
-        android:layout_height="16dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="20dp"
-        app:srcCompat="@drawable/serchicon" />
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
