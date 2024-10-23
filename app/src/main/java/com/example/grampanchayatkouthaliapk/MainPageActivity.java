@@ -90,7 +90,6 @@ public class MainPageActivity extends AppCompatActivity {
         updateUI(account);
 
         TextView textPayTax = findViewById(R.id.text_pay_tax);
-        ImageView imgPayTax = findViewById(R.id.image_pay_tax);
         textPayTax.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -98,19 +97,11 @@ public class MainPageActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-<<<<<<< HEAD
         ImageView imageGovernmentSchemes = findViewById(R.id.image_government_schemes);
         imageGovernmentSchemes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openGovernmentSchemesPage(v);
-=======
-        imgPayTax.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainPageActivity.this, TaxPayActivity.class);
-                startActivity(intent);
->>>>>>> e32d7b450ab3b24cb4694890c0504626245288b3
             }
         });
     }
