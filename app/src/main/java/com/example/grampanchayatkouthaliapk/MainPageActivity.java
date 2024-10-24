@@ -106,6 +106,23 @@ public class MainPageActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        TextView textproject = findViewById(R.id.text_projects);
+        ImageView imgproject = findViewById(R.id.image_projects);
+        textproject.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, ProjectsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imgproject.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, ProjectsActivity.class);
+                startActivity(intent);
+            }
+        });
         ImageView imageGovernmentSchemes = findViewById(R.id.image_government_schemes);
         imageGovernmentSchemes.setOnClickListener(new View.OnClickListener() {
             @Override

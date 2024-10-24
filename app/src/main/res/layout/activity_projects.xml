@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4CBA0">
+
+    <!-- Tabs (Two buttons) -->
+    <Button
+        android:id="@+id/tab1_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="चालू प्रकल्प"
+        android:textColor="@android:color/black"
+        android:backgroundTint="#F08A5D"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tab2_button"
+        app:layout_constraintWidth_percent="0.5"/>
+
+    <Button
+        android:id="@+id/tab2_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="मागील प्रकल्प"
+        android:textColor="@android:color/black"
+        android:backgroundTint="#A8D8EA"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tab1_button"
+        app:layout_constraintWidth_percent="0.5"/>
+
+    <!-- Project 1 Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/project1_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/tab1_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/project1_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_launcher_foreground"
+                android:scaleType="centerCrop"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:id="@+id/project1_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1. ग्रामपंचायतीचे आश्रयगृह बांधकाम..."
+                android:textColor="@android:color/black"
+                android:textSize="14sp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Project 2 Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/project2_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/project1_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/project2_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_launcher_foreground"
+                android:scaleType="centerCrop"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:id="@+id/project2_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="2. ग्रामपंचायतीचे पाण्याच्या पाईपलाईनचे दुसरे काम ..."
+                android:textColor="@android:color/black"
+                android:textSize="14sp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
