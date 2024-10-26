@@ -45,14 +45,20 @@ dependencies {
     implementation("androidx.navigation:navigation-ui:2.8.0")
     implementation("androidx.drawerlayout:drawerlayout:1.2.0")
 
+
+
+
     // Firebase Realtime Database
     implementation(platform("com.google.firebase:firebase-bom:33.3.0"))
     implementation("com.google.firebase:firebase-database:20.3.0") // Add Realtime Database dependency
     implementation("com.google.firebase:firebase-auth:21.0.1") // Authentication if needed
     implementation("com.google.android.gms:play-services-auth:19.0.0") // Google sign-in
+    implementation ("com.google.firebase:firebase-firestore:24.0.2")
+
 
     // Image loading library
     implementation("com.squareup.picasso:picasso:2.71828")
+
 
     // Testing dependencies
     testImplementation("junit:junit:4.13.2")
