@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TableLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,12 +20,12 @@ import com.google.firebase.database.ValueEventListener;
 public class TaxPayActivity extends AppCompatActivity {
 
     private DatabaseReference databaseReference;
-    private TextView textName;
     private TextView textHouseNumber;
     private TextView textTotalBill;
-    private EditText inputFullName;
     private EditText inputHouseNumber;
     private Button btnFetchBill;
+    private Button btnPayBill; // Declare the pay bill button
+    private TableLayout tableLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,77 +36,85 @@ public class TaxPayActivity extends AppCompatActivity {
         databaseReference = FirebaseDatabase.getInstance().getReference("taxRecords");
 
         // Initialize Views
-        textName = findViewById(R.id.text_name);
         textHouseNumber = findViewById(R.id.text_house_number);
         textTotalBill = findViewById(R.id.text_total_bill);
-        inputFullName = findViewById(R.id.input_full_name);
         inputHouseNumber = findViewById(R.id.input_house_number);
         btnFetchBill = findViewById(R.id.btn_fetch_bill);
+        btnPayBill = findViewById(R.id.btn_pay_bill); // Initialize the pay bill button
+        tableLayout = findViewById(R.id.table_layout);
 
-        btnFetchBill.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String fullName = inputFullName.getText().toString().trim();
-                String houseNumberStr = inputHouseNumber.getText().toString().trim();
-
-                if (!houseNumberStr.isEmpty()) {
-                    int houseNumber = Integer.parseInt(houseNumberStr);
-                    // Fetch total bill from the database
-                    fetchTotalBill(fullName, houseNumber);
-                } else {
-                    showMessageDialog(getString(R.string.please_enter_valid_house_number));
-                }
+        btnFetchBill.setOnClickListener(view -> {
+            String houseNumberStr = inputHouseNumber.getText().toString().trim();
+            if (!houseNumberStr.isEmpty()) {
+                int houseNumber = Integer.parseInt(houseNumberStr);
+                clearPreviousData();
+                fetchTotalBill(houseNumber);
+            } else {
+                showMessageDialog("Please enter a valid house number.");
             }
         });
     }
 
-    private void fetchTotalBill(String fullName, int houseNumber) {
-        // Query the database for the total bill based on fullname and housenumber
+    private void clearPreviousData() {
+        textHouseNumber.setText("");
+        textTotalBill.setText("");
+        tableLayout.removeAllViews();
+        btnPayBill.setVisibility(View.GONE); // Hide the Pay Bill button
+    }
+
+    private void fetchTotalBill(int houseNumber) {
         databaseReference.orderByChild("housenumber").equalTo(houseNumber)
                 .addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         boolean recordFound = false;
                         for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                            String nameFromDB = snapshot.child("fullname").getValue(String.class);
-                            if (nameFromDB != null && nameFromDB.equals(fullName)) {
-                                // Get total bill
-                                Integer totalBill = snapshot.child("totaltax").getValue(Integer.class);
-                                if (totalBill != null) {
-                                    displayTotalBill(fullName, houseNumber, totalBill);
-                                } else {
-                                    showMessageDialog(getString(R.string.total_bill_not_found));
-                                }
+                            String fullName = snapshot.child("fullname").getValue(String.class);
+                            Integer totalBill = snapshot.child("totaltax").getValue(Integer.class);
+                            if (totalBill != null) {
+                                displayTotalBill(fullName, houseNumber, totalBill);
                                 recordFound = true;
                                 break;
                             }
                         }
                         if (!recordFound) {
-                            showMessageDialog(getString(R.string.record_not_found));
+                            showMessageDialog("Record not found.");
                         }
                     }
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
-                        showMessageDialog(getString(R.string.database_error, error.getMessage()));
+                        showMessageDialog("Database error: " + error.getMessage());
                     }
                 });
     }
 
     private void displayTotalBill(String fullName, int houseNumber, int totalBill) {
-        textName.setText(getString(R.string.name, fullName));
-        textHouseNumber.setText(getString(R.string.house_number, houseNumber));
-        textTotalBill.setText(getString(R.string.total_bill, totalBill));
-        textName.setVisibility(View.VISIBLE);
-        textHouseNumber.setVisibility(View.VISIBLE);
-        textTotalBill.setVisibility(View.VISIBLE);
+        tableLayout.removeAllViews();
+
+        TextView textName = new TextView(this);
+        textName.setText("Name: " + fullName);
+        textName.setTextSize(18);
+        tableLayout.addView(textName);
+
+        TextView textHouseNumberDisplay = new TextView(this);
+        textHouseNumberDisplay.setText("House Number: " + houseNumber);
+        textHouseNumberDisplay.setTextSize(18);
+        tableLayout.addView(textHouseNumberDisplay);
+
+        TextView textTotalBillDisplay = new TextView(this);
+        textTotalBillDisplay.setText("Total Bill: ₹" + totalBill);
+        textTotalBillDisplay.setTextSize(18);
+        tableLayout.addView(textTotalBillDisplay);
+
+        // Show the Pay Bill button
+        btnPayBill.setVisibility(View.VISIBLE);
     }
 
     private void showMessageDialog(String message) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(message)
                 .setPositiveButton("OK", null)
-                .create()
                 .show();
     }
 }

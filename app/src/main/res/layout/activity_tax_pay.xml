@@ -8,47 +8,72 @@
     tools:context=".TaxPayActivity">
 
     <EditText
-        android:id="@+id/input_full_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Full Name"
-        android:inputType="textPersonName" />
-
-    <EditText
         android:id="@+id/input_house_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="House Number"
+        android:hint="घर क्रमांक"
         android:inputType="number" />
 
     <Button
         android:id="@+id/btn_fetch_bill"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fetch Bill" />
+        android:text="बिल मिळवा"
+        android:layout_marginTop="16dp" />
 
-    <TextView
-        android:id="@+id/text_name"
+    <TableLayout
+        android:id="@+id/table_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:layout_marginTop="16dp">
+
+        <TableRow>
+            <TextView
+                android:id="@+id/text_house_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="घर क्रमांक: "
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_house_number_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/text_total_bill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="एकूण बिल: "
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_total_bill_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textSize="18sp" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btn_pay_bill"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name: "
-        android:textStyle="bold"
-        android:visibility="gone" />
-
-    <TextView
-        android:id="@+id/text_house_number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="House Number: "
-        android:textStyle="bold"
-        android:visibility="gone" />
-
-    <TextView
-        android:id="@+id/text_total_bill"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Total Bill: "
-        android:textStyle="bold"
-        android:visibility="gone" />
-
+        android:text="बिल भरा"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        android:textSize="20sp"
+        android:padding="12dp"
+        android:backgroundTint="@color/colorAccent"
+        android:textColor="@android:color/white" />
 </LinearLayout>

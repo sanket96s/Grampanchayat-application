@@ -1,4 +1,12 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+        <string name="please_enter_valid_house_number" tools:ignore="DuplicateDefinition">कृपया वैध घर क्रमांक प्रविष्ट करा</string>
+        <string name="total_bill_not_found">एकूण बिल सापडले नाही</string>
+        <string name="record_not_found">तपशील सापडले नाही</string>
+        <string name="database_error">डाटाबेस त्रुटी: %1$s</string>
+        <string name="house_number">घर क्रमांक: %1$d</string>
+        <string name="total_bill">एकूण बिल: %1$d</string>
+        <string name="name">नाव: %1$s</string>
+
     <string name="app_name">Grampanchayat Kouthali apk</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
@@ -14,13 +22,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="enter_details">Enter Details</string>
-    <string name="please_enter_valid_house_number">Please enter a valid house number.</string>
-    <string name="total_bill_not_found">Total bill not found.</string>
-    <string name="record_not_found">Record not found for the given details.</string>
-    <string name="database_error">Database error: %1$s</string>
-    <string name="name">Name: %1$s</string>
-    <string name="house_number">House Number: %1$d</string>
-    <string name="total_bill">Total Bill: %1$d</string>
+
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus

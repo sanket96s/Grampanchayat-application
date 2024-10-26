@@ -3,6 +3,7 @@ package com.example.grampanchayatkouthaliapk;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -64,6 +65,13 @@ public class LoginActivity extends AppCompatActivity {
                 String password = passwordField.getText().toString();
                 signInWithEmail(email, password);
             });
+
+            // Add Register Button click listener
+            Button registerButton = findViewById(R.id.register_button);
+            registerButton.setOnClickListener(v -> {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            });
         }
     }
 
@@ -80,6 +88,7 @@ public class LoginActivity extends AppCompatActivity {
                     } else {
                         // If sign in fails, display a message to the user.
                         Log.w(TAG, "signInWithEmail:failure", task.getException());
+                        Toast.makeText(LoginActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
                     }
                 });
     }
@@ -103,6 +112,7 @@ public class LoginActivity extends AppCompatActivity {
             } catch (ApiException e) {
                 // Google Sign In failed, update UI appropriately
                 Log.w(TAG, "Google sign in failed", e);
+                Toast.makeText(this, "Google Sign-In failed.", Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -123,6 +133,7 @@ public class LoginActivity extends AppCompatActivity {
                     } else {
                         // If sign in fails, display a message to the user.
                         Log.w(TAG, "signInWithCredential:failure", task.getException());
+                        Toast.makeText(LoginActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
                     }
                 });
     }

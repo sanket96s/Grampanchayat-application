@@ -62,18 +62,21 @@ public class MainPageActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
-
                 if (id == R.id.nav_profile) {
-                    Toast.makeText(MainPageActivity.this, "Profile Selected", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainPageActivity.this, ProfileActivity.class);
+                    startActivity(intent);
                 } else if (id == R.id.help_and_support) {
-                    Toast.makeText(MainPageActivity.this, "Help and Support Selected", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainPageActivity.this, HelpAndSupportActivity.class);
+                    startActivity(intent);
                 } else if (id == R.id.nav_settings) {
-                    Toast.makeText(MainPageActivity.this, "Settings Selected", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainPageActivity.this, SettingsActivity.class);
+                    startActivity(intent);
                 } else if (id == R.id.nav_logout) {
                     signOut();
                 } else {
                     return false;
                 }
+
 
                 drawerLayout.closeDrawer(GravityCompat.START);
                 return true;
