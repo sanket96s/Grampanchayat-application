@@ -109,6 +109,25 @@ public class MainPageActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        TextView textcertificate = findViewById(R.id.text_apply_certificate);
+        ImageView imgcertificate = findViewById(R.id.image_certificate);
+        textcertificate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, ApplyForCertificateActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imgcertificate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, ApplyForCertificateActivity.class);
+                startActivity(intent);
+            }
+        });
+
         ImageView imageGovernmentSchemes = findViewById(R.id.image_government_schemes);
         imageGovernmentSchemes.setOnClickListener(new View.OnClickListener() {
             @Override
