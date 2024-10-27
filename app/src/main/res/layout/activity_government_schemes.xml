@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".GovernmentSchemesActivity">
+
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -11,6 +13,8 @@
         android:background="#FFDAB9"
         app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteY="0dp">
+
+
 
 
         <ImageView
@@ -85,7 +89,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="345dp"
             android:layout_marginLeft="230dp"
-            android:text="ग्राम पंचायत विकास योजनाा"
+            android:text="ग्राम पंचायत विकास योजना"
             android:textSize="16sp"
             android:textColor="#000000"/>
 
@@ -107,16 +111,18 @@
             android:layout_marginLeft="250dp"
             android:text="अटल भूजल योजना"
             android:textSize="16sp"
-            android:textColor="#000000"/>
+            android:textColor="#000000"
+            android:onClick="openScheme5InformationPage"/>
 
 
         <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="255dp"
-        android:layout_marginTop="580dp"
-        app:srcCompat="@drawable/scheme5" />
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="255dp"
+            android:layout_marginTop="580dp"
+            app:srcCompat="@drawable/scheme5"
+            android:onClick="openScheme5InformationPage"/>
 
         <TextView
             android:id="@+id/textView5"
@@ -128,19 +134,48 @@
             android:textColor="#000000"
             android:textSize="16sp" />
 
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/toolBar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?attr/actionBarSize"-->
+<!--            android:background="?attr/colorPrimary"-->
+<!--            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>-->
 
-        <ImageView
-            android:id="@+id/imageView8"
+        <ViewFlipper
+            android:id="@+id/viewFlipper"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginTop="40dp"
-            app:srcCompat="@drawable/adv" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal">
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="68dp"
+                app:srcCompat="@drawable/adv" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="68dp"
+                app:srcCompat="@drawable/adv1" />
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="68dp"
+                app:srcCompat="@drawable/adv2" />
+        </ViewFlipper>
+
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="165dp"
-            android:layout_marginTop="179dp"
+            android:layout_marginTop="209dp"
             app:srcCompat="@drawable/more_horiz" />
 
 
@@ -160,5 +195,51 @@
             android:layout_marginTop="750dp"
             app:srcCompat="@drawable/line2" />
 
+<!--        <androidx.drawerlayout.widget.DrawerLayout-->
+<!--            android:id="@+id/drawer_layout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--            <RelativeLayout-->
+
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginRight="222dp">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/text5"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="0dp"-->
+<!--                    android:background="#8257BF"-->
+<!--                    android:padding="9dp"-->
+<!--                    android:text=" योजना"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#000000"-->
+<!--                    android:textSize="34sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <ImageButton-->
+<!--                    android:id="@+id/imageButton"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="29dp"-->
+<!--                    android:clickable="true"-->
+<!--                    app:srcCompat="@drawable/menu" />-->
+
+
+<!--            </RelativeLayout>-->
+
+<!--            <com.google.android.material.navigation.NavigationView-->
+<!--                android:id="@+id/navigation_view"-->
+<!--                android:layout_width="165dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_gravity="start"-->
+<!--                android:layout_marginTop="72dp"-->
+<!--                app:menu="@menu/drawer_menu" />-->
+
+<!--        </androidx.drawerlayout.widget.DrawerLayout>-->
+
     </FrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

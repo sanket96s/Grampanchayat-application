@@ -1,0 +1,196 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="600dp"
+            android:text="1.	पायाभूत सुविधांचा विकास &#xA;2.	शिक्षण आणि आरोग्य सुधारणा &#xA;3.	स्वच्छता आणि सांडपाणी व्यवस्थापन &#xA;4.	शाश्वत ऊर्जा &#xA;5.	शेतीमध्ये सुधारणा &#xA;6.	रोजगार निर्मिती &#xA;7.	डिजिटल सेवांचा वापर&#xA;8.	स्थानिक उद्योगाचा विकास&#xA;" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="439dp"
+            android:text="1.	ग्रामपंचायतीचे प्रस्ताव पत्र  &#xA;2.	ग्राम विकास &#xA;3.	वित्तीय माहिती  ( वित्तीय स्त्रोतांची माहिती.)&#xA;4.	ग्रामसभा निर्णय  ( ग्रामसभेचा निर्णय पत्र.)&#xA;5.	सर्व्हे रिपोर्ट  &#xA;" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="385dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="275dp"
+
+            android:text="1.गावाची निवड (सरकार किंवा संबंधित प्राधिकरण निवडते.)&#xA;2.सहभागिता ( गावातील सर्व नागरिकांनी सहभाग घेणे आवश्यक आहे.)&#xA;3.सक्षम संस्थांची निवड ( पंचायत किंवा ग्रामसभांच्या माध्यम.)&#xA;4.शाश्वत विकासाची योजना ( गावात शाश्वत विकासाच्या योजना राबवण्यासाठी गावातील नेत्यांनी आणि संस्थांनी इच्छुक असणे आवश्यक आहे.)" />
+
+        <Button
+            android:id="@+id/applyapplication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="255dp"
+            android:layout_marginTop="780dp"
+            android:text="अर्ज करा" />
+
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="575dp"
+            android:text="फायदे :"
+            android:textColor="#2C2727"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="663dp" />
+
+        <View
+            android:id="@+id/bold_line4"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="403dp"
+            android:background="#000000"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.787" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="412dp"
+            android:text="आवश्यक कागदपत्रे :"
+            android:textAlignment="viewStart"
+            android:textColor="#231E1E"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="15dp"
+            tools:layout_editor_absoluteY="507dp" />
+
+        <View
+            android:id="@+id/bold_line3"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="566dp"
+            android:background="#000000"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.59" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="250dp"
+            android:text="पात्रता :"
+            android:textAlignment="viewStart"
+            android:textColor="#272323"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="341dp" />
+
+        <View
+            android:id="@+id/bold_line2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="243dp"
+            android:background="@color/black"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.402" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="133dp"
+            android:text="स्मार्ट ग्राम योजना ही ग्रामीण विकासासाठी सुरू केलेली एक महत्त्वाची योजना आहे, ज्यामध्ये गावांचा सर्वांगीण विकास साधण्याचे उद्दिष्ट आहे. या योजनेअंतर्गत गावांना स्मार्ट बनविण्यासाठी विविध पायाभूत सुविधांचे आणि तंत्रज्ञानाचे वापर केले जाते. या योजनेचा मुख्य उद्देश ग्रामीण भागातील जीवनमान सुधारून त्यांना शाश्वत आणि स्वावलंबी बनविणे आहे."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="159dp" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="247dp"
+            android:layout_height="61dp"
+            android:layout_marginLeft="135dp"
+            android:layout_marginTop="35dp"
+            android:text="स्मार्ट ग्राम योजना "
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="144dp"
+            tools:layout_editor_absoluteY="25dp" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="95dp"
+            android:layout_height="106dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/scheme6"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="25dp" />
+
+        <View
+            android:id="@+id/bold_line"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="120dp"
+            android:background="#000000"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.169" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="20dp" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

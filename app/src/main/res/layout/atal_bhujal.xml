@@ -1,0 +1,191 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="-99dp">
+
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="610dp"
+            android:text="1.	आर्थिक सहाय्य&#xA;2.	तांत्रिक सहाय्य &#xA;3.	कौशल्य विकास &#xA;4.	समुदाय सहभाग   &#xA;5.	दीर्घकालीन स्थिरता  &#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;" />
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="387dp"
+            android:layout_height="112dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="460dp"
+            android:text="1.	ओळखपत्र  (आधार कार्ड, मतदार ID, किंवा पासपोर्ट.)&#xA;2.	पत्त्याचे प्रमाणपत्र  ( यु्टिलिटी बिल, राशन कार्ड, किंवा मालमत्तेचे दस्तऐवज.)&#xA;3.	जमिनीच्या मालकीचे दस्तऐवज  ( शेतजमीनच्या मालकीचा पुरावा )&#xA;4.	अर्ज फॉर्म  &#xA;5.	पाण्याचा वापर नोंद    ( जलवापर संबंधित दस्तऐवज.)&#xA;" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="335dp"
+            android:text="1.	ग्रामीण रहिवासी &#xA;2.	कृषक   ( मुख्यतः शेतकरी आणि कृषी समुदायांसाठी.)&#xA;3.	पंचायतीची सदस्यता   &#xA;4.	जलस्रोत व्यवस्थापन  ( जलसंवर्धन उपक्रमांमध्ये भाग घेणारे संबंधित व्यक्ती.)&#xA;" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="135dp"
+            android:layout_marginRight="19dp"
+            android:text="अटल भूजल योजना (Atal Bhujal Yojana) भारत सरकारची योजना आहे, जी भूजलाचे संरक्षण आणि व्यवस्थापन करण्यासाठी राबवली जाते. या योजनेचा मुख्य उद्देश जलस्रोतांचा टिकाऊ वापर प्रोत्साहित करणे, भूजल पातळीत वाढ करणे, आणि जलसंपत्तीचे संवर्धन करणे आहे. योजना अंतर्गत स्थानिक समुदायांच्या सहभागाने पाण्याचा वापर कमी करणे, भूजल पातळीची मोजणी करणे, आणि जलसंवर्धनाबद्दल जागरूकता वाढवणे यासारखे उपक्रम घेतले जातात, ज्यामुळे ग्रामीण शेतकऱ्यांना दीर्घकालीन आणि टिकाऊ पाण्याचे व्यवस्थापन मिळवता येईल." />
+
+        <Button
+            android:id="@+id/applyapplication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="255dp"
+            android:layout_marginTop="780dp"
+            android:text="अर्ज करा" />
+
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="585dp"
+            android:layout_marginLeft="15dp"
+            android:text="फायदे :"
+            android:textColor="#2C2727"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="663dp" />
+
+        <View
+            android:id="@+id/bold_line4"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#000000"
+            android:visibility="visible"
+            android:layout_marginTop="433dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.787" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="438dp"
+            android:text="आवश्यक कागदपत्रे :"
+            android:textAlignment="viewStart"
+            android:textColor="#231E1E"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="15dp"
+            tools:layout_editor_absoluteY="507dp" />
+
+        <View
+            android:id="@+id/bold_line3"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="578dp"
+            android:background="#000000"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.59" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="311dp"
+            android:text="पात्रता :"
+            android:textAlignment="viewStart"
+            android:textColor="#272323"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="341dp" />
+
+        <View
+            android:id="@+id/bold_line2"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="305dp"
+            android:background="#000000"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.402" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="247dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="135dp"
+            android:layout_marginTop="20dp"
+            android:text="अटल भूजल योजना  "
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="144dp"
+            tools:layout_editor_absoluteY="25dp" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="95dp"
+            android:layout_height="106dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/scheme4"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="25dp" />
+
+        <View
+            android:id="@+id/bold_line"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="120dp"
+            android:background="#000000"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.169" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="20dp" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
