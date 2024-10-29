@@ -1,195 +1,180 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <FrameLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="-99dp">
+        android:layout_height="match_parent">
 
-
-        <TextView
-            android:id="@+id/textView31"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="615dp"
-            android:text="1.	आर्थिक सहाय्य  ( विकास प्रकल्पांसाठी निधी.)&#xA;2.	इन्फ्रास्ट्रक्चर विकास  ( रस्ते, स्वच्छता, आणि पाण्याची पुरवठा सुधारणा.)&#xA;3.	कौशल्य विकास  ( ग्रामीणांसाठी प्रशिक्षण कार्यक्रम.)&#xA;4.	रोजगार निर्मिती &#xA;5.	समुदाय सशक्तीकरण  &#xA;" />
-
-        <TextView
-            android:id="@+id/textView30"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="465dp"
-            android:text="1.	ओळखपत्र ( आधार कार्ड, मतदार ID, किंवा पासपोर्ट.)&#xA;2.	पत्त्याचे प्रमाणपत्र ( यु्टिलिटी बिल, ration कार्ड, किंवा मालमत्तेचे दस्तऐवज.)&#xA;3.	उत्पन्न प्रमाणपत्र ( स्थानिक प्राधिकरणाद्वारे जारी केलेले.)&#xA;4.	फोटोज&#xA;5.	अर्ज फॉर्म  ( विशेष योजनेसाठी भरलेला अर्ज फॉर्म.)&#xA;" />
-
-        <TextView
-            android:id="@+id/textView29"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="335dp"
-            android:text="1.	ग्रामीण रहिवासी &#xA;2.	वय: सामान्यत ( 18 वर्ष.)&#xA;3.	पंचायतीची सदस्यता&#xA;4.	उत्पन्न निकष&#xA;" />
-
-        <Button
-            android:id="@+id/applyapplication"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="255dp"
-            android:layout_marginTop="780dp"
-            android:text="अर्ज करा" />
-
-
-        <TextView
-            android:id="@+id/textView26"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="130dp"
-            android:layout_marginRight="18dp"
-            android:text="ग्राम पंचायत विकास योजना भारत सरकार की एक महत्वपूर्ण पहल है, जिसका उद्देश्य ग्रामीण क्षेत्रों में आधारभूत संरचना का विकास और जीवन स्तर में सुधार करना है। इस योजना के तहत, ग्राम पंचायतों को वित्तीय सहायता प्रदान की जाती है, ताकि वे स्थानीय विकास परियोजनाओं को लागू कर सकें। इन परियोजनाओं में सड़क निर्माण, जल आपूर्ति, स्वच्छता, कृषि विकास, और शिक्षा जैसी सेवाओं का सुधार शामिल है। यह योजना स्थानीय शासन को सशक्त बनाने और ग्रामीण समुदायों की भागीदारी को प्रोत्साहित करने पर केंद्रित है, जिससे समग्र विकास और सामाजिक-आर्थिक स्थिति में सुधार हो सके।" />
-
-
-        <TextView
-            android:id="@+id/textView17"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="585dp"
-            android:layout_marginLeft="15dp"
-            android:text="फायदे :"
-            android:textColor="#2C2727"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="663dp" />
-
-        <View
-            android:id="@+id/bold_line4"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:background="#000000"
-            android:visibility="visible"
-            android:layout_marginTop="433dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.787" />
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="438dp"
-            android:text="आवश्यक कागदपत्रे :"
-            android:textAlignment="viewStart"
-            android:textColor="#231E1E"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="15dp"
-            tools:layout_editor_absoluteY="507dp" />
+            <!-- Image and Header -->
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/scheme3" />
 
-        <View
-            android:id="@+id/bold_line3"
-            android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:layout_marginTop="578dp"
-            android:background="#000000"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.59" />
+            <!-- Bold line under header -->
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="97dp"
+                android:layout_marginTop="1dp"
+                android:text="ग्राम पंचायत
+                                विकास योजना "
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/imageView10"
+                app:layout_constraintTop_toTopOf="@id/imageView10" />
 
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="311dp"
-            android:text="पात्रता :"
-            android:textAlignment="viewStart"
-            android:textColor="#272323"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="341dp" />
+            <View
+                android:id="@+id/bold_line"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="16dp"
+                android:background="#000000"
+                app:layout_constraintTop_toBottomOf="@id/imageView10" />
 
-        <View
-            android:id="@+id/bold_line2"
-            android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:layout_marginTop="305dp"
-            android:background="#000000"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.402" />
+            <!-- Main Content -->
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="ग्राम पंचायत विकास योजना भारत सरकार की एक महत्वपूर्ण पहल आहे, ज्याचा उद्देश ग्रामीण क्षेत्रातील आधारभूत संरचना विकास आणि जीवनमान सुधारना आहे. या योजनेअंतर्गत, ग्राम पंचायतांना आर्थिक सहाय्य प्रदान केले जाते, जेणेकरून त्या स्थानिक विकास प्रकल्प लागू करू शकतील. या प्रकल्पांमध्ये रस्त्यांचे बांधकाम, जल पुरवठा, स्वच्छता, कृषी विकास, आणि शिक्षण यांसारख्या सेवांचे सुधारणा समाविष्ट आहेत. ही योजना स्थानिक शासनाला सशक्त बनवण्यावर आणि ग्रामीण समुदायांच्या सहभागाला प्रोत्साहन देण्यावर केंद्रित आहे, ज्यामुळे एकूण विकास आणि सामाजिक-आर्थिक स्थितीत सुधारणा होऊ शकेल."
+                app:layout_constraintTop_toBottomOf="@id/bold_line"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="231dp"
-            android:layout_height="103dp"
-            android:layout_marginLeft="135dp"
-            android:layout_marginTop="11dp"
-            android:text="ग्राम पंचायत
-                            विकास योजना  "
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textStyle="bold"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="144dp"
-            tools:layout_editor_absoluteY="25dp" />
+            <View
+                android:id="@+id/bold_line1"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="16dp"
+                android:background="#000000"
+                app:layout_constraintTop_toBottomOf="@id/textView9" />
+            <!-- Eligibility Section -->
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="पात्रता :"
+                android:textColor="#272323"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/bold_line1"
+                app:layout_constraintStart_toStartOf="parent" />
 
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="95dp"
-            android:layout_height="106dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/scheme3"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="25dp" />
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="1.	ग्रामीण रहिवासी &#xA;2.	वय: सामान्यत ( 18 वर्ष.)&#xA;3.	पंचायतीची सदस्यता&#xA;4.	उत्पन्न निकष&#xA;"
+                app:layout_constraintTop_toBottomOf="@id/textView13"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-        <View
-            android:id="@+id/bold_line"
-            android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:layout_marginTop="120dp"
-            android:background="#000000"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.169" />
+            <!-- Second Bold Line -->
+            <View
+                android:id="@+id/bold_line2"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="16dp"
+                android:background="#000000"
+                app:layout_constraintTop_toBottomOf="@id/textView7" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_begin="20dp" />
+            <!-- Required Documents Section -->
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="आवश्यक कागदपत्रे :"
+                android:textColor="#231E1E"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/bold_line2"
+                app:layout_constraintStart_toStartOf="parent" />
 
-    </FrameLayout>
+            <!-- Third Bold Line -->
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="1.	ओळखपत्र ( आधार कार्ड, मतदार ID, किंवा पासपोर्ट.)&#xA;2.	पत्त्याचे प्रमाणपत्र ( यु्टिलिटी बिल, ration कार्ड, किंवा मालमत्तेचे दस्तऐवज.)&#xA;3.	उत्पन्न प्रमाणपत्र ( स्थानिक प्राधिकरणाद्वारे जारी केलेले.)&#xA;4.	फोटोज&#xA;5.	अर्ज फॉर्म  ( विशेष योजनेसाठी भरलेला अर्ज फॉर्म.)&#xA;"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView15" />
 
+            <View
+                android:id="@+id/bold_line3"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="16dp"
+                android:background="#000000"
+                app:layout_constraintTop_toBottomOf="@id/textView10" />
+
+            <!-- Benefits Section -->
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="फायदे :"
+                android:textColor="#2C2727"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/bold_line3"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="1.	आर्थिक सहाय्य  ( विकास प्रकल्पांसाठी निधी.)&#xA;2.	इन्फ्रास्ट्रक्चर विकास  ( रस्ते, स्वच्छता, आणि पाण्याची पुरवठा सुधारणा.)&#xA;3.	कौशल्य विकास  ( ग्रामीणांसाठी प्रशिक्षण कार्यक्रम.)&#xA;4.	रोजगार निर्मिती &#xA;5.	समुदाय सशक्तीकरण  &#xA;"
+                app:layout_constraintTop_toBottomOf="@id/textView17"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Apply Button -->
+            <Button
+                android:id="@+id/applyapplication"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="अर्ज करा"
+                app:layout_constraintTop_toBottomOf="@id/textView20"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
