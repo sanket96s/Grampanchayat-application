@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="159dp"
             android:hint="अर्ज क्रमांक प्रविष्ट करा"
-            android:inputType="number"
+            android:inputType="text"
             android:padding="16dp"
             android:textSize="18sp" />
             <TextView
@@ -90,10 +90,41 @@
             android:layout_marginTop="326dp"
             android:layout_marginLeft="125dp"/>
 
-
-
-
     </FrameLayout>
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_tracking_result_message"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:textColor="#4CAF50"-->
+<!--        android:textSize="16sp"-->
+<!--        android:visibility="gone" />-->
+
+<!--    <TableLayout-->
+<!--        android:id="@+id/table_tracking_result"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:stretchColumns="*"-->
+<!--        android:visibility="gone">-->
+
+<!--        <TableRow>-->
+<!--            <TextView android:text="अर्ज क्रमांक" android:textStyle="bold" />-->
+<!--            <TextView android:text="स्थिती" android:textStyle="bold" />-->
+<!--            <TextView android:text="शंका / समस्या" android:textStyle="bold" />-->
+<!--            <TextView android:text="अर्ज पहा" android:textStyle="bold" />-->
+<!--        </TableRow>-->
+
+<!--        <TableRow>-->
+<!--            <TextView android:id="@+id/tv_application_no" />-->
+<!--            <TextView android:id="@+id/tv_status" />-->
+<!--            <TextView android:id="@+id/tv_grievance" />-->
+<!--            <Button-->
+<!--                android:id="@+id/btn_view_application_form"-->
+<!--                android:text="अर्ज पहा" />-->
+<!--        </TableRow>-->
+<!--    </TableLayout>-->
 </ScrollView>
 
 

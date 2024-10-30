@@ -79,6 +79,9 @@ public class GovernmentSchemesActivity extends AppCompatActivity {
         // Start the sliding
         handler.postDelayed(runnable, SLIDE_INTERVAL);
 
+        Button trackButton = findViewById(R.id.trackapplication);
+        trackButton.setOnClickListener(v -> openApplicationTrackingPage(v));
+
 
 
         TextView textJandhanYojana = findViewById(R.id.textView5);
@@ -119,6 +122,11 @@ public class GovernmentSchemesActivity extends AppCompatActivity {
         super.onDestroy();
         handler.removeCallbacks(runnable); // Stop the handler when activity is destroyed
     }
+    public void openApplicationTrackingPage(View v) {
+        Intent intent = new Intent(GovernmentSchemesActivity.this, ApplicationTrackingActivity.class);
+        startActivity(intent);
+    }
+
     public void openScheme1InformationPage(View v) {
         Intent intent = new Intent(GovernmentSchemesActivity.this, Scheme1InformationActivity.class);
         startActivity(intent);
@@ -144,7 +152,8 @@ public class GovernmentSchemesActivity extends AppCompatActivity {
         Intent intent = new Intent(GovernmentSchemesActivity.this, Scheme6InformationActivity.class);
         startActivity(intent);
     }
-//    public void openApplicationTrackingPage(MenuItem item) {
+
+//    public void openApplicationTrackingPage(View v) {
 //        Intent intent = new Intent(GovernmentSchemesActivity.this, ApplicationTrackingActivity.class);
 //        startActivity(intent);
 //    }

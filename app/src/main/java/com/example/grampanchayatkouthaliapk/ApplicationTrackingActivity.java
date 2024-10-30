@@ -2,6 +2,7 @@ package com.example.grampanchayatkouthaliapk;
 
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -63,6 +64,11 @@ public class ApplicationTrackingActivity extends AppCompatActivity {
             etApplicationId.setError("कृपया अर्ज क्रमांक प्रविष्ट करा");
             return;
         }
+        if (!applicationId.matches("^[a-zA-Z0-9]{12}$")) {
+            etApplicationId.setError("अर्ज क्रमांक फक्त 12 अल्फान्यूमेरिक वर्णांचा असावा");
+            return;
+        }
+
 
         if (TextUtils.isEmpty(captchaInput)) {
             etCaptchaInput.setError("कृपया कॅप्चा प्रविष्ट करा");
