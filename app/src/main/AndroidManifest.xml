@@ -36,6 +36,11 @@
         <activity android:name=".TaxPayActivity" />
         <activity android:name=".GovernmentSchemesActivity"></activity>
         <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".HelpAndSupportActivity"></activity>
+        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".SettingsActivity"></activity>
+        <activity android:name="FakePaymentActivity"></activity>
+
     </application>
 
 </manifest>

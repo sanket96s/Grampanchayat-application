@@ -6,6 +6,11 @@
         <string name="house_number">घर क्रमांक: %1$d</string>
         <string name="total_bill">एकूण बिल: %1$d</string>
         <string name="name">नाव: %1$s</string>
+    <string-array name="language_options">
+        <item>English</item>
+        <item>Marathi</item>
+    </string-array>
+
 
     <string name="app_name">Grampanchayat Kouthali apk</string>
     <string name="action_settings">Settings</string>
