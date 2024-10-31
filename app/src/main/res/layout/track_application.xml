@@ -116,16 +116,16 @@
             android:stretchColumns="*">
 
             <TableRow>
-                <TextView android:text="अर्ज क्रमांक" android:textStyle="bold" android:textAlignment="center" android:background="@drawable/cell_border" android:padding="2dp"/>
-                <TextView android:text="स्थिती" android:textStyle="bold" android:textAlignment="center" android:background="@drawable/cell_border" android:padding="2dp"/>
-                <TextView android:text="शंका / समस्या" android:textStyle="bold" android:textAlignment="center" android:background="@drawable/cell_border" android:padding="2dp" />
-                <TextView android:text="अर्ज पहा" android:textStyle="bold" android:textAlignment="center"  android:background="@drawable/cell_border" android:padding="2dp"/>
+                <TextView android:text="अर्ज क्रमांक" android:textStyle="bold" android:textAlignment="center" android:background="@drawable/cell_border" android:padding="1dp"/>
+                <TextView android:text="स्थिती" android:textStyle="bold" android:textAlignment="center" android:background="@drawable/cell_border" android:padding="1dp"/>
+                <TextView android:text="शंका / समस्या" android:textStyle="bold" android:textAlignment="center" android:background="@drawable/cell_border" android:padding="1dp" />
+                <TextView android:text="अर्ज पहा" android:textStyle="bold" android:textAlignment="center"  android:background="@drawable/cell_border" android:padding="1dp"/>
             </TableRow>
 
             <TableRow>
-                <TextView android:id="@+id/tv_application_no" android:text="123456789012" android:textAlignment="center" android:background="@drawable/cell_border" android:padding="2dp"/>
-                <TextView android:id="@+id/tv_status" android:text="प्रक्रियेत आहे" android:textAlignment="center" android:background="@drawable/cell_border" android:padding="2dp"/>
-                <TextView android:id="@+id/tv_grievance" android:text="शंका नाही" android:textAlignment="center" android:background="@drawable/cell_border" android:padding="2dp"/>
+                <TextView android:id="@+id/tv_application_no" android:text="123456789012" android:textAlignment="center" android:background="@drawable/cell_border" android:padding="1dp"/>
+                <TextView android:id="@+id/tv_status" android:text="प्रक्रियेत आहे" android:textAlignment="center" android:background="@drawable/cell_border" android:padding="1dp"/>
+                <TextView android:id="@+id/tv_grievance" android:text="शंका नाही" android:textAlignment="center" android:background="@drawable/cell_border" android:padding="1dp"/>
                 <TextView
                     android:id="@+id/tv_view_application_form_link"
                     android:layout_width="wrap_content"
@@ -133,11 +133,11 @@
                     android:text="अर्ज"
                     android:background="@drawable/cell_border"
                     android:textAlignment="center"
-                    android:textColor="#0000FF"
+                    android:textColor="#5D5DD1"
                     android:textStyle="bold"
                     android:clickable="true"
                     android:focusable="true"
-                    android:padding="2dp"/>
+                    android:padding="1dp"/>
             </TableRow>
         </TableLayout>
     </LinearLayout>

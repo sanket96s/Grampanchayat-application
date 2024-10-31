@@ -52,7 +52,7 @@ public class ApplicationTrackingActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 trackApplication();
-                resultSection.setVisibility(View.VISIBLE);
+//                resultSection.setVisibility(View.VISIBLE);
             }
         });
 //        tvViewApplicationFormLink.setOnClickListener(v -> viewApplicationForm());
@@ -78,31 +78,38 @@ public class ApplicationTrackingActivity extends AppCompatActivity {
         // Validate inputs
         if (TextUtils.isEmpty(applicationId)) {
             etApplicationId.setError("कृपया अर्ज क्रमांक प्रविष्ट करा");
+            resultSection.setVisibility(View.GONE);
             return;
         }
-        if (!applicationId.matches("^[a-zA-Z0-9]{12}$")) {
+        else if (!applicationId.matches("^[a-zA-Z0-9]{12}$")) {
             etApplicationId.setError("अर्ज क्रमांक फक्त 12 अल्फान्यूमेरिक वर्णांचा असावा");
+            resultSection.setVisibility(View.GONE);
             return;
         }
 
 
-        if (TextUtils.isEmpty(captchaInput)) {
+        else if (TextUtils.isEmpty(captchaInput)) {
             etCaptchaInput.setError("कृपया कॅप्चा प्रविष्ट करा");
+            resultSection.setVisibility(View.GONE);
             return;
         }
 
-        if (!captchaInput.equals(generatedCaptcha)) {
+        else if (!captchaInput.equals(generatedCaptcha)) {
             etCaptchaInput.setError("कॅप्चा चुकीचा आहे");
+            resultSection.setVisibility(View.GONE);
             return;
         }
-        tvTrackingResultMessage.setText("अर्ज क्रमांक " + applicationId + " यशस्वीरित्या ट्रॅक करण्यात आला!");
+        else {
+        tvTrackingResultMessage.setText("अर्ज क्रमांक " + applicationId + " यशस्वीरित्या ट्रॅक करण्यात आला आहे !");
         tvTrackingResultMessage.setVisibility(View.VISIBLE);
+        resultSection.setVisibility(View.VISIBLE);
+            showTrackingResult(applicationId);}
 
 
         // Simulate application tracking process
         // In a real application, you would fetch application details from a database or API
         // For demonstration purposes, we'll just show a success message
-        showTrackingResult(applicationId);
+
     }
 
     private void showTrackingResult(String applicationId) {
