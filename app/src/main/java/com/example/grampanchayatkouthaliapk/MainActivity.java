@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Transition after video playback ends or after 5 seconds
         videoView.setOnCompletionListener(mp -> proceedToCheckAuthentication());
-        new Handler().postDelayed(this::proceedToCheckAuthentication, 5000); // 5000 milliseconds = 5 seconds
+        new Handler().postDelayed(this::proceedToCheckAuthentication, 2000); // 2000 milliseconds = 5 seconds
     }
 
     @Override
