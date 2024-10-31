@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Image and Header -->
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/scheme5"
+                android:importantForAccessibility="no" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="93dp"
+                android:layout_marginTop="4dp"
+                android:text="प्रधानमंत्री जनधन
+                 योजना (PMJDY)"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/imageView10"
+                app:layout_constraintTop_toTopOf="@id/imageView10" />
+
+            <View
+                android:id="@+id/bold_line"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="16dp"
+                android:background="#000000"
+                app:layout_constraintTop_toBottomOf="@id/textView8" />
+
+            <!-- Content Text -->
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="प्रधानमंत्री जनधन योजना (PMJDY) प्रत्येक परिवाराचा या योजनेत समावेश करण्यावर भर देते. यापूर्वीची योजना खेड्यांचा विचार करीत होती. ही योजना ग्रामीण आणि शहरी भागाला समाविष्ट करीत आहे. यापूर्वीची योजना ज्या खेड्यांची लोकसंख्या २०००पेक्षा जास्त आहे त्याच खेड्यांना या स्वाभिमान योजनेंचा लाभ होत होता. पण पी.एम.जे.डी.वाय. या योजनेंतर्गत १००० ते १५०० परिवार असलेल्या प्रत्येक उपसेवा क्षेत्रात बँकिंग सेवा उपलब्ध होऊन सारा देश या योजनेंतर्गत गुंतला जाणार आहे. प्रत्येक पाच किलोमीटरच्या अंतरावर या सुविधा या योजनेंतर्गत संपूर्ण देशभर उपलब्ध करून देण्यात येणार आहेत."
+                app:layout_constraintTop_toBottomOf="@id/bold_line"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <View
+                android:id="@+id/bold_line_eligibility"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="16dp"
+                android:background="#000000"
+                app:layout_constraintTop_toBottomOf="@id/textView9" />
+            <!-- Eligibility -->
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:text="पात्रता :"
+                android:textColor="#272323"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/bold_line_eligibility"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="1.वय (१० वर्षे आणि त्यावरील व्यक्ती.)&#xA;2.भारतीय नागरिक.&#xA;3.बँकेचे खाते&#xA;4.आधार कार्ड (ओळखपत्र)&#xA;5.वित्तीय समावेशन&#xA;"
+                app:layout_constraintTop_toBottomOf="@id/textView13"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Required Documents -->
+
+            <View
+                android:id="@+id/bold_line2"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="12dp"
+                android:background="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView14" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:text="आवश्यक कागदपत्रे :"
+                android:textColor="#231E1E"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/bold_line2"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="1.आधार कार्ड &#xA;2.ओळखपत्र ( आधार कार्ड , ड्रायव्हिंग लायसन्स, पासपोर्ट )&#xA;3.रहिवासी प्रमाणपत्र ( वीज बिल, पाण्याचे बिल, रेशन कार्ड)&#xA;4.पासपोर्ट आकाराचे फोटो ( २ फोटो ) &#xA;5.पॅन कार्ड &#xA;6.KYC संबंधित दस्तावेज"
+                app:layout_constraintTop_toBottomOf="@id/textView15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <View
+                android:id="@+id/bold_line3"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="16dp"
+                android:background="#000000"
+                app:layout_constraintTop_toBottomOf="@id/textView16" />
+
+            <!-- Benefits -->
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:text="फायदे :"
+                android:textColor="#2C2727"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/bold_line3"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="1.	शून्य बॅलन्स खाते&#xA;2.	रुपे डेबिट कार्ड&#xA;3.	रु. १ लाख अपघात विमा&#xA;4.	रु. ३०,००० जीवन विमा&#xA;5.	रु. १०,००० ओव्हरड्राफ्ट सुविधा&#xA;6.	वित्तीय समावेशन&#xA;7.	सरकारी योजनांचा थेट लाभ&#xA;8.	मोफत मोबाईल बँकिंग सुविधा&#xA;9.	आंतरराष्ट्रीय व्यवहार (रुपे कार्डद्वारे)&#xA;"
+                app:layout_constraintTop_toBottomOf="@id/textView17"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Apply Button -->
+            <Button
+                android:id="@+id/applyapplication"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="अर्ज करा"
+                app:layout_constraintTop_toBottomOf="@id/textView18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

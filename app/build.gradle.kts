@@ -45,6 +45,8 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment:2.8.0")
     implementation("androidx.navigation:navigation-ui:2.8.0")
     implementation("androidx.drawerlayout:drawerlayout:1.2.0")
+    implementation( "com.google.android.material:material:1.7.0")
+    implementation("com.google.android.material:material:1.8.0")
 
     // Firebase Realtime Database
     implementation(platform("com.google.firebase:firebase-bom:33.3.0"))

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -34,13 +35,20 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainPageActivity" />
         <activity android:name=".TaxPayActivity" />
-        <activity android:name=".GovernmentSchemesActivity"></activity>
-        <activity android:name=".RegisterActivity"></activity>
-        <activity android:name=".HelpAndSupportActivity"></activity>
-        <activity android:name=".ProfileActivity"></activity>
-        <activity android:name=".SettingsActivity"></activity>
-        <activity android:name="FakePaymentActivity"></activity>
-
+        <activity android:name=".GovernmentSchemesActivity"/>
+        <activity android:name=".Scheme1InformationActivity"/>
+        <activity android:name=".Scheme2InformationActivity"/>
+        <activity android:name=".Scheme3InformationActivity"/>
+        <activity android:name=".Scheme4InformationActivity"/>
+        <activity android:name=".Scheme5InformationActivity"/>
+        <activity android:name=".Scheme6InformationActivity"/>
+        <activity android:name=".ApplicationFormActivity"/>
+        <activity android:name=".ApplicationTrackingActivity"/>
+        <activity android:name=".RegisterActivity"/>
+        <activity android:name=".HelpAndSupportActivity"/>
+        <activity android:name=".ProfileActivity"/>
+        <activity android:name=".SettingsActivity"/>
+        <activity android:name=".FakePaymentActivity"/>
     </application>
 
 </manifest>

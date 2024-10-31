@@ -109,13 +109,25 @@ public class MainPageActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        TextView textGovernmentSchemes = findViewById(R.id.text_government_schemes);
         ImageView imageGovernmentSchemes = findViewById(R.id.image_government_schemes);
+        textGovernmentSchemes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, GovernmentSchemesActivity.class);
+                startActivity(intent);
+            }
+        });
+
         imageGovernmentSchemes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openGovernmentSchemesPage(v);
+                Intent intent = new Intent(MainPageActivity.this, GovernmentSchemesActivity.class);
+                startActivity(intent);
             }
         });
+
+
     }
 
     @Override
