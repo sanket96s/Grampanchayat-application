@@ -77,7 +77,6 @@ public class MainPageActivity extends AppCompatActivity {
                     return false;
                 }
 
-
                 drawerLayout.closeDrawer(GravityCompat.START);
                 return true;
             }
@@ -109,6 +108,25 @@ public class MainPageActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        TextView textProjects = findViewById(R.id.text_projects);
+        ImageView imgProjects = findViewById(R.id.image_projects);
+        textProjects.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, ProjectsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imgProjects.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, ProjectsActivity.class);
+                startActivity(intent);
+            }
+        });
+
         TextView textGovernmentSchemes = findViewById(R.id.text_government_schemes);
         ImageView imageGovernmentSchemes = findViewById(R.id.image_government_schemes);
         textGovernmentSchemes.setOnClickListener(new View.OnClickListener() {
@@ -126,8 +144,6 @@ public class MainPageActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
     }
 
     @Override
@@ -185,9 +201,9 @@ public class MainPageActivity extends AppCompatActivity {
             super.onBackPressed();
         }
     }
+
     public void openGovernmentSchemesPage(View view) {
         Intent intent = new Intent(MainPageActivity.this, GovernmentSchemesActivity.class);
         startActivity(intent);
     }
 }
-
