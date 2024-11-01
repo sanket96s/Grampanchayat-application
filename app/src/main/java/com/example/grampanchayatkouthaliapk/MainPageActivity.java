@@ -123,6 +123,26 @@ public class MainPageActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        // In MainPageActivity.java
+        TextView textGramsabha = findViewById(R.id.text_events);
+        ImageView imgGramsabha = findViewById(R.id.image_events);
+
+        textGramsabha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, GramsabhaActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imgGramsabha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, GramsabhaActivity.class);
+                startActivity(intent);
+            }
+        });
+
         ImageView imageGovernmentSchemes = findViewById(R.id.image_government_schemes);
         imageGovernmentSchemes.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -34,6 +34,7 @@
         <activity android:name=".GovernmentSchemesActivity"></activity>
         <activity android:name=".ProjectsActivity"></activity>
         <activity android:name=".ProjectDetailActivity"></activity>
+        <activity android:name=".GramsabhaActivity"></activity>
     </application>
 
 </manifest>
