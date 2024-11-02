@@ -87,4 +87,8 @@
         android:padding="12dp"
         android:elevation="4dp"
         android:layout_marginTop="8dp" />
+<<<<<<< HEAD
 </LinearLayout>
+=======
+</LinearLayout>
+>>>>>>> 68667e6edc5669b5eff7cec108786357798de84d
