@@ -128,6 +128,29 @@ public class MainPageActivity extends AppCompatActivity {
             }
         });
 
+        ImageView imgComplaint = findViewById(R.id.image_complaint); // Your complaint image ID
+        TextView txtComplaint = findViewById(R.id.text_problem_report);   // Your complaint text ID
+
+
+        imgComplaint.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, ComplaintActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        txtComplaint.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, ComplaintActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
         ImageView imageGovernmentSchemes = findViewById(R.id.image_government_schemes);
         imageGovernmentSchemes.setOnClickListener(new View.OnClickListener() {
             @Override

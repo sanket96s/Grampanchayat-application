@@ -18,6 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GrampanchayatKouthaliApk"
         tools:targetApi="31">
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -34,7 +35,10 @@
         <activity android:name=".TaxPayActivity" />
         <activity android:name=".GovernmentSchemesActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".ApplyForCertificateActivity"></activity>
+        <activity android:name=".ApplyForCertificateActivity" />
+        <activity android:name=".ComplaintActivity" />
+
+
     </application>
 
 </manifest>

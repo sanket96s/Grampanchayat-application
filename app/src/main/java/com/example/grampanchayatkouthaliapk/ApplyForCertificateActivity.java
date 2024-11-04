@@ -8,6 +8,6 @@ public class ApplyForCertificateActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_apply_for_certificate); // Link to your XML layout for this activity
+        setContentView(R.layout.activity_apply_for_certificate);
     }
 }
