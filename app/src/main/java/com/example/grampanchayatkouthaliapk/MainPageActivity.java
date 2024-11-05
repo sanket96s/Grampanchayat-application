@@ -62,13 +62,15 @@ public class MainPageActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
-
                 if (id == R.id.nav_profile) {
-                    Toast.makeText(MainPageActivity.this, "Profile Selected", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainPageActivity.this, ProfileActivity.class);
+                    startActivity(intent);
                 } else if (id == R.id.help_and_support) {
-                    Toast.makeText(MainPageActivity.this, "Help and Support Selected", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainPageActivity.this, HelpAndSupportActivity.class);
+                    startActivity(intent);
                 } else if (id == R.id.nav_settings) {
-                    Toast.makeText(MainPageActivity.this, "Settings Selected", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainPageActivity.this, SettingsActivity.class);
+                    startActivity(intent);
                 } else if (id == R.id.nav_logout) {
                     signOut();
                 } else {
@@ -106,9 +108,10 @@ public class MainPageActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        TextView textproject = findViewById(R.id.text_projects);
-        ImageView imgproject = findViewById(R.id.image_projects);
-        textproject.setOnClickListener(new View.OnClickListener() {
+
+        TextView textProjects = findViewById(R.id.text_projects);
+        ImageView imgProjects = findViewById(R.id.image_projects);
+        textProjects.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainPageActivity.this, ProjectsActivity.class);
@@ -116,13 +119,14 @@ public class MainPageActivity extends AppCompatActivity {
             }
         });
 
-        imgproject.setOnClickListener(new View.OnClickListener() {
+        imgProjects.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainPageActivity.this, ProjectsActivity.class);
                 startActivity(intent);
             }
         });
+
         // In MainPageActivity.java
         TextView textGramsabha = findViewById(R.id.text_events);
         ImageView imgGramsabha = findViewById(R.id.image_events);
@@ -143,11 +147,24 @@ public class MainPageActivity extends AppCompatActivity {
             }
         });
 
+
+
+        TextView textGovernmentSchemes = findViewById(R.id.text_government_schemes);
+
         ImageView imageGovernmentSchemes = findViewById(R.id.image_government_schemes);
+        textGovernmentSchemes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, GovernmentSchemesActivity.class);
+                startActivity(intent);
+            }
+        });
+
         imageGovernmentSchemes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openGovernmentSchemesPage(v);
+                Intent intent = new Intent(MainPageActivity.this, GovernmentSchemesActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -207,9 +224,9 @@ public class MainPageActivity extends AppCompatActivity {
             super.onBackPressed();
         }
     }
+
     public void openGovernmentSchemesPage(View view) {
         Intent intent = new Intent(MainPageActivity.this, GovernmentSchemesActivity.class);
         startActivity(intent);
     }
 }
-

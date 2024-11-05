@@ -1,14 +1,19 @@
 package com.example.grampanchayatkouthaliapk;
 
+import android.app.AlertDialog;
+import android.content.Intent;
+
 import android.os.Bundle;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TableLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -16,15 +21,18 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+
 public class TaxPayActivity extends AppCompatActivity {
 
     private DatabaseReference databaseReference;
-    private TextView textName;
-    private TextView textHouseNumber;
-    private TextView textTotalBill;
-    private EditText inputFullName;
+
+    private static final int REQUEST_CODE_PAYMENT = 1001; // Define a unique request code
+
+    private TextView textHouseNumber, textTotalBill;
     private EditText inputHouseNumber;
-    private Button btnFetchBill;
+    private Button btnFetchBill, btnPayBill;
+    private TableLayout tableLayout;
+    private int totalBillAmount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,77 +43,152 @@ public class TaxPayActivity extends AppCompatActivity {
         databaseReference = FirebaseDatabase.getInstance().getReference("taxRecords");
 
         // Initialize Views
-        textName = findViewById(R.id.text_name);
         textHouseNumber = findViewById(R.id.text_house_number);
         textTotalBill = findViewById(R.id.text_total_bill);
-        inputFullName = findViewById(R.id.input_full_name);
         inputHouseNumber = findViewById(R.id.input_house_number);
         btnFetchBill = findViewById(R.id.btn_fetch_bill);
+        btnPayBill = findViewById(R.id.btn_pay_bill); // Initialize the Pay Bill button
+        tableLayout = findViewById(R.id.table_layout);
 
-        btnFetchBill.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String fullName = inputFullName.getText().toString().trim();
-                String houseNumberStr = inputHouseNumber.getText().toString().trim();
+        // Set Pay Bill button to be initially hidden
+        btnPayBill.setVisibility(View.GONE);
 
-                if (!houseNumberStr.isEmpty()) {
-                    int houseNumber = Integer.parseInt(houseNumberStr);
-                    // Fetch total bill from the database
-                    fetchTotalBill(fullName, houseNumber);
-                } else {
-                    showMessageDialog(getString(R.string.please_enter_valid_house_number));
-                }
-            }
-        });
+
+        btnFetchBill.setOnClickListener(view -> fetchBill());
+        btnPayBill.setOnClickListener(view -> payBill()); // Set click listener for Pay Bill
     }
 
-    private void fetchTotalBill(String fullName, int houseNumber) {
-        // Query the database for the total bill based on fullname and housenumber
+
+    private void fetchBill() {
+        String houseNumberStr = inputHouseNumber.getText().toString().trim();
+        if (houseNumberStr.isEmpty()) {
+            showMessageDialog("Please enter a valid house number.");
+            return;
+        }
+
+        try {
+            int houseNumber = Integer.parseInt(houseNumberStr);
+            clearPreviousData();
+            fetchTotalBill(houseNumber);
+        } catch (NumberFormatException e) {
+            showMessageDialog("Invalid house number format.");
+        }
+    }
+
+    private void clearPreviousData() {
+        textHouseNumber.setText("");
+        textTotalBill.setText("");
+        tableLayout.removeAllViews();
+        btnPayBill.setVisibility(View.GONE); // Hide Pay Bill button on clearing data
+        totalBillAmount = 0;
+    }
+
+    private void fetchTotalBill(int houseNumber) {
         databaseReference.orderByChild("housenumber").equalTo(houseNumber)
                 .addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         boolean recordFound = false;
                         for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                            String nameFromDB = snapshot.child("fullname").getValue(String.class);
-                            if (nameFromDB != null && nameFromDB.equals(fullName)) {
-                                // Get total bill
-                                Integer totalBill = snapshot.child("totaltax").getValue(Integer.class);
-                                if (totalBill != null) {
-                                    displayTotalBill(fullName, houseNumber, totalBill);
-                                } else {
-                                    showMessageDialog(getString(R.string.total_bill_not_found));
-                                }
+                            String fullName = snapshot.child("fullname").getValue(String.class);
+                            Integer totalBill = snapshot.child("totaltax").getValue(Integer.class);
+                            if (totalBill != null) {
+                                totalBillAmount = totalBill;
+                                displayTotalBill(fullName, houseNumber, totalBill);
                                 recordFound = true;
                                 break;
                             }
                         }
                         if (!recordFound) {
-                            showMessageDialog(getString(R.string.record_not_found));
+                            showMessageDialog("Record not found.");
                         }
                     }
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
-                        showMessageDialog(getString(R.string.database_error, error.getMessage()));
+                        showMessageDialog("Database error: " + error.getMessage());
                     }
                 });
     }
 
     private void displayTotalBill(String fullName, int houseNumber, int totalBill) {
-        textName.setText(getString(R.string.name, fullName));
-        textHouseNumber.setText(getString(R.string.house_number, houseNumber));
-        textTotalBill.setText(getString(R.string.total_bill, totalBill));
-        textName.setVisibility(View.VISIBLE);
-        textHouseNumber.setVisibility(View.VISIBLE);
-        textTotalBill.setVisibility(View.VISIBLE);
+        tableLayout.removeAllViews();
+
+        TextView textName = new TextView(this);
+        textName.setText("Name: " + fullName);
+        textName.setTextSize(18);
+        tableLayout.addView(textName);
+
+        TextView textHouseNumberDisplay = new TextView(this);
+        textHouseNumberDisplay.setText("House Number: " + houseNumber);
+        textHouseNumberDisplay.setTextSize(18);
+        tableLayout.addView(textHouseNumberDisplay);
+
+        TextView textTotalBillDisplay = new TextView(this);
+        textTotalBillDisplay.setText("Total Bill: ₹" + totalBill);
+        textTotalBillDisplay.setTextSize(18);
+        tableLayout.addView(textTotalBillDisplay);
+
+        // Show the Pay Bill button
+        btnPayBill.setVisibility(View.VISIBLE);
+    }
+
+    private void payBill() {
+        Intent intent = new Intent(TaxPayActivity.this, FakePaymentActivity.class);
+        intent.putExtra("totalAmount", totalBillAmount); // Pass total bill amount
+        startActivityForResult(intent, REQUEST_CODE_PAYMENT); // Use startActivityForResult
     }
 
     private void showMessageDialog(String message) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(message)
                 .setPositiveButton("OK", null)
-                .create()
                 .show();
     }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == REQUEST_CODE_PAYMENT && resultCode == RESULT_OK) {
+            boolean paymentStatus = data.getBooleanExtra("paymentStatus", false);
+            int paidAmount = data.getIntExtra("paidAmount", 0);
+
+            if (paymentStatus) {
+                updateDatabaseAfterPayment(paidAmount);
+                showMessageDialog("Payment successful! Amount paid: ₹" + paidAmount);
+            } else {
+                showMessageDialog("Payment failed. Please try again.");
+            }
+        }
+    }
+
+    private void updateDatabaseAfterPayment(int paidAmount) {
+        String houseNumberStr = inputHouseNumber.getText().toString().trim();
+        int houseNumber = Integer.parseInt(houseNumberStr);
+
+        // Find the record in the database and reduce the total tax
+        databaseReference.orderByChild("housenumber").equalTo(houseNumber)
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                            Integer totalTax = snapshot.child("totaltax").getValue(Integer.class);
+                            if (totalTax != null) {
+                                int updatedTax = totalTax - paidAmount;
+                                snapshot.getRef().child("totaltax").setValue(updatedTax); // Update the total tax in database
+                                textTotalBill.setText("Total Bill: ₹" + updatedTax); // Optionally update UI
+                                fetchTotalBill(houseNumber);
+                                break;
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        showMessageDialog("Database error: " + error.getMessage());
+                    }
+                });
+    }
+
+
 }

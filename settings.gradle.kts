@@ -10,8 +10,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-    }
+            }
 }
+
 
 rootProject.name = "Grampanchayat Kouthali apk"
 include(":app")
