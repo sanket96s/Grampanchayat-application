@@ -30,51 +30,50 @@
             android:layout_marginStart="8dp" />
     </LinearLayout>
 
-    <!-- Buttons for Different Certificate Types -->
-    <Button
-        android:id="@+id/btn_birth_certificate"
+    <!-- Radio Buttons for Different Certificate Types -->
+    <RadioGroup
+        android:id="@+id/radioGroup_certificate_types"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="जन्म प्रमाणपत्र"
-        android:backgroundTint="#81D4FA"
-        android:textColor="#000000"
-        android:padding="12dp"
-        android:elevation="2dp"
-        android:layout_marginBottom="8dp" />
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
 
-    <Button
-        android:id="@+id/btn_death_certificate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="मृत्यू प्रमाणपत्र"
-        android:backgroundTint="#81D4FA"
-        android:textColor="#000000"
-        android:padding="12dp"
-        android:elevation="2dp"
-        android:layout_marginBottom="8dp" />
+        <RadioButton
+            android:id="@+id/radio_birth_certificate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="जन्म प्रमाणपत्र"
+            android:textColor="#000000"
+            android:padding="12dp"
+            android:buttonTint="#81D4FA" />
 
-    <Button
-        android:id="@+id/btn_residence_certificate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="रहिवासी प्रमाणपत्र"
-        android:backgroundTint="#81D4FA"
-        android:textColor="#000000"
-        android:padding="12dp"
-        android:elevation="2dp"
-        android:layout_marginBottom="8dp" />
+        <RadioButton
+            android:id="@+id/radio_death_certificate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="मृत्यू प्रमाणपत्र"
+            android:textColor="#000000"
+            android:padding="12dp"
+            android:buttonTint="#81D4FA" />
 
-    <Button
-        android:id="@+id/btn_income_certificate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="उत्पन्न प्रमाणपत्र"
-        android:backgroundTint="#81D4FA"
-        android:textColor="#000000"
-        android:padding="12dp"
-        android:elevation="2dp"
-        android:layout_marginBottom="16dp" />
+        <RadioButton
+            android:id="@+id/radio_residence_certificate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="रहिवासी प्रमाणपत्र"
+            android:textColor="#000000"
+            android:padding="12dp"
+            android:buttonTint="#81D4FA" />
+
+        <RadioButton
+            android:id="@+id/radio_income_certificate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="उत्पन्न प्रमाणपत्र"
+            android:textColor="#000000"
+            android:padding="12dp"
+            android:buttonTint="#81D4FA" />
+    </RadioGroup>
 
     <!-- Submit Button -->
     <Button
@@ -86,5 +85,5 @@
         android:textColor="#FFFFFF"
         android:padding="12dp"
         android:elevation="4dp"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="16dp" />
 </LinearLayout>
