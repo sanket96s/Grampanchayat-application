@@ -50,5 +50,6 @@
         <activity android:name=".ProfileActivity" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".FakePaymentActivity" />
+        <activity android:name=".RegisterforCertificateActivity"></activity>
     </application>
 </manifest>
