@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
@@ -14,7 +16,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GrampanchayatKouthaliApk"
-        tools:targetApi="31">
+        tools:targetApi="31"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true">
 
         <activity
             android:name=".MainActivity"
@@ -40,8 +44,11 @@
         <activity android:name=".Scheme6InformationActivity"/>
         <activity android:name=".ApplicationFormActivity"/>
         <activity android:name=".ApplicationTrackingActivity"/>
-
-
+        <activity android:name=".RegisterActivity"/>
+        <activity android:name=".HelpAndSupportActivity"/>
+        <activity android:name=".ProfileActivity"/>
+        <activity android:name=".SettingsActivity"/>
+        <activity android:name=".FakePaymentActivity"/>
     </application>
 
 </manifest>
