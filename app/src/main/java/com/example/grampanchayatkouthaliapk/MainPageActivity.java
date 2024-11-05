@@ -147,9 +147,29 @@ public class MainPageActivity extends AppCompatActivity {
             }
         });
 
+        // Adding Gramsabha functionality
+        TextView textGramsabha = findViewById(R.id.text_events);
+        ImageView imgGramsabha = findViewById(R.id.image_events);
+
+        textGramsabha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, GramsabhaActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imgGramsabha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, GramsabhaActivity.class);
+                startActivity(intent);
+            }
+        });
+
         // Adding Complaint functionality
-        ImageView imgComplaint = findViewById(R.id.image_complaint); // Your complaint image ID
-        TextView txtComplaint = findViewById(R.id.text_problem_report);   // Your complaint text ID
+        ImageView imgComplaint = findViewById(R.id.image_complaint);
+        TextView txtComplaint = findViewById(R.id.text_problem_report);
 
         imgComplaint.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -170,6 +190,7 @@ public class MainPageActivity extends AppCompatActivity {
         // Adding Government Schemes functionality
         TextView textGovernmentSchemes = findViewById(R.id.text_government_schemes);
         ImageView imageGovernmentSchemes = findViewById(R.id.image_government_schemes);
+
         textGovernmentSchemes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -241,10 +262,5 @@ public class MainPageActivity extends AppCompatActivity {
         } else {
             super.onBackPressed();
         }
-    }
-
-    public void openGovernmentSchemesPage(View view) {
-        Intent intent = new Intent(MainPageActivity.this, GovernmentSchemesActivity.class);
-        startActivity(intent);
     }
 }

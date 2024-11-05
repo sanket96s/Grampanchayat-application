@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFDAB9"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Tabs for Upcoming and Past Events -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/btnUpcomingEvents"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFA726"
+                android:text="चालू प्रकल्प"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnPastEvents"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#81D4FA"
+                android:text="मागील प्रकल्प"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- List of Events -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="#FFE0B2">
+
+            <!-- Event Item 1 -->
+            <LinearLayout
+                android:id="@+id/eventItem1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:background="#FFFFFF"
+                android:layout_marginBottom="8dp"
+                android:elevation="2dp"
+                android:onClick="onEventItemClick"> <!-- Set onClick method for item -->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="पाणलोट व्यवस्थापन प्रकल्प"
+                        android:textSize="18sp"
+                        android:textColor="#37474F"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="या प्रकल्पाचा उद्देश पाण्याचे संवर्धन करणे आहे."
+                        android:textSize="14sp"
+                        android:textColor="#607D8B"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Event Item 2 -->
+            <LinearLayout
+                android:id="@+id/eventItem2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:onClick="onEventItemClick"> <!-- Set onClick method for item -->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="रस्ता बांधणी प्रकल्प"
+                        android:textSize="18sp"
+                        android:textColor="#37474F"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="या प्रकल्पाचा उद्देश नवीन रस्ते बांधून वाहतुकीची सुविधा सुधारणे आहे."
+                        android:textSize="14sp"
+                        android:textColor="#607D8B"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Event Details Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="#FFE0B2"
+            android:layout_marginTop="16dp"
+            tools:ignore="ExtraText">
+
+           <!-- <TextView
+                android:id="@+id/eventTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="कार्यक्रमाचे शीर्षक"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#37474F" />
+
+
+            <TextView
+                android:id="@+id/eventDescriptionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="कार्यक्रमाचे वर्णन येथे येईल..."
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:textColor="#607D8B" /> -->
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
