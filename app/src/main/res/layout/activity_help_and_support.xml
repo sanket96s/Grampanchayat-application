@@ -10,7 +10,7 @@
         android:id="@+id/help_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Help and Support"
+        android:text="सहाय्य आणि समर्थन"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_gravity="center"
@@ -20,7 +20,7 @@
         android:id="@+id/help_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="If you have any questions or need assistance, please check the FAQs below or contact us."
+        android:text="तुमच्याकडे काही प्रश्न असतील किंवा मदतीची आवश्यकता असेल, तर कृपया खालील FAQs तपासा किंवा आमच्याशी संपर्क साधा."
         android:textSize="16sp"
         android:layout_marginBottom="16dp"/>
 
@@ -28,7 +28,7 @@
         android:id="@+id/faq_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Frequently Asked Questions"
+        android:text="वारंवार विचारले जाणारे प्रश्न"
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginBottom="8dp"/>
@@ -36,16 +36,8 @@
     <ListView
         android:id="@+id/faq_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:dividerHeight="1dp"/>
-
-    <Button
-        android:id="@+id/contact_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Contact Support"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#FF6200EE"
-        android:textColor="#FFFFFF"/>
 
 </LinearLayout>

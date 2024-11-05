@@ -1,12 +1,12 @@
 package com.example.grampanchayatkouthaliapk;
 
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ProfileActivity extends AppCompatActivity {
-    @Override
+public class ProjectDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile); // Opens activity_profile.xml
+        setContentView(R.layout.activity_project_detail);
     }
 }

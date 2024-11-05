@@ -3,10 +3,10 @@ package com.example.grampanchayatkouthaliapk;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ProfileActivity extends AppCompatActivity {
+public class Scheme6InformationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile); // Opens activity_profile.xml
+        setContentView(R.layout.aavas_yojna);
     }
 }

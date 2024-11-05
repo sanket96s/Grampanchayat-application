@@ -77,7 +77,6 @@ public class MainPageActivity extends AppCompatActivity {
                     return false;
                 }
 
-
                 drawerLayout.closeDrawer(GravityCompat.START);
                 return true;
             }
@@ -110,6 +109,7 @@ public class MainPageActivity extends AppCompatActivity {
             }
         });
 
+        // Adding Apply for Certificate functionality
         TextView textcertificate = findViewById(R.id.text_apply_certificate);
         ImageView imgcertificate = findViewById(R.id.image_certificate);
         textcertificate.setOnClickListener(new View.OnClickListener() {
@@ -128,9 +128,28 @@ public class MainPageActivity extends AppCompatActivity {
             }
         });
 
+        // Adding Projects functionality
+        TextView textProjects = findViewById(R.id.text_projects);
+        ImageView imgProjects = findViewById(R.id.image_projects);
+        textProjects.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, ProjectsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imgProjects.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, ProjectsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Adding Complaint functionality
         ImageView imgComplaint = findViewById(R.id.image_complaint); // Your complaint image ID
         TextView txtComplaint = findViewById(R.id.text_problem_report);   // Your complaint text ID
-
 
         imgComplaint.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -140,7 +159,6 @@ public class MainPageActivity extends AppCompatActivity {
             }
         });
 
-
         txtComplaint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -149,13 +167,22 @@ public class MainPageActivity extends AppCompatActivity {
             }
         });
 
-
-
+        // Adding Government Schemes functionality
+        TextView textGovernmentSchemes = findViewById(R.id.text_government_schemes);
         ImageView imageGovernmentSchemes = findViewById(R.id.image_government_schemes);
+        textGovernmentSchemes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, GovernmentSchemesActivity.class);
+                startActivity(intent);
+            }
+        });
+
         imageGovernmentSchemes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openGovernmentSchemesPage(v);
+                Intent intent = new Intent(MainPageActivity.this, GovernmentSchemesActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -215,9 +242,9 @@ public class MainPageActivity extends AppCompatActivity {
             super.onBackPressed();
         }
     }
+
     public void openGovernmentSchemesPage(View view) {
         Intent intent = new Intent(MainPageActivity.this, GovernmentSchemesActivity.class);
         startActivity(intent);
     }
 }
-

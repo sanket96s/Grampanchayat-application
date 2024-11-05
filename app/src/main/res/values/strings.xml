@@ -1,4 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Marathi Strings -->
     <string name="please_enter_valid_house_number" tools:ignore="DuplicateDefinition">कृपया वैध घर क्रमांक प्रविष्ट करा</string>
     <string name="total_bill_not_found">एकूण बिल सापडले नाही</string>
     <string name="record_not_found">तपशील सापडले नाही</string>
@@ -6,7 +7,14 @@
     <string name="house_number">घर क्रमांक: %1$d</string>
     <string name="total_bill">एकूण बिल: %1$d</string>
     <string name="name">नाव: %1$s</string>
+    
+    <!-- Language Options -->
+    <string-array name="language_options">
+        <item>English</item>
+        <item>Marathi</item>
+    </string-array>
 
+    <!-- English Strings -->
     <string name="app_name">Grampanchayat Kouthali apk</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
@@ -59,5 +67,5 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
-    <string name="title_activity_apply_for_certificate">activity_apply_for_certificate</string>
+    <string name="title_activity_apply_for_certificate">Apply For Certificate</string>
 </resources>
