@@ -1,187 +1,168 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFF3E0"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
-    <ScrollView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="#F0F0F0">
 
-        <LinearLayout
+        <!-- Project Image -->
+        <ImageView
+            android:id="@+id/sample_photo"
             android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:padding="8dp"
+            android:contentDescription="प्रकल्पाचे छायाचित्र" />
+
+        <!-- Project Title -->
+        <TextView
+            android:id="@+id/project_title"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingTop="12dp"
+            android:text="प्रकल्पाचे शीर्षक" />
 
-            <!-- Project Title -->
-            <TextView
-                android:id="@+id/projectTitleTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Water Conservation Project / जल संवर्धन प्रकल्प"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                android:textColor="#333333"
-                android:background="#FFFFFF"
-                android:padding="12dp"
-                android:layout_marginBottom="8dp" />
+        <!-- Project Description -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="12dp"
+            android:text="प्रकल्पाचे वर्णन" />
 
-            <!-- Project Description -->
-            <TextView
-                android:id="@+id/projectDescriptionTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="This project aims to conserve water resources in the region. / हा प्रकल्प या क्षेत्रातील जल संसाधने जतन करण्याच्या उद्देशाने आहे."
-                android:textSize="16sp"
-                android:textColor="#666666"
-                android:background="#FFFFFF"
-                android:padding="12dp"
-                android:layout_marginBottom="8dp" />
+        <TextView
+            android:id="@+id/project_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingTop="4dp" />
 
-            <!-- Objectives -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Objectives: / उद्दिष्टे:"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:background="#E0F7FA"
-                android:padding="8dp"
-                android:layout_marginBottom="4dp" />
-            <TextView
-                android:id="@+id/objectivesTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="To reduce water wastage and promote efficient water usage. / जल नासाडी कमी करणे आणि प्रभावी जल वापराला प्रोत्साहन देणे."
-                android:textSize="16sp"
-                android:textColor="#666666"
-                android:background="#FFFFFF"
-                android:padding="12dp"
-                android:layout_marginBottom="8dp" />
+        <!-- Project Objectives -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="12dp"
+            android:text="प्रकल्पाचे उद्दिष्टे" />
 
-            <!-- Start Date and Expected/Actual Completion Date -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Start Date: January 1, 2023 / प्रारंभ दिनांक: १ जानेवारी २०२३"
-                android:textSize="16sp"
-                android:textColor="#666666"
-                android:background="#FFFFFF"
-                android:padding="12dp"
-                android:layout_marginBottom="4dp" />
-            <TextView
-                android:id="@+id/completionDateTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Expected Completion Date: December 31, 2023 / अपेक्षित पूर्णता दिनांक: ३१ डिसेंबर २०२३"
-                android:textSize="16sp"
-                android:textColor="#666666"
-                android:background="#FFFFFF"
-                android:padding="12dp"
-                android:layout_marginBottom="8dp" />
+        <TextView
+            android:id="@+id/project_objectives"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingTop="4dp" />
 
-            <!-- Project Status -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Project Status: In Progress / प्रकल्प स्थिती: प्रगतीपथावर"
-                android:textSize="16sp"
-                android:textColor="#666666"
-                android:background="#FFFFFF"
-                android:padding="12dp"
-                android:layout_marginBottom="8dp" />
+        <!-- Start Date -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="12dp"
+            android:text="प्रकल्पाची सुरुवात तारीख" />
 
-            <!-- Budget and Funding -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Budget and Funding: / बजेट आणि निधी:"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:background="#E0F7FA"
-                android:padding="8dp"
-                android:layout_marginBottom="4dp" />
-            <TextView
-                android:id="@+id/budgetTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Total budget allocated: $10,000 / एकूण बजेट: $१०,०००"
-                android:textSize="16sp"
-                android:textColor="#666666"
-                android:background="#FFFFFF"
-                android:padding="12dp"
-                android:layout_marginBottom="8dp" />
+        <TextView
+            android:id="@+id/project_start_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingTop="4dp" />
 
-            <!-- Key Stakeholders -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Key Stakeholders: / महत्त्वाचे भागधारक:"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:background="#E0F7FA"
-                android:padding="8dp"
-                android:layout_marginBottom="4dp" />
-            <TextView
-                android:id="@+id/stakeholdersTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Local government and community leaders. / स्थानिक शासन आणि सामुदायिक नेते."
-                android:textSize="16sp"
-                android:textColor="#666666"
-                android:background="#FFFFFF"
-                android:padding="12dp"
-                android:layout_marginBottom="8dp" />
+        <!-- Completion Date -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="12dp"
+            android:text="पूर्ण होण्याची तारीख" />
 
-            <!-- Location -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Location: / स्थान:"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:background="#E0F7FA"
-                android:padding="8dp"
-                android:layout_marginBottom="4dp" />
-            <TextView
-                android:id="@+id/locationTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Project Location: Kouthali / प्रकल्प स्थान: कोंठाळी"
-                android:textSize="16sp"
-                android:textColor="#666666"
-                android:background="#FFFFFF"
-                android:padding="12dp"
-                android:layout_marginBottom="8dp" />
+        <TextView
+            android:id="@+id/project_completion_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingTop="4dp" />
 
-            <!-- Progress Updates -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Progress Updates: / प्रगती अद्यतने:"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:background="#E0F7FA"
-                android:padding="8dp"
-                android:layout_marginBottom="4dp" />
-            <TextView
-                android:id="@+id/progressUpdatesTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Currently, the project is 50% complete. / सध्या, प्रकल्प ५०% पूर्ण झाला आहे."
-                android:textSize="16sp"
-                android:textColor="#666666"
-                android:background="#FFFFFF"
-                android:padding="12dp"
-                android:layout_marginBottom="8dp" />
+        <!-- Project Status -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="12dp"
+            android:text="प्रकल्पाची स्थिती" />
 
-        </LinearLayout>
-    </ScrollView>
+        <TextView
+            android:id="@+id/project_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingTop="4dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Project Budget -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="12dp"
+            android:text="प्रकल्पाचा बजेट" />
+
+        <TextView
+            android:id="@+id/project_budget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingTop="4dp" />
+
+        <!-- Project Stakeholders -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="12dp"
+            android:text="प्रकल्पातील संबंधित व्यक्ती" />
+
+        <TextView
+            android:id="@+id/project_stakeholders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingTop="4dp" />
+
+        <!-- Project Location -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="12dp"
+            android:text="प्रकल्पाचे ठिकाण" />
+
+        <TextView
+            android:id="@+id/project_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingTop="4dp" />
+
+        <!-- Feedback Button -->
+        <Button
+            android:id="@+id/feedback_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+        android:text="प्रतिसाद द्या"
+        android:layout_marginTop="16dp" />
+    </LinearLayout>
+</ScrollView>

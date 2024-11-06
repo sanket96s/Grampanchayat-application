@@ -16,6 +16,8 @@ public class GramsabhaActivity extends AppCompatActivity {
         // Initialize clickable event items
         LinearLayout eventItem1 = findViewById(R.id.eventItem1);
         LinearLayout eventItem2 = findViewById(R.id.eventItem2);
+        LinearLayout eventItem3 = findViewById(R.id.eventItem3);
+        LinearLayout eventItem4 = findViewById(R.id.eventItem4);
 
         // Set onClickListeners for the event items
         eventItem1.setOnClickListener(new View.OnClickListener() {
@@ -31,6 +33,20 @@ public class GramsabhaActivity extends AppCompatActivity {
                 openEventDetail("रस्ता बांधणी प्रकल्प", "या प्रकल्पाचा उद्देश नवीन रस्ते बांधून वाहतुकीची सुविधा सुधारणे आहे.");
             }
         });
+
+        eventItem3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openEventDetail("स्वच्छता मोहीम", "या प्रकल्पाचा उद्देश गावात स्वच्छता आणि स्वच्छतेचे महत्त्व वाढविणे आहे.");
+            }
+        });
+
+        eventItem4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openEventDetail("आरोग्य तपासणी शिबिर", "या प्रकल्पाचा उद्देश गावातील नागरिकांचे आरोग्य तपासणी सेवा उपलब्ध करणे आहे.");
+            }
+        });
     }
 
     // Method to open EventDetailActivity with event details
@@ -41,4 +57,3 @@ public class GramsabhaActivity extends AppCompatActivity {
         startActivity(intent);
     }
 }
-
