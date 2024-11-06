@@ -70,7 +70,42 @@
             android:layout_marginBottom="16dp"
             android:inputType="phone"/>
 
-        <!-- Complaint Input Field -->
+        <!-- Complaint Category Radio Buttons -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="समस्या श्रेणी :"
+            android:textSize="16sp"
+            android:textColor="#000"/>
+        <RadioGroup
+            android:id="@+id/radioGroupCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+            <RadioButton
+                android:id="@+id/radioWater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="पाणी"/>
+            <RadioButton
+                android:id="@+id/radioRoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="रस्ता"/>
+            <RadioButton
+                android:id="@+id/radioElectricity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="वीज"/>
+            <RadioButton
+                android:id="@+id/radioOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="इतर"/>
+        </RadioGroup>
+
+        <!-- Complaint Description Field -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -81,30 +116,22 @@
             android:id="@+id/etComplaint"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-
             android:hint="आपली समस्या भरा"
             android:padding="12dp"
             android:layout_marginBottom="24dp"
             android:inputType="textMultiLine"
             android:minLines="5"/>
 
-        <!-- Submit Button at the bottom -->
-        <LinearLayout
-            android:layout_width="match_parent"
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/btnUpload"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="bottom|center_horizontal"
-            android:paddingTop="20dp">
-
-            <Button
-                android:id="@+id/btnUpload"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="अपलोड करा"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:backgroundTint="#FF8800"
-                android:padding="10dp"/>
-        </LinearLayout>
-
+            android:text="अपलोड करा"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:backgroundTint="#FF8800"
+            android:padding="10dp"
+            android:layout_gravity="center"/>
     </LinearLayout>
 </ScrollView>
