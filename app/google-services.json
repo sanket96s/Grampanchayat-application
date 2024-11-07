@@ -31,14 +31,6 @@
           }
         },
         {
-          "client_id": "181236633370-3bjc60qemhfjkidvkacdq8lm2lf66olg.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.grampanchayatkouthaliapk",
-            "certificate_hash": "9973b5453ca944eb1f589e7b8b4b54287175298f"
-          }
-        },
-        {
           "client_id": "181236633370-59v0fv81pqivja6etthgeelusn7b3i6q.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -47,11 +39,11 @@
           }
         },
         {
-          "client_id": "181236633370-ajm3j5nqkfp54b5rv2koll3igifla8gq.apps.googleusercontent.com",
+          "client_id": "181236633370-9d5of4pqka4vf48g6jnb48upqm0us2k0.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.grampanchayatkouthaliapk",
-            "certificate_hash": "9a5a63e37cf51362abf2dc31603e0c8f5f85b6db"
+            "certificate_hash": "0ad39e51b04e03cdd7aaa2f2eeda3241a7fd0cbb"
           }
         },
         {
