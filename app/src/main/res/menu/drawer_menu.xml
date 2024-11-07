@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_village_info_overview"
+        android:title="Village Information Overview"/>
+    <item
+        android:id="@+id/nav_public_facilities"
+        android:title="Public Facilities"/>
+    <item
+        android:id="@+id/nav_community_cultural_info"
+        android:title="Community and Cultural Information"/>
+    <item
+        android:id="@+id/nav_economic_activities"
+        android:title="Economic Activities"/>
+    <item
+        android:id="@+id/nav_infrastructure"
+        android:title="Infrastructure"/>
+</menu>

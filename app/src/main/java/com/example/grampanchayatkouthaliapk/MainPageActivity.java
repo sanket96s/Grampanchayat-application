@@ -89,6 +89,24 @@ public class MainPageActivity extends AppCompatActivity {
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
         updateUI(account);
 
+        TextView textvillageinfo = findViewById(R.id.text_village_information);
+        ImageView imgvillageinfo = findViewById(R.id.image_village_information);
+        textvillageinfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, VillageActivity.class);
+                startActivity(intent);
+            }
+        });
+        imgvillageinfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, VillageActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         TextView textPayTax = findViewById(R.id.text_pay_tax);
         ImageView imgPayTax = findViewById(R.id.image_pay_tax);
         textPayTax.setOnClickListener(new View.OnClickListener() {
@@ -154,12 +172,13 @@ public class MainPageActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    public void onBackPressed() {
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            drawerLayout.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
+        @Override
+        public void onBackPressed () {
+            if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                drawerLayout.closeDrawer(GravityCompat.START);
+            } else {
+                super.onBackPressed();
+            }
         }
-    }
 }
+

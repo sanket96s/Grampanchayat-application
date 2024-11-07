@@ -31,6 +31,32 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainPageActivity" />
         <activity android:name=".TaxPayActivity"></activity>
+        <activity
+            android:name=".VillageActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        </activity>
+
+        <activity
+            android:name=".PublicFacilitiesActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        </activity>
+
+        <activity
+            android:name=".CommunityCulturalInfoActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        </activity>
+
+        <activity
+            android:name=".EconomicActivitiesActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        </activity>
+
+        <activity
+            android:name=".InfrastructureActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        </activity>
+
+
     </application>
 
 </manifest>
