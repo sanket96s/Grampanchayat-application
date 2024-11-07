@@ -53,5 +53,25 @@
         <activity android:name=".ApplyForCertificateActivity" />
         <activity android:name=".ComplaintActivity" />
         <activity android:name=".RegisterforCertificateActivity"/>
+        <activity
+            android:name=".VillageActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        </activity>
+        <activity
+            android:name=".PublicFacilitiesActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        </activity>
+        <activity
+            android:name=".CommunityCulturalInfoActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        </activity>
+        <activity
+            android:name=".EconomicActivitiesActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        </activity>
+        <activity
+            android:name=".InfrastructureActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        </activity>
     </application>
 </manifest>
