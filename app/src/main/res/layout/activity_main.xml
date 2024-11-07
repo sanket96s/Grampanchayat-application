@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
@@ -29,13 +30,14 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="योजना" />
+                android:text="योजना"
+                android:textSize="16sp"
+                android:textColor="#000000"/>
 
             <ImageView
                 android:id="@+id/image_complaint"
                 android:layout_width="98dp"
                 android:layout_height="98dp"
-                android:layout_gravity="top|left"
                 android:layout_marginTop="105dp"
                 android:layout_marginLeft="50dp"
                 android:src="@drawable/complaintfileicon"
@@ -45,18 +47,16 @@
                 android:id="@+id/text_problem_report"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="top|left"
                 android:layout_marginTop="208dp"
                 android:layout_marginLeft="60dp"
                 android:text="समस्या नोंदवा"
                 android:textSize="16sp"
-                android:textColor="#000000" />
+                android:textColor="#000000"/>
 
             <ImageView
                 android:id="@+id/image_certificate"
                 android:layout_width="98dp"
                 android:layout_height="98dp"
-                android:layout_gravity="top|left"
                 android:layout_marginTop="105dp"
                 android:layout_marginLeft="245dp"
                 android:src="@drawable/certificatesapplicationicon"
@@ -66,39 +66,36 @@
                 android:id="@+id/text_apply_certificate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="top|left"
                 android:layout_marginTop="208dp"
                 android:layout_marginLeft="260dp"
                 android:text="प्रमाणपत्र अर्ज"
                 android:textSize="16sp"
-                android:textColor="#000000" />
+                android:textColor="#000000"/>
 
             <ImageView
                 android:id="@+id/image_government_schemes"
                 android:layout_width="98dp"
                 android:layout_height="98dp"
-                android:layout_gravity="top|left"
                 android:layout_marginTop="281dp"
                 android:layout_marginLeft="50dp"
                 android:src="@drawable/governmentschemesicon"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:onClick="openGovernmentSchemesPage"/>
 
             <TextView
                 android:id="@+id/text_government_schemes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="top|left"
                 android:layout_marginTop="387dp"
                 android:layout_marginLeft="80dp"
                 android:text="योजना"
                 android:textSize="16sp"
-                android:textColor="#000000" />
+                android:textColor="#000000"/>
 
             <ImageView
                 android:id="@+id/image_events"
                 android:layout_width="98dp"
                 android:layout_height="98dp"
-                android:layout_gravity="top|left"
                 android:layout_marginTop="281dp"
                 android:layout_marginLeft="245dp"
                 android:src="@drawable/eventsicon"
@@ -108,39 +105,36 @@
                 android:id="@+id/text_events"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="top|left"
                 android:layout_marginLeft="270dp"
                 android:layout_marginTop="387dp"
                 android:text="ग्रामसभा"
                 android:textColor="#000000"
-                android:textSize="16sp" />
+                android:textSize="16sp"/>
 
             <ImageView
                 android:id="@+id/image_projects"
                 android:layout_width="98dp"
                 android:layout_height="98dp"
-                android:layout_gravity="top|left"
                 android:layout_marginTop="454dp"
                 android:layout_marginLeft="50dp"
                 android:src="@drawable/projectsicon"
+                android:onClick="openProjectsActivity"
                 android:gravity="center"/>
 
             <TextView
                 android:id="@+id/text_projects"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="top|left"
                 android:layout_marginLeft="82dp"
                 android:layout_marginTop="560dp"
                 android:text="प्रकल्प"
                 android:textColor="#000000"
-                android:textSize="16sp" />
+                android:textSize="16sp"/>
 
             <ImageView
                 android:id="@+id/image_village_information"
                 android:layout_width="98dp"
                 android:layout_height="98dp"
-                android:layout_gravity="top|left"
                 android:layout_marginTop="454dp"
                 android:layout_marginLeft="245dp"
                 android:src="@drawable/villageinformationicon"
@@ -150,18 +144,16 @@
                 android:id="@+id/text_village_information"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="top|left"
                 android:layout_marginLeft="253dp"
                 android:layout_marginTop="560dp"
                 android:text="गावाची माहिती"
                 android:textColor="#000000"
-                android:textSize="16sp" />
+                android:textSize="16sp"/>
 
             <ImageView
                 android:id="@+id/image_pay_tax"
                 android:layout_width="98dp"
                 android:layout_height="98dp"
-                android:layout_gravity="top|left"
                 android:layout_marginTop="620dp"
                 android:layout_marginLeft="50dp"
                 android:src="@drawable/fivehundred"
@@ -171,12 +163,11 @@
                 android:id="@+id/text_pay_tax"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="top|left"
                 android:layout_marginLeft="80dp"
                 android:layout_marginTop="730dp"
                 android:text="कर भरा"
                 android:textColor="#000000"
-                android:textSize="16sp" />
+                android:textSize="16sp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -195,10 +186,9 @@
 
                 <TextView
                     android:id="@+id/text_gram_panchayat"
-                    android:layout_width="140dp"
-                    android:layout_height="25dp"
-                    android:layout_marginLeft="130dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
                     android:text="ग्रामपंचायत कौठाली"
                     android:textColor="#000000"
                     android:textSize="18sp"
@@ -208,28 +198,19 @@
                     android:id="@+id/icon_notification"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="325dp"
-                    android:layout_marginTop="17dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_centerVertical="true"
                     android:src="@drawable/notificationicon" />
 
-                <Button
-                    android:id="@+id/sign_in_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sign In"
-                    android:layout_below="@id/icon_notification"
-                    android:layout_marginTop="20dp"
-                    android:layout_centerHorizontal="true" />
-
             </RelativeLayout>
-
         </FrameLayout>
     </ScrollView>
 
     <!-- Navigation drawer -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_view"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
@@ -237,6 +218,5 @@
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/nav_menu"
         app:itemTextAppearance="@style/NavigationViewTextStyle" />
-
 
 </androidx.drawerlayout.widget.DrawerLayout>

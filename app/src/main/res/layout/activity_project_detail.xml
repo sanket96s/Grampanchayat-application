@@ -1,0 +1,168 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="#F0F0F0">
+
+        <!-- Project Image -->
+        <ImageView
+            android:id="@+id/sample_photo"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:padding="8dp"
+            android:contentDescription="प्रकल्पाचे छायाचित्र" />
+
+        <!-- Project Title -->
+        <TextView
+            android:id="@+id/project_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingTop="12dp"
+            android:text="प्रकल्पाचे शीर्षक" />
+
+        <!-- Project Description -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="12dp"
+            android:text="प्रकल्पाचे वर्णन" />
+
+        <TextView
+            android:id="@+id/project_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingTop="4dp" />
+
+        <!-- Project Objectives -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="12dp"
+            android:text="प्रकल्पाचे उद्दिष्टे" />
+
+        <TextView
+            android:id="@+id/project_objectives"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingTop="4dp" />
+
+        <!-- Start Date -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="12dp"
+            android:text="प्रकल्पाची सुरुवात तारीख" />
+
+        <TextView
+            android:id="@+id/project_start_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingTop="4dp" />
+
+        <!-- Completion Date -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="12dp"
+            android:text="पूर्ण होण्याची तारीख" />
+
+        <TextView
+            android:id="@+id/project_completion_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingTop="4dp" />
+
+        <!-- Project Status -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="12dp"
+            android:text="प्रकल्पाची स्थिती" />
+
+        <TextView
+            android:id="@+id/project_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingTop="4dp" />
+
+        <!-- Project Budget -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="12dp"
+            android:text="प्रकल्पाचा बजेट" />
+
+        <TextView
+            android:id="@+id/project_budget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingTop="4dp" />
+
+        <!-- Project Stakeholders -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="12dp"
+            android:text="प्रकल्पातील संबंधित व्यक्ती" />
+
+        <TextView
+            android:id="@+id/project_stakeholders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingTop="4dp" />
+
+        <!-- Project Location -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="12dp"
+            android:text="प्रकल्पाचे ठिकाण" />
+
+        <TextView
+            android:id="@+id/project_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingTop="4dp" />
+
+        <!-- Feedback Button -->
+        <Button
+            android:id="@+id/feedback_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+        android:text="प्रतिसाद द्या"
+        android:layout_marginTop="16dp" />
+    </LinearLayout>
+</ScrollView>

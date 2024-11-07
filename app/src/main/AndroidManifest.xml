@@ -3,14 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GrampanchayatKouthaliApk"
@@ -21,42 +24,54 @@
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.GrampanchayatKouthaliApk">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainPageActivity" />
-        <activity android:name=".TaxPayActivity"></activity>
+        <activity android:name=".TaxPayActivity" />
+        <activity android:name=".GovernmentSchemesActivity" />
+        <activity android:name=".ProjectsActivity" />
+        <activity android:name=".ProjectDetailActivity" />
+        <activity android:name=".GramsabhaActivity" />
+        <activity android:name=".EventGramDetailActivity" />
+        <activity android:name=".Scheme1InformationActivity"/>
+        <activity android:name=".Scheme2InformationActivity"/>
+        <activity android:name=".Scheme3InformationActivity"/>
+        <activity android:name=".Scheme4InformationActivity"/>
+        <activity android:name=".Scheme5InformationActivity"/>
+        <activity android:name=".Scheme6InformationActivity"/>
+        <activity android:name=".ApplicationFormActivity"/>
+        <activity android:name=".ApplicationTrackingActivity"/>
+        <activity android:name=".RegisterActivity"/>
+        <activity android:name=".HelpAndSupportActivity"/>
+        <activity android:name=".ProfileActivity"/>
+        <activity android:name=".SettingsActivity"/>
+        <activity android:name=".FakePaymentActivity"/>
+        <activity android:name=".ApplyForCertificateActivity" />
+        <activity android:name=".ComplaintActivity" />
+        <activity android:name=".RegisterforCertificateActivity"/>
         <activity
             android:name=".VillageActivity"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
         </activity>
-
         <activity
             android:name=".PublicFacilitiesActivity"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
         </activity>
-
         <activity
             android:name=".CommunityCulturalInfoActivity"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
         </activity>
-
         <activity
             android:name=".EconomicActivitiesActivity"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
         </activity>
-
         <activity
             android:name=".InfrastructureActivity"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
         </activity>
-
-
     </application>
-
 </manifest>
