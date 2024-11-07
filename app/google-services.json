@@ -3,7 +3,7 @@
     "project_number": "181236633370",
     "firebase_url": "https://grampanchayat-application-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "grampanchayat-application",
-    "storage_bucket": "grampanchayat-application.appspot.com"
+    "storage_bucket": "grampanchayat-application.firebasestorage.app"
   },
   "client": [
     {
@@ -28,6 +28,14 @@
           "android_info": {
             "package_name": "com.example.grampanchayatkouthaliapk",
             "certificate_hash": "8021611139b87b92b2e9983d20cecfcb3990f180"
+          }
+        },
+        {
+          "client_id": "181236633370-3bjc60qemhfjkidvkacdq8lm2lf66olg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.grampanchayatkouthaliapk",
+            "certificate_hash": "9973b5453ca944eb1f589e7b8b4b54287175298f"
           }
         },
         {
