@@ -1,7 +1,6 @@
 package com.example.grampanchayatkouthaliapk;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -41,12 +40,11 @@ public class ProjectDetailActivity extends AppCompatActivity {
             projectLocation.setText(extras.getString("PROJECT_LOCATION"));
         }
 
-        // Set up the feedback button to open Google Form
+        // Set up the feedback button to open ProjectFormActivity
         Button feedbackButton = findViewById(R.id.feedback_button);
         feedbackButton.setOnClickListener(v -> {
-            // Replace with your Google Form URL
-            String googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSc_MKvGfF2Jm8f5AI5LwmmkZ8rM0RxpC8ITrbIBy1bWMd08Cg/viewform?usp=sf_link";
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(googleFormUrl));
+            // Open ProjectFormActivity instead of the Google Form
+            Intent intent = new Intent(ProjectDetailActivity.this, ProjectFormActivity.class);
             startActivity(intent);
         });
     }

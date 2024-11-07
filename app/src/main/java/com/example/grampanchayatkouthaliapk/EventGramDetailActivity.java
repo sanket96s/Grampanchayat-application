@@ -1,7 +1,6 @@
 package com.example.grampanchayatkouthaliapk;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -33,16 +32,11 @@ public class EventGramDetailActivity extends AppCompatActivity {
         // Find the btnRegister button in your layout
         Button btnRegister = findViewById(R.id.btnRegister);
 
-        // Set an OnClickListener on the button
+        // Set an OnClickListener on the button to open EventFormActivity
         btnRegister.setOnClickListener(v -> {
-            // Google Form URL (replace with your actual Google Form URL)
-            String googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLScTQc6Eas8wvY4Y4Ow1BgF5fjN_Y51PbqfGeGu9LQ-ieo5pew/viewform?usp=sf_link"; // Replace with your actual Google Form URL
-
-            // Create an Intent to open the URL
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(googleFormURL));
-
-            // Start the browser with the form
-            startActivity(intent);
+            // Create an intent to open EventFormActivity
+            Intent intent = new Intent(EventGramDetailActivity.this, EventFormActivity.class);
+            startActivity(intent); // Start the EventFormActivity
         });
     }
 }

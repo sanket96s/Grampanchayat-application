@@ -52,6 +52,8 @@
         <activity android:name=".FakePaymentActivity"/>
         <activity android:name=".ApplyForCertificateActivity" />
         <activity android:name=".ComplaintActivity" />
+        <activity android:name=".EventFormActivity" />
+        <activity android:name=".ProjectFormActivity" />
         <activity android:name=".RegisterforCertificateActivity"/>
     </application>
 </manifest>

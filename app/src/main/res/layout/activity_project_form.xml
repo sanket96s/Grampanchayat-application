@@ -1,0 +1,93 @@
+<!-- res/layout/activity_feedback.xml -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4C7A3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Title for the page -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="प्रतिक्रिया नोंदवा"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_gravity="center"
+            android:paddingBottom="16dp"/>
+
+        <!-- Name Input Field -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="तुमचे नाव :"
+            android:textSize="16sp"
+            android:textColor="#000"/>
+        <EditText
+            android:id="@+id/feedback_etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="तुमचे नाव भरा"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:inputType="text"/>
+
+        <!-- Email Input Field -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ईमेल :"
+            android:textSize="16sp"
+            android:textColor="#000"/>
+        <EditText
+            android:id="@+id/feedback_etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="तुमचा ईमेल भरा"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:inputType="textEmailAddress"/>
+
+        <!-- Feedback Input Field -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="तुमची प्रतिक्रिया :"
+            android:textSize="16sp"
+            android:textColor="#000"/>
+        <EditText
+            android:id="@+id/feedback_etMessage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:hint="आपली प्रतिक्रिया येथे भरा"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp"
+            android:inputType="textMultiLine"
+            android:minLines="5"/>
+
+        <!-- Submit Button at the bottom -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom|center_horizontal"
+            android:paddingTop="20dp">
+
+            <Button
+                android:id="@+id/feedback_btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="सबमिट करा"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:backgroundTint="#FF8800"
+                android:padding="10dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
