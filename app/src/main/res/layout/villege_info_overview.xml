@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Main content view -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:background="#FFDAB9"> <!-- Background set to peach -->
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1"
+            android:padding="16dp"
+            android:showDividers="middle"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dp"> <!-- Divider thickness -->
+
+            <!-- Village Information Title -->
+            <TableRow>
+                <TextView
+                    android:id="@+id/village_info_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Village Information"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    android:layout_span="2"
+                    android:gravity="center"
+                    android:paddingBottom="16dp"
+                    android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
+            </TableRow>
+
+            <!-- Coordinates and Village Information -->
+            <TableRow>
+                <TextView
+                    android:id="@+id/coordinates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Coordinates: 34.0522° N, 118.2437° W"
+                    android:textSize="14sp"
+                    android:textColor="#000000"
+                    android:paddingTop="8dp"
+                    android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/population"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Population: 15,000"
+                    android:textSize="14sp"
+                    android:textColor="#000000"
+                    android:paddingTop="4dp"
+                    android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Area: 25 Sq Km"
+                    android:textSize="14sp"
+                    android:textColor="#000000"
+                    android:paddingTop="4dp"
+                    android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/historical_background"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Historical Background: Green Valley was established in the early 1800s and has a rich history of agriculture and community-driven initiatives."
+                    android:textSize="14sp"
+                    android:textColor="#000000"
+                    android:lineSpacingExtra="4dp"
+                    android:paddingTop="8dp"/>
+            </TableRow>
+
+            <!-- Administration Details Section -->
+            <TableRow>
+                <TextView
+                    android:id="@+id/administration_details_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Administration Details"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="8dp"
+                    android:layout_span="2"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4dp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/key_official"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Key Official: Sarpanch: Mr. Rajesh Kumar"
+                    android:textSize="14sp"
+                    android:textColor="#000000"
+                    android:paddingTop="4dp"
+                    android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/office_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Office Address: 123 Village Lane, Gram Panchayat"
+                    android:textSize="14sp"
+                    android:textColor="#000000"
+                    android:paddingTop="4dp"
+                    android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/working_hours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Working Hours: Mon-Fri, 9 AM - 5 PM"
+                    android:textSize="14sp"
+                    android:textColor="#000000"
+                    android:paddingTop="4dp"
+                    android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/office_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Office Details: 123 Village Street, Greenfield, Working Hours: Mon-Fri, 9 AM - 5 PM"
+                    android:textSize="14sp"
+                    android:textColor="#000000"
+                    android:paddingTop="4dp"
+                    android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#FFFFFF"
+        app:menu="@menu/drawer_menu"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>
