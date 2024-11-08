@@ -14,22 +14,27 @@
         <item>Marathi</item>
     </string-array>
 
-    <!-- English Strings -->
-    <string name="app_name">Grampanchayat Kouthali apk</string>
-    <string name="action_settings">Settings</string>
+    <string name="no_user_logged_in">कोणताही वापरकर्ता लॉग इन केलेला नाही</string>
+
+    <!-- Marathi Strings -->
+    <string name="app_name">ग्रामपंचायत कोठली एपीके</string>
+    <string name="action_settings">सेटिंग्ज</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="first_fragment_label">पहिला विभाग</string>
+    <string name="second_fragment_label">दुसरा विभाग</string>
+    <string name="next">पुढे</string>
+    <string name="previous">मागे</string>
     <!-- Replace with your own values -->
     <string name="default_web_client_id">181236633370-7gf29i4la3lnrjb6kf3rjgpbu2k9216s.apps.googleusercontent.com</string>
-    <!--    <string name="app_name">MyApp</string>-->
-    <string name="nav_header_desc">Account</string>
-    <string name="nav_header_title">User Name</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="enter_details">Enter Details</string>
+    <!--    <string name="app_name">माझा अ‍ॅप</string>-->
+    <string name="nav_header_desc">खाते</string>
+    <string name="nav_header_title">वापरकर्त्याचं नाव</string>
+    <string name="navigation_drawer_open">नेव्हिगेशन ड्रॉअर उघडा</string>
+    <string name="navigation_drawer_close">नेव्हिगेशन ड्रॉअर बंद करा</string>
+    <string name="enter_details">तपशील प्रविष्ट करा</string>
+    <string name="email_prefix">ईमेल: </string>
+    <string name="username_format">%1$s</string>
+
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
