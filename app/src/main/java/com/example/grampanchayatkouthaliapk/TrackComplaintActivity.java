@@ -21,7 +21,7 @@ public class TrackComplaintActivity extends AppCompatActivity {
 
     private EditText etComplaintId;
     private Button btnTrack;
-    private TextView tvComplaintStatus;
+    private TextView tvComplaintDetails;
 
     private DatabaseReference databaseReference;
 
@@ -33,7 +33,7 @@ public class TrackComplaintActivity extends AppCompatActivity {
         // Initialize UI components
         etComplaintId = findViewById(R.id.etComplaintId);
         btnTrack = findViewById(R.id.btnTrack);
-        tvComplaintStatus = findViewById(R.id.tvComplaintStatus);
+        tvComplaintDetails = findViewById(R.id.tvComplaintDetails);
 
         // Initialize Firebase Database reference
         databaseReference = FirebaseDatabase.getInstance().getReference("Complaints");
@@ -59,15 +59,23 @@ public class TrackComplaintActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
-                    // Get the status of the complaint
+                    // Get the details of the complaint
                     Complaint complaint = snapshot.getValue(Complaint.class);
                     if (complaint != null) {
-                        tvComplaintStatus.setText("तक्रार स्थिती: " + complaint.getStatus());
+                        String details = "तक्रार तपशील:\n\n" +
+                                "तक्रार क्रमांक: " + complaint.getComplaintId() + "\n" +
+                                "नाव: " + complaint.getName() + "\n" +
+                                "पत्ता: " + complaint.getAddress() + "\n" +
+                                "मोबाईल नंबर: " + complaint.getMobileNumber() + "\n" +
+                                "तक्रारीची श्रेणी: " + complaint.getCategory() + "\n" +
+                                "तक्रार: " + complaint.getComplaintDescription() + "\n" +
+                                "तक्रार स्थिती: " + complaint.getStatus();
+                        tvComplaintDetails.setText(details);
                     } else {
-                        tvComplaintStatus.setText("तक्रार आयडी अवैध आहे.");
+                        tvComplaintDetails.setText("तक्रार आयडी अवैध आहे.");
                     }
                 } else {
-                    tvComplaintStatus.setText("तक्रार आयडी आढळले नाही.");
+                    tvComplaintDetails.setText("तक्रार आयडी आढळले नाही.");
                 }
             }
 
