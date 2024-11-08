@@ -55,12 +55,16 @@ dependencies {
     implementation("com.google.android.gms:play-services-auth:19.0.0") // Google sign-in
     implementation ("com.google.firebase:firebase-firestore:24.0.2")
 
+    implementation ("com.sun.mail:android-mail:1.6.5")
+    implementation ("com.sun.mail:android-activation:1.6.5")
+
 
     // Image loading library
     implementation("com.squareup.picasso:picasso:2.71828")
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation ("com.squareup.okhttp3:okhttp:4.9.0")
+    implementation("com.google.firebase:firebase-storage:21.0.1")
 
 
     // Testing dependencies
