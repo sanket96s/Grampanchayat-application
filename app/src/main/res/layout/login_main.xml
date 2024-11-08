@@ -11,31 +11,31 @@
             android:id="@+id/login_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="लॉगिन"
+            android:text="@string/login_title"
             android:textSize="24sp"
             android:textColor="#000000"
             android:layout_gravity="center_horizontal"
-            android:paddingBottom="16dp"/>
+            android:paddingBottom="16dp" />
 
         <EditText
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="ईमेल"
+            android:hint="@string/email_hint"
             android:textColor="#000000"
             android:inputType="textEmailAddress"
             android:padding="8dp"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="8dp" />
 
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="पासवर्ड"
+            android:hint="@string/password_hint"
             android:textColor="#000000"
             android:inputType="textPassword"
             android:padding="8dp"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,26 +47,48 @@
                     android:id="@+id/login_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="लॉगिन करा"
+                    android:text="@string/login_button"
                     android:backgroundTint="#000000"
                     android:textColor="#FFFFFF"
-                    android:layout_marginEnd="8dp"/>
+                    android:layout_marginEnd="8dp" />
 
                 <Button
                     android:id="@+id/register_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="नोंदणी करा"
+                    android:text="@string/register_button"
                     android:backgroundTint="#000000"
-                    android:textColor="#FFFFFF"/>
+                    android:textColor="#FFFFFF" />
 
-                <Button
+                <!-- Google Sign-In Button -->
+                <LinearLayout
                     android:id="@+id/google_sign_in_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="गूगल सह लॉगिन"
-                    android:backgroundTint="#4285F4"
+                    android:background="#8A2BE2"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
+
+                <!-- Google Logo ImageView -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_google_logo_foreground"
+                    android:contentDescription="@string/google_logo"
+                    android:scaleType="centerInside" />
+
+                <!-- Google Sign-In Text -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/google_sign_in_button"
                     android:textColor="#FFFFFF"
-                    android:layout_marginStart="8dp"/>
+                    android:layout_marginStart="8dp"
+                    android:gravity="center_vertical" />
         </LinearLayout>
 </LinearLayout>
+    </LinearLayout>

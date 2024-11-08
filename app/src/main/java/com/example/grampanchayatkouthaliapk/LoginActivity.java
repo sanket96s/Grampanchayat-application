@@ -6,10 +6,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -46,6 +46,7 @@ public class LoginActivity extends AppCompatActivity {
             // User is not authenticated
             setContentView(R.layout.login_main);
 
+            // Set up Google Sign-In
             GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                     .requestIdToken(getString(R.string.default_web_client_id))
                     .requestEmail()
@@ -53,9 +54,11 @@ public class LoginActivity extends AppCompatActivity {
 
             mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
-            Button googleSignInButton = findViewById(R.id.google_sign_in_button);
+            // Google Sign-In Button as a LinearLayout
+            LinearLayout googleSignInButton = findViewById(R.id.google_sign_in_button);
             googleSignInButton.setOnClickListener(v -> signIn());
 
+            // Email Sign-In Button
             Button emailSignInButton = findViewById(R.id.login_button);
             EditText emailField = findViewById(R.id.email);
             EditText passwordField = findViewById(R.id.password);
@@ -66,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
                 signInWithEmail(email, password);
             });
 
-            // Add Register Button click listener
+            // Register Button
             Button registerButton = findViewById(R.id.register_button);
             registerButton.setOnClickListener(v -> {
                 Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
