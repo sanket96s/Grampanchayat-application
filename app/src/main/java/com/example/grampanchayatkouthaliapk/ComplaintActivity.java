@@ -1,7 +1,6 @@
 package com.example.grampanchayatkouthaliapk;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -10,16 +9,19 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+import java.util.Properties;
+import java.util.Random;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.Properties;
+import com.google.firebase.database.ValueEventListener;
 
 import javax.mail.Message;
 import javax.mail.MessagingException;
@@ -66,7 +68,7 @@ public class ComplaintActivity extends AppCompatActivity {
         btnUpload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                saveComplaintData();
+                generateUniqueComplaintId();
             }
         });
 
@@ -80,17 +82,42 @@ public class ComplaintActivity extends AppCompatActivity {
         });
     }
 
-    private void saveComplaintData() {
+    private void generateUniqueComplaintId() {
+        // Generate a random 7-digit ID
+        Random random = new Random();
+        int randomId = 1000000 + random.nextInt(9000000);
+        String complaintId = String.valueOf(randomId);
+
+        // Check if the ID is already in the database
+        databaseReference.child(complaintId).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    // If the ID already exists, generate a new one
+                    generateUniqueComplaintId();
+                } else {
+                    // If the ID is unique, proceed to save the complaint data
+                    saveComplaintData(complaintId);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(ComplaintActivity.this, "Error: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void saveComplaintData(String complaintId) {
         // Get input values from EditText fields
         String name = etName.getText().toString().trim();
         String address = etAddress.getText().toString().trim();
         String mobileNumber = etMobileNumber.getText().toString().trim();
         String complaintDescription = etComplaint.getText().toString().trim();
 
-        // Validate that all required fields are filled in
-        if (name.isEmpty() || address.isEmpty() || mobileNumber.isEmpty() || complaintDescription.isEmpty()) {
-            Toast.makeText(this, "कृपया सर्व माहिती भरा.", Toast.LENGTH_SHORT).show();
-            return;
+        if (mobileNumber.length() != 10) {
+            Toast.makeText(this, "कृपया 10 अंकी मोबाईल नंबर प्रविष्ट करा.", Toast.LENGTH_SHORT).show();
+            return; // If mobile number is not 10 digits, return
         }
 
         // Get selected radio button text for complaint category
@@ -101,44 +128,37 @@ public class ComplaintActivity extends AppCompatActivity {
             category = selectedRadioButton.getText().toString();
         } else {
             category = "";
+            Toast.makeText(this, "कृपया समस्या श्रेणी निवडा.", Toast.LENGTH_SHORT).show();
+            return; // If no category is selected, return
         }
 
-        // Generate unique complaint ID for Firebase database entry
-        String complaintId = databaseReference.push().getKey();
+        // Create a complaint object to hold all information
+        Complaint complaint = new Complaint(complaintId, name, address, mobileNumber, category, complaintDescription, "submitted");
 
-        // Check if complaintId is valid
-        if (complaintId != null) {
-            // Create a complaint object to hold all information
-            Complaint complaint = new Complaint(complaintId, name, address, mobileNumber, category, complaintDescription, "submitted");
+        // Store the complaint object in Firebase
+        databaseReference.child(complaintId).setValue(complaint)
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        // Clear all fields after successful submission
+                        etName.setText("");
+                        etAddress.setText("");
+                        etMobileNumber.setText("");
+                        etComplaint.setText("");
+                        radioGroupCategory.clearCheck();
 
-            // Store the complaint object in Firebase
-            databaseReference.child(complaintId).setValue(complaint)
-                    .addOnCompleteListener(task -> {
-                        if (task.isSuccessful()) {
-                            // Display success message
-                            Toast.makeText(this, "तक्रार यशस्वीरित्या नोंदवली.", Toast.LENGTH_SHORT).show();
-                            // Clear input fields after successful submission
-                            etName.setText("");
-                            etAddress.setText("");
-                            etMobileNumber.setText("");
-                            etComplaint.setText("");
-                            radioGroupCategory.clearCheck();
-
-                            // Retrieve logged-in user's email
-                            FirebaseUser user = firebaseAuth.getCurrentUser();
-                            if (user != null) {
-                                String userEmail = user.getEmail();
-                                // Send email with complaint details
-                                new SendEmailTask(userEmail, name, address, mobileNumber, category, complaintDescription, complaintId).execute();
-                            } else {
-                                Toast.makeText(this, "वापरकर्ता लॉग इन नाही.", Toast.LENGTH_SHORT).show();
-                            }
-                        } else {
-                            // Display error message in case of failure
-                            Toast.makeText(this, "तक्रार नोंदवताना त्रुटी आली.", Toast.LENGTH_SHORT).show();
+                        // Retrieve logged-in user's email
+                        FirebaseUser user = firebaseAuth.getCurrentUser();
+                        if (user != null) {
+                            String userEmail = user.getEmail();
+                            // Send email with complaint details
+                            new SendEmailTask(userEmail, name, address, mobileNumber, category, complaintDescription, complaintId).execute();
                         }
-                    });
-        }
+
+                        // Navigate to the success page
+                        Intent intent = new Intent(ComplaintActivity.this, SuccessActivity.class);
+                        startActivity(intent);
+                    }
+                });
     }
 
     private static class SendEmailTask extends AsyncTask<Void, Void, Void> {
@@ -185,14 +205,20 @@ public class ComplaintActivity extends AppCompatActivity {
                 Message message = new MimeMessage(session);
                 message.setFrom(new InternetAddress(username));
                 message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(userEmail));
-                message.setSubject("नवीन तक्रार नोंदवली (Complaint ID: " + complaintId + ")");
-                message.setText("तक्रार तपशील:\n\n" +
-                        "नाव: " + name + "\n" +
-                        "पत्ता: " + address + "\n" +
-                        "मोबाईल नंबर: " + mobileNumber + "\n" +
-                        "तक्रारीची श्रेणी: " + category + "\n" +
-                        "तक्रार: " + complaintDescription + "\n" +
-                        "तक्रार क्रमांक: " + complaintId);
+                message.setSubject("Complaint Submitted Successfully");
+
+                String emailContent = "📧 तक्रार आयडी: " + complaintId + "\n"
+                        + "📝 तक्रार माहिती:\n"
+                        + "👤 नाव: " + name + "\n"
+                        + "📍 पत्ता: " + address + "\n"
+                        + "📱 मोबाईल क्रमांक: " + mobileNumber + "\n"
+                        + "💡 श्रेणी: " + category + "\n"
+                        + "🗣 तक्रार: " + complaintDescription + "\n\n"
+                        + "📧 आपली तक्रार यशस्वीरित्या नोंदवली गेली आहे. कृपया तक्रार आयडी वापरून तक्रारीचा मागोवा घ्या.";
+
+
+
+                message.setText(emailContent);
 
                 // Send the email
                 Transport.send(message);
@@ -200,6 +226,7 @@ public class ComplaintActivity extends AppCompatActivity {
             } catch (MessagingException e) {
                 e.printStackTrace();
             }
+
             return null;
         }
     }

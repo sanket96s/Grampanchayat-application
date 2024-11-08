@@ -58,7 +58,7 @@
         <activity android:name=".ProjectFormActivity" />
         <activity android:name=".RegisterforCertificateActivity"/>
         <activity android:name=".TrackComplaintActivity"></activity>
-        <activity android:name=".SendEmailTask"></activity>
+        <activity android:name=".SuccessActivity"/>
 
 
         <activity
