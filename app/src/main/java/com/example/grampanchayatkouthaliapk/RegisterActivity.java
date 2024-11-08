@@ -2,10 +2,12 @@ package com.example.grampanchayatkouthaliapk;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -35,13 +37,38 @@ public class RegisterActivity extends AppCompatActivity {
             String email = emailEditText.getText().toString().trim();
             String password = passwordEditText.getText().toString().trim();
 
-            if (fullName.isEmpty() || email.isEmpty() || password.isEmpty()) {
-                Toast.makeText(RegisterActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
-            } else {
+            if (validateInputs(fullName, email, password)) {
                 // Handle registration logic
                 registerUser(fullName, email, password);
             }
         });
+    }
+
+    private boolean validateInputs(String fullName, String email, String password) {
+        boolean isValid = true;
+
+        if (fullName.isEmpty()) {
+            fullNameEditText.setError("पूर्ण नाव आवश्यक आहे");
+            isValid = false;
+        }
+
+        if (email.isEmpty()) {
+            emailEditText.setError("ई-मेल आवश्यक आहे");
+            isValid = false;
+        } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            emailEditText.setError("कृपया वैध ई-मेल प्रविष्ट करा");
+            isValid = false;
+        }
+
+        if (password.isEmpty()) {
+            passwordEditText.setError("पासवर्ड आवश्यक आहे");
+            isValid = false;
+        } else if (password.length() < 8 || !password.matches(".*[A-Za-z].*") || !password.matches(".*[0-9].*")) {
+            passwordEditText.setError("पासवर्ड किमान 8 वर्णांचा असावा आणि त्यात अक्षरे व संख्यांचा समावेश असावा");
+            isValid = false;
+        }
+
+        return isValid;
     }
 
     private void registerUser(String fullName, String email, String password) {
@@ -57,7 +84,15 @@ public class RegisterActivity extends AppCompatActivity {
                         }
                     } else {
                         // If registration fails, display a message to the user.
-                        Toast.makeText(RegisterActivity.this, "Registration failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        if (task.getException() != null) {
+                            String errorMessage = task.getException().getMessage();
+                            if (errorMessage != null && errorMessage.contains("email")) {
+                                emailEditText.setError(errorMessage);
+                            } else {
+                                // Use a generic error message if the specific cause is unknown
+                                emailEditText.setError("नोंदणी अयशस्वी: " + errorMessage);
+                            }
+                        }
                     }
                 });
     }
@@ -74,9 +109,8 @@ public class RegisterActivity extends AppCompatActivity {
                     startActivity(intent);
                     finish(); // Optional: Call finish() if you want to close RegisterActivity
                 })
-
                 .addOnFailureListener(e -> {
-                    Toast.makeText(RegisterActivity.this, "Error saving user: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    fullNameEditText.setError("वापरकर्ता जतन करताना त्रुटी: " + e.getMessage());
                 });
     }
 
