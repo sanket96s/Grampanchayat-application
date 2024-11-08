@@ -1,0 +1,125 @@
+<!-- res/layout/activity_event_form.xml -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4C7A3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Title for the page -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="कार्यक्रम नोंदवा"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_gravity="center"
+            android:paddingBottom="16dp"/>
+
+        <!-- Event Name Input Field -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="कार्यक्रमाचे नाव :"
+            android:textSize="16sp"
+            android:textColor="#000"/>
+        <EditText
+            android:id="@+id/eventForm_etEventName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="कार्यक्रमाचे नाव भरा"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:inputType="text"/>
+
+        <!-- Event Location Input Field -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ठिकाण :"
+            android:textSize="16sp"
+            android:textColor="#000"/>
+        <EditText
+            android:id="@+id/eventForm_etEventLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="कार्यक्रमाचे ठिकाण भरा"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:inputType="text"/>
+
+        <!-- Date Input Field -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="तारीख :"
+            android:textSize="16sp"
+            android:textColor="#000"/>
+        <EditText
+            android:id="@+id/eventForm_etEventDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="कार्यक्रमाची तारीख भरा (DD/MM/YYYY)"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:inputType="date"/>
+
+        <!-- Time Input Field -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="वेळ :"
+            android:textSize="16sp"
+            android:textColor="#000"/>
+        <EditText
+            android:id="@+id/eventForm_etEventTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="कार्यक्रमाची वेळ भरा (HH:MM AM/PM)"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:inputType="time"/>
+
+        <!-- Description Input Field -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="कार्यक्रमाचे वर्णन :"
+            android:textSize="16sp"
+            android:textColor="#000"/>
+        <EditText
+            android:id="@+id/eventForm_etEventDescription"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:hint="कार्यक्रमाचे वर्णन भरा"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp"
+            android:inputType="textMultiLine"
+            android:minLines="5"/>
+
+        <!-- Submit Button at the bottom -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom|center_horizontal"
+            android:paddingTop="20dp">
+
+            <Button
+                android:id="@+id/eventForm_btnSubmitEvent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="सबमिट करा"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:backgroundTint="#FF8800"
+                android:padding="10dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
