@@ -1,0 +1,122 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Marathi Strings -->
+    <string name="please_enter_valid_house_number">कृपया वैध घर क्रमांक प्रविष्ट करा</string>
+    <string name="total_bill_not_found">एकूण बिल सापडले नाही</string>
+    <string name="record_not_found">तपशील सापडले नाही</string>
+    <string name="database_error">डाटाबेस त्रुटी: %1$s</string>
+    <string name="house_number">घर क्रमांक: %1$d</string>
+    <string name="total_bill">एकूण बिल: %1$d</string>
+    <string name="name">नाव: %1$s</string>
+    <string name="login_title">लॉगिन</string>
+    <string name="email_hint">ईमेल</string>
+    <string name="password_hint">पासवर्ड</string>
+    <string name="login_button">लॉगिन करा</string>
+    <string name="register_button">नोंदणी करा</string>
+    <string name="google_sign_in_button">गूगल सह लॉगिन</string>
+    <string name="google_logo">गूगल लोगो</string>
+    <string name="register_title">नोंदणी</string>
+    <string name="full_name_hint">पूर्ण नाव</string>
+    <string name="register_button_text">नोंदणी करा</string>
+    <string name="scheme">योजना</string>
+    <string name="report_problem">समस्या नोंदवा</string>
+    <string name="apply_certificate">प्रमाणपत्र अर्ज</string>
+    <string name="government_schemes">शासन योजना</string>
+    <string name="gramsabha">ग्रामसभा</string>
+    <string name="projects">प्रकल्प</string>
+    <string name="village_information">ग्राम माहिती</string>
+    <string name="pay_tax">कर भरा</string>
+    <string name="gram_panchayat">ग्राम पंचायत</string>
+    <string name="profile">प्रोफाइल</string>
+    <string name="help_and_support">मदत आणि समर्थन</string>
+    <string name="settings">सेटिंग</string>
+    <string name="logout">बाहेर पडणे</string>
+    <string name="email_prefix">ईमेल: </string>
+    <string name="username_format">वापरकर्ता नाव: %1$s</string>
+    <string name="no_user_logged_in">कोणताही वापरकर्ता सध्या लॉग इन केलेला नाही.</string>
+    <string name="username_not_set">सेट केलेले नाही</string>
+    <string name="help_title">सहाय्य आणि समर्थन</string>
+    <string name="help_description">तुमच्याकडे काही प्रश्न असतील किंवा मदतीची आवश्यकता असेल, तर कृपया खालील FAQs तपासा किंवा आमच्याशी संपर्क साधा.</string>
+    <string name="faq_title">वारंवार विचारले जाणारे प्रश्न</string>
+    <string name="faq_question_1">सामान्य शासकीय योजनांचा लाभ कसा घ्यावा?</string>
+    <string name="faq_answer_1">कृपया \'शासकीय योजना\' विभागात जा, योजना क्लिक करा आणि अर्ज भरा.</string>
+
+    <string name="faq_question_2">संपर्क साधण्यासाठी कोणते नंबर आहेत?</string>
+    <string name="faq_answer_2">\'ग्राम माहिती\' विभागात जा, \'अधिकाऱ्यांचा टॅब\' निवडा आणि सेल फोन नंबर शोधा.</string>
+
+    <string name="faq_question_3">ग्रामपंचायतीच्या बैठकीत कसे सहभागी व्हावे?</string>
+    <string name="faq_answer_3">\'ग्रामसभा\' विभागात जा, तारीख तपासा आणि उपस्थित राहा.</string>
+
+    <string name="faq_question_4">प्रश्न किंवा तक्रारीसाठी कोणाकडे संपर्क करावा?</string>
+    <string name="faq_answer_4">\'तक्रार दाखल करा\' विभागात जा आणि फॉर्म भरा.</string>
+
+    <!-- Language Options -->
+    <string-array name="language_options">
+        <item>English</item>
+        <item>मराठी</item>
+    </string-array>
+
+
+
+    <!-- App Information -->
+    <string name="app_name">ग्रामपंचायत कोठली एपीके</string>
+    <string name="action_settings">सेटिंग्ज</string>
+
+    <!-- Navigation Fragment Labels -->
+    <string name="first_fragment_label">पहिला विभाग</string>
+    <string name="second_fragment_label">दुसरा विभाग</string>
+
+    <!-- Navigation Controls -->
+    <string name="next">पुढे</string>
+    <string name="previous">मागे</string>
+
+    <!-- Default Values -->
+    <string name="default_web_client_id">181236633370-7gf29i4la3lnrjb6kf3rjgpbu2k9216s.apps.googleusercontent.com</string>
+
+    <!-- Navigation Drawer -->
+    <string name="nav_header_desc">खाते</string>
+    <string name="nav_header_title">वापरकर्त्याचं नाव</string>
+    <string name="navigation_drawer_open">नेव्हिगेशन ड्रॉअर उघडा</string>
+    <string name="navigation_drawer_close">नेव्हिगेशन ड्रॉअर बंद करा</string>
+
+    <!-- User Input -->
+    <string name="enter_details">तपशील प्रविष्ट करा</string>
+
+    <!-- Placeholder Text -->
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
+        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
+        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
+        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
+        bibendum, vel congue leo egestas.\n\n
+        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
+        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
+        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
+        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
+        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
+        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
+        est.\n\n
+        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
+        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
+        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
+        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
+        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
+        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
+        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
+        convallis.\n\n
+        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
+        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
+        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
+        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
+        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
+        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    </string>
+    <string name="title_activity_apply_for_certificate">प्रमाणपत्रासाठी अर्ज करा</string>
+</resources>
