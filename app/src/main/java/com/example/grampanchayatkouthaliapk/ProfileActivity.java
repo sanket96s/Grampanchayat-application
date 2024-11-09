@@ -32,12 +32,12 @@ public class ProfileActivity extends AppCompatActivity {
             if (userName != null && !userName.isEmpty()) {
                 profileNameTextView.setText(getString(R.string.username_format, user.getDisplayName()));
             } else {
-                profileNameTextView.setText(getString(R.string.username_format, "सेट केलेले नाही"));
+                profileNameTextView.setText(getString(R.string.username_format, getString(R.string.username_not_set)));
             }
         } else {
             // If no user is logged in, show a message in Marathi
             profileEmailTextView.setText(getString(R.string.no_user_logged_in));
-            profileNameTextView.setText(getString(R.string.username_format, "Not Logged In"));
+            profileNameTextView.setText(getString(R.string.username_format, getString(R.string.username_not_set)));
         }
     }
 }

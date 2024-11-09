@@ -2,17 +2,17 @@
     <item
         android:id="@+id/nav_profile"
         android:icon="@drawable/accountinfo"
-        android:title="प्रोफाइल" />
+        android:title="@string/profile" />
     <item
         android:id="@+id/help_and_support"
         android:icon="@drawable/helpcircle"
-        android:title="मदत आणि समर्थन" />
+        android:title="@string/help_and_support" />
     <item
         android:id="@+id/nav_settings"
         android:icon="@drawable/setting"
-        android:title="सेटिंग" />
+        android:title="@string/settings" />
     <item
         android:id="@+id/nav_logout"
         android:icon="@drawable/logout"
-        android:title="बाहेर पडणे" />
+        android:title="@string/logout" />
 </menu>

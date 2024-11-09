@@ -26,15 +26,34 @@
     <string name="village_information">Village Information</string>
     <string name="pay_tax">Pay Tax</string>
     <string name="gram_panchayat">Gram Panchayat</string>
+    <string name="profile">Profile</string>
+    <string name="help_and_support">Help and Support</string>
+    <string name="settings">Settings</string>
+    <string name="logout">Logout</string>
+    <string name="email_prefix">Email: </string>
+    <string name="username_format">Username: %1$s</string>
+    <string name="no_user_logged_in">No user is currently logged in.</string>
+    <string name="username_not_set">Not set</string>
+    <string name="help_title">Help and Support</string>
+    <string name="help_description">If you have any questions or need assistance, please check the FAQs below or contact us.</string>
+    <string name="faq_title">Frequently Asked Questions</string>
+    <string name="faq_question_1">How to avail benefits of government schemes?</string>
+    <string name="faq_answer_1">Please go to the \'Government Schemes\' section, click on the scheme, and fill out the application form.</string>
 
+    <string name="faq_question_2">What are the contact numbers for reaching out?</string>
+    <string name="faq_answer_2">Go to the \'Village Information\' section, select the \'Officials\' tab, and find the contact numbers.</string>
+
+    <string name="faq_question_3">How to participate in Gram Panchayat meetings?</string>
+    <string name="faq_answer_3">Go to the \'Gram Sabha\' section, check the date, and attend the meeting.</string>
+
+    <string name="faq_question_4">Who to contact for queries or complaints?</string>
+    <string name="faq_answer_4">Go to the \'File a Complaint\' section and fill out the form.</string>
 
     <!-- Language Options -->
     <string-array name="language_options">
         <item>English</item>
         <item>Marathi</item>
     </string-array>
-
-    <string name="no_user_logged_in">No user logged in</string>
 
     <!-- App Information -->
     <string name="app_name">Gram Panchayat APK</string>
@@ -59,8 +78,6 @@
 
     <!-- User Input -->
     <string name="enter_details">Enter details</string>
-    <string name="email_prefix">Email: </string>
-    <string name="username_format">%1$s</string>
 
     <!-- Placeholder Text -->
     <string name="lorem_ipsum">

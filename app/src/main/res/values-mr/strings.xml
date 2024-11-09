@@ -26,6 +26,28 @@
     <string name="village_information">ग्राम माहिती</string>
     <string name="pay_tax">कर भरा</string>
     <string name="gram_panchayat">ग्राम पंचायत</string>
+    <string name="profile">प्रोफाइल</string>
+    <string name="help_and_support">मदत आणि समर्थन</string>
+    <string name="settings">सेटिंग</string>
+    <string name="logout">बाहेर पडणे</string>
+    <string name="email_prefix">ईमेल: </string>
+    <string name="username_format">वापरकर्ता नाव: %1$s</string>
+    <string name="no_user_logged_in">कोणताही वापरकर्ता सध्या लॉग इन केलेला नाही.</string>
+    <string name="username_not_set">सेट केलेले नाही</string>
+    <string name="help_title">सहाय्य आणि समर्थन</string>
+    <string name="help_description">तुमच्याकडे काही प्रश्न असतील किंवा मदतीची आवश्यकता असेल, तर कृपया खालील FAQs तपासा किंवा आमच्याशी संपर्क साधा.</string>
+    <string name="faq_title">वारंवार विचारले जाणारे प्रश्न</string>
+    <string name="faq_question_1">सामान्य शासकीय योजनांचा लाभ कसा घ्यावा?</string>
+    <string name="faq_answer_1">कृपया \'शासकीय योजना\' विभागात जा, योजना क्लिक करा आणि अर्ज भरा.</string>
+
+    <string name="faq_question_2">संपर्क साधण्यासाठी कोणते नंबर आहेत?</string>
+    <string name="faq_answer_2">\'ग्राम माहिती\' विभागात जा, \'अधिकाऱ्यांचा टॅब\' निवडा आणि सेल फोन नंबर शोधा.</string>
+
+    <string name="faq_question_3">ग्रामपंचायतीच्या बैठकीत कसे सहभागी व्हावे?</string>
+    <string name="faq_answer_3">\'ग्रामसभा\' विभागात जा, तारीख तपासा आणि उपस्थित राहा.</string>
+
+    <string name="faq_question_4">प्रश्न किंवा तक्रारीसाठी कोणाकडे संपर्क करावा?</string>
+    <string name="faq_answer_4">\'तक्रार दाखल करा\' विभागात जा आणि फॉर्म भरा.</string>
 
     <!-- Language Options -->
     <string-array name="language_options">
@@ -33,7 +55,7 @@
         <item>मराठी</item>
     </string-array>
 
-    <string name="no_user_logged_in">कोणताही वापरकर्ता लॉग इन केलेला नाही</string>
+
 
     <!-- App Information -->
     <string name="app_name">ग्रामपंचायत कोठली एपीके</string>
@@ -58,8 +80,6 @@
 
     <!-- User Input -->
     <string name="enter_details">तपशील प्रविष्ट करा</string>
-    <string name="email_prefix">ईमेल: </string>
-    <string name="username_format">%1$s</string>
 
     <!-- Placeholder Text -->
     <string name="lorem_ipsum">
