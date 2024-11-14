@@ -26,50 +26,49 @@
 
 
         <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="115dp"
-        >
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="115dp"
+            android:orientation="vertical">
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingBottom="8dp"
                 android:paddingTop="8dp"
+                android:paddingBottom="8dp"
                 android:text="वैयक्तिक माहिती:"
                 android:textColor="#0056b3"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/et_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="पूर्ण नाव"
-            android:inputType="textPersonName" />
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="पूर्ण नाव"
+                android:inputType="textPersonName" />
 
-        <EditText
-            android:id="@+id/et_age"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="वय"
-            android:inputType="number" />
+            <EditText
+                android:id="@+id/et_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="वय"
+                android:inputType="number" />
 
-        <EditText
-            android:id="@+id/et_address"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="पत्ता"
-            android:inputType="textPostalAddress" />
+            <EditText
+                android:id="@+id/et_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="पत्ता"
+                android:inputType="textPostalAddress" />
 
-        <EditText
-            android:id="@+id/et_contact"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="मोबाइल नंबर"
-            android:inputType="phone" />
+            <EditText
+                android:id="@+id/et_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="मोबाइल नंबर"
+                android:inputType="phone" />
 
 
             <TextView
@@ -82,29 +81,29 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/btn_identity_proof"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ओळखपत्र अपलोड करा" />
+            <Button
+                android:id="@+id/btn_identity_proof"
+                android:layout_width="195dp"
+                android:layout_height="wrap_content"
+                android:text="आधार अपलोड करा" />
 
-        <Button
-            android:id="@+id/btn_address_proof"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="पत्त्याचा पुरावा अपलोड करा" />
+            <Button
+                android:id="@+id/btn_address_proof"
+                android:layout_width="195dp"
+                android:layout_height="wrap_content"
+                android:text="रहिवासी पुरावा अपलोड करा" />
 
-        <Button
-            android:id="@+id/btn_land_ownership"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="जमिनीच्या मालकीचा दस्तऐवज अपलोड करा" />
+            <Button
+                android:id="@+id/btn_land_ownership"
+                android:layout_width="195dp"
+                android:layout_height="wrap_content"
+                android:text="उत्पन्न दाखल अपलोड करा" />
 
-        <Button
-            android:id="@+id/btn_income_certificate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="उत्पन्न प्रमाणपत्र अपलोड करा" />
+            <Button
+                android:id="@+id/btn_income_certificate"
+                android:layout_width="195dp"
+                android:layout_height="wrap_content"
+                android:text="रेशन कार्ड अपलोड करा" />
 
 
             <TextView
@@ -117,30 +116,23 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/et_scheme_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Scheme Name"
-            android:text="अटल भूजल योजना"
-            android:inputType="text"
-            android:enabled="false" />
 
-        <EditText
-            android:id="@+id/et_purpose"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="अर्जाचा उद्देश"
-            android:inputType="text" />
+
+            <EditText
+                android:id="@+id/et_purpose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="अर्जाचा उद्देश"
+                android:inputType="text" />
 
 
             <Button
                 android:id="@+id/btn_submit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="126dp"
                 android:layout_marginTop="12dp"
                 android:backgroundTint="#0056b3"
-                android:layout_marginStart="126dp"
                 android:paddingTop="12dp"
                 android:paddingBottom="12dp"
                 android:text="अर्ज सादर करा"
@@ -155,10 +147,10 @@
                 android:id="@+id/tv_confirmation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" अर्ज यशस्वीपणे सबमिट करण्यात आला! "
-                android:textSize="16sp"
-                android:textColor="#4CAF50"
                 android:paddingTop="16dp"
+                android:text=" अर्ज यशस्वीपणे सबमिट करण्यात आला! "
+                android:textColor="#4CAF50"
+                android:textSize="16sp"
                 android:visibility="gone" />
 
             <!-- Application ID TextView -->
@@ -166,10 +158,10 @@
                 android:id="@+id/tv_application_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="अर्ज क्रमांक : "
-                android:textSize="16sp"
-                android:textColor="#4CAF50"
                 android:paddingTop="8dp"
+                android:text="अर्ज क्रमांक : "
+                android:textColor="#4CAF50"
+                android:textSize="16sp"
                 android:visibility="gone" />
 
 
