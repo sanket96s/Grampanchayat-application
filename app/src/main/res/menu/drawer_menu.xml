@@ -3,17 +3,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_village_info_overview"
-        android:title="Village Information Overview"/>
+        android:title="@string/nav_village_info_overview"/>
     <item
         android:id="@+id/nav_public_facilities"
-        android:title="Public Facilities"/>
+        android:title="@string/nav_public_facilities"/>
     <item
         android:id="@+id/nav_community_cultural_info"
-        android:title="Community and Cultural Information"/>
+        android:title="@string/nav_community_cultural_info"/>
     <item
         android:id="@+id/nav_economic_activities"
-        android:title="Economic Activities"/>
+        android:title="@string/nav_economic_activities"/>
     <item
         android:id="@+id/nav_infrastructure"
-        android:title="Infrastructure"/>
+        android:title="@string/nav_infrastructure"/>
 </menu>

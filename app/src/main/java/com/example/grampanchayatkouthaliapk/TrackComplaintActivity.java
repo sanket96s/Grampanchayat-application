@@ -5,6 +5,8 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,7 +23,7 @@ public class TrackComplaintActivity extends AppCompatActivity {
 
     private EditText etComplaintId;
     private Button btnTrack;
-    private TextView tvComplaintDetails;
+    private TableLayout tblComplaintDetails;
 
     private DatabaseReference databaseReference;
 
@@ -33,7 +35,7 @@ public class TrackComplaintActivity extends AppCompatActivity {
         // Initialize UI components
         etComplaintId = findViewById(R.id.etComplaintId);
         btnTrack = findViewById(R.id.btnTrack);
-        tvComplaintDetails = findViewById(R.id.tvComplaintDetails);
+        tblComplaintDetails = findViewById(R.id.tblComplaintDetails);
 
         // Initialize Firebase Database reference
         databaseReference = FirebaseDatabase.getInstance().getReference("Complaints");
@@ -62,20 +64,19 @@ public class TrackComplaintActivity extends AppCompatActivity {
                     // Get the details of the complaint
                     Complaint complaint = snapshot.getValue(Complaint.class);
                     if (complaint != null) {
-                        String details = "तक्रार तपशील:\n\n" +
-                                "तक्रार क्रमांक: " + complaint.getComplaintId() + "\n" +
-                                "नाव: " + complaint.getName() + "\n" +
-                                "पत्ता: " + complaint.getAddress() + "\n" +
-                                "मोबाईल नंबर: " + complaint.getMobileNumber() + "\n" +
-                                "तक्रारीची श्रेणी: " + complaint.getCategory() + "\n" +
-                                "तक्रार: " + complaint.getComplaintDescription() + "\n" +
-                                "तक्रार स्थिती: " + complaint.getStatus();
-                        tvComplaintDetails.setText(details);
-                    } else {
-                        tvComplaintDetails.setText("तक्रार आयडी अवैध आहे.");
+                        // Populate the TableLayout with complaint details
+                        ((TextView) findViewById(R.id.tvComplaintId)).setText(complaint.getComplaintId());
+                        ((TextView) findViewById(R.id.tvName)).setText(complaint.getName());
+                        ((TextView) findViewById(R.id.tvAddress)).setText(complaint.getAddress());
+                        ((TextView) findViewById(R.id.tvMobileNumber)).setText(complaint.getMobileNumber());
+                        ((TextView) findViewById(R.id.tvCategory)).setText(complaint.getCategory());
+                        ((TextView) findViewById(R.id.tvComplaintDescription)).setText(complaint.getComplaintDescription());
+                        ((TextView) findViewById(R.id.tvStatus)).setText(complaint.getStatus());
+
+                        tblComplaintDetails.setVisibility(View.VISIBLE);  // Show the table layout
                     }
                 } else {
-                    tvComplaintDetails.setText("तक्रार आयडी आढळले नाही.");
+                    Toast.makeText(TrackComplaintActivity.this, "तक्रार आयडी आढळले नाही.", Toast.LENGTH_SHORT).show();
                 }
             }
 

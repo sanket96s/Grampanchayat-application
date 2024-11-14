@@ -14,6 +14,7 @@ public class ProjectDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_project_detail);
 
+        // Initialize views
         ImageView projectImage = findViewById(R.id.sample_photo);
         TextView projectTitle = findViewById(R.id.project_title);
         TextView projectDescription = findViewById(R.id.project_description);
@@ -43,7 +44,6 @@ public class ProjectDetailActivity extends AppCompatActivity {
         // Set up the feedback button to open ProjectFormActivity
         Button feedbackButton = findViewById(R.id.feedback_button);
         feedbackButton.setOnClickListener(v -> {
-            // Open ProjectFormActivity instead of the Google Form
             Intent intent = new Intent(ProjectDetailActivity.this, ProjectFormActivity.class);
             startActivity(intent);
         });

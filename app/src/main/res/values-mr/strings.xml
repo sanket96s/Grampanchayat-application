@@ -1,5 +1,115 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Marathi Strings -->
+
+
+<!--    title-->
+    <!-- Economic Activities Section -->
+
+    <string name="infrastructure_page">इन्फ्रास्ट्रक्चर पृष्ठ</string>
+    <string name="transport_services">वाहतूक सेवा</string>
+    <string name="bus_services">बस सेवा</string>
+    <string name="route_a">मार्ग A: मेन स्क्वेअर ते हिल व्ह्यू, 6:00 AM - 10:00 PM</string>
+    <string name="route_b">मार्ग B: मार्केट रोड ते रिव्हरसाइड, 5:30 AM - 9:30 PM</string>
+    <string name="railway_stations">रेल्वे स्थानके</string>
+    <string name="central_station">सेंट्रल स्टेशन: दर 30 मिनिटांनी ट्रेन</string>
+    <string name="east_junction">ईस्ट जंक्शन: दर 1 तासांनी ट्रेन</string>
+    <string name="roads_section">रस्ते विभाग</string>
+    <string name="major_roads">मुख्य रस्ते</string>
+    <string name="main_street">मेन स्ट्रीट, ओक ऍव्हेन्यू, पाइन रोड</string>
+    <string name="conditions">अवस्था</string>
+    <string name="conditions_list">चांगली, मध्यम, खराब</string>
+    <string name="ongoing_roadworks">चालू रस्ता काम</string>
+    <string name="main_street_resurfacing">मेन स्ट्रीट - डिसेंबर 2023 पर्यंत पुनः पृष्ठभाग</string>
+    <string name="planned_roadworks">नियोजित रस्ता काम</string>
+    <string name="pine_road_widening">पाइन रोड - 2024 मध्ये रुंदीकरण</string>
+    <string name="communication_section">संवाद विभाग</string>
+    <string name="internet_services">इंटरनेट सेवा</string>
+    <string name="provider_a">प्रदाता A - हाय स्पीड फायबर</string>
+    <string name="provider_b">प्रदाता B - ब्रॉडबँड</string>
+    <string name="telecommunication_services">दूरसंचार सेवा</string>
+    <string name="telco_x">टेल्को X - मोबाइल नेटवर्क</string>
+    <string name="telco_y">टेल्को Y - 4G सेवा</string>
+
+    <!-- Local Businesses Section -->
+
+
+    <string name="local_shop_name">शांती जनरल स्टोअर</string>
+    <string name="local_shop_products">किराणा, घरगुती वस्तू</string>
+
+    <string name="tailor_service_name">रामेश तळतार</string>
+    <string name="tailor_service_products">कस्टम कपडे, बदलावे</string>
+
+    <!-- Employment Opportunities Section -->
+
+
+    <string name="job_position_farm_supervisor">पद: शेती पर्यवेक्षक</string>
+    <string name="job_description_farm_supervisor">पिक उत्पादन पाहा आणि शेती कामकाज व्यवस्थापित करा. कृषी क्षेत्रातील अनुभव आवश्यक.</string>
+    <string name="job_position_carpenter">पद: कारपेंटर</string>
+    <string name="job_description_carpenter">स्थानिक बांधकाम प्रकल्पासाठी कौशल्य असलेला कारपेंटर आवश्यक. अनुभव आवश्यक.</string>
+
+    <!-- Training Centres Section -->
+
+    <string name="training_centre_skillup">केंद्र: Skillup संस्थान</string>
+    <string name="training_focus_skillup">लक्ष: काष्ठकाम, इलेक्ट्रिकल काम, आणि शिंटिंग.</string>
+    <string name="training_centre_village">केंद्र: गावी प्रशिक्षण केंद्र</string>
+    <string name="training_courses_village">कोर्स: मूलभूत आयटी कौशल्ये आणि कृषी तंत्र.</string>
+
+
+
+    <string name="rice_description">तांदूळ हे गावातील एक प्रमुख अन्नधान्य आहे, पारंपरिक पद्धतींनी उच्च उत्पादन आणि गुणवत्ता सुनिश्चित केली जाते.</string>
+
+    <string name="wheat_description">गहू पीक फेडल चक्र आणि सेंद्रिय खतांचा वापर करून, उच्च उत्पादन आणि शाश्वत शेती केली जाते.</string>
+
+    <string name="local_shop">स्थानिक दुकान</string>
+    <string name="shop_name">नाव: शांती जनरल स्टोअर</string>
+    <string name="shop_products">उत्पादने: किरकोळ वस्तू, गृहिणी वस्तू</string>
+
+    <string name="tailor_name">नाव: रमेश टेलर्स</string>
+    <string name="tailor_products">उत्पादने: कस्टम गारमेंट, दुरुस्ती</string>
+
+    <string name="farm_supervisor">पद: कृषी पर्यवेक्षक</string>
+    <string name="farm_supervisor_desc">पिक उत्पादन देखरेख करा आणि शेतीचे संचालन व्यवस्थापित करा. कृषी मध्ये अनुभव आवश्यक.</string>
+    <string name="carpenter">पद: लाकूडकाम करणारा</string>
+    <string name="carpenter_desc">स्थानीय बांधकाम प्रकल्पांसाठी कुशल लाकूडकाम करणारा आवश्यक. अनुभव आवश्यक.</string>
+    <string name="training_centres">प्रशिक्षण केंद्र</string>
+    <string name="skillup_institute">केंद्र: स्किलअप संस्था</string>
+    <string name="skillup_focus">धोरण: लाकूडकाम, इलेक्ट्रिकल वर्क, आणि टेलोरिंग.</string>
+    <string name="village_training_hub">केंद्र: व्हिलेज ट्रेनिंग हब</string>
+    <string name="village_courses">कोर्सेस: बेसिक आयटी कौशल्य आणि कृषी तंत्रज्ञान.</string>
+    <string name="economic_activities">आर्थिक क्रियाकलाप</string>
+    <string name="agriculture_section">कृषी विभाग</string>
+    <string name="rice_farming">भात लागवड</string>
+    <string name="wheat_cultivation">गहू लागवड</string>
+    <string name="local_businesses">स्थानिक व्यवसाय</string>
+    <string name="tailor_service">सुतार सेवा</string>
+    <string name="employment_opportunities">रोजगार संधी</string>
+    <string name="job_opening">नोकरीची संधी</string>
+    <string name="position">पद: </string>
+    <string name="description">वर्णन: </string>
+    <string name="festivals_title">सण आणि उत्सव</string>
+    <string name="diwali">दिवाळी</string>
+    <string name="diwali_description">दिवाळी, ज्याला प्रकाशाचा सण म्हणून ओळखले जाते, ऑक्टोबर किंवा नोव्हेंबरमध्ये साजरा केला जातो. हे अंधारावर प्रकाशाचा विजय दर्शवते.</string>
+    <string name="holi">होळी</string>
+    <string name="holi_description">होळी मार्चमध्ये साजरी केली जाते आणि वसंत ऋतूच्या आगमनाचे चिन्ह आहे. त्याच्या रंगीबेरंगी रंगांसाठी ओळखली जाते, ती आनंद आणि एकतेचे प्रतीक आहे.</string>
+    <string name="local_attractions_title">स्थानिक आकर्षणे</string>
+    <string name="sunset_point">सूर्यास्त बिंदू</string>
+    <string name="sunset_point_description">पर्वतांवरील मनमोहक सूर्यास्तांचे लोकप्रिय ठिकाण.</string>
+    <string name="heritage_fort">ऐतिहासिक किल्ला</string>
+    <string name="heritage_fort_description">प्राचीन किल्ल्याच्या समृद्ध इतिहास आणि स्थापत्यशास्त्राचा शोध घ्या.</string>
+    <string name="river_view_park">नदी दृश्य पार्क</string>
+    <string name="river_view_park_description">नदीकाठची विश्रांती, मनमोहक दृश्ये आणि हिरवळीसह विश्रांती घ्या.</string>
+    <string name="community_centers_title">सामुदायिक केंद्रे</string>
+    <string name="green_hall">ग्रीन हॉल</string>
+    <string name="green_hall_description">सामुदायिक कार्यक्रम आणि सभा साठी ठिकाण.</string>
+    <string name="sunrise_center">सूर्योदय केंद्र</string>
+    <string name="sunrise_center_description">क्रीडा आणि शैक्षणिक कार्यक्रमांसाठी युवा केंद्र. सुविधा: व्यायामशाळा, वाचनालय, वर्गखोल्या.</string>
+    <string name="water_supply_info">शहराच्या चांगल्या देखभालीच्या पाणी वितरण प्रणालीद्वारे स्वच्छ पाण्याचा सतत पुरवठा सुनिश्चित केला जातो.</string>
+    <string name="electricity_info">विश्वसनीय वीज सेवा प्रदान केली जाते, ज्यामुळे किमान वीजपुरवठा खंडित होतो आणि कार्यक्षम ग्राहक समर्थन सुनिश्चित केले जाते.</string>
+    <string name="sanitation_info">स्वच्छता सेवांमध्ये कचरा संकलन, पुनर्वापर आणि सार्वजनिक स्वच्छता राखणे समाविष्ट आहे.</string>
+    <string name="nav_village_info_overview">गाव माहिती सिंहावलोकन</string>
+    <string name="nav_public_facilities">सार्वजनिक सुविधा</string>
+    <string name="nav_community_cultural_info">समुदाय आणि सांस्कृतिक माहिती</string>
+    <string name="nav_economic_activities">आर्थिक क्रियाकलाप</string>
+    <string name="nav_infrastructure">संपदा</string>
     <string name="please_enter_valid_house_number">कृपया वैध घर क्रमांक प्रविष्ट करा</string>
     <string name="total_bill_not_found">एकूण बिल सापडले नाही</string>
     <string name="record_not_found">तपशील सापडले नाही</string>
@@ -7,12 +117,53 @@
     <string name="house_number">घर क्रमांक: %1$d</string>
     <string name="total_bill">एकूण बिल: %1$d</string>
     <string name="name">नाव: %1$s</string>
+    <string name="name1">नाव: </string>
+    <string name="mobile_number_label">मोबाइल नंबर:</string>
+    <string name="complaint_description_label">तक्रार वर्णन:</string>
+    <string name="village_info_title">गावाची माहिती</string>
+    <string name="coordinates">संकेतांक: ३४.०५२२° उ, ११८.२४३७° प</string>
+    <string name="population">लोकसंख्या: १५,०००</string>
+    <string name="area">क्षेत्रफळ: २५ चौ.कि.मी</string>
+    <string name="historical_background">ऐतिहासिक पार्श्वभूमी: कौथाळोची स्थापना १८०० च्या दशकाच्या सुरुवातीला झाली आणि त्याचा शेती आणि समाज-चालित उपक्रमांचा समृद्ध इतिहास आहे.</string>
+    <string name="administration_details_title">प्रशासनाचे तपशील</string>
+    <string name="key_official">प्रमुख अधिकारी: सरपंच: श्री. राजेश कुमार</string>
+    <string name="office_address">कार्यालयाचा पत्ता: १२३ व्हिलेज लेन, ग्राम पंचायत</string>
+    <string name="working_hours">कार्यालयीन वेळ: सोम-शुक्र, सकाळी ९ ते संध्याकाळी ५</string>
+    <string name="office_details">कार्यालय तपशील: १२३ व्हिलेज स्ट्रीट, कौथाळी, कार्यालयीन वेळ: सोम-शुक्र, सकाळी ९ ते संध्याकाळी ५</string>
+
+    <string name="public_facilities">सार्वजनिक सुविधा</string>
+    <string name="healthcare_facilities">आरोग्य सेवा</string>
+    <string name="city_hospital">शहर रुग्णालय</string>
+    <string name="city_hospital_address">123 मुख्य मार्ग, सिटिव्हिल</string>
+    <string name="green_valley_clinic">ग्रीन व्हॅली क्लिनिक</string>
+    <string name="green_valley_clinic_address">456 ग्रीनवे ड्राईव्ह, ग्रीन व्हॅली</string>
+    <string name="sunrise_health_center">सनराईज हेल्थ सेंटर</string>
+    <string name="sunrise_health_center_address">789 सनराईज अव्हेन्यू, सनराईज टाउन</string>
+    <string name="education_section">शिक्षण विभाग</string>
+    <string name="schools">शाळा</string>
+    <string name="green_valley_school">ग्रीन व्हॅली शाळा</string>
+    <string name="green_valley_school_address">101 व्हॅली रोड, ग्रीन व्हॅली</string>
+    <string name="sunrise_academy">सनराईज अकादमी</string>
+    <string name="sunrise_academy_address">202 सनराईज लेन, सनराईज टाउन</string>
+    <string name="hilltop_high_school">हिलटॉप हायस्कूल</string>
+    <string name="hilltop_high_school_address">303 हिलटॉप ड्राईव्ह, हिलटॉप</string>
+    <string name="colleges">महाविद्यालये</string>
+    <string name="city_college">सिटी कॉलेज</string>
+    <string name="city_college_address">404 कॉलेज स्ट्रीट, सिटिव्हिल</string>
+    <string name="riverdale_institute">रिव्हरडेल इन्स्टिट्यूट</string>
+    <string name="riverdale_institute_address">505 रिव्हर रोड, रिव्हरडेल</string>
+    <string name="mountain_view_college">माउंटन व्ह्यू कॉलेज</string>
+    <string name="mountain_view_college_address">606 माउंटन व्ह्यू, माउंटन एरिया</string>
+    <string name="utilities_section">सुविधा विभाग</string>
+    <string name="water_supply">पाणी पुरवठा</string>
+    <string name="sanitation">स्वच्छता</string>
+
     <string name="login_title">लॉगिन</string>
     <string name="email_hint">ईमेल</string>
     <string name="password_hint">पासवर्ड</string>
     <string name="login_button">लॉगिन करा</string>
     <string name="register_button">नोंदणी करा</string>
-    <string name="google_sign_in_button">गूगल सह लॉगिन</string>
+    <string name="google_sign_in_button">गूगल</string>
     <string name="google_logo">गूगल लोगो</string>
     <string name="register_title">नोंदणी</string>
     <string name="full_name_hint">पूर्ण नाव</string>
@@ -48,12 +199,105 @@
 
     <string name="faq_question_4">प्रश्न किंवा तक्रारीसाठी कोणाकडे संपर्क करावा?</string>
     <string name="faq_answer_4">\'तक्रार दाखल करा\' विभागात जा आणि फॉर्म भरा.</string>
+    <string name="edit_profile_picture">प्रोफाइल चित्र संपादित करा</string>
+    <string name="edit_profile_name">नाव संपादित करा</string>
+    <string name="edit_profile_email">ईमेल संपादित करा</string>
+    <string name="profile_name">नाव</string>
+    <string name="profile_email">ईमेल</string>
+    <string name="email_format">ईमेल: %1$s</string>
+    <string name="page_title">समस्या नोंदवा</string>
+    <string name="name_label">नाव:</string>
+    <string name="name_hint">आपले नाव भरा</string>
+    <string name="address_label">पत्ता:</string>
+    <string name="address_hint">आपला पत्ता भरा</string>
+    <string name="mobile_label">मोबाईल क्रमांक:</string>
+    <string name="mobile_hint">मोबाईल क्रमांक भरा</string>
+    <string name="category_label">समस्या श्रेणी:</string>
+    <string name="water">पाणी</string>
+    <string name="road">रस्ता</string>
+    <string name="electricity">वीज</string>
+    <string name="other">इतर</string>
+    <string name="complaint_label">समस्या:</string>
+    <string name="complaint_category_label">समस्या श्रेणी:</string>
+    <string name="water_category">पाणी</string>
+    <string name="road_category">रस्ता</string>
+    <string name="electricity_category">वीज</string>
+    <string name="other_category">इतर</string>
+    <string name="complaint_submitted_success">तक्रार यशस्वीरित्या नोंदवली गेली आहे</string>
+    <string name="error_mobile_number">कृपया 10 अंकी मोबाईल नंबर प्रविष्ट करा.</string>
+    <string name="error_category">कृपया समस्या श्रेणी निवडा.</string>
+
+    <string name="mobile_number_hint">मोबाईल क्रमांक भरा</string>
+    <string name="complaint_hint">आपली समस्या भरा</string>
+
+    <string name="project_image_desc">प्रकल्प चित्र</string>
+    <string name="submit_button">अपलोड करा</string>
+    <string name="upload_button">अपलोड करा</string>
+    <!-- Title -->
+    <string name="project_description_1">या प्रकल्पाचा उद्देश पाण्याचे संरक्षण करणे आहे.</string>
+
+    <string name="project_title_2">रस्ता बांधणी प्रकल्प</string>
+    <string name="project_description_2">या प्रकल्पाचा उद्देश नवीन रस्त्यांचे बांधकाम करून वाहतुकीची सुविधा सुधारणे आहे.</string>
+
+    <string name="project_title_3">शाळा पुनर्निर्माण प्रकल्प</string>
+    <string name="project_title_1">जल संवर्धन प्रकल्प</string>
+
+    <string name="project_description_3">या प्रकल्पाच्या माध्यमातून शाळांचे पुनर्निर्माण व सुधारणे करण्यात येणार आहे.</string>
+
+
+    <string name="address">पत्ता:</string>
+    <string name="mobile_number">मोबाइल नंबर:</string>
+    <string name="category">वर्ग:</string>
+    <string name="complaint_description">तक्रार वर्णन:</string>
+    <string name="status">स्थिती:</string>
+    <string name="project_title_4">कृषी सुधारणा प्रकल्प</string>
+    <string name="complaint_id">तक्रार आयडी:</string>
+    <string name="project_description_4">कृषी उत्पादन वाढवण्यासाठी सुधारित तंत्रज्ञानाचा वापर करणे.</string>
+    <string name="track_complaint_title">तक्रार ट्रॅक करा</string>
+    <string name="project_title">प्रकल्प शीर्षक</string>
+    <string name="project_description">प्रकल्प वर्णन</string>
+    <string name="project_objectives">उद्दिष्टे</string>
+    <string name="project_start_date">सुरुवात तारीख</string>
+    <string name="project_completion_date">पूर्णता तारीख</string>
+    <string name="project_status">स्थिती</string>
+    <string name="project_budget">बजेट</string>
+    <string name="project_stakeholders">भागीदार</string>
+    <string name="success_message">तुम्ही यशस्वीरित्या नोंदवले.</string>
+    <string name="feedback_title">प्रतिक्रिया नोंदवा</string>
+    <string name="feedback_name_label">तुमचे नाव:</string>
+    <string name="feedback_name_hint">तुमचे नाव भरा</string>
+    <string name="feedback_email_label">ईमेल:</string>
+    <string name="feedback_email_hint">तुमचा ईमेल भरा</string>
+    <string name="feedback_message_label">तुमची प्रतिक्रिया:</string>
+    <string name="feedback_message_hint">आपली प्रतिक्रिया येथे भरा</string>
+    <string name="feedback_submit_button">सबमिट करा</string>
+    <string name="project_location">स्थान</string>
+    <string name="give_feedback">प्रतिक्रिया द्या</string>
+
+    <string name="feedback_button">प्रतिसाद द्या</string>
+
+
+    <!-- Complaint ID Label -->
+    <string name="complaint_id_label">तक्रार आयडी :</string>
+
+    <!-- Complaint ID Hint -->
+    <string name="complaint_id_hint">आपला तक्रार आयडी भरा</string>
+
+    <!-- Track Button Text -->
+    <string name="track_button">ट्रॅक करा</string>
+
+    <!-- Complaint Details TextView -->
+    <string name="complaint_details">तक्रार तपशील इथे दर्शवले जातील.</string>
+
 
     <!-- Language Options -->
-    <string-array name="language_options">
-        <item>English</item>
-        <item>मराठी</item>
-    </string-array>
+        <string name="language_label">भाषा</string>
+        <string name="save_settings">सेटिंग्ज जतन करा</string>
+        <string-array name="language_options">
+            <item>इंग्रजी</item>
+            <item>मराठी</item>
+        </string-array>
+
 
 
 
