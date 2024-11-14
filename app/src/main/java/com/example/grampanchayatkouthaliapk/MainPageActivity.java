@@ -43,7 +43,7 @@ public class MainPageActivity extends AppCompatActivity {
         NavigationView navigationView = findViewById(R.id.navigation_view);
         View headerView = navigationView.getHeaderView(0);
 
-        iconAccountCircle = headerView.findViewById(R.id.icon_account_circle);
+        iconAccountCircle = headerView.findViewById(R.id.home_profile_image);
         navUsername = headerView.findViewById(R.id.nav_username);
         homeProfileImage = findViewById(R.id.home_profile_image);
 
@@ -67,9 +67,6 @@ public class MainPageActivity extends AppCompatActivity {
                     startActivity(intent);
                 } else if (id == R.id.help_and_support) {
                     Intent intent = new Intent(MainPageActivity.this, HelpAndSupportActivity.class);
-                    startActivity(intent);
-                } else if (id == R.id.nav_settings) {
-                    Intent intent = new Intent(MainPageActivity.this, SettingsActivity.class);
                     startActivity(intent);
                 } else if (id == R.id.nav_logout) {
                     signOut();

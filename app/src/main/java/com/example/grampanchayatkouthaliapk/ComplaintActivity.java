@@ -1,6 +1,7 @@
 package com.example.grampanchayatkouthaliapk;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +10,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import java.util.Locale;
 import java.util.Properties;
 import java.util.Random;
 
@@ -42,7 +45,6 @@ public class ComplaintActivity extends AppCompatActivity {
     // UI components
     private EditText etName, etAddress, etMobileNumber, etComplaint;
     private RadioGroup radioGroupCategory;
-    private Button btnUpload, btnTrackComplaint;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,24 +63,18 @@ public class ComplaintActivity extends AppCompatActivity {
         etMobileNumber = findViewById(R.id.etMobileNumber);
         etComplaint = findViewById(R.id.etComplaint);
         radioGroupCategory = findViewById(R.id.radioGroupCategory);
-        btnUpload = findViewById(R.id.btnUpload);
-        btnTrackComplaint = findViewById(R.id.btnTrackComplaint);
+        Button btnUpload = findViewById(R.id.btnUpload);
+        Button btnTrackComplaint = findViewById(R.id.btnTrackComplaint);
 
         // Set onClick listener for the upload button
-        btnUpload.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                generateUniqueComplaintId();
-            }
-        });
+        btnUpload.setText(getString(R.string.submit_button)); // Localized button text
+        btnUpload.setOnClickListener(v -> generateUniqueComplaintId());
 
         // Set onClick listener for the track complaint button
-        btnTrackComplaint.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ComplaintActivity.this, TrackComplaintActivity.class);
-                startActivity(intent);
-            }
+        btnTrackComplaint.setText(getString(R.string.track_button)); // Localized button text
+        btnTrackComplaint.setOnClickListener(v -> {
+            Intent intent = new Intent(ComplaintActivity.this, TrackComplaintActivity.class);
+            startActivity(intent);
         });
     }
 
@@ -116,7 +112,7 @@ public class ComplaintActivity extends AppCompatActivity {
         String complaintDescription = etComplaint.getText().toString().trim();
 
         if (mobileNumber.length() != 10) {
-            Toast.makeText(this, "कृपया 10 अंकी मोबाईल नंबर प्रविष्ट करा.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.error_mobile_number), Toast.LENGTH_SHORT).show();
             return; // If mobile number is not 10 digits, return
         }
 
@@ -128,7 +124,7 @@ public class ComplaintActivity extends AppCompatActivity {
             category = selectedRadioButton.getText().toString();
         } else {
             category = "";
-            Toast.makeText(this, "कृपया समस्या श्रेणी निवडा.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.error_category), Toast.LENGTH_SHORT).show();
             return; // If no category is selected, return
         }
 
@@ -151,7 +147,8 @@ public class ComplaintActivity extends AppCompatActivity {
                         if (user != null) {
                             String userEmail = user.getEmail();
                             // Send email with complaint details
-                            new SendEmailTask(userEmail, name, address, mobileNumber, category, complaintDescription, complaintId).execute();
+                            Resources res = getResources();
+                            new SendEmailTask(userEmail, name, address, mobileNumber, category, complaintDescription, complaintId, res).execute();
                         }
 
                         // Navigate to the success page
@@ -170,8 +167,9 @@ public class ComplaintActivity extends AppCompatActivity {
         private final String category;
         private final String complaintDescription;
         private final String complaintId;
+        private final Resources res;
 
-        SendEmailTask(String userEmail, String name, String address, String mobileNumber, String category, String complaintDescription, String complaintId) {
+        SendEmailTask(String userEmail, String name, String address, String mobileNumber, String category, String complaintDescription, String complaintId, Resources res) {
             this.userEmail = userEmail;
             this.name = name;
             this.address = address;
@@ -179,6 +177,7 @@ public class ComplaintActivity extends AppCompatActivity {
             this.category = category;
             this.complaintDescription = complaintDescription;
             this.complaintId = complaintId;
+            this.res = res;
         }
 
         @Override
@@ -188,39 +187,39 @@ public class ComplaintActivity extends AppCompatActivity {
 
             // Set up properties for the email
             Properties props = new Properties();
-            props.put("mail.smtp.auth", "true");
-            props.put("mail.smtp.starttls.enable", "true");
             props.put("mail.smtp.host", "smtp.gmail.com");
             props.put("mail.smtp.port", "587");
+            props.put("mail.smtp.auth", "true");
+            props.put("mail.smtp.starttls.enable", "true");
 
-            // Create a session with authentication
+            // Create a session for sending email
             Session session = Session.getInstance(props, new javax.mail.Authenticator() {
+                @Override
                 protected PasswordAuthentication getPasswordAuthentication() {
                     return new PasswordAuthentication(username, password);
                 }
             });
 
             try {
-                // Create a new email message
+                // Create email message
                 Message message = new MimeMessage(session);
                 message.setFrom(new InternetAddress(username));
                 message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(userEmail));
-                message.setSubject("Complaint Submitted Successfully");
+                message.setSubject("Complaint Registered: " + complaintId);
 
-                String emailContent = "📧 तक्रार आयडी: " + complaintId + "\n"
-                        + "📝 तक्रार माहिती:\n"
-                        + "👤 नाव: " + name + "\n"
-                        + "📍 पत्ता: " + address + "\n"
-                        + "📱 मोबाईल क्रमांक: " + mobileNumber + "\n"
-                        + "💡 श्रेणी: " + category + "\n"
-                        + "🗣 तक्रार: " + complaintDescription + "\n\n"
-                        + "📧 आपली तक्रार यशस्वीरित्या नोंदवली गेली आहे. कृपया तक्रार आयडी वापरून तक्रारीचा मागोवा घ्या.";
+                // Construct the message body in both English and Marathi
+                String messageBody = res.getString(R.string.complaint_id_label) + " " + complaintId + "\n\n"
+                        + res.getString(R.string.name_label) + " " + name + "\n"
+                        + res.getString(R.string.address_label) + " " + address + "\n"
+                        + res.getString(R.string.mobile_number_label) + " " + mobileNumber + "\n"
+                        + res.getString(R.string.category_label) + " " + category + "\n"
+                        + res.getString(R.string.complaint_description_label) + " " + complaintDescription + "\n\n"
+                        + "------------------------------\n\n";
 
 
+                message.setText(messageBody);
 
-                message.setText(emailContent);
-
-                // Send the email
+                // Send email
                 Transport.send(message);
 
             } catch (MessagingException e) {

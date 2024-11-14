@@ -8,10 +8,6 @@
         android:icon="@drawable/helpcircle"
         android:title="@string/help_and_support" />
     <item
-        android:id="@+id/nav_settings"
-        android:icon="@drawable/setting"
-        android:title="@string/settings" />
-    <item
         android:id="@+id/nav_logout"
         android:icon="@drawable/logout"
         android:title="@string/logout" />

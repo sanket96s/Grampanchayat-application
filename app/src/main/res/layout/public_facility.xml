@@ -5,276 +5,162 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFDAB9">
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_height="match_parent"
+        android:background="#FFDAB9">
 
-        <!-- Public Facilities Heading -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Public Facilities"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:paddingBottom="16dp" />
-
-        <!-- Healthcare Facilities Section -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Healthcare Facilities"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:paddingBottom="8dp" />
-
-        <TableLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:stretchColumns="1"
-            android:background="#E6E6FA">
+            android:orientation="vertical"
+            android:padding="16dp">
 
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="City Hospital"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:padding="8dp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="123 Main Street, Cityville"
-                    android:textSize="14sp"
-                    android:padding="8dp" />
-            </TableRow>
+            <!-- Public Facilities Heading -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/public_facilities"
+                style="@style/SectionTitle"/>
 
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Green Valley Clinic"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:padding="8dp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="456 Greenway Drive, Green Valley"
-                    android:textSize="14sp"
-                    android:padding="8dp" />
-            </TableRow>
+            <!-- Healthcare Facilities Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/healthcare_facilities"
+                style="@style/SubSectionTitle"/>
 
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sunrise Health Center"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:padding="8dp" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TableSectionBackground">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="8dp"
-                    android:text="789 Sunrise Avenue, Sunrise Town"
-                    android:textSize="14sp" />
-            </TableRow>
-        </TableLayout>
+                <TableRow style="@style/TableRowBackground">
+                    <TextView
+                        style="@style/TableRowTextStyle"
+                        android:text="@string/city_hospital"/>
+                    <TextView
+                        style="@style/TextRowSubtext"
+                        android:text="@string/city_hospital_address"/>
+                </TableRow>
 
-        <!-- Education Section -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Education Section"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:paddingTop="16dp"
-            android:paddingBottom="8dp" />
+                <TableRow style="@style/TableRowBackground">
+                    <TextView
+                        style="@style/TableRowTextStyle"
+                        android:text="@string/green_valley_clinic"/>
+                    <TextView
+                        style="@style/TextRowSubtext"
+                        android:text="@string/green_valley_clinic_address"/>
+                </TableRow>
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:stretchColumns="1"
-            android:background="#FFFACD">
+                <TableRow style="@style/TableRowBackground">
+                    <TextView
+                        style="@style/TableRowTextStyle"
+                        android:text="@string/sunrise_health_center"/>
+                    <TextView
+                        style="@style/TextRowSubtext"
+                        android:text="@string/sunrise_health_center_address"/>
+                </TableRow>
+            </TableLayout>
 
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Schools"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:padding="8dp"
-                    android:layout_span="2" />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Green Valley School"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:padding="8dp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="101 Valley Road, Green Valley"
-                    android:textSize="14sp"
-                    android:padding="8dp" />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sunrise Academy"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:padding="8dp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="202 Sunrise Lane, Sunrise Town"
-                    android:textSize="14sp"
-                    android:padding="8dp" />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Hilltop High School"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:padding="8dp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="303 Hilltop Drive, Hilltop"
-                    android:textSize="14sp"
-                    android:padding="8dp" />
-            </TableRow>
+            <!-- Education Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/education_section"
+                style="@style/SubSectionTitle"/>
 
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Colleges"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:padding="8dp"
-                    android:layout_span="2" />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="City College"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:padding="8dp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="404 College Street, Cityville"
-                    android:textSize="14sp"
-                    android:padding="8dp" />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Riverdale Institute"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:padding="8dp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="505 River Road, Riverdale"
-                    android:textSize="14sp"
-                    android:padding="8dp" />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Mountain View College"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:padding="8dp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="606 Mountain View, Mountain Area"
-                    android:textSize="14sp"
-                    android:padding="8dp" />
-            </TableRow>
-        </TableLayout>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TableSectionBackground">
 
-        <!-- Utilities Section -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Utilities Section"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:paddingTop="16dp"
-            android:paddingBottom="8dp" />
+                <TableRow style="@style/TableRowBackground">
+                    <TextView
+                        style="@style/TableRowTextStyle"
+                        android:text="@string/green_valley_school"/>
+                    <TextView
+                        style="@style/TextRowSubtext"
+                        android:text="@string/green_valley_school_address"/>
+                </TableRow>
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:stretchColumns="1"
-            android:background="#E0FFFF">
+                <TableRow style="@style/TableRowBackground">
+                    <TextView
+                        style="@style/TableRowTextStyle"
+                        android:text="@string/sunrise_academy"/>
+                    <TextView
+                        style="@style/TextRowSubtext"
+                        android:text="@string/sunrise_academy_address"/>
+                </TableRow>
 
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Water Supply"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:padding="8dp" />
-            </TableRow>
+                <TableRow style="@style/TableRowBackground">
+                    <TextView
+                        style="@style/TableRowTextStyle"
+                        android:text="@string/hilltop_high_school"/>
+                    <TextView
+                        style="@style/TextRowSubtext"
+                        android:text="@string/hilltop_high_school_address"/>
+                </TableRow>
+            </TableLayout>
 
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Electricity"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:padding="8dp" />
-            </TableRow>
+            <!-- Utilities Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/utilities_section"
+                style="@style/SubSectionTitle"/>
 
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sanitation"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:padding="8dp" />
-            </TableRow>
-        </TableLayout>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TableSectionBackground">
 
-    </LinearLayout>
-</ScrollView>
+                <TableRow style="@style/TableRowBackground">
+                    <TextView
+                        style="@style/TableRowTextStyle"
+                        android:text="@string/water_supply"/>
+                    <TextView
+                        style="@style/TextRowSubtext"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:ellipsize="none"
+                        android:text="@string/water_supply_info"/>
+                </TableRow>
 
-<com.google.android.material.navigation.NavigationView
-android:id="@+id/nav_view"
-android:layout_width="wrap_content"
-android:layout_height="match_parent"
-android:layout_gravity="start"
-android:background="#FFFFFF"
-app:menu="@menu/drawer_menu"/>
+                <TableRow style="@style/TableRowBackground">
+                    <TextView
+                        style="@style/TableRowTextStyle"
+                        android:text="@string/electricity"/>
+                    <TextView
+                        style="@style/TextRowSubtext"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:ellipsize="none"
+                        android:text="@string/electricity_info"/>
+                </TableRow>
 
-    </androidx.drawerlayout.widget.DrawerLayout>
+                <TableRow style="@style/TableRowBackground">
+                    <TextView
+                        style="@style/TableRowTextStyle"
+                        android:text="@string/sanitation"/>
+                    <TextView
+                        style="@style/TextRowSubtext"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:ellipsize="none"
+                        android:text="@string/sanitation_info"/>
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#FFFFFF"
+        app:menu="@menu/drawer_menu"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

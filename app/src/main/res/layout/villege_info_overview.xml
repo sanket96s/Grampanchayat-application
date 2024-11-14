@@ -12,146 +12,161 @@
         android:padding="16dp"
         android:background="#FFDAB9"> <!-- Background set to peach -->
 
-        <TableLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:stretchColumns="1"
-            android:padding="16dp"
-            android:showDividers="middle"
-            android:divider="@android:color/darker_gray"
-            android:dividerHeight="1dp"> <!-- Divider thickness -->
+            android:orientation="vertical">
 
-            <!-- Village Information Title -->
-            <TableRow>
-                <TextView
-                    android:id="@+id/village_info_title"
-                    android:layout_width="wrap_content"
+            <!-- Village Information Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="8dp"
+                android:foreground="?android:attr/selectableItemBackground"> <!-- Foreground for ripple effect -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Village Information"
-                    android:textStyle="bold"
-                    android:textSize="20sp"
-                    android:textColor="#000000"
-                    android:layout_span="2"
-                    android:gravity="center"
-                    android:paddingBottom="16dp"
-                    android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
-            </TableRow>
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
-            <!-- Coordinates and Village Information -->
-            <TableRow>
-                <TextView
-                    android:id="@+id/coordinates"
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/village_info_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/village_info_title"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textColor="#000000"
+                        android:gravity="center"
+                        android:paddingBottom="16dp"
+                        android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/coordinates"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/coordinates"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:paddingTop="8dp"
+                        android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
+
+                    <TextView
+                        android:id="@+id/population"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/population"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:paddingTop="4dp"
+                        android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
+
+                    <TextView
+                        android:id="@+id/area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/area"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:paddingTop="4dp"
+                        android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
+
+                    <TextView
+                        android:id="@+id/historical_background"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/historical_background"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:lineSpacingExtra="4dp"
+                        android:paddingTop="8dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Administration Details Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="8dp"
+                android:foreground="?android:attr/selectableItemBackground"> <!-- Foreground for ripple effect -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Coordinates: 34.0522° N, 118.2437° W"
-                    android:textSize="14sp"
-                    android:textColor="#000000"
-                    android:paddingTop="8dp"
-                    android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
-            </TableRow>
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
-            <TableRow>
-                <TextView
-                    android:id="@+id/population"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Population: 15,000"
-                    android:textSize="14sp"
-                    android:textColor="#000000"
-                    android:paddingTop="4dp"
-                    android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
-            </TableRow>
+                    <TextView
+                        android:id="@+id/administration_details_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/administration_details_title"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:paddingBottom="8dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="4dp"/>
 
-            <TableRow>
-                <TextView
-                    android:id="@+id/area"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Area: 25 Sq Km"
-                    android:textSize="14sp"
-                    android:textColor="#000000"
-                    android:paddingTop="4dp"
-                    android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
-            </TableRow>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"/>
 
-            <TableRow>
-                <TextView
-                    android:id="@+id/historical_background"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Historical Background: Green Valley was established in the early 1800s and has a rich history of agriculture and community-driven initiatives."
-                    android:textSize="14sp"
-                    android:textColor="#000000"
-                    android:lineSpacingExtra="4dp"
-                    android:paddingTop="8dp"/>
-            </TableRow>
+                    <TextView
+                        android:id="@+id/key_official"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/key_official"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:paddingTop="4dp"
+                        android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
 
-            <!-- Administration Details Section -->
-            <TableRow>
-                <TextView
-                    android:id="@+id/administration_details_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Administration Details"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:textColor="#000000"
-                    android:paddingTop="16dp"
-                    android:paddingBottom="8dp"
-                    android:layout_span="2"
-                    android:gravity="center"
-                    android:lineSpacingExtra="4dp"/>
-            </TableRow>
+                    <TextView
+                        android:id="@+id/office_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/office_address"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:paddingTop="4dp"
+                        android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
 
-            <TableRow>
-                <TextView
-                    android:id="@+id/key_official"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Key Official: Sarpanch: Mr. Rajesh Kumar"
-                    android:textSize="14sp"
-                    android:textColor="#000000"
-                    android:paddingTop="4dp"
-                    android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
-            </TableRow>
+                    <TextView
+                        android:id="@+id/working_hours"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/working_hours"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:paddingTop="4dp"
+                        android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
 
-            <TableRow>
-                <TextView
-                    android:id="@+id/office_address"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Office Address: 123 Village Lane, Gram Panchayat"
-                    android:textSize="14sp"
-                    android:textColor="#000000"
-                    android:paddingTop="4dp"
-                    android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
-            </TableRow>
-
-            <TableRow>
-                <TextView
-                    android:id="@+id/working_hours"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Working Hours: Mon-Fri, 9 AM - 5 PM"
-                    android:textSize="14sp"
-                    android:textColor="#000000"
-                    android:paddingTop="4dp"
-                    android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
-            </TableRow>
-
-            <TableRow>
-                <TextView
-                    android:id="@+id/office_details"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Office Details: 123 Village Street, Greenfield, Working Hours: Mon-Fri, 9 AM - 5 PM"
-                    android:textSize="14sp"
-                    android:textColor="#000000"
-                    android:paddingTop="4dp"
-                    android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
-            </TableRow>
-
-        </TableLayout>
+                    <TextView
+                        android:id="@+id/office_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/office_details"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:paddingTop="4dp"
+                        android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
     </ScrollView>
 
     <!-- Navigation Drawer -->
@@ -161,6 +176,6 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="#FFFFFF"
+        app:itemIconTint="#FF6347"
         app:menu="@menu/drawer_menu"/>
-
 </androidx.drawerlayout.widget.DrawerLayout>

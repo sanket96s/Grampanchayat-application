@@ -5,282 +5,334 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFDAB9">
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_height="match_parent"
+        android:background="#FFDAB9">
 
-        <!-- Infrastructure Page Title -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Infrastructure Page"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:paddingBottom="16dp" />
-
-        <!-- Transport Services Section -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Transport Services"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:paddingBottom="8dp" />
-
-        <TableLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:stretchColumns="1">
+            android:orientation="vertical"
+            android:padding="16dp">
 
-            <!-- Bus Services -->
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Bus Services"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:padding="4dp"
-                    android:background="#FFFFFF" />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Route A: Main Square to Hill View, 6:00 AM - 10:00 PM"
-                    android:textStyle="bold"
-                    android:padding="4dp" />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Route B: Market Road to Riverside, 5:30 AM - 9:30 PM"
-                    android:textStyle="bold"
-                    android:padding="4dp" />
-            </TableRow>
+            <!-- Infrastructure Page Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/infrastructure_page"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:paddingBottom="16dp"
+                android:textColor="#4B0082" />
 
-            <!-- Railway Stations -->
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Railway Stations"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:padding="4dp"
-                    android:background="#FFFFFF" />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Central Station: Trains every 30 mins"
-                    android:textStyle="bold"
-                    android:padding="4dp" />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="East Junction: Trains every 1 hour"
-                    android:textStyle="bold"
-                    android:padding="4dp" />
-            </TableRow>
-        </TableLayout>
+            <!-- Transport Services Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/transport_services"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingBottom="8dp"
+                android:textColor="#FF6347" />
 
-        <!-- Roads Section -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Roads Section"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:paddingTop="16dp"
-            android:paddingBottom="8dp" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1"
+                android:background="#FFF0F5"
+                android:padding="8dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:elevation="4dp">
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:stretchColumns="1">
+                <!-- Bus Services -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bus_services"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:padding="4dp"
+                        android:background="#FFFFFF"
+                        android:textColor="#4B0082"
+                        android:layout_span="2" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/route_a"
+                        android:textStyle="bold"
+                        android:padding="4dp"
+                        android:textColor="#2E8B57" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/route_b"
+                        android:textStyle="bold"
+                        android:padding="4dp"
+                        android:textColor="#2E8B57" />
+                </TableRow>
 
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Major Roads"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:padding="4dp"
-                    android:background="#FFFFFF" />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Main Street, Oak Avenue, Pine Road"
-                    android:textStyle="bold"
-                    android:padding="4dp" />
-            </TableRow>
+                <!-- Railway Stations -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/railway_stations"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:padding="4dp"
+                        android:background="#FFFFFF"
+                        android:textColor="#4B0082"
+                        android:layout_span="2" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/central_station"
+                        android:textStyle="bold"
+                        android:padding="4dp"
+                        android:textColor="#2E8B57" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/east_junction"
+                        android:textStyle="bold"
+                        android:padding="4dp"
+                        android:textColor="#2E8B57" />
+                </TableRow>
+            </TableLayout>
 
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Conditions"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:padding="4dp"
-                    android:background="#FFFFFF" />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Good, Fair, Poor"
-                    android:textStyle="bold"
-                    android:padding="4dp" />
-            </TableRow>
+            <!-- Roads Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/roads_section"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp"
+                android:textColor="#FF6347" />
 
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ongoing Roadworks"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:padding="4dp"
-                    android:background="#FFFFFF" />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Main Street - Resurfacing until Dec 2023"
-                    android:textStyle="bold"
-                    android:padding="4dp" />
-            </TableRow>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1"
+                android:background="#FFF0F5"
+                android:padding="8dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:elevation="4dp">
 
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Planned Roadworks"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:padding="4dp"
-                    android:background="#FFFFFF" />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Pine Road - Widening in 2024"
-                    android:textStyle="bold"
-                    android:padding="4dp" />
-            </TableRow>
-        </TableLayout>
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/major_roads"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:padding="4dp"
+                        android:background="#FFFFFF"
+                        android:textColor="#4B0082"
+                        android:layout_span="2" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/main_street"
+                        android:textStyle="bold"
+                        android:padding="4dp"
+                        android:textColor="#2E8B57" />
+                </TableRow>
 
-        <!-- Communication Section -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Communication Section"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:paddingTop="16dp"
-            android:paddingBottom="8dp" />
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/conditions"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:padding="4dp"
+                        android:background="#FFFFFF"
+                        android:textColor="#4B0082"
+                        android:layout_span="2" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/conditions_list"
+                        android:textStyle="bold"
+                        android:padding="4dp"
+                        android:textColor="#2E8B57" />
+                </TableRow>
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:stretchColumns="1">
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ongoing_roadworks"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:padding="4dp"
+                        android:background="#FFFFFF"
+                        android:textColor="#4B0082"
+                        android:layout_span="2" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/main_street_resurfacing"
+                        android:textStyle="bold"
+                        android:padding="4dp"
+                        android:textColor="#2E8B57" />
+                </TableRow>
 
-            <!-- Internet Services -->
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Internet Services"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:padding="4dp"
-                    android:background="#FFFFFF" />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Provider A - High Speed Fiber"
-                    android:textStyle="bold"
-                    android:padding="4dp" />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Provider B - Broadband"
-                    android:textStyle="bold"
-                    android:padding="4dp" />
-            </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/planned_roadworks"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:padding="4dp"
+                        android:background="#FFFFFF"
+                        android:textColor="#4B0082"
+                        android:layout_span="2" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/pine_road_widening"
+                        android:textStyle="bold"
+                        android:padding="4dp"
+                        android:textColor="#2E8B57" />
+                </TableRow>
+            </TableLayout>
 
-            <!-- Telecommunication Services -->
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Telecommunication Services"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:padding="4dp"
-                    android:background="#FFFFFF" />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Telco X - Mobile Network"
-                    android:textStyle="bold"
-                    android:padding="4dp" />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Telco Y - 4G Services"
-                    android:textStyle="bold"
-                    android:padding="4dp" />
-            </TableRow>
-        </TableLayout>
+            <!-- Communication Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/communication_section"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp"
+                android:textColor="#FF6347" />
 
-    </LinearLayout>
-</ScrollView>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1"
+                android:background="#FFF0F5"
+                android:padding="8dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:elevation="4dp">
 
-<com.google.android.material.navigation.NavigationView
-android:id="@+id/nav_view"
-android:layout_width="wrap_content"
-android:layout_height="match_parent"
-android:layout_gravity="start"
-android:background="#FFFFFF"
-app:menu="@menu/drawer_menu"/>
+                <!-- Internet Services -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/internet_services"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:padding="4dp"
+                        android:background="#FFFFFF"
+                        android:textColor="#4B0082"
+                        android:layout_span="2" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/provider_a"
+                        android:textStyle="bold"
+                        android:padding="4dp"
+                        android:textColor="#2E8B57" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/provider_b"
+                        android:textStyle="bold"
+                        android:padding="4dp"
+                        android:textColor="#2E8B57" />
+                </TableRow>
 
+                <!-- Telecommunication Services -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/telecommunication_services"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:padding="4dp"
+                        android:background="#FFFFFF"
+                        android:textColor="#4B0082"
+                        android:layout_span="2" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/telco_x"
+                        android:textStyle="bold"
+                        android:padding="4dp"
+                        android:textColor="#2E8B57" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/telco_y"
+                        android:textStyle="bold"
+                        android:padding="4dp"
+                        android:textColor="#2E8B57" />
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#FFFFFF"
+        app:menu="@menu/drawer_menu"/>
 </androidx.drawerlayout.widget.DrawerLayout>

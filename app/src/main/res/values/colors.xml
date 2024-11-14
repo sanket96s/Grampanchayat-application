@@ -7,6 +7,13 @@
     <color name="colorAccent">#FF4081</color>
     <color name="your_custom_color">#FFDAB9</color>
     <color name="green">#4CAF50</color>
+    <color name="light_peach">#F4CBA0</color>
     <color name="blue">#2196F3</color>
     <color name="red">#F44336</color>
+    <color name="colorItemPressed">#D3D3D3</color>
+    <color name="colorItemSelected">#A9A9A9</color>
+    <color name="colorItemNormal">#FFFFFF</color>
+        <color name="peach_background">#FFDAB9</color> <!-- Peach Background -->
+        <color name="primary_text">#4A4A4A</color> <!-- Dark Gray Text Color -->
+        <color name="button_background">#FF7F50</color> <!-- Coral Button Background -->
 </resources>

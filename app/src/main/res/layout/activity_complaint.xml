@@ -1,6 +1,4 @@
-<!-- res/layout/activity_complaint.xml -->
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F4C7A3">
@@ -15,7 +13,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="समस्या नोंदवा"
+            android:text="@string/page_title"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="#000"
@@ -26,14 +24,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="नाव :"
+            android:text="@string/name_label"
             android:textSize="16sp"
             android:textColor="#000"/>
         <EditText
             android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="आपले नाव भरा"
+            android:hint="@string/name_hint"
             android:padding="12dp"
             android:layout_marginBottom="16dp"
             android:inputType="textPersonName"/>
@@ -42,14 +40,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="पत्ता :"
+            android:text="@string/address_label"
             android:textSize="16sp"
             android:textColor="#000"/>
         <EditText
             android:id="@+id/etAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="आपला पत्ता भरा"
+            android:hint="@string/address_hint"
             android:padding="12dp"
             android:layout_marginBottom="16dp"
             android:inputType="textPostalAddress"/>
@@ -58,14 +56,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="मोबाईल क्रमांक :"
+            android:text="@string/mobile_label"
             android:textSize="16sp"
             android:textColor="#000"/>
         <EditText
             android:id="@+id/etMobileNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="मोबाईल क्रमांक भरा"
+            android:hint="@string/mobile_hint"
             android:padding="12dp"
             android:layout_marginBottom="16dp"
             android:inputType="phone"/>
@@ -74,7 +72,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="समस्या श्रेणी :"
+            android:text="@string/category_label"
             android:textSize="16sp"
             android:textColor="#000"/>
         <RadioGroup
@@ -87,36 +85,36 @@
                 android:id="@+id/radioWater"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="पाणी"/>
+                android:text="@string/water"/>
             <RadioButton
                 android:id="@+id/radioRoad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="रस्ता"/>
+                android:text="@string/road"/>
             <RadioButton
                 android:id="@+id/radioElectricity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="वीज"/>
+                android:text="@string/electricity"/>
             <RadioButton
                 android:id="@+id/radioOther"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="इतर"/>
+                android:text="@string/other"/>
         </RadioGroup>
 
         <!-- Complaint Description Field -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="समस्या :"
+            android:text="@string/complaint_label"
             android:textSize="16sp"
             android:textColor="#000"/>
         <EditText
             android:id="@+id/etComplaint"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:hint="आपली समस्या भरा"
+            android:layout_height="wrap_content"
+            android:hint="@string/complaint_hint"
             android:padding="12dp"
             android:layout_marginBottom="24dp"
             android:inputType="textMultiLine"
@@ -135,7 +133,7 @@
                 android:id="@+id/btnUpload"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="अपलोड करा"
+                android:text="@string/upload_button"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp"
                 android:backgroundTint="#FF8800"
@@ -147,7 +145,7 @@
                 android:id="@+id/btnTrackComplaint"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="तक्रार शोधा"
+                android:text="@string/track_button"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp"
                 android:backgroundTint="#4CAF50"

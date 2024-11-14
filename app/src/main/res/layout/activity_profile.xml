@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="#FFDAB9"> <!-- Peach background color -->
+    android:background="#FFDAB9">
 
-    <!-- Profile Picture with Edit Icon -->
+    <!-- Profile Picture -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,10 +21,11 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_centerInParent="true"
-            android:src="@drawable/accountinfo" />
+            android:scaleType="centerCrop"
+            android:background="@drawable/circle_background" />
     </RelativeLayout>
 
-    <!-- Name with Edit Icon -->
+    <!-- Name -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,15 +40,14 @@
             android:id="@+id/profile_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name"
+            android:text="@string/profile_name"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_centerVertical="true"
             android:layout_alignParentStart="true" />
-
     </RelativeLayout>
 
-    <!-- Email with Edit Icon -->
+    <!-- Email -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -62,8 +62,10 @@
             android:id="@+id/profile_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email"
-            android:textSize="16sp" />
+            android:text="@string/profile_email"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
     </RelativeLayout>
 
 </LinearLayout>

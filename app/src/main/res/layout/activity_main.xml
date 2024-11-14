@@ -7,275 +7,288 @@
     android:fitsSystemWindows="true">
     <!-- Ensures layout is adjusted for system UI -->
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-    android:background="#FFDAB9"
-    android:fillViewport="true">
-
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FFDAB9">
+        android:background="#FAD6A5"
+        android:fillViewport="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="#A9A9A9">
+            android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/home_profile_image"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="13dp"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/accountinfo"
-                android:scaleType="centerCrop"
-                android:background="@drawable/circle_background" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#333333">
 
-            <TextView
-                android:id="@+id/text_gram_panchayat"
-                android:layout_width="wrap_content"
+                <!-- Profile Image with Green Border -->
+                <FrameLayout
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerVertical="true">
+
+                    <!-- Green Border ImageView -->
+                    <ImageView
+                        android:id="@+id/home_profile_image_border"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:src="@drawable/circle_background_green_border" /> <!-- Green Border -->
+
+                    <!-- Profile Image -->
+                    <ImageView
+                        android:id="@+id/home_profile_image"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/accountinfo"
+                        android:background="@drawable/circle_background" /> <!-- Profile Picture -->
+
+                </FrameLayout>
+
+                <!-- Gram Panchayat Text -->
+                <TextView
+                    android:id="@+id/text_gram_panchayat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/gram_panchayat"
+                    android:textSize="20sp"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginLeft="20dp" />
+            </RelativeLayout>
+
+            <!-- Content Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="@string/gram_panchayat"
-                android:textSize="20sp"
-                android:textColor="#FFFFFF"
-                android:layout_marginLeft="20dp" />
+                android:layout_marginTop="60dp"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <!-- First Column -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <!-- Complaint File -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/image_complaint"
+                            android:layout_width="98dp"
+                            android:layout_height="98dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/complaintfileicon" />
+
+                        <TextView
+                            android:id="@+id/text_problem_report"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center"
+                            android:text="@string/report_problem"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <!-- Apply Certificate -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/image_certificate"
+                            android:layout_width="98dp"
+                            android:layout_height="98dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/certificatesapplicationicon" />
+
+                        <TextView
+                            android:id="@+id/text_apply_certificate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center"
+                            android:text="@string/apply_certificate"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <!-- Government Schemes -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/image_government_schemes"
+                            android:layout_width="98dp"
+                            android:layout_height="98dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="8dp"
+                            android:onClick="openGovernmentSchemesPage"
+                            android:src="@drawable/governmentschemesicon" />
+
+                        <TextView
+                            android:id="@+id/text_government_schemes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center"
+                            android:text="@string/government_schemes"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <!-- Events -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/image_events"
+                            android:layout_width="98dp"
+                            android:layout_height="98dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/eventsicon" />
+
+                        <TextView
+                            android:id="@+id/text_events"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center"
+                            android:text="@string/gramsabha"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Second Column -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <!-- Projects -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/image_projects"
+                            android:layout_width="98dp"
+                            android:layout_height="98dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="8dp"
+                            android:onClick="openProjectsActivity"
+                            android:src="@drawable/projectsicon" />
+
+                        <TextView
+                            android:id="@+id/text_projects"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center"
+                            android:text="@string/projects"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <!-- Village Information -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/image_village_information"
+                            android:layout_width="98dp"
+                            android:layout_height="98dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/villageinformationicon" />
+
+                        <TextView
+                            android:id="@+id/text_village_information"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center"
+                            android:text="@string/village_information"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <!-- Pay Tax -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/image_pay_tax"
+                            android:layout_width="98dp"
+                            android:layout_height="98dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/fivehundred" />
+
+                        <TextView
+                            android:id="@+id/text_pay_tax"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center"
+                            android:text="@string/pay_tax"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
         </RelativeLayout>
+    </ScrollView>
 
-        <!-- Content Section -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:orientation="horizontal"
-            android:padding="16dp">
-
-            <!-- First Column -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <!-- Complaint File -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/image_complaint"
-                        android:layout_width="98dp"
-                        android:layout_height="98dp"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="8dp"
-                        android:src="@drawable/complaintfileicon" />
-
-                    <TextView
-                        android:id="@+id/text_problem_report"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:gravity="center"
-                        android:text="@string/report_problem"
-                        android:textColor="#000000"
-                        android:textSize="16sp" />
-                </LinearLayout>
-
-                <!-- Apply Certificate -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/image_certificate"
-                        android:layout_width="98dp"
-                        android:layout_height="98dp"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="8dp"
-                        android:src="@drawable/certificatesapplicationicon" />
-
-                    <TextView
-                        android:id="@+id/text_apply_certificate"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:gravity="center"
-                        android:text="@string/apply_certificate"
-                        android:textColor="#000000"
-                        android:textSize="16sp" />
-                </LinearLayout>
-
-                <!-- Government Schemes -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/image_government_schemes"
-                        android:layout_width="98dp"
-                        android:layout_height="98dp"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="8dp"
-                        android:onClick="openGovernmentSchemesPage"
-                        android:src="@drawable/governmentschemesicon" />
-
-                    <TextView
-                        android:id="@+id/text_government_schemes"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:gravity="center"
-                        android:text="@string/government_schemes"
-                        android:textColor="#000000"
-                        android:textSize="16sp" />
-                </LinearLayout>
-
-                <!-- Events -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/image_events"
-                        android:layout_width="98dp"
-                        android:layout_height="98dp"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="8dp"
-                        android:src="@drawable/eventsicon" />
-
-                    <TextView
-                        android:id="@+id/text_events"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:gravity="center"
-                        android:text="@string/gramsabha"
-                        android:textColor="#000000"
-                        android:textSize="16sp" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- Second Column -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <!-- Projects -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/image_projects"
-                        android:layout_width="98dp"
-                        android:layout_height="98dp"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="8dp"
-                        android:onClick="openProjectsActivity"
-                        android:src="@drawable/projectsicon" />
-
-                    <TextView
-                        android:id="@+id/text_projects"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:gravity="center"
-                        android:text="@string/projects"
-                        android:textColor="#000000"
-                        android:textSize="16sp" />
-                </LinearLayout>
-
-                <!-- Village Information -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/image_village_information"
-                        android:layout_width="98dp"
-                        android:layout_height="98dp"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="8dp"
-                        android:src="@drawable/villageinformationicon" />
-
-                    <TextView
-                        android:id="@+id/text_village_information"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:gravity="center"
-                        android:text="@string/village_information"
-                        android:textColor="#000000"
-                        android:textSize="16sp" />
-                </LinearLayout>
-
-                <!-- Pay Tax -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/image_pay_tax"
-                        android:layout_width="98dp"
-                        android:layout_height="98dp"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="8dp"
-                        android:src="@drawable/fivehundred" />
-
-                    <TextView
-                        android:id="@+id/text_pay_tax"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:gravity="center"
-                        android:text="@string/pay_tax"
-                        android:textColor="#000000"
-                        android:textSize="16sp" />
-                </LinearLayout>
-
-
-            </LinearLayout>
-        </LinearLayout>
-    </RelativeLayout>
-</ScrollView>
-
-    <!-- Drawer navigation view -->
 <com.google.android.material.navigation.NavigationView
 android:id="@+id/navigation_view"
 android:layout_width="wrap_content"
