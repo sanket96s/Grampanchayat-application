@@ -20,6 +20,6 @@ public class Scheme3InformationActivity extends AppCompatActivity {
         Intent intent = new Intent(Scheme3InformationActivity.this, ApplicationFormActivity.class);
         startActivity(intent);
 
-    }
+
     }
 }
