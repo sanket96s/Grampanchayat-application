@@ -75,15 +75,34 @@
             android:buttonTint="#81D4FA" />
     </RadioGroup>
 
-    <!-- Submit Button -->
-    <Button
-        android:id="@+id/btn_submit_application"
+    <!-- Submit and Track Buttons -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="अर्ज सादर करा"
-        android:backgroundTint="#FFA726"
-        android:textColor="#FFFFFF"
-        android:padding="12dp"
-        android:elevation="4dp"
-        android:layout_marginTop="16dp" />
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btn_submit_application"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="अर्ज सादर करा"
+            android:backgroundTint="#FFA726"
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:elevation="4dp"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btn_track_certificate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="प्रमाणपत्र शोधा"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:elevation="4dp" />
+    </LinearLayout>
+
 </LinearLayout>
