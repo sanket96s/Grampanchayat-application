@@ -12,7 +12,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#FFDAB9">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -35,7 +36,7 @@
                 android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="93dp"
+                android:layout_marginStart="119dp"
                 android:layout_marginTop="4dp"
                 android:text="प्रधानमंत्री जनधन
                  योजना (PMJDY)"
