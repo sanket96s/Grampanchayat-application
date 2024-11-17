@@ -1,0 +1,280 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEBE0"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Image View with border -->
+        <ImageView
+            android:id="@+id/sample_photo"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_border" />  <!-- Custom border for Image -->
+
+        <!-- Project Title Section -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/project_title_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/project_title"
+                android:textStyle="bold"
+                android:padding="12dp"
+                android:layout_marginBottom="4dp"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/project_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Project Title"
+                android:textSize="20sp"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/rounded_background" />
+        </LinearLayout>
+
+        <!-- Project Description Section -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/project_description_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/project_description"
+                android:textStyle="bold"
+                android:padding="12dp"
+                android:layout_marginBottom="4dp"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/project_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Project Description"
+                android:textSize="14sp"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/rounded_background" />
+        </LinearLayout>
+
+        <!-- Project Objectives Section -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/project_objectives_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/project_objectives"
+                android:textStyle="bold"
+                android:padding="12dp"
+                android:layout_marginBottom="4dp"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/project_objectives"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Objectives"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/rounded_background" />
+        </LinearLayout>
+
+        <!-- Project Start Date Section -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/project_start_date_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/project_start_date"
+                android:textStyle="bold"
+                android:padding="12dp"
+                android:layout_marginBottom="4dp"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/project_start_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Start Date"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/rounded_background" />
+        </LinearLayout>
+
+        <!-- Project Completion Date Section -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/project_completion_date_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/project_completion_date"
+                android:textStyle="bold"
+                android:padding="12dp"
+                android:layout_marginBottom="4dp"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/project_completion_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Completion Date"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/rounded_background" />
+        </LinearLayout>
+
+        <!-- Project Status Section -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/project_status_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/project_status"
+                android:textStyle="bold"
+                android:padding="12dp"
+                android:layout_marginBottom="4dp"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/project_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/rounded_background" />
+        </LinearLayout>
+
+        <!-- Project Budget Section -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/project_budget_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/project_budget"
+                android:textStyle="bold"
+                android:padding="12dp"
+                android:layout_marginBottom="4dp"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/project_budget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Budget"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/rounded_background" />
+        </LinearLayout>
+
+        <!-- Project Stakeholders Section -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/project_stakeholders_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/project_stakeholders"
+                android:textStyle="bold"
+                android:padding="12dp"
+                android:layout_marginBottom="4dp"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/project_stakeholders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Stakeholders"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/rounded_background" />
+        </LinearLayout>
+
+        <!-- Project Location Section -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/project_location_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/project_location"
+                android:textStyle="bold"
+                android:padding="12dp"
+                android:layout_marginBottom="4dp"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/project_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/rounded_background" />
+        </LinearLayout>
+
+        <!-- Feedback Button with rounded corners -->
+        <Button
+            android:id="@+id/feedback_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/give_feedback"
+            android:background="@drawable/rounded_box"
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"/>
+
+    </LinearLayout>
+</ScrollView>

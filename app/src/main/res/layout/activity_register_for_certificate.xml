@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFDAB9"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#FFDAB9">
+
+        <TextView
+            android:id="@+id/document_type_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:text="प्रमाणपत्र प्रकार:" />
+
+
+        <!-- वैयक्तिक माहिती -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="वैयक्तिक माहिती:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+
+        <EditText
+            android:id="@+id/full_name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="पूर्ण नाव"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/edit_text_border"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/parent_name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="आईचा/वडिलांचा नाव"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/edit_text_border"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/dob_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="जन्मतारीख"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/edit_text_border"
+            android:inputType="date" />
+
+        <RadioGroup
+            android:id="@+id/gender_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/male_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="पुरुष"
+                android:padding="8dp" />
+
+            <RadioButton
+                android:id="@+id/female_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="महिला"
+                android:padding="8dp" />
+
+            <RadioButton
+                android:id="@+id/other_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="इतर"
+                android:padding="8dp" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/address_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="पत्ता"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/edit_text_border"
+            android:inputType="textPostalAddress" />
+
+        <EditText
+            android:id="@+id/mobile_number_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="मोबाइल नंबर"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/edit_text_border"
+            android:inputType="phone" />
+
+        <!-- File Upload Buttons Redirecting to Google Form -->
+        <Button
+            android:id="@+id/upload_photo_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="फोटो अपलोड करा"
+            android:layout_marginBottom="8dp"
+            android:onClick="openPhotoGoogleForm" />
+
+        <Button
+            android:id="@+id/upload_aadhar_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="आधार कार्ड अपलोड करा"
+            android:layout_marginBottom="8dp"
+            android:onClick="openAadharGoogleForm" />
+
+        <Button
+            android:id="@+id/upload_ration_card_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="शिधापत्रिका अपलोड करा"
+            android:layout_marginBottom="8dp"
+            android:onClick="openRationCardGoogleForm" />
+
+        <!-- Confirmation CheckBox -->
+        <CheckBox
+            android:id="@+id/confirm_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="सर्व माहिती योग्य आहे, याची पुष्टी करा"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="अर्ज करा" />
+
+    </LinearLayout>
+</ScrollView>

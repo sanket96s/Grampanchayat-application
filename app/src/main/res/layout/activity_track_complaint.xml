@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4C7A3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Title for the page -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/track_complaint_title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_gravity="center"
+            android:paddingBottom="24dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Complaint ID Input Field -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/complaint_id_label"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:layout_marginBottom="8dp"/>
+        <EditText
+            android:id="@+id/etComplaintId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/complaint_id_hint"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:inputType="text"/>
+
+        <!-- Track Button -->
+        <Button
+            android:id="@+id/btnTrack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/track_button"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:backgroundTint="#4CAF50"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- TableLayout for displaying complaint details -->
+        <TableLayout
+            android:id="@+id/tblComplaintDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1"
+            android:padding="16dp"
+            android:visibility="gone"
+            android:divider="@android:color/darker_gray"
+            android:showDividers="middle|end"
+            android:background="#FFFFFF">
+
+            <!-- Table Row for Complaint ID -->
+            <TableRow
+                android:background="#E8F5E9"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/complaint_id"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:paddingEnd="8dp"/>
+                <TextView
+                    android:id="@+id/tvComplaintId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#4CAF50"
+                    android:paddingStart="8dp"
+                    android:layout_weight="1"
+                    android:scrollHorizontally="false"/>
+            </TableRow>
+
+            <!-- Table Row for Name -->
+            <TableRow
+                android:background="#FFF3E0"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name1"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:paddingEnd="8dp"/>
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:paddingStart="8dp"
+                    android:layout_weight="1"
+                    android:scrollHorizontally="false"/>
+            </TableRow>
+
+            <!-- Table Row for Address -->
+            <TableRow
+                android:background="#E8F5E9"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/address"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:paddingEnd="8dp"/>
+                <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:paddingStart="8dp"
+                    android:layout_weight="1"
+                    android:scrollHorizontally="false"/>
+            </TableRow>
+
+            <!-- Table Row for Mobile Number -->
+            <TableRow
+                android:background="#FFF3E0"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mobile_number"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:paddingEnd="8dp"/>
+                <TextView
+                    android:id="@+id/tvMobileNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:paddingStart="8dp"
+                    android:layout_weight="1"
+                    android:scrollHorizontally="false"/>
+            </TableRow>
+
+            <!-- Table Row for Category -->
+            <TableRow
+                android:background="#E8F5E9"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/category"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:paddingEnd="8dp"/>
+                <TextView
+                    android:id="@+id/tvCategory"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:paddingStart="8dp"
+                    android:layout_weight="1"
+                    android:scrollHorizontally="false"/>
+            </TableRow>
+
+            <!-- Table Row for Complaint Description -->
+            <TableRow
+                android:background="#FFF3E0"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/complaint_description"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:paddingEnd="8dp"/>
+                <TextView
+                    android:id="@+id/tvComplaintDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:paddingStart="8dp"
+                    android:layout_weight="1"
+                    android:scrollHorizontally="false"/>
+            </TableRow>
+
+            <!-- Table Row for Status -->
+            <TableRow
+                android:background="#E8F5E9"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/status"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:paddingEnd="8dp"/>
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#4CAF50"
+                    android:paddingStart="8dp"
+                    android:layout_weight="1"
+                    android:scrollHorizontally="false"/>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>

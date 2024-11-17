@@ -28,10 +28,14 @@ The Gram Panchayat Application is designed to enhance community engagement and s
 - Stay informed about upcoming local events, including cultural, educational, and health-related activities.
 - Register for events and provide feedback.
 
+### 7. Tax Pay
+- User can get tax bill by enetering house number.
+- generated amount can be paid using payment gateway.
+
 ## Technologies Used 🛠️
-- **Frontend:** Android (Java)
-- **Backend:** [Backend Technology] (Node.js/Java)
-- **Database:** [Database Technology] (Firebase)
+- **Frontend:** Android (Java/XML)
+- **Backend:** [Backend Technology] (Java)
+- **Database:** [Database Technology] (Firebase/NoSQL)
 - **Cloud Services:** [Cloud Provider] (Google Cloud)
 
 ## Installation 📲
@@ -51,6 +55,7 @@ To install the Gram Panchayat APK on your Android device:
 2. **Navigate the Features:** Use the bottom navigation bar to access different sections of the app.
 3. **File Complaints and Applications:** Follow the prompts to file complaints or apply for certificates and schemes.
 4. **View Updates:** Check the status of your applications, complaints, and events.
+5. **Pay Tax:** user can pay the tax online.
 
 ## Contributing 🤝
 We welcome contributions! If you want to help improve the Gram Panchayat Application, please fork the repository and submit a pull request.

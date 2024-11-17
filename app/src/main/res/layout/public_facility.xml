@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFDAB9">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Public Facilities Heading -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/public_facilities"
+                style="@style/SectionTitle"/>
+
+            <!-- Healthcare Facilities Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/healthcare_facilities"
+                style="@style/SubSectionTitle"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TableSectionBackground">
+
+                <TableRow style="@style/TableRowBackground">
+                    <TextView
+                        style="@style/TableRowTextStyle"
+                        android:text="@string/city_hospital"/>
+                    <TextView
+                        style="@style/TextRowSubtext"
+                        android:text="@string/city_hospital_address"/>
+                </TableRow>
+
+                <TableRow style="@style/TableRowBackground">
+                    <TextView
+                        style="@style/TableRowTextStyle"
+                        android:text="@string/green_valley_clinic"/>
+                    <TextView
+                        style="@style/TextRowSubtext"
+                        android:text="@string/green_valley_clinic_address"/>
+                </TableRow>
+
+                <TableRow style="@style/TableRowBackground">
+                    <TextView
+                        style="@style/TableRowTextStyle"
+                        android:text="@string/sunrise_health_center"/>
+                    <TextView
+                        style="@style/TextRowSubtext"
+                        android:text="@string/sunrise_health_center_address"/>
+                </TableRow>
+            </TableLayout>
+
+            <!-- Education Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/education_section"
+                style="@style/SubSectionTitle"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TableSectionBackground">
+
+                <TableRow style="@style/TableRowBackground">
+                    <TextView
+                        style="@style/TableRowTextStyle"
+                        android:text="@string/green_valley_school"/>
+                    <TextView
+                        style="@style/TextRowSubtext"
+                        android:text="@string/green_valley_school_address"/>
+                </TableRow>
+
+                <TableRow style="@style/TableRowBackground">
+                    <TextView
+                        style="@style/TableRowTextStyle"
+                        android:text="@string/sunrise_academy"/>
+                    <TextView
+                        style="@style/TextRowSubtext"
+                        android:text="@string/sunrise_academy_address"/>
+                </TableRow>
+
+                <TableRow style="@style/TableRowBackground">
+                    <TextView
+                        style="@style/TableRowTextStyle"
+                        android:text="@string/hilltop_high_school"/>
+                    <TextView
+                        style="@style/TextRowSubtext"
+                        android:text="@string/hilltop_high_school_address"/>
+                </TableRow>
+            </TableLayout>
+
+            <!-- Utilities Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/utilities_section"
+                style="@style/SubSectionTitle"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TableSectionBackground">
+
+                <TableRow style="@style/TableRowBackground">
+                    <TextView
+                        style="@style/TableRowTextStyle"
+                        android:text="@string/water_supply"/>
+                    <TextView
+                        style="@style/TextRowSubtext"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:ellipsize="none"
+                        android:text="@string/water_supply_info"/>
+                </TableRow>
+
+                <TableRow style="@style/TableRowBackground">
+                    <TextView
+                        style="@style/TableRowTextStyle"
+                        android:text="@string/electricity"/>
+                    <TextView
+                        style="@style/TextRowSubtext"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:ellipsize="none"
+                        android:text="@string/electricity_info"/>
+                </TableRow>
+
+                <TableRow style="@style/TableRowBackground">
+                    <TextView
+                        style="@style/TableRowTextStyle"
+                        android:text="@string/sanitation"/>
+                    <TextView
+                        style="@style/TextRowSubtext"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:ellipsize="none"
+                        android:text="@string/sanitation_info"/>
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#FFFFFF"
+        app:menu="@menu/drawer_menu"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

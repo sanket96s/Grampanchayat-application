@@ -19,6 +19,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.squareup.picasso.Picasso;
@@ -43,7 +44,7 @@ public class MainPageActivity extends AppCompatActivity {
         NavigationView navigationView = findViewById(R.id.navigation_view);
         View headerView = navigationView.getHeaderView(0);
 
-        iconAccountCircle = headerView.findViewById(R.id.icon_account_circle);
+        iconAccountCircle = headerView.findViewById(R.id.home_profile_image);
         navUsername = headerView.findViewById(R.id.nav_username);
         homeProfileImage = findViewById(R.id.home_profile_image);
 
@@ -68,15 +69,11 @@ public class MainPageActivity extends AppCompatActivity {
                 } else if (id == R.id.help_and_support) {
                     Intent intent = new Intent(MainPageActivity.this, HelpAndSupportActivity.class);
                     startActivity(intent);
-                } else if (id == R.id.nav_settings) {
-                    Intent intent = new Intent(MainPageActivity.this, SettingsActivity.class);
-                    startActivity(intent);
                 } else if (id == R.id.nav_logout) {
                     signOut();
                 } else {
                     return false;
                 }
-
 
                 drawerLayout.closeDrawer(GravityCompat.START);
                 return true;
@@ -91,6 +88,24 @@ public class MainPageActivity extends AppCompatActivity {
 
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
         updateUI(account);
+
+        TextView textvillageinfo = findViewById(R.id.text_village_information);
+        ImageView imgvillageinfo = findViewById(R.id.image_village_information);
+        textvillageinfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, VillageActivity.class);
+                startActivity(intent);
+            }
+        });
+        imgvillageinfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, VillageActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         TextView textPayTax = findViewById(R.id.text_pay_tax);
         ImageView imgPayTax = findViewById(R.id.image_pay_tax);
@@ -109,8 +124,89 @@ public class MainPageActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // Adding Apply for Certificate functionality
+        TextView textcertificate = findViewById(R.id.text_apply_certificate);
+        ImageView imgcertificate = findViewById(R.id.image_certificate);
+        textcertificate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, ApplyForCertificateActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imgcertificate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, ApplyForCertificateActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Adding Projects functionality
+        TextView textProjects = findViewById(R.id.text_projects);
+        ImageView imgProjects = findViewById(R.id.image_projects);
+        textProjects.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, ProjectsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imgProjects.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, ProjectsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Adding Gramsabha functionality
+        TextView textGramsabha = findViewById(R.id.text_events);
+        ImageView imgGramsabha = findViewById(R.id.image_events);
+
+        textGramsabha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, GramsabhaActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imgGramsabha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, GramsabhaActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Adding Complaint functionality
+        ImageView imgComplaint = findViewById(R.id.image_complaint);
+        TextView txtComplaint = findViewById(R.id.text_problem_report);
+
+        imgComplaint.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, ComplaintActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        txtComplaint.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPageActivity.this, ComplaintActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Adding Government Schemes functionality
         TextView textGovernmentSchemes = findViewById(R.id.text_government_schemes);
         ImageView imageGovernmentSchemes = findViewById(R.id.image_government_schemes);
+
         textGovernmentSchemes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -126,8 +222,6 @@ public class MainPageActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
     }
 
     @Override
@@ -178,16 +272,11 @@ public class MainPageActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed() {
+    public void onBackPressed () {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
         }
     }
-    public void openGovernmentSchemesPage(View view) {
-        Intent intent = new Intent(MainPageActivity.this, GovernmentSchemesActivity.class);
-        startActivity(intent);
-    }
 }
-
