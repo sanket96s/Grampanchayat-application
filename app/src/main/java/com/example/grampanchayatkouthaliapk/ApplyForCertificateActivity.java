@@ -21,6 +21,7 @@ public class ApplyForCertificateActivity extends AppCompatActivity {
 
         radioGroupCertificateTypes = findViewById(R.id.radioGroup_certificate_types);
         Button btnSubmitApplication = findViewById(R.id.btn_submit_application);
+        Button btnTrackCertificate = findViewById(R.id.btn_track_certificate);
 
         // Submit and navigate to the next activity
         btnSubmitApplication.setOnClickListener(new View.OnClickListener() {
@@ -40,6 +41,14 @@ public class ApplyForCertificateActivity extends AppCompatActivity {
                 } else {
                     showToast("कृपया प्रमाणपत्र प्रकार निवडा");
                 }
+            }
+        });
+
+        btnTrackCertificate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ApplyForCertificateActivity.this, TrackCertificateActivity.class);
+                startActivity(intent);
             }
         });
     }

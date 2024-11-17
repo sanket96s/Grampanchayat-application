@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4C7A3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Title for the page -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="प्रमाणपत्र ट्रॅक करा"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_gravity="center"
+            android:paddingBottom="16dp"/>
+
+        <!-- Certificate ID Input Field -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="प्रमाणपत्र आयडी :"
+            android:textSize="16sp"
+            android:textColor="#000"/>
+        <EditText
+            android:id="@+id/etCertificateId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="आपला प्रमाणपत्र आयडी भरा"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:inputType="text"/>
+
+        <!-- Track Button -->
+        <Button
+            android:id="@+id/btnTrackCertificate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ट्रॅक करा"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:backgroundTint="#4CAF50"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Certificate Status TextView -->
+        <TextView
+            android:id="@+id/tvCertificateDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:padding="12dp"/>
+    </LinearLayout>
+</ScrollView>
