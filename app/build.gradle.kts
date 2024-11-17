@@ -65,6 +65,14 @@ dependencies {
     implementation ("com.sun.mail:android-mail:1.6.5")
     implementation ("com.sun.mail:android-activation:1.6.5")
 
+    implementation ("com.google.firebase:firebase-database:20.0.5")
+    implementation ("com.google.firebase:firebase-auth:21.0.1")  // Required for authentication if needed
+
+    implementation ("com.google.firebase:firebase-database:20.1.0")
+    implementation ("com.google.firebase:firebase-storage:20.1.0")
+
+    implementation ("com.github.bumptech.glide:glide:4.12.0")
+
 
     // Image loading library
     implementation("com.squareup.picasso:picasso:2.71828")

@@ -4,60 +4,36 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ApplyForCertificateActivity extends AppCompatActivity {
-    private String selectedDocumentType = "";
+
+    private RadioGroup radioGroupCertificateTypes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apply_for_certificate);
 
-        Button btnBirthCertificate = findViewById(R.id.radio_birth_certificate);
-        Button btnDeathCertificate = findViewById(R.id.radio_death_certificate);
-        Button btnResidenceCertificate = findViewById(R.id.radio_residence_certificate);
-        Button btnIncomeCertificate = findViewById(R.id.radio_income_certificate);
+        radioGroupCertificateTypes = findViewById(R.id.radioGroup_certificate_types);
         Button btnSubmitApplication = findViewById(R.id.btn_submit_application);
 
-        btnBirthCertificate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectedDocumentType = "Birth Certificate";
-//                showToast("जन्म प्रमाणपत्र निवडले आहे");
-            }
-        });
-
-        btnDeathCertificate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectedDocumentType = "Death Certificate";
-               // showToast("मृत्यू प्रमाणपत्र निवडले आहे");
-            }
-        });
-
-        btnResidenceCertificate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectedDocumentType = "Residence Certificate";
-               // showToast("रहिवासी प्रमाणपत्र निवडले आहे");
-            }
-        });
-
-        btnIncomeCertificate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectedDocumentType = "Income Certificate";
-               // showToast("उत्पन्न प्रमाणपत्र निवडले आहे");
-            }
-        });
-
+        // Submit and navigate to the next activity
         btnSubmitApplication.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!selectedDocumentType.isEmpty()) {
+                // Get the selected RadioButton's text
+                int selectedId = radioGroupCertificateTypes.getCheckedRadioButtonId();
+
+                if (selectedId != -1) {
+                    RadioButton selectedRadioButton = findViewById(selectedId);
+                    String selectedDocumentType = selectedRadioButton.getText().toString();
+
+                    // Pass the selected document type to the next activity
                     Intent intent = new Intent(ApplyForCertificateActivity.this, RegisterforCertificateActivity.class);
                     intent.putExtra("DOCUMENT_TYPE", selectedDocumentType);
                     startActivity(intent);
@@ -68,6 +44,7 @@ public class ApplyForCertificateActivity extends AppCompatActivity {
         });
     }
 
+    // Display a toast message
     private void showToast(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
