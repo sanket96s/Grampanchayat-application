@@ -2,7 +2,50 @@
 
 
 <!--    title-->
-    <!-- Economic Activities Section -->
+
+
+    <string name="upi_app_not_found">UPI अॅप सापडले नाही. कृपया Google Pay सारखे UPI अॅप इन्स्टॉल करा.</string>
+    <string name="organization_name">ग्रामीण पंचायत कौथळी</string>
+    <string name="payment_note">करासाठी पेमेंट</string>
+
+    <string name="fetch_bill">बिल मिळवा</string>
+    <string name="pay_bill">बिल भरा</string>
+    <string name="enter_house_number">कृपया वैध घर क्रमांक द्या.</string>
+    <string name="invalid_house_number">अवैध घर क्रमांक स्वरूप.</string>
+    <string name="payment_success">पेमेन्ट यशस्वी! रक्कम भरली: ₹</string>
+    <string name="payment_failed">पेमेन्ट अयशस्वी किंवा रद्द केली.</string>
+    <string name="hint_house_number">घर क्रमांक</string>
+    <string name="btn_fetch_bill">बिल मिळवा</string>
+    <string name="text_house_number">घर क्रमांक: </string>
+    <string name="text_total_bill">एकूण बिल: </string>
+    <string name="btn_pay_bill">बिल भरा</string>
+    <string name="event1_title">पाणलोट व्यवस्थापन प्रकल्प</string>
+    <string name="event1_description">या प्रकल्पाचा उद्देश पाण्याचे संवर्धन करणे आहे.</string>
+
+    <string name="event2_title">रस्ता बांधणी प्रकल्प</string>
+    <string name="event2_description">या प्रकल्पाचा उद्देश नवीन रस्ते बांधून वाहतुकीची सुविधा सुधारणे आहे.</string>
+
+    <string name="event3_title">स्वच्छता मोहीम</string>
+    <string name="event3_description">या प्रकल्पाचा उद्देश गावात स्वच्छता आणि स्वच्छतेचे महत्त्व वाढविणे आहे.</string>
+
+    <string name="event4_title">आरोग्य तपासणी शिबिर</string>
+    <string name="event4_description">या प्रकल्पाचा उद्देश गावातील नागरिकांचे आरोग्य तपासणी सेवा उपलब्ध करणे आहे.</string>
+    <string name="event_title">कार्यक्रमाचे शीर्षक</string>
+    <string name="event_description">कार्यक्रमाचे वर्णन येथे येईल...</string>
+    <string name="event_date_time">तारीख आणि वेळ: १ जानेवारी २०२५ - १०:०० AM</string>
+    <string name="event_venue">स्थळ: सामुदायिक सभागृह</string>
+    <string name="event_agenda">कार्यसूची: विकास योजनांवर चर्चा</string>
+    <string name="event_organizers">आयोजक: ग्राम पंचायत कार्यालय</string>
+    <string name="event_contact_info">संपर्क: ९८२१२३४५६७</string>
+    <string name="register">प्रतिक्रिया नोंदवा</string>
+    <string name="event_item_1_title">पाणलोट व्यवस्थापन प्रकल्प</string>
+    <string name="event_item_1_desc">या प्रकल्पाचा उद्देश पाण्याचे संवर्धन करणे आहे.</string>
+    <string name="event_item_2_title">रस्ता बांधणी प्रकल्प</string>
+    <string name="event_item_2_desc">या प्रकल्पाचा उद्देश नवीन रस्ते बांधून वाहतुकीची सुविधा सुधारणे आहे.</string>
+    <string name="event_item_3_title">स्वच्छता मोहीम</string>
+    <string name="event_item_3_desc">या प्रकल्पाचा उद्देश गावात स्वच्छता आणि स्वच्छतेचे महत्त्व वाढविणे आहे.</string>
+    <string name="event_item_4_title">आरोग्य तपासणी शिबिर</string>
+    <string name="event_item_4_desc">या प्रकल्पाचा उद्देश गावातील नागरिकांचे आरोग्य तपासणी सेवा उपलब्ध करणे आहे.</string>
 
     <string name="infrastructure_page">इन्फ्रास्ट्रक्चर पृष्ठ</string>
     <string name="transport_services">वाहतूक सेवा</string>
@@ -114,9 +157,9 @@
     <string name="total_bill_not_found">एकूण बिल सापडले नाही</string>
     <string name="record_not_found">तपशील सापडले नाही</string>
     <string name="database_error">डाटाबेस त्रुटी: %1$s</string>
-    <string name="house_number">घर क्रमांक: %1$d</string>
-    <string name="total_bill">एकूण बिल: %1$d</string>
-    <string name="name">नाव: %1$s</string>
+    <string name="house_number">घर क्रमांक: </string>
+    <string name="total_bill">एकूण बिल: </string>
+    <string name="name">नाव: </string>
     <string name="name1">नाव: </string>
     <string name="mobile_number_label">मोबाइल नंबर:</string>
     <string name="complaint_description_label">तक्रार वर्णन:</string>

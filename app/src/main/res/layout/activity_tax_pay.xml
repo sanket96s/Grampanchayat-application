@@ -11,14 +11,14 @@
         android:id="@+id/input_house_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="घर क्रमांक"
+        android:hint="@string/hint_house_number"
         android:inputType="number" />
 
     <Button
         android:id="@+id/btn_fetch_bill"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="बिल मिळवा"
+        android:text="@string/btn_fetch_bill"
         android:layout_marginTop="16dp" />
 
     <TableLayout
@@ -33,7 +33,7 @@
                 android:id="@+id/text_house_number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="घर क्रमांक: "
+                android:text="@string/text_house_number"
                 android:textStyle="bold"
                 android:visibility="gone"
                 android:textSize="18sp" />
@@ -42,7 +42,7 @@
                 android:id="@+id/text_house_number_value"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
+                android:text=" "
                 android:textSize="18sp" />
         </TableRow>
 
@@ -51,7 +51,7 @@
                 android:id="@+id/text_total_bill"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="एकूण बिल: "
+                android:text="@string/text_total_bill"
                 android:textStyle="bold"
                 android:visibility="gone"
                 android:textSize="18sp" />
@@ -69,7 +69,7 @@
         android:id="@+id/btn_pay_bill"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="बिल भरा"
+        android:text="@string/btn_pay_bill"
         android:layout_marginTop="16dp"
         android:visibility="gone"
         android:textSize="20sp"

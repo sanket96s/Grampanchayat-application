@@ -1,10 +1,10 @@
 package com.example.grampanchayatkouthaliapk;
 
 import android.app.AlertDialog;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
-
+import android.net.Uri;
 import android.os.Bundle;
-
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,20 +14,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-
 public class TaxPayActivity extends AppCompatActivity {
 
+    private static final int UPI_PAYMENT_REQUEST_CODE = 1001;
+
     private DatabaseReference databaseReference;
-
-    private static final int REQUEST_CODE_PAYMENT = 1001; // Define a unique request code
-
     private TextView textHouseNumber, textTotalBill;
     private EditText inputHouseNumber;
     private Button btnFetchBill, btnPayBill;
@@ -47,22 +44,22 @@ public class TaxPayActivity extends AppCompatActivity {
         textTotalBill = findViewById(R.id.text_total_bill);
         inputHouseNumber = findViewById(R.id.input_house_number);
         btnFetchBill = findViewById(R.id.btn_fetch_bill);
-        btnPayBill = findViewById(R.id.btn_pay_bill); // Initialize the Pay Bill button
+        btnPayBill = findViewById(R.id.btn_pay_bill);
         tableLayout = findViewById(R.id.table_layout);
 
         // Set Pay Bill button to be initially hidden
         btnPayBill.setVisibility(View.GONE);
 
-
+        // Fetch Bill on button click
         btnFetchBill.setOnClickListener(view -> fetchBill());
-        btnPayBill.setOnClickListener(view -> payBill()); // Set click listener for Pay Bill
+        // Pay Bill on button click (via UPI)
+        btnPayBill.setOnClickListener(view -> initiateUPIPayment());
     }
-
 
     private void fetchBill() {
         String houseNumberStr = inputHouseNumber.getText().toString().trim();
         if (houseNumberStr.isEmpty()) {
-            showMessageDialog("Please enter a valid house number.");
+            showMessageDialog(getString(R.string.enter_house_number));
             return;
         }
 
@@ -71,7 +68,7 @@ public class TaxPayActivity extends AppCompatActivity {
             clearPreviousData();
             fetchTotalBill(houseNumber);
         } catch (NumberFormatException e) {
-            showMessageDialog("Invalid house number format.");
+            showMessageDialog(getString(R.string.invalid_house_number));
         }
     }
 
@@ -100,13 +97,13 @@ public class TaxPayActivity extends AppCompatActivity {
                             }
                         }
                         if (!recordFound) {
-                            showMessageDialog("Record not found.");
+                            showMessageDialog(getString(R.string.record_not_found));
                         }
                     }
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
-                        showMessageDialog("Database error: " + error.getMessage());
+                        showMessageDialog(getString(R.string.database_error) + error.getMessage());
                     }
                 });
     }
@@ -115,17 +112,17 @@ public class TaxPayActivity extends AppCompatActivity {
         tableLayout.removeAllViews();
 
         TextView textName = new TextView(this);
-        textName.setText("Name: " + fullName);
+        textName.setText(getString(R.string.name) + fullName);
         textName.setTextSize(18);
         tableLayout.addView(textName);
 
         TextView textHouseNumberDisplay = new TextView(this);
-        textHouseNumberDisplay.setText("House Number: " + houseNumber);
+        textHouseNumberDisplay.setText(getString(R.string.house_number) + houseNumber);
         textHouseNumberDisplay.setTextSize(18);
         tableLayout.addView(textHouseNumberDisplay);
 
         TextView textTotalBillDisplay = new TextView(this);
-        textTotalBillDisplay.setText("Total Bill: ₹" + totalBill);
+        textTotalBillDisplay.setText(getString(R.string.total_bill) + totalBill);
         textTotalBillDisplay.setTextSize(18);
         tableLayout.addView(textTotalBillDisplay);
 
@@ -133,31 +130,56 @@ public class TaxPayActivity extends AppCompatActivity {
         btnPayBill.setVisibility(View.VISIBLE);
     }
 
-    private void payBill() {
-        Intent intent = new Intent(TaxPayActivity.this, FakePaymentActivity.class);
-        intent.putExtra("totalAmount", totalBillAmount); // Pass total bill amount
-        startActivityForResult(intent, REQUEST_CODE_PAYMENT); // Use startActivityForResult
+    private void initiateUPIPayment() {
+        String upiId = "sushrutmhetras@okhdfcbank";
+        String name = getString(R.string.organization_name);
+        String note = getString(R.string.payment_note);
+        String amount = String.valueOf(totalBillAmount);
+
+        // Create UPI Intent URI
+        Uri uri = Uri.parse("upi://pay?pa=" + upiId +
+                "&pn=" + name +
+                "&mc=0000&tid=1234567890&url=upi&am=" + amount +
+                "&cu=INR" + "&tn=" + note);
+
+        Intent upiPaymentIntent = new Intent(Intent.ACTION_VIEW, uri);
+        upiPaymentIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        try {
+            startActivityForResult(upiPaymentIntent, UPI_PAYMENT_REQUEST_CODE);
+        } catch (ActivityNotFoundException e) {
+            showMessageDialog(getString(R.string.upi_app_not_found));
+        }
     }
 
-    private void showMessageDialog(String message) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage(message)
-                .setPositiveButton("OK", null)
-                .show();
-    }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == REQUEST_CODE_PAYMENT && resultCode == RESULT_OK) {
-            boolean paymentStatus = data.getBooleanExtra("paymentStatus", false);
-            int paidAmount = data.getIntExtra("paidAmount", 0);
+        if (requestCode == UPI_PAYMENT_REQUEST_CODE) {
+            if (resultCode == RESULT_OK || resultCode == 11) {
+                String response = data != null ? data.getStringExtra("response") : "";
+                String status = "";
+                if (response != null) {
+                    String[] responseArr = response.split("&");
+                    for (String res : responseArr) {
+                        String[] resData = res.split("=");
+                        if (resData.length > 1) {
+                            if (resData[0].equalsIgnoreCase("Status")) {
+                                status = resData[1];
+                            }
+                        }
+                    }
+                }
 
-            if (paymentStatus) {
-                updateDatabaseAfterPayment(paidAmount);
-                showMessageDialog("Payment successful! Amount paid: ₹" + paidAmount);
+                if ("Success".equalsIgnoreCase(status)) {
+                    showMessageDialog(getString(R.string.payment_success) + totalBillAmount);
+                    // Optionally, update the database or UI based on payment status.
+                    updateDatabaseAfterPayment(totalBillAmount);
+                } else {
+                    showMessageDialog(getString(R.string.payment_failed));
+                }
             } else {
-                showMessageDialog("Payment failed. Please try again.");
+                showMessageDialog(getString(R.string.payment_failed));
             }
         }
     }
@@ -176,7 +198,7 @@ public class TaxPayActivity extends AppCompatActivity {
                             if (totalTax != null) {
                                 int updatedTax = totalTax - paidAmount;
                                 snapshot.getRef().child("totaltax").setValue(updatedTax); // Update the total tax in database
-                                textTotalBill.setText("Total Bill: ₹" + updatedTax); // Optionally update UI
+                                textTotalBill.setText(getString(R.string.total_bill) + updatedTax); // Optionally update UI
                                 fetchTotalBill(houseNumber);
                                 break;
                             }
@@ -185,10 +207,15 @@ public class TaxPayActivity extends AppCompatActivity {
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
-                        showMessageDialog("Database error: " + error.getMessage());
+                        showMessageDialog(getString(R.string.database_error) + error.getMessage());
                     }
                 });
     }
 
-
+    private void showMessageDialog(String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(message)
+                .setPositiveButton("OK", null)
+                .show();
+    }
 }
