@@ -2,13 +2,13 @@ package com.example.grampanchayatkouthaliapk;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -16,19 +16,23 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.bumptech.glide.Glide;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Random;
+
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 
 public class RegisterforCertificateActivity extends AppCompatActivity {
 
@@ -36,10 +40,11 @@ public class RegisterforCertificateActivity extends AppCompatActivity {
     private RadioGroup genderRadioGroup;
     private CheckBox confirmCheckBox;
     private Button submitButton, uploadPhotoButton, uploadAadharButton, uploadRationCardButton;
+
     private DatabaseReference databaseReference;
+    private FirebaseAuth firebaseAuth;
+
     private String documentType; // Variable to store document type
-    private ImageView imageView; // ImageView for displaying image
-    private Uri imageUri; // Uri to store image URI for upload
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +64,7 @@ public class RegisterforCertificateActivity extends AppCompatActivity {
             documentType = "माहिती नाही"; // Fallback value
         }
 
+        firebaseAuth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference("CertificateApplications");
 
         fullNameEditText = findViewById(R.id.full_name_edit_text);
@@ -74,22 +80,16 @@ public class RegisterforCertificateActivity extends AppCompatActivity {
         uploadAadharButton = findViewById(R.id.upload_aadhar_button);
         uploadRationCardButton = findViewById(R.id.upload_ration_card_button);
 
-        // Initialize the ImageView
-        imageView = findViewById(R.id.imageView);
-
-        // Set Google Forms links for image uploads
-        uploadPhotoButton.setOnClickListener(view -> openGoogleForm("https://forms.gle/8i1mcvAzoh5qrEF39"));
-        uploadAadharButton.setOnClickListener(view -> openGoogleForm("https://forms.gle/8i1mcvAzoh5qrEF39"));
-        uploadRationCardButton.setOnClickListener(view -> openGoogleForm("https://forms.gle/8i1mcvAzoh5qrEF39"));
+        // Set Google Forms links
+        uploadPhotoButton.setOnClickListener(view -> openGoogleForm("https://forms.gle/onaYYktF4GQ1Nush9"));
+        uploadAadharButton.setOnClickListener(view -> openGoogleForm("https://forms.gle/nVJRYXHzWxv9Qzdv7"));
+        uploadRationCardButton.setOnClickListener(view -> openGoogleForm("https://forms.gle/igmA5oTrDNXNguHC8"));
 
         submitButton.setOnClickListener(view -> {
             if (validateForm()) {
                 submitToFirebase();
             }
         });
-
-        // Retrieve image URLs from Firebase
-        retrieveImageUrls();
     }
 
     private void openGoogleForm(String formUrl) {
@@ -138,95 +138,93 @@ public class RegisterforCertificateActivity extends AppCompatActivity {
         RadioButton selectedGender = findViewById(genderRadioGroup.getCheckedRadioButtonId());
         String gender = selectedGender.getText().toString();
 
-        // Generate unique 7-digit ID
-        String uniqueId = generateUniqueId();
-
-        // Save data in Firebase Realtime Database
-        Map<String, String> applicationData = new HashMap<>();
-        applicationData.put("FullName", fullName);
-        applicationData.put("ParentName", parentName);
-        applicationData.put("DOB", dob);
-        applicationData.put("Address", address);
-        applicationData.put("MobileNumber", mobileNumber);
-        applicationData.put("Gender", gender);
-        applicationData.put("ApplicationID", uniqueId);
-        applicationData.put("CertificateType", documentType); // Save document type
-
-        // Upload image to Firebase Storage and get the URL
-        if (imageUri != null) {
-            uploadImageToFirebase(imageUri);
-        }
-
-        // Save other data to Firebase
-        databaseReference.child(uniqueId).setValue(applicationData)
-                .addOnSuccessListener(unused -> Toast.makeText(this, "डेटा यशस्वीरित्या सबमिट झाला", Toast.LENGTH_SHORT).show())
-                .addOnFailureListener(e -> Toast.makeText(this, "डेटा सबमिट करण्यात समस्या आली", Toast.LENGTH_SHORT).show());
+        generateUniqueIdAndSubmit(fullName, parentName, dob, address, mobileNumber, gender, documentType);
     }
 
-    private String generateUniqueId() {
-        Random random = new Random();
-        return String.format("%07d", random.nextInt(10000000));
-    }
+    private void generateUniqueIdAndSubmit(String fullName, String parentName, String dob,
+                                           String address, String mobileNumber, String gender, String documentType) {
+        String uniqueId = String.format("%07d", new Random().nextInt(10000000));
+        databaseReference.child(uniqueId).get().addOnCompleteListener(task -> {
+            if (task.isSuccessful() && task.getResult().exists()) {
+                generateUniqueIdAndSubmit(fullName, parentName, dob, address, mobileNumber, gender, documentType);
+            } else {
+                Map<String, String> applicationData = new HashMap<>();
+                applicationData.put("FullName", fullName);
+                applicationData.put("ParentName", parentName);
+                applicationData.put("DOB", dob);
+                applicationData.put("Address", address);
+                applicationData.put("MobileNumber", mobileNumber);
+                applicationData.put("Gender", gender);
+                applicationData.put("ApplicationID", uniqueId);
+                applicationData.put("CertificateType", documentType);
 
-    private void uploadImageToFirebase(Uri imageUri) {
-        StorageReference storageReference = FirebaseStorage.getInstance().getReference("uploads/" + System.currentTimeMillis() + ".jpg");
-        storageReference.putFile(imageUri)
-                .addOnSuccessListener(taskSnapshot -> {
-                    storageReference.getDownloadUrl().addOnSuccessListener(uri -> {
-                        String imageUrl = uri.toString();
-                        saveImageUrlToDatabase(imageUrl);
-                    }).addOnFailureListener(e -> {
-                        Toast.makeText(RegisterforCertificateActivity.this, "Failed to get image URL", Toast.LENGTH_SHORT).show();
-                    });
-                })
-                .addOnFailureListener(e -> {
-                    Toast.makeText(RegisterforCertificateActivity.this, "Image upload failed", Toast.LENGTH_SHORT).show();
-                });
-    }
-
-    private void saveImageUrlToDatabase(String imageUrl) {
-        String uniqueId = generateUniqueId();
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("CertificateApplications").child(uniqueId);
-
-        // Create a map to store the image data
-        Map<String, Object> applicationData = new HashMap<>();
-        applicationData.put("imageUrl", imageUrl);
-        applicationData.put("imageType", "photo"); // Can be "aadhar", "rationCard", etc.
-
-        // Save the data in Firebase
-        databaseReference.setValue(applicationData)
-                .addOnCompleteListener(task -> {
-                    if (task.isSuccessful()) {
-                        Toast.makeText(RegisterforCertificateActivity.this, "Image URL saved successfully", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(RegisterforCertificateActivity.this, "Failed to save image URL", Toast.LENGTH_SHORT).show();
-                    }
-                });
-    }
-
-    private void retrieveImageUrls() {
-        DatabaseReference imageDatabaseReference = FirebaseDatabase.getInstance().getReference("CertificateApplications");
-        imageDatabaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    String imageUrl = snapshot.child("imageUrl").getValue(String.class);
-
-                    if (imageUrl != null && !imageUrl.isEmpty()) {
-                        // Use Glide to load the image from Firebase Storage
-                        Glide.with(RegisterforCertificateActivity.this)
-                                .load(imageUrl)
-                                .into(imageView);
-                    } else {
-                        Toast.makeText(RegisterforCertificateActivity.this, "Image URL is not available", Toast.LENGTH_SHORT).show();
-                    }
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                Toast.makeText(RegisterforCertificateActivity.this, "Failed to retrieve image data", Toast.LENGTH_SHORT).show();
+                databaseReference.child(uniqueId).setValue(applicationData)
+                        .addOnSuccessListener(unused -> {
+                            Toast.makeText(this, "डेटा यशस्वीरित्या सबमिट झाला", Toast.LENGTH_SHORT).show();
+                            FirebaseUser user = firebaseAuth.getCurrentUser();
+                            if (user != null) {
+                                new SendEmailTask(user.getEmail(), fullName, parentName, dob, address, mobileNumber, gender, uniqueId, documentType).execute();
+                            }
+                        })
+                        .addOnFailureListener(e -> Toast.makeText(this, "डेटा सबमिट करण्यात समस्या आली", Toast.LENGTH_SHORT).show());
             }
         });
+    }
+
+    private static class SendEmailTask extends AsyncTask<Void, Void, Void> {
+        private final String email, fullName, parentName, dob, address, mobileNumber, gender, uniqueId, documentType;
+
+        SendEmailTask(String email, String fullName, String parentName, String dob,
+                      String address, String mobileNumber, String gender, String uniqueId, String documentType) {
+            this.email = email;
+            this.fullName = fullName;
+            this.parentName = parentName;
+            this.dob = dob;
+            this.address = address;
+            this.mobileNumber = mobileNumber;
+            this.gender = gender;
+            this.uniqueId = uniqueId;
+            this.documentType = documentType;
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            final String username = "salunkep341@gmail.com";
+            final String password = "nmrj whzm mhql gphe";
+
+            Properties props = new Properties();
+            props.put("mail.smtp.auth", "true");
+            props.put("mail.smtp.starttls.enable", "true");
+            props.put("mail.smtp.host", "smtp.gmail.com");
+            props.put("mail.smtp.port", "587");
+
+            Session session = Session.getInstance(props, new javax.mail.Authenticator() {
+                protected PasswordAuthentication getPasswordAuthentication() {
+                    return new PasswordAuthentication(username, password);
+                }
+            });
+
+            try {
+                Message message = new MimeMessage(session);
+                message.setFrom(new InternetAddress(username));
+                message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(email));
+                message.setSubject("Certificate Application Submitted Successfully");
+                String content = "📑 अर्जाची माहिती:\n\n"
+                        + "👤 नाव: " + fullName + "\n"
+                        + "👨‍👩‍👦 पालकांचे नाव: " + parentName + "\n"
+                        + "🎂 जन्मतारीख: " + dob + "\n"
+                        + "📍 पत्ता: " + address + "\n"
+                        + "📞 मोबाइल क्रमांक: " + mobileNumber + "\n"
+                        + "👥 लिंग: " + gender + "\n"
+                        + "📜 प्रमाणपत्र प्रकार: " + documentType + "\n"
+                        + "🆔 अर्ज क्रमांक: " + uniqueId + "\n\nधन्यवाद!";
+
+                message.setText(content);
+                Transport.send(message);
+            } catch (MessagingException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
     }
 }

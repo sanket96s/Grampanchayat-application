@@ -59,6 +59,8 @@
         <activity android:name=".RegisterforCertificateActivity"/>
         <activity android:name=".TrackComplaintActivity"></activity>
         <activity android:name=".SuccessActivity"/>
+        <activity android:name=".TrackCertificateActivity" />
+
 
         <activity
             android:name=".VillageActivity"
