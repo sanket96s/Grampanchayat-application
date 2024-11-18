@@ -36,7 +36,7 @@ public class TrackCertificateActivity extends AppCompatActivity {
             String certificateId = etCertificateId.getText().toString().trim();
 
             if (certificateId.isEmpty()) {
-                Toast.makeText(this, "कृपया प्रमाणपत्र आयडी भरा", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.toast_enter_certificate_id), Toast.LENGTH_SHORT).show();
             } else {
                 fetchCertificateDetails(certificateId);
             }
@@ -51,20 +51,20 @@ public class TrackCertificateActivity extends AppCompatActivity {
                 if (dataSnapshot.exists()) {
                     // Fetch and display certificate details
                     StringBuilder details = new StringBuilder();
-                    details.append("प्रमाणपत्र आयडी: ").append(certificateId).append("\n");
+                    details.append(getString(R.string.enter_certificate_id)).append(": ").append(certificateId).append("\n");
                     for (DataSnapshot field : dataSnapshot.getChildren()) {
                         details.append(field.getKey()).append(": ").append(field.getValue()).append("\n");
                     }
                     tvCertificateDetails.setText(details.toString());
                 } else {
                     // No record found for the entered certificateId
-                    tvCertificateDetails.setText("प्रमाणपत्र माहिती सापडली नाही");
+                    tvCertificateDetails.setText(getString(R.string.certificate_details_not_found));
                 }
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Toast.makeText(TrackCertificateActivity.this, "त्रुटी: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(TrackCertificateActivity.this, String.format(getString(R.string.error_occurred), databaseError.getMessage()), Toast.LENGTH_SHORT).show();
             }
         });
     }

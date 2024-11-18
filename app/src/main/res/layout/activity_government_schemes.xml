@@ -4,18 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/scr"
     android:background="#FFDAB9">
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFDAB9">
-
-
-        <!-- Header Title -->
-
 
         <TextView
             android:id="@+id/textView38"
@@ -23,213 +17,20 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="1dp"
             android:background="#C379CF"
-            android:text="योजना"
+            android:text="@string/scheme_title"
             android:textAlignment="center"
             android:textColor="#25262E"
             android:textSize="34sp"
             android:textStyle="bold"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- ViewFlipper with Images -->
-        <ViewFlipper
-            android:id="@+id/viewFlipper"
+        <!-- RecyclerView for Scheme List -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/schemeRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            app:layout_constraintTop_toBottomOf="@id/textView38">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginTop="4dp"
-                app:srcCompat="@drawable/adv" />
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginTop="4dp"
-                app:srcCompat="@drawable/adv1" />
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginTop="4dp"
-                app:srcCompat="@drawable/adv2" />
-        </ViewFlipper>
-
-        <!-- Scheme 1 -->
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toStartOf="@+id/imageView"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/viewFlipper"
-            app:srcCompat="@drawable/scheme1" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="प्रधानमंत्री जन आरोग्य योजना"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="@id/imageView2"
-            app:layout_constraintStart_toStartOf="@id/imageView2"
-            app:layout_constraintTop_toBottomOf="@id/imageView2" />
-
-        <!-- Scheme 2 -->
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="16dp"
-
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/imageView2"
-            app:layout_constraintTop_toTopOf="@id/imageView2"
-            app:srcCompat="@drawable/scheme3" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="ग्राम पंचायत विकास योजना"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="@id/imageView"
-            app:layout_constraintStart_toStartOf="@id/imageView"
-            app:layout_constraintTop_toBottomOf="@id/imageView" />
-
-        <!-- Scheme 3 -->
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toStartOf="@+id/imageView4"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView2"
-            app:srcCompat="@drawable/scheme2" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="प्रधानमंत्री आवास योजना"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="@id/imageView3"
-            app:layout_constraintStart_toStartOf="@id/imageView3"
-            app:layout_constraintTop_toBottomOf="@id/imageView3" />
-
-        <!-- Scheme 4 -->
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="16dp"
-
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/imageView3"
-            app:layout_constraintTop_toTopOf="@id/imageView3"
-            app:srcCompat="@drawable/scheme4" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:onClick="openScheme5InformationPage"
-            android:text="अटल भूजल योजना"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="@id/imageView4"
-            app:layout_constraintStart_toStartOf="@id/imageView4"
-            app:layout_constraintTop_toBottomOf="@id/imageView4" />
-
-        <!-- Scheme 5 -->
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="8dp"
-            android:onClick="openScheme5InformationPage"
-            app:layout_constraintEnd_toStartOf="@+id/imageView6"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView3"
-            app:srcCompat="@drawable/scheme5" />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="प्रधानमंत्री जन धन योजना"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="@id/imageView5"
-            app:layout_constraintStart_toStartOf="@id/imageView5"
-            app:layout_constraintTop_toBottomOf="@id/imageView5" />
-
-        <!-- Scheme 6 -->
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="16dp"
-
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/imageView5"
-            app:layout_constraintTop_toTopOf="@id/imageView5"
-            app:srcCompat="@drawable/scheme6" />
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="स्मार्ट ग्राम योजना"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="@id/imageView6"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@id/imageView6"
-            app:layout_constraintTop_toBottomOf="@id/imageView6" />
-
-        <Button
-            android:id="@+id/trackapplication"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="96dp"
-            android:layout_marginBottom="1dp"
-            android:text="अर्ज ट्रॅक "
-            app:layout_constraintTop_toBottomOf="@id/textView5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-
+            app:layout_constraintTop_toBottomOf="@id/textView38"
+            android:layout_marginTop="16dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </ScrollView>

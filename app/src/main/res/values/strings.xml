@@ -1,12 +1,96 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- English Strings -->
+    <string name="enter_certificate_id">Enter Certificate ID</string>
+    <string name="certificate_details_not_found">No certificate details found</string>
+    <string name="error_occurred">Error: %1$s</string>
+    <string name="toast_enter_certificate_id">Please enter certificate ID</string>
+
+    <string name="certificate_id_label">Certificate ID:</string>
+    <string name="certificate_id_hint">Enter your certificate ID</string>
+    <string name="certificate_details">Certificate details will appear here</string>
+
+    <string name="document_type_label">Certificate Type:</string>
+    <string name="personal_info_label">Personal Information:</string>
+
+    <string name="please_select_document">Please select a certificate type</string>
+    <string name="please_fill_fields">Please fill all fields</string>
+    <string name="form_submission_success">Form submitted successfully</string>
+    <string name="form_submission_error">Error in submitting form</string>
+    <string name="please_select_gender">Please select gender</string>
+    <string name="please_accept_terms">Please accept the terms</string>
+
+    <string name="document_type">Document Type:</string>
+    <string name="personal_info">Personal Information:</string>
+    <string name="parent_name_hint">Parent\'\s Name</string>
+    <string name="dob_hint">Date of Birth</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="upload_photo">Upload Photo</string>
+    <string name="upload_aadhar">Upload Aadhar Card</string>
+    <string name="upload_ration_card">Upload Ration Card</string>
+    <string name="confirm_info">Confirm that all information is correct</string>
+    <string name="select_certificate_type">Please select a certificate type</string>
+
+    <string name="header_text">Select Certificate Type:</string>
+    <string name="birth_certificate">Birth Certificate</string>
+    <string name="death_certificate">Death Certificate</string>
+    <string name="residence_certificate">Residence Certificate</string>
+    <string name="income_certificate">Income Certificate</string>
+    <string name="submit_application">Submit Application</string>
+    <string name="track_certificate">Track Certificate</string>
+
+
+    <!-- Housing Scheme -->
+    <string name="housing_scheme_title">Housing Scheme</string>
+    <string name="housing_scheme_description">This scheme provides affordable housing options for low-income families.</string>
+    <string name="housing_scheme_eligibility">Eligibility: Low-income families, individuals without homes.</string>
+    <string name="housing_scheme_required_docs">Required Docs: Aadhar card, income certificate, proof of residence.</string>
+
+    <!-- Water Supply Scheme -->
+    <string name="water_scheme_title">Water Supply Scheme</string>
+    <string name="water_scheme_description">This scheme provides clean drinking water to rural areas.</string>
+    <string name="water_scheme_eligibility">Eligibility: Residents in rural or underserved areas.</string>
+    <string name="water_scheme_required_docs">Required Docs: Aadhar card, proof of residence.</string>
+
+    <!-- Sanitation Scheme -->
+    <string name="sanitation_scheme_title">Sanitation Scheme</string>
+    <string name="sanitation_scheme_description">This scheme aims to improve sanitation facilities in rural areas.</string>
+    <string name="sanitation_scheme_eligibility">Eligibility: Families in rural areas without proper sanitation.</string>
+    <string name="sanitation_scheme_required_docs">Required Docs: Aadhar card, proof of residence.</string>
+
+    <!-- Health Scheme -->
+    <string name="health_scheme_title">Health Scheme</string>
+    <string name="health_scheme_description">This scheme provides healthcare benefits for rural and underprivileged populations.</string>
+    <string name="health_scheme_eligibility">Eligibility: Low-income families, elderly citizens, children.</string>
+    <string name="health_scheme_required_docs">Required Docs: Aadhar card, medical records (if any).</string>
+
+    <!-- Education Scheme -->
+    <string name="education_scheme_title">Education Scheme</string>
+    <string name="education_scheme_description">This scheme helps provide free education to children from economically weaker sections.</string>
+    <string name="education_scheme_eligibility">Eligibility: Children of low-income families.</string>
+    <string name="education_scheme_required_docs">Required Docs: Aadhar card, income certificate, school records.</string>
+
+    <!-- Employment Scheme -->
+    <string name="employment_scheme_title">Employment Scheme</string>
+    <string name="employment_scheme_description">This scheme provides job opportunities and skill development programs.</string>
+    <string name="employment_scheme_eligibility">Eligibility: Unemployed youth, women, and marginalized communities.</string>
+    <string name="employment_scheme_required_docs">Required Docs: Aadhar card, educational qualification certificates, resume.</string>
+        <string name="scheme_title">Scheme</string>
+        <string name="pm_ayushman_yojana">PM Jan Arogya Yojana</string>
+        <string name="gram_panchayat_yojana">Gram Panchayat Vikas Yojana</string>
+        <string name="pm_avas_yojana">PM Awas Yojana</string>
+        <string name="atal_bhujal_yojana">Atal Bhujal Yojana</string>
+        <string name="pm_jan_dhan_yojana">PM Jan Dhan Yojana</string>
+        <string name="smart_village_yojana">Smart Village Yojana</string>
+        <string name="track_application">Track Application</string>
+
     <string name="please_enter_valid_house_number">Please enter a valid house number</string>
     <string name="total_bill_not_found">Total bill not found</string>
     <string name="record_not_found">Record not found</string>
     <string name="database_error">Database error: %1$s</string>
-    <string name="house_number">House number: %1$d</string>
-    <string name="total_bill">Total bill: %1$d</string>
-    <string name="name">Name: %1$s</string>
+    <string name="house_number">House number: </string>
+    <string name="total_bill">Total bill: </string>
+    <string name="name">Name: </string>
     <string name="login_title">Login</string>
     <string name="email_hint">Email</string>
     <string name="password_hint">Password</string>
@@ -108,7 +192,49 @@
     <string name="name1">Name:  </string>
 
     <!-- Title -->
-    <!-- Economic Activities Section -->
+
+    <string name="upi_app_not_found">UPI app not found. Please install a UPI app like Google Pay.</string>
+    <string name="organization_name">Grampanchayat Kouthali</string>
+    <string name="payment_note">Payment for tax</string>
+
+    <string name="fetch_bill">Fetch Bill</string>
+    <string name="pay_bill">Pay Bill</string>
+    <string name="enter_house_number">Please enter a valid house number.</string>
+    <string name="invalid_house_number">Invalid house number format.</string>
+    <string name="payment_success">Payment successful! Amount paid: ₹</string>
+    <string name="payment_failed">Payment failed or cancelled.</string>
+    <string name="hint_house_number">House Number</string>
+    <string name="btn_fetch_bill">Fetch Bill</string>
+    <string name="text_house_number">House Number: </string>
+    <string name="text_total_bill">Total Bill: </string>
+    <string name="btn_pay_bill">Pay Bill</string>
+    <string name="event1_title">Water Conservation Project</string>
+    <string name="event1_description">The purpose of this project is to conserve water.</string>
+
+    <string name="event2_title">Road Construction Project</string>
+    <string name="event2_description">This project aims to build new roads to improve transportation.</string>
+
+    <string name="event3_title">Cleanliness Campaign</string>
+    <string name="event3_description">The purpose of this project is to increase awareness about cleanliness in the village.</string>
+
+    <string name="event4_title">Health Checkup Camp</string>
+    <string name="event4_description">The purpose of this project is to provide health checkup services to the villagers.</string>
+    <string name="event_title">Event Title</string>
+    <string name="event_description">Event description will go here...</string>
+    <string name="event_date_time">Date and Time: January 1, 2025 - 10:00 AM</string>
+    <string name="event_venue">Venue: Community Hall</string>
+    <string name="event_agenda">Agenda: Discussion on development plans</string>
+    <string name="event_organizers">Organizers: Gram Panchayat Office</string>
+    <string name="event_contact_info">Contact: 9821234567</string>
+    <string name="register">feedback</string>
+    <string name="event_item_1_title">Watershed Management Project</string>
+    <string name="event_item_1_desc">The aim of this project is water conservation.</string>
+    <string name="event_item_2_title">Road Construction Project</string>
+    <string name="event_item_2_desc">The aim of this project is to improve transportation by constructing new roads.</string>
+    <string name="event_item_3_title">Cleanliness Campaign</string>
+    <string name="event_item_3_desc">The aim of this project is to enhance cleanliness and sanitation in the village.</string>
+    <string name="event_item_4_title">Health Check-up Camp</string>
+    <string name="event_item_4_desc">The aim of this project is to provide health check-up services to the villagers.</string>
 
     <string name="infrastructure_page">Infrastructure Page</string>
     <string name="transport_services">Transport Services</string>
@@ -243,9 +369,9 @@
     <string name="office_address">Office Address: 123 Village Lane, Gram Panchayat</string>
     <string name="working_hours">Working Hours: Mon-Fri, 9 AM - 5 PM</string>
     <string name="office_details">Office Details: 123 Village Street, kouthali, Working Hours: Mon-Fri, 9 AM - 5 PM</string>
-    <string name="mobile_number_label">मोबाइल नंबर:</string>
-    <string name="complaint_description_label">तक्रार वर्णन:</string>
-    <string name="success_message">तुम्ही यशस्वीरित्या नोंदवले.</string>
+    <string name="mobile_number_label">Mobile Number:</string>
+    <string name="complaint_description_label">Complaint Description:</string>
+    <string name="success_message">You have successfully submitted.</string>
     <string name="track_complaint_title">Track Complaint</string>
     <string name="project_title">Project Title</string>
     <string name="project_description">Project Description</string>

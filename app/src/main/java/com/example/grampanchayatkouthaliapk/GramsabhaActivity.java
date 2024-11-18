@@ -23,28 +23,36 @@ public class GramsabhaActivity extends AppCompatActivity {
         eventItem1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openEventDetail("पाणलोट व्यवस्थापन प्रकल्प", "या प्रकल्पाचा उद्देश पाण्याचे संवर्धन करणे आहे.");
+                String title = getString(R.string.event1_title);
+                String description = getString(R.string.event1_description);
+                openEventDetail(title, description);
             }
         });
 
         eventItem2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openEventDetail("रस्ता बांधणी प्रकल्प", "या प्रकल्पाचा उद्देश नवीन रस्ते बांधून वाहतुकीची सुविधा सुधारणे आहे.");
+                String title = getString(R.string.event2_title);
+                String description = getString(R.string.event2_description);
+                openEventDetail(title, description);
             }
         });
 
         eventItem3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openEventDetail("स्वच्छता मोहीम", "या प्रकल्पाचा उद्देश गावात स्वच्छता आणि स्वच्छतेचे महत्त्व वाढविणे आहे.");
+                String title = getString(R.string.event3_title);
+                String description = getString(R.string.event3_description);
+                openEventDetail(title, description);
             }
         });
 
         eventItem4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openEventDetail("आरोग्य तपासणी शिबिर", "या प्रकल्पाचा उद्देश गावातील नागरिकांचे आरोग्य तपासणी सेवा उपलब्ध करणे आहे.");
+                String title = getString(R.string.event4_title);
+                String description = getString(R.string.event4_description);
+                openEventDetail(title, description);
             }
         });
     }

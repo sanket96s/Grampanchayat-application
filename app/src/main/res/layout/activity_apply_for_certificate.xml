@@ -24,7 +24,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="प्रमाणपत्र प्रकार निवडा :"
+            android:text="@string/header_text"
             android:textSize="18sp"
             android:textColor="#000000"
             android:layout_marginStart="8dp" />
@@ -42,7 +42,7 @@
             android:id="@+id/radio_birth_certificate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="जन्म प्रमाणपत्र"
+            android:text="@string/birth_certificate"
             android:textColor="#000000"
             android:padding="12dp"
             android:buttonTint="#81D4FA" />
@@ -51,7 +51,7 @@
             android:id="@+id/radio_death_certificate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="मृत्यू प्रमाणपत्र"
+            android:text="@string/death_certificate"
             android:textColor="#000000"
             android:padding="12dp"
             android:buttonTint="#81D4FA" />
@@ -60,7 +60,7 @@
             android:id="@+id/radio_residence_certificate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="रहिवासी प्रमाणपत्र"
+            android:text="@string/residence_certificate"
             android:textColor="#000000"
             android:padding="12dp"
             android:buttonTint="#81D4FA" />
@@ -69,7 +69,7 @@
             android:id="@+id/radio_income_certificate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="उत्पन्न प्रमाणपत्र"
+            android:text="@string/income_certificate"
             android:textColor="#000000"
             android:padding="12dp"
             android:buttonTint="#81D4FA" />
@@ -87,7 +87,7 @@
             android:id="@+id/btn_submit_application"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="अर्ज सादर करा"
+            android:text="@string/submit_application"
             android:backgroundTint="#FFA726"
             android:textColor="#FFFFFF"
             android:padding="12dp"
@@ -98,7 +98,7 @@
             android:id="@+id/btn_track_certificate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="प्रमाणपत्र शोधा"
+            android:text="@string/track_certificate"
             android:backgroundTint="#4CAF50"
             android:textColor="#FFFFFF"
             android:padding="12dp"

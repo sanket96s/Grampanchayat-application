@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="प्रमाणपत्र ट्रॅक करा"
+            android:text="@string/page_title"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="#000"
@@ -25,14 +25,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="प्रमाणपत्र आयडी :"
+            android:text="@string/certificate_id_label"
             android:textSize="16sp"
             android:textColor="#000"/>
         <EditText
             android:id="@+id/etCertificateId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="आपला प्रमाणपत्र आयडी भरा"
+            android:hint="@string/certificate_id_hint"
             android:padding="12dp"
             android:layout_marginBottom="16dp"
             android:inputType="text"/>
@@ -42,7 +42,7 @@
             android:id="@+id/btnTrackCertificate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ट्रॅक करा"
+            android:text="@string/track_button"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
             android:backgroundTint="#4CAF50"
@@ -55,6 +55,7 @@
             android:id="@+id/tvCertificateDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/certificate_details"
             android:textSize="16sp"
             android:textColor="#000"
             android:padding="12dp"/>

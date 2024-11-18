@@ -2,7 +2,134 @@
 
 
 <!--    title-->
-    <!-- Economic Activities Section -->
+    <!-- Housing Scheme -->
+    <!-- Housing Scheme -->
+    <string name="housing_scheme_title">गृह योजना</string>
+    <string name="housing_scheme_description">ही योजना कमी उत्पन्न असलेल्या कुटुंबांसाठी स्वस्त गृह उपलब्ध करणे.</string>
+    <string name="housing_scheme_eligibility">पात्रता: कमी उत्पन्न असलेली कुटुंबे, घर नसलेली व्यक्ती.</string>
+    <string name="housing_scheme_required_docs">आवश्यक कागदपत्रे: आधार कार्ड, उत्पन्न प्रमाणपत्र, निवासाचा पुरावा.</string>
+
+    <!-- Water Supply Scheme -->
+    <string name="water_scheme_title">पाणी पुरवठा योजना</string>
+    <string name="water_scheme_description">ही योजना ग्रामीण भागातील लोकांसाठी स्वच्छ पाणी पुरवठा सुनिश्चित करते.</string>
+    <string name="water_scheme_eligibility">पात्रता: ग्रामीण किंवा दुर्गम भागातील रहिवासी.</string>
+    <string name="water_scheme_required_docs">आवश्यक कागदपत्रे: आधार कार्ड, निवासाचा पुरावा.</string>
+
+    <!-- Sanitation Scheme -->
+    <string name="sanitation_scheme_title">स्वच्छता योजना</string>
+    <string name="sanitation_scheme_description">ही योजना ग्रामीण भागात स्वच्छता सुविधा सुधारण्यासाठी आहे.</string>
+    <string name="sanitation_scheme_eligibility">पात्रता: ग्रामीण भागातील कुटुंबे ज्या ठिकाणी स्वच्छतेची सोय नाही.</string>
+    <string name="sanitation_scheme_required_docs">आवश्यक कागदपत्रे: आधार कार्ड, निवासाचा पुरावा.</string>
+
+    <!-- Health Scheme -->
+    <string name="health_scheme_title">आरोग्य योजना</string>
+    <string name="health_scheme_description">ही योजना ग्रामीण आणि गरीब लोकांसाठी आरोग्य सेवांचा लाभ देते.</string>
+    <string name="health_scheme_eligibility">पात्रता: कमी उत्पन्न असलेली कुटुंबे, वृद्ध नागरिक, मुले.</string>
+    <string name="health_scheme_required_docs">आवश्यक कागदपत्रे: आधार कार्ड, वैद्यकीय रेकॉर्ड (असल्यास).</string>
+
+    <!-- Education Scheme -->
+    <string name="education_scheme_title">शिक्षण योजना</string>
+    <string name="education_scheme_description">ही योजना गरीब कुटुंबांच्या मुलांसाठी मोफत शिक्षण देण्याची मदत करते.</string>
+    <string name="education_scheme_eligibility">पात्रता: कमी उत्पन्न असलेली कुटुंबे.</string>
+    <string name="education_scheme_required_docs">आवश्यक कागदपत्रे: आधार कार्ड, उत्पन्न प्रमाणपत्र, शालेय रेकॉर्ड.</string>
+
+    <!-- Employment Scheme -->
+    <string name="employment_scheme_title">रोजगार योजना</string>
+    <string name="employment_scheme_description">ही योजना बेरोजगार तरुणांसाठी रोजगार आणि कौशल्य विकास कार्यक्रम उपलब्ध करते.</string>
+    <string name="employment_scheme_eligibility">पात्रता: बेरोजगार तरुण, महिला, वंचित समाज.</string>
+    <string name="employment_scheme_required_docs">आवश्यक कागदपत्रे: आधार कार्ड, शैक्षणिक प्रमाणपत्रे, बायोडाटा.</string>
+    <string name="enter_certificate_id">प्रमाणपत्र आयडी भरा</string>
+    <string name="certificate_details_not_found">प्रमाणपत्र माहिती सापडली नाही</string>
+    <string name="error_occurred">त्रुटी: %1$s</string>
+    <string name="toast_enter_certificate_id">कृपया प्रमाणपत्र आयडी भरा</string>
+
+    <string name="certificate_id_label">प्रमाणपत्र आयडी :</string>
+    <string name="certificate_id_hint">आपला प्रमाणपत्र आयडी भरा</string>
+    <string name="certificate_details">प्रमाणपत्र तपशील इथे दिसतील</string>
+
+    <string name="document_type_label">प्रमाणपत्र प्रकार:</string>
+    <string name="personal_info_label">वैयक्तिक माहिती:</string>
+
+    <string name="please_select_document">कृपया प्रमाणपत्र प्रकार निवडा</string>
+    <string name="please_fill_fields">कृपया सर्व माहिती भरा</string>
+    <string name="form_submission_success">अर्ज यशस्वीरित्या सबमिट केला गेला</string>
+    <string name="form_submission_error">अर्ज सबमिट करण्यात त्रुटी आली</string>
+    <string name="please_select_gender">कृपया लिंग निवडा</string>
+    <string name="please_accept_terms">कृपया अटी मान्य करा</string>
+
+    <string name="document_type">प्रमाणपत्र प्रकार:</string>
+    <string name="personal_info">वैयक्तिक माहिती:</string>
+    <string name="parent_name_hint">आईचा/वडिलांचा नाव</string>
+    <string name="dob_hint">जन्मतारीख</string>
+    <string name="male">पुरुष</string>
+    <string name="female">महिला</string>
+    <string name="upload_photo">फोटो अपलोड करा</string>
+    <string name="upload_aadhar">आधार कार्ड अपलोड करा</string>
+    <string name="upload_ration_card">शिधापत्रिका अपलोड करा</string>
+    <string name="confirm_info">सर्व माहिती योग्य आहे, याची पुष्टी करा</string>
+    <string name="select_certificate_type">कृपया प्रमाणपत्र प्रकार निवडा</string>
+
+    <string name="header_text">प्रमाणपत्र प्रकार निवडा :</string>
+    <string name="birth_certificate">जन्म प्रमाणपत्र</string>
+    <string name="death_certificate">मृत्यू प्रमाणपत्र</string>
+    <string name="residence_certificate">रहिवासी प्रमाणपत्र</string>
+    <string name="income_certificate">उत्पन्न प्रमाणपत्र</string>
+    <string name="submit_application">अर्ज सादर करा</string>
+    <string name="track_certificate">प्रमाणपत्र शोधा</string>
+
+
+    <string name="scheme_title">योजना</string>
+    <string name="pm_ayushman_yojana">प्रधानमंत्री जन आरोग्य योजना</string>
+    <string name="gram_panchayat_yojana">ग्राम पंचायत विकास योजना</string>
+    <string name="pm_avas_yojana">प्रधानमंत्री आवास योजना</string>
+    <string name="atal_bhujal_yojana">अटल भूजल योजना</string>
+    <string name="pm_jan_dhan_yojana">प्रधानमंत्री जन धन योजना</string>
+    <string name="smart_village_yojana">स्मार्ट ग्राम योजना</string>
+    <string name="track_application">अर्ज ट्रॅक</string>
+
+
+    <string name="upi_app_not_found">UPI अॅप सापडले नाही. कृपया Google Pay सारखे UPI अॅप इन्स्टॉल करा.</string>
+    <string name="organization_name">ग्रामीण पंचायत कौथळी</string>
+    <string name="payment_note">करासाठी पेमेंट</string>
+
+    <string name="fetch_bill">बिल मिळवा</string>
+    <string name="pay_bill">बिल भरा</string>
+    <string name="enter_house_number">कृपया वैध घर क्रमांक द्या.</string>
+    <string name="invalid_house_number">अवैध घर क्रमांक स्वरूप.</string>
+    <string name="payment_success">पेमेन्ट यशस्वी! रक्कम भरली: ₹</string>
+    <string name="payment_failed">पेमेन्ट अयशस्वी किंवा रद्द केली.</string>
+    <string name="hint_house_number">घर क्रमांक</string>
+    <string name="btn_fetch_bill">बिल मिळवा</string>
+    <string name="text_house_number">घर क्रमांक: </string>
+    <string name="text_total_bill">एकूण बिल: </string>
+    <string name="btn_pay_bill">बिल भरा</string>
+    <string name="event1_title">पाणलोट व्यवस्थापन प्रकल्प</string>
+    <string name="event1_description">या प्रकल्पाचा उद्देश पाण्याचे संवर्धन करणे आहे.</string>
+
+    <string name="event2_title">रस्ता बांधणी प्रकल्प</string>
+    <string name="event2_description">या प्रकल्पाचा उद्देश नवीन रस्ते बांधून वाहतुकीची सुविधा सुधारणे आहे.</string>
+
+    <string name="event3_title">स्वच्छता मोहीम</string>
+    <string name="event3_description">या प्रकल्पाचा उद्देश गावात स्वच्छता आणि स्वच्छतेचे महत्त्व वाढविणे आहे.</string>
+
+    <string name="event4_title">आरोग्य तपासणी शिबिर</string>
+    <string name="event4_description">या प्रकल्पाचा उद्देश गावातील नागरिकांचे आरोग्य तपासणी सेवा उपलब्ध करणे आहे.</string>
+    <string name="event_title">कार्यक्रमाचे शीर्षक</string>
+    <string name="event_description">कार्यक्रमाचे वर्णन येथे येईल...</string>
+    <string name="event_date_time">तारीख आणि वेळ: १ जानेवारी २०२५ - १०:०० AM</string>
+    <string name="event_venue">स्थळ: सामुदायिक सभागृह</string>
+    <string name="event_agenda">कार्यसूची: विकास योजनांवर चर्चा</string>
+    <string name="event_organizers">आयोजक: ग्राम पंचायत कार्यालय</string>
+    <string name="event_contact_info">संपर्क: ९८२१२३४५६७</string>
+    <string name="register">प्रतिक्रिया नोंदवा</string>
+    <string name="event_item_1_title">पाणलोट व्यवस्थापन प्रकल्प</string>
+    <string name="event_item_1_desc">या प्रकल्पाचा उद्देश पाण्याचे संवर्धन करणे आहे.</string>
+    <string name="event_item_2_title">रस्ता बांधणी प्रकल्प</string>
+    <string name="event_item_2_desc">या प्रकल्पाचा उद्देश नवीन रस्ते बांधून वाहतुकीची सुविधा सुधारणे आहे.</string>
+    <string name="event_item_3_title">स्वच्छता मोहीम</string>
+    <string name="event_item_3_desc">या प्रकल्पाचा उद्देश गावात स्वच्छता आणि स्वच्छतेचे महत्त्व वाढविणे आहे.</string>
+    <string name="event_item_4_title">आरोग्य तपासणी शिबिर</string>
+    <string name="event_item_4_desc">या प्रकल्पाचा उद्देश गावातील नागरिकांचे आरोग्य तपासणी सेवा उपलब्ध करणे आहे.</string>
 
     <string name="infrastructure_page">इन्फ्रास्ट्रक्चर पृष्ठ</string>
     <string name="transport_services">वाहतूक सेवा</string>
@@ -114,9 +241,9 @@
     <string name="total_bill_not_found">एकूण बिल सापडले नाही</string>
     <string name="record_not_found">तपशील सापडले नाही</string>
     <string name="database_error">डाटाबेस त्रुटी: %1$s</string>
-    <string name="house_number">घर क्रमांक: %1$d</string>
-    <string name="total_bill">एकूण बिल: %1$d</string>
-    <string name="name">नाव: %1$s</string>
+    <string name="house_number">घर क्रमांक: </string>
+    <string name="total_bill">एकूण बिल: </string>
+    <string name="name">नाव: </string>
     <string name="name1">नाव: </string>
     <string name="mobile_number_label">मोबाइल नंबर:</string>
     <string name="complaint_description_label">तक्रार वर्णन:</string>

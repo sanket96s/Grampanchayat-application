@@ -1,161 +1,81 @@
-
+// GovernmentSchemesActivity.java
 package com.example.grampanchayatkouthaliapk;
 
-
-import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.ViewFlipper;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-
-import com.google.android.material.navigation.NavigationView;
-
-
-
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import java.util.ArrayList;
+import java.util.List;
 
 public class GovernmentSchemesActivity extends AppCompatActivity {
 
-    private ViewFlipper viewFlipper;
-    private Handler handler;
-    private Runnable runnable;
-    private final int SLIDE_INTERVAL = 3000;
-    private DrawerLayout drawerLayout;
-    private NavigationView navigationView;
+    private RecyclerView recyclerView;
+    private SchemeAdapter adapter;
+    private List<Scheme> schemeList;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_government_schemes);// Ensure this layout exists
+        setContentView(R.layout.activity_government_schemes); // Ensure this layout exists
 
-//        Toolbar toolbar;
-//        toolbar = findViewById(R.id.toolBar);
-//        setSupportActionBar(toolbar);
+        // Set up RecyclerView
+        recyclerView = findViewById(R.id.schemeRecyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-//        drawerLayout = findViewById(R.id.drawer_layout);
-//        ImageButton imageButton = findViewById(R.id.imageButton);
-//
-//        imageButton.setOnClickListener(v -> {
-//            if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-//                drawerLayout.closeDrawer(GravityCompat.START);
-//            } else {
-//                drawerLayout.openDrawer(GravityCompat.START);
-//            }
-//        });
+        // Initialize the scheme list
+        schemeList = getSchemeList();
 
-//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-//                this, drawerLayout, toolbar,
-//                R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-//        drawerLayout.addDrawerListener(toggle);
-//        toggle.syncState();
-
-
-        viewFlipper = findViewById(R.id.viewFlipper);
-
-        // Setup the handler to manage the sliding
-        handler = new Handler();
-        runnable = new Runnable() {
-            @Override
-            public void run() {
-                viewFlipper.showNext(); // Show the next image
-                handler.postDelayed(this, SLIDE_INTERVAL); // Repeat the action after the interval
-            }
-        };
-
-        // Start the sliding
-        handler.postDelayed(runnable, SLIDE_INTERVAL);
-
-        Button trackButton = findViewById(R.id.trackapplication);
-        trackButton.setOnClickListener(v -> openApplicationTrackingPage(v));
-
-
-
-        TextView textJandhanYojana = findViewById(R.id.textView5);
-        ImageView imageJandhanYojana = findViewById(R.id.imageView5);
-        textJandhanYojana.setOnClickListener(v -> openScheme1InformationPage(v));
-        imageJandhanYojana.setOnClickListener(v -> openScheme1InformationPage(v));
-
-        TextView textAvasYojana = findViewById(R.id.textView3);
-        ImageView imageAvasYojana = findViewById(R.id.imageView3);
-        textAvasYojana.setOnClickListener(v -> openScheme6InformationPage(v));
-        imageAvasYojana.setOnClickListener(v -> openScheme6InformationPage(v));
-
-        TextView textAtalBhujalYojana = findViewById(R.id.textView4);
-        ImageView imageAtalBhujalYojana = findViewById(R.id.imageView4);
-        textAtalBhujalYojana.setOnClickListener(v -> openScheme5InformationPage(v));
-        imageAtalBhujalYojana.setOnClickListener(v -> openScheme5InformationPage(v));
-
-        TextView textGramVikasYojana = findViewById(R.id.textView);
-        ImageView imageGramVikasYojana = findViewById(R.id.imageView);
-        textGramVikasYojana.setOnClickListener(v -> openScheme4InformationPage(v));
-        imageGramVikasYojana.setOnClickListener(v -> openScheme4InformationPage(v));
-
-        TextView textJanArogyaYojana = findViewById(R.id.textView2);
-        ImageView imageJanArogyaYojana = findViewById(R.id.imageView2);
-        textJanArogyaYojana.setOnClickListener(v -> openScheme3InformationPage(v));
-        imageJanArogyaYojana.setOnClickListener(v -> openScheme3InformationPage(v));
-
-        TextView textSmartGramYojana = findViewById(R.id.textView6);
-        ImageView imageSmartGramYojana = findViewById(R.id.imageView6);
-        textSmartGramYojana.setOnClickListener(v -> openScheme2InformationPage(v));
-        imageSmartGramYojana.setOnClickListener(v -> openScheme2InformationPage(v));
-
-
+        // Set up the adapter
+        adapter = new SchemeAdapter(schemeList, this);
+        recyclerView.setAdapter(adapter);
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        handler.removeCallbacks(runnable); // Stop the handler when activity is destroyed
-    }
-    public void openApplicationTrackingPage(View v) {
-        Intent intent = new Intent(GovernmentSchemesActivity.this, ApplicationTrackingActivity.class);
-        startActivity(intent);
-    }
+    private List<Scheme> getSchemeList() {
+        List<Scheme> schemes = new ArrayList<>();
 
-    public void openScheme1InformationPage(View v) {
-        Intent intent = new Intent(GovernmentSchemesActivity.this, Scheme1InformationActivity.class);
-        startActivity(intent);
-    }
+// Housing Scheme
+        String housingTitle = getString(R.string.housing_scheme_title);
+        String housingDescription = getString(R.string.housing_scheme_description);
+        String housingEligibility = getString(R.string.housing_scheme_eligibility);
+        String housingRequiredDocs = getString(R.string.housing_scheme_required_docs);
+        schemes.add(new Scheme(housingTitle, housingDescription, R.drawable.housingscheme, housingEligibility, housingRequiredDocs));
 
-    public void openScheme2InformationPage(View v) {
-        Intent intent = new Intent(GovernmentSchemesActivity.this, Scheme2InformationActivity.class);
-        startActivity(intent);
-    }
-    public void openScheme3InformationPage(View v) {
-        Intent intent = new Intent(GovernmentSchemesActivity.this, Scheme3InformationActivity.class);
-        startActivity(intent);
-    }
-    public void openScheme4InformationPage(View v) {
-        Intent intent = new Intent(GovernmentSchemesActivity.this, Scheme4InformationActivity.class);
-        startActivity(intent);
-    }
-    public void openScheme5InformationPage(View v) {
-        Intent intent = new Intent(GovernmentSchemesActivity.this, Scheme5InformationActivity.class);
-        startActivity(intent);
-    }
-    public void openScheme6InformationPage(View v) {
-        Intent intent = new Intent(GovernmentSchemesActivity.this, Scheme6InformationActivity.class);
-        startActivity(intent);
-    }
+// Water Supply Scheme
+        String waterTitle = getString(R.string.water_scheme_title);
+        String waterDescription = getString(R.string.water_scheme_description);
+        String waterEligibility = getString(R.string.water_scheme_eligibility);
+        String waterRequiredDocs = getString(R.string.water_scheme_required_docs);
+        schemes.add(new Scheme(waterTitle, waterDescription, R.drawable.waterscheme, waterEligibility, waterRequiredDocs));
 
-//    public void openApplicationTrackingPage(View v) {
-//        Intent intent = new Intent(GovernmentSchemesActivity.this, ApplicationTrackingActivity.class);
-//        startActivity(intent);
-//    }
+// Sanitation Scheme
+        String sanitationTitle = getString(R.string.sanitation_scheme_title);
+        String sanitationDescription = getString(R.string.sanitation_scheme_description);
+        String sanitationEligibility = getString(R.string.sanitation_scheme_eligibility);
+        String sanitationRequiredDocs = getString(R.string.sanitation_scheme_required_docs);
+        schemes.add(new Scheme(sanitationTitle, sanitationDescription, R.drawable.sanitizationscheme, sanitationEligibility, sanitationRequiredDocs));
 
+// Health Scheme
+        String healthTitle = getString(R.string.health_scheme_title);
+        String healthDescription = getString(R.string.health_scheme_description);
+        String healthEligibility = getString(R.string.health_scheme_eligibility);
+        String healthRequiredDocs = getString(R.string.health_scheme_required_docs);
+        schemes.add(new Scheme(healthTitle, healthDescription, R.drawable.healthscheme, healthEligibility, healthRequiredDocs));
+
+// Education Scheme
+        String educationTitle = getString(R.string.education_scheme_title);
+        String educationDescription = getString(R.string.education_scheme_description);
+        String educationEligibility = getString(R.string.education_scheme_eligibility);
+        String educationRequiredDocs = getString(R.string.education_scheme_required_docs);
+        schemes.add(new Scheme(educationTitle, educationDescription, R.drawable.educationscheme, educationEligibility, educationRequiredDocs));
+
+// Employment Scheme
+        String employmentTitle = getString(R.string.employment_scheme_title);
+        String employmentDescription = getString(R.string.employment_scheme_description);
+        String employmentEligibility = getString(R.string.employment_scheme_eligibility);
+        String employmentRequiredDocs = getString(R.string.employment_scheme_required_docs);
+        schemes.add(new Scheme(employmentTitle, employmentDescription, R.drawable.employmentscheme, employmentEligibility, employmentRequiredDocs));
+
+        return schemes;
+    }
 }

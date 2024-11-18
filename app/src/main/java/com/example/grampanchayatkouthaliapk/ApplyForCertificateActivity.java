@@ -39,7 +39,7 @@ public class ApplyForCertificateActivity extends AppCompatActivity {
                     intent.putExtra("DOCUMENT_TYPE", selectedDocumentType);
                     startActivity(intent);
                 } else {
-                    showToast("कृपया प्रमाणपत्र प्रकार निवडा");
+                    showToast(getString(R.string.select_certificate_type)); // Use string resource for Toast message
                 }
             }
         });
@@ -53,7 +53,7 @@ public class ApplyForCertificateActivity extends AppCompatActivity {
         });
     }
 
-    // Display a toast message
+    // Display a toast message using string resources
     private void showToast(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
