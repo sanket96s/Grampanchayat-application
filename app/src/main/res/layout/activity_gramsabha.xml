@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFDAB9"
+    android:background="@color/background_color"
     android:padding="8dp">
 
     <LinearLayout
@@ -18,28 +18,7 @@
             android:orientation="horizontal"
             android:gravity="center"
             android:layout_marginBottom="8dp">
-
-<!--            <Button-->
-<!--                android:id="@+id/btnUpcomingEvents"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_weight="1"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:backgroundTint="#FFA726"-->
-<!--                android:text="चालू प्रकल्प"-->
-<!--                android:textColor="#FFFFFF"-->
-<!--                android:textSize="16sp"-->
-<!--                android:textStyle="bold" />-->
-
-<!--            <Button-->
-<!--                android:id="@+id/btnPastEvents"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_weight="1"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:backgroundTint="#81D4FA"-->
-<!--                android:text="मागील प्रकल्प"-->
-<!--                android:textColor="#FFFFFF"-->
-<!--                android:textSize="16sp"-->
-<!--                android:textStyle="bold" />-->
+            <!-- Add your tabs here -->
         </LinearLayout>
 
         <!-- List of Events -->
@@ -48,7 +27,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="8dp"
-            android:background="#FFE0B2">
+            android:background="@color/event_background">
 
             <!-- Event Item 1 -->
             <LinearLayout
@@ -57,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="8dp"
-                android:background="#FFFFFF"
+                android:background="@drawable/event_item_border"
                 android:layout_marginBottom="8dp"
                 android:elevation="2dp"
                 android:onClick="onEventItemClick">
@@ -72,17 +51,17 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="पाणलोट व्यवस्थापन प्रकल्प"
+                        android:text="@string/event_item_1_title"
                         android:textSize="18sp"
-                        android:textColor="#37474F"
+                        android:textColor="@color/event_title_color"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="या प्रकल्पाचा उद्देश पाण्याचे संवर्धन करणे आहे."
+                        android:text="@string/event_item_1_desc"
                         android:textSize="14sp"
-                        android:textColor="#607D8B"
+                        android:textColor="@color/event_desc_color"
                         android:layout_marginTop="4dp" />
                 </LinearLayout>
             </LinearLayout>
@@ -94,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="8dp"
-                android:background="#FFFFFF"
+                android:background="@drawable/event_item_border"
                 android:elevation="2dp"
                 android:layout_marginBottom="8dp"
                 android:onClick="onEventItemClick">
@@ -109,17 +88,17 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="रस्ता बांधणी प्रकल्प"
+                        android:text="@string/event_item_2_title"
                         android:textSize="18sp"
-                        android:textColor="#37474F"
+                        android:textColor="@color/event_title_color"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="या प्रकल्पाचा उद्देश नवीन रस्ते बांधून वाहतुकीची सुविधा सुधारणे आहे."
+                        android:text="@string/event_item_2_desc"
                         android:textSize="14sp"
-                        android:textColor="#607D8B"
+                        android:textColor="@color/event_desc_color"
                         android:layout_marginTop="4dp" />
                 </LinearLayout>
             </LinearLayout>
@@ -131,7 +110,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="8dp"
-                android:background="#FFFFFF"
+                android:background="@drawable/event_item_border"
                 android:elevation="2dp"
                 android:layout_marginBottom="8dp"
                 android:onClick="onEventItemClick">
@@ -146,17 +125,17 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="स्वच्छता मोहीम"
+                        android:text="@string/event_item_3_title"
                         android:textSize="18sp"
-                        android:textColor="#37474F"
+                        android:textColor="@color/event_title_color"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="या प्रकल्पाचा उद्देश गावात स्वच्छता आणि स्वच्छतेचे महत्त्व वाढविणे आहे."
+                        android:text="@string/event_item_3_desc"
                         android:textSize="14sp"
-                        android:textColor="#607D8B"
+                        android:textColor="@color/event_desc_color"
                         android:layout_marginTop="4dp" />
                 </LinearLayout>
             </LinearLayout>
@@ -168,7 +147,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="8dp"
-                android:background="#FFFFFF"
+                android:background="@drawable/event_item_border"
                 android:elevation="2dp"
                 android:layout_marginBottom="8dp"
                 android:onClick="onEventItemClick">
@@ -183,17 +162,17 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="आरोग्य तपासणी शिबिर"
+                        android:text="@string/event_item_4_title"
                         android:textSize="18sp"
-                        android:textColor="#37474F"
+                        android:textColor="@color/event_title_color"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="या प्रकल्पाचा उद्देश गावातील नागरिकांचे आरोग्य तपासणी सेवा उपलब्ध करणे आहे."
+                        android:text="@string/event_item_4_desc"
                         android:textSize="14sp"
-                        android:textColor="#607D8B"
+                        android:textColor="@color/event_desc_color"
                         android:layout_marginTop="4dp" />
                 </LinearLayout>
             </LinearLayout>

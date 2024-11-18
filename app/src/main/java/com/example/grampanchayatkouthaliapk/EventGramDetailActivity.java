@@ -35,7 +35,7 @@ public class EventGramDetailActivity extends AppCompatActivity {
         // Set an OnClickListener on the button to open EventFormActivity
         btnRegister.setOnClickListener(v -> {
             // Create an intent to open EventFormActivity
-            Intent intent = new Intent(EventGramDetailActivity.this, EventFormActivity.class);
+            Intent intent = new Intent(EventGramDetailActivity.this, ProjectFormActivity.class);
             startActivity(intent); // Start the EventFormActivity
         });
     }

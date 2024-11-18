@@ -4,9 +4,9 @@
     <string name="total_bill_not_found">Total bill not found</string>
     <string name="record_not_found">Record not found</string>
     <string name="database_error">Database error: %1$s</string>
-    <string name="house_number">House number: %1$d</string>
-    <string name="total_bill">Total bill: %1$d</string>
-    <string name="name">Name: %1$s</string>
+    <string name="house_number">House number: </string>
+    <string name="total_bill">Total bill: </string>
+    <string name="name">Name: </string>
     <string name="login_title">Login</string>
     <string name="email_hint">Email</string>
     <string name="password_hint">Password</string>
@@ -108,7 +108,49 @@
     <string name="name1">Name:  </string>
 
     <!-- Title -->
-    <!-- Economic Activities Section -->
+
+    <string name="upi_app_not_found">UPI app not found. Please install a UPI app like Google Pay.</string>
+    <string name="organization_name">Grampanchayat Kouthali</string>
+    <string name="payment_note">Payment for tax</string>
+
+    <string name="fetch_bill">Fetch Bill</string>
+    <string name="pay_bill">Pay Bill</string>
+    <string name="enter_house_number">Please enter a valid house number.</string>
+    <string name="invalid_house_number">Invalid house number format.</string>
+    <string name="payment_success">Payment successful! Amount paid: ₹</string>
+    <string name="payment_failed">Payment failed or cancelled.</string>
+    <string name="hint_house_number">House Number</string>
+    <string name="btn_fetch_bill">Fetch Bill</string>
+    <string name="text_house_number">House Number: </string>
+    <string name="text_total_bill">Total Bill: </string>
+    <string name="btn_pay_bill">Pay Bill</string>
+    <string name="event1_title">Water Conservation Project</string>
+    <string name="event1_description">The purpose of this project is to conserve water.</string>
+
+    <string name="event2_title">Road Construction Project</string>
+    <string name="event2_description">This project aims to build new roads to improve transportation.</string>
+
+    <string name="event3_title">Cleanliness Campaign</string>
+    <string name="event3_description">The purpose of this project is to increase awareness about cleanliness in the village.</string>
+
+    <string name="event4_title">Health Checkup Camp</string>
+    <string name="event4_description">The purpose of this project is to provide health checkup services to the villagers.</string>
+    <string name="event_title">Event Title</string>
+    <string name="event_description">Event description will go here...</string>
+    <string name="event_date_time">Date and Time: January 1, 2025 - 10:00 AM</string>
+    <string name="event_venue">Venue: Community Hall</string>
+    <string name="event_agenda">Agenda: Discussion on development plans</string>
+    <string name="event_organizers">Organizers: Gram Panchayat Office</string>
+    <string name="event_contact_info">Contact: 9821234567</string>
+    <string name="register">feedback</string>
+    <string name="event_item_1_title">Watershed Management Project</string>
+    <string name="event_item_1_desc">The aim of this project is water conservation.</string>
+    <string name="event_item_2_title">Road Construction Project</string>
+    <string name="event_item_2_desc">The aim of this project is to improve transportation by constructing new roads.</string>
+    <string name="event_item_3_title">Cleanliness Campaign</string>
+    <string name="event_item_3_desc">The aim of this project is to enhance cleanliness and sanitation in the village.</string>
+    <string name="event_item_4_title">Health Check-up Camp</string>
+    <string name="event_item_4_desc">The aim of this project is to provide health check-up services to the villagers.</string>
 
     <string name="infrastructure_page">Infrastructure Page</string>
     <string name="transport_services">Transport Services</string>
@@ -243,9 +285,9 @@
     <string name="office_address">Office Address: 123 Village Lane, Gram Panchayat</string>
     <string name="working_hours">Working Hours: Mon-Fri, 9 AM - 5 PM</string>
     <string name="office_details">Office Details: 123 Village Street, kouthali, Working Hours: Mon-Fri, 9 AM - 5 PM</string>
-    <string name="mobile_number_label">मोबाइल नंबर:</string>
-    <string name="complaint_description_label">तक्रार वर्णन:</string>
-    <string name="success_message">तुम्ही यशस्वीरित्या नोंदवले.</string>
+    <string name="mobile_number_label">Mobile Number:</string>
+    <string name="complaint_description_label">Complaint Description:</string>
+    <string name="success_message">You have successfully submitted.</string>
     <string name="track_complaint_title">Track Complaint</string>
     <string name="project_title">Project Title</string>
     <string name="project_description">Project Description</string>
