@@ -1,80 +1,79 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4C7A3">
+    android:background="@color/peach">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="20dp">
 
-        <!-- Title for the page -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/page_title"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="#000"
+            android:textColor="#4E342E"
             android:layout_gravity="center"
             android:paddingBottom="16dp"/>
 
-        <!-- Name Input Field -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/name_label"
             android:textSize="16sp"
-            android:textColor="#000"/>
+            android:textColor="#4E342E"/>
+
         <EditText
             android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints=""
             android:hint="@string/name_hint"
             android:padding="12dp"
             android:layout_marginBottom="16dp"
-            android:inputType="textPersonName"/>
+            android:inputType="textPersonName" />
 
-        <!-- Address Input Field -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/address_label"
             android:textSize="16sp"
-            android:textColor="#000"/>
+            android:textColor="#4E342E"/>
         <EditText
             android:id="@+id/etAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints=""
             android:hint="@string/address_hint"
             android:padding="12dp"
             android:layout_marginBottom="16dp"
             android:inputType="textPostalAddress"/>
 
-        <!-- Mobile Number Input Field -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/mobile_label"
             android:textSize="16sp"
-            android:textColor="#000"/>
+            android:textColor="#4E342E"/>
         <EditText
             android:id="@+id/etMobileNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints=""
             android:hint="@string/mobile_hint"
             android:padding="12dp"
             android:layout_marginBottom="16dp"
             android:inputType="phone"/>
 
-        <!-- Complaint Category Radio Buttons -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/category_label"
             android:textSize="16sp"
-            android:textColor="#000"/>
+            android:textColor="#4E342E"/>
         <RadioGroup
             android:id="@+id/radioGroupCategory"
             android:layout_width="match_parent"
@@ -85,70 +84,75 @@
                 android:id="@+id/radioWater"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/water"/>
+                android:text="@string/water"
+                android:textColor="#4E342E"/>
             <RadioButton
                 android:id="@+id/radioRoad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/road"/>
+                android:text="@string/road"
+                android:textColor="#4E342E"/>
             <RadioButton
                 android:id="@+id/radioElectricity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/electricity"/>
+                android:text="@string/electricity"
+                android:textColor="#4E342E"/>
             <RadioButton
                 android:id="@+id/radioOther"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/other"/>
+                android:text="@string/other"
+                android:textColor="#4E342E"/>
         </RadioGroup>
 
-        <!-- Complaint Description Field -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/complaint_label"
             android:textSize="16sp"
-            android:textColor="#000"/>
+            android:textColor="#4E342E"/>
         <EditText
             android:id="@+id/etComplaint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints=""
             android:hint="@string/complaint_hint"
             android:padding="12dp"
             android:layout_marginBottom="24dp"
             android:inputType="textMultiLine"
-            android:minLines="5"/>
+            android:minLines="5"
+            android:textColor="#4E342E"/>
 
-        <!-- Buttons Container -->
         <LinearLayout
+            style="?android:attr/buttonBarStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
             android:paddingBottom="24dp">
 
-            <!-- Submit Button -->
             <Button
                 android:id="@+id/btnUpload"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/upload_button"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp"
-                android:backgroundTint="#FF8800"
+                android:backgroundTint="#FF7043"
                 android:padding="10dp"
-                android:layout_marginEnd="20dp"/>
+                android:layout_marginEnd="20dp" />
 
-            <!-- Track Complaint Button -->
             <Button
                 android:id="@+id/btnTrackComplaint"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/track_button"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp"
-                android:backgroundTint="#4CAF50"
+                android:backgroundTint="#388E3C"
                 android:padding="10dp"/>
         </LinearLayout>
     </LinearLayout>

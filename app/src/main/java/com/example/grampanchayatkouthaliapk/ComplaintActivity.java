@@ -4,14 +4,14 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.view.View;
+
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import java.util.Locale;
 import java.util.Properties;
 import java.util.Random;
 
@@ -36,28 +36,22 @@ import javax.mail.internet.MimeMessage;
 
 public class ComplaintActivity extends AppCompatActivity {
 
-    // Firebase Database reference
     private DatabaseReference databaseReference;
 
-    // Firebase Authentication
     private FirebaseAuth firebaseAuth;
 
-    // UI components
     private EditText etName, etAddress, etMobileNumber, etComplaint;
     private RadioGroup radioGroupCategory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_complaint);  // Link to the layout file
+        setContentView(R.layout.activity_complaint);
 
-        // Initialize Firebase Database reference
         databaseReference = FirebaseDatabase.getInstance().getReference("Complaints");
 
-        // Initialize Firebase Authentication
         firebaseAuth = FirebaseAuth.getInstance();
 
-        // Initialize UI components
         etName = findViewById(R.id.etName);
         etAddress = findViewById(R.id.etAddress);
         etMobileNumber = findViewById(R.id.etMobileNumber);
@@ -66,12 +60,10 @@ public class ComplaintActivity extends AppCompatActivity {
         Button btnUpload = findViewById(R.id.btnUpload);
         Button btnTrackComplaint = findViewById(R.id.btnTrackComplaint);
 
-        // Set onClick listener for the upload button
-        btnUpload.setText(getString(R.string.submit_button)); // Localized button text
+        btnUpload.setText(getString(R.string.submit_button));
         btnUpload.setOnClickListener(v -> generateUniqueComplaintId());
 
-        // Set onClick listener for the track complaint button
-        btnTrackComplaint.setText(getString(R.string.track_button)); // Localized button text
+        btnTrackComplaint.setText(getString(R.string.track_button));
         btnTrackComplaint.setOnClickListener(v -> {
             Intent intent = new Intent(ComplaintActivity.this, TrackComplaintActivity.class);
             startActivity(intent);
@@ -79,20 +71,16 @@ public class ComplaintActivity extends AppCompatActivity {
     }
 
     private void generateUniqueComplaintId() {
-        // Generate a random 7-digit ID
         Random random = new Random();
         int randomId = 1000000 + random.nextInt(9000000);
         String complaintId = String.valueOf(randomId);
 
-        // Check if the ID is already in the database
         databaseReference.child(complaintId).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
-                    // If the ID already exists, generate a new one
                     generateUniqueComplaintId();
                 } else {
-                    // If the ID is unique, proceed to save the complaint data
                     saveComplaintData(complaintId);
                 }
             }
@@ -105,7 +93,6 @@ public class ComplaintActivity extends AppCompatActivity {
     }
 
     private void saveComplaintData(String complaintId) {
-        // Get input values from EditText fields
         String name = etName.getText().toString().trim();
         String address = etAddress.getText().toString().trim();
         String mobileNumber = etMobileNumber.getText().toString().trim();
@@ -113,45 +100,37 @@ public class ComplaintActivity extends AppCompatActivity {
 
         if (mobileNumber.length() != 10) {
             Toast.makeText(this, getString(R.string.error_mobile_number), Toast.LENGTH_SHORT).show();
-            return; // If mobile number is not 10 digits, return
+            return;
         }
 
-        // Get selected radio button text for complaint category
         int selectedCategoryId = radioGroupCategory.getCheckedRadioButtonId();
         String category;
         if (selectedCategoryId != -1) {
             RadioButton selectedRadioButton = findViewById(selectedCategoryId);
             category = selectedRadioButton.getText().toString();
         } else {
-            category = "";
             Toast.makeText(this, getString(R.string.error_category), Toast.LENGTH_SHORT).show();
-            return; // If no category is selected, return
+            return;
         }
 
-        // Create a complaint object to hold all information
         Complaint complaint = new Complaint(complaintId, name, address, mobileNumber, category, complaintDescription, "submitted");
 
-        // Store the complaint object in Firebase
         databaseReference.child(complaintId).setValue(complaint)
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
-                        // Clear all fields after successful submission
                         etName.setText("");
                         etAddress.setText("");
                         etMobileNumber.setText("");
                         etComplaint.setText("");
                         radioGroupCategory.clearCheck();
 
-                        // Retrieve logged-in user's email
                         FirebaseUser user = firebaseAuth.getCurrentUser();
                         if (user != null) {
                             String userEmail = user.getEmail();
-                            // Send email with complaint details
                             Resources res = getResources();
                             new SendEmailTask(userEmail, name, address, mobileNumber, category, complaintDescription, complaintId, res).execute();
                         }
 
-                        // Navigate to the success page
                         Intent intent = new Intent(ComplaintActivity.this, SuccessActivity.class);
                         startActivity(intent);
                     }
@@ -182,17 +161,15 @@ public class ComplaintActivity extends AppCompatActivity {
 
         @Override
         protected Void doInBackground(Void... voids) {
-            final String username = "salunkep341@gmail.com";  // Your email address
-            final String password = "nmrj whzm mhql gphe";  // Your email password
+            final String username = "salunkep341@gmail.com";
+            final String password = "nmrj whzm mhql gphe";
 
-            // Set up properties for the email
             Properties props = new Properties();
             props.put("mail.smtp.host", "smtp.gmail.com");
             props.put("mail.smtp.port", "587");
             props.put("mail.smtp.auth", "true");
             props.put("mail.smtp.starttls.enable", "true");
 
-            // Create a session for sending email
             Session session = Session.getInstance(props, new javax.mail.Authenticator() {
                 @Override
                 protected PasswordAuthentication getPasswordAuthentication() {
@@ -201,13 +178,11 @@ public class ComplaintActivity extends AppCompatActivity {
             });
 
             try {
-                // Create email message
                 Message message = new MimeMessage(session);
                 message.setFrom(new InternetAddress(username));
                 message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(userEmail));
                 message.setSubject("Complaint Registered: " + complaintId);
 
-                // Construct the message body in both English and Marathi
                 String messageBody = res.getString(R.string.complaint_id_label) + " " + complaintId + "\n\n"
                         + res.getString(R.string.name_label) + " " + name + "\n"
                         + res.getString(R.string.address_label) + " " + address + "\n"
@@ -219,11 +194,10 @@ public class ComplaintActivity extends AppCompatActivity {
 
                 message.setText(messageBody);
 
-                // Send email
                 Transport.send(message);
 
             } catch (MessagingException e) {
-                e.printStackTrace();
+                Log.e("MessagingError", "Error occurred while sending message", e);
             }
 
             return null;

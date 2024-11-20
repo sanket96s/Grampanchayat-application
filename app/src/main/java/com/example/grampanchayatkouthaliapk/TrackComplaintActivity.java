@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TableLayout;
-import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,7 +21,6 @@ import com.google.firebase.database.ValueEventListener;
 public class TrackComplaintActivity extends AppCompatActivity {
 
     private EditText etComplaintId;
-    private Button btnTrack;
     private TableLayout tblComplaintDetails;
 
     private DatabaseReference databaseReference;
@@ -32,28 +30,20 @@ public class TrackComplaintActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_track_complaint);
 
-        // Initialize UI components
         etComplaintId = findViewById(R.id.etComplaintId);
-        btnTrack = findViewById(R.id.btnTrack);
+        Button btnTrack = findViewById(R.id.btnTrack);
         tblComplaintDetails = findViewById(R.id.tblComplaintDetails);
 
-        // Initialize Firebase Database reference
         databaseReference = FirebaseDatabase.getInstance().getReference("Complaints");
 
-        // Set onClick listener for the track button
-        btnTrack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                trackComplaint();
-            }
-        });
+        btnTrack.setOnClickListener(v -> trackComplaint());
     }
 
     private void trackComplaint() {
         String complaintId = etComplaintId.getText().toString().trim();
 
         if (TextUtils.isEmpty(complaintId)) {
-            Toast.makeText(this, "कृपया तक्रार आयडी भरा.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.enter_complaint_id), Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -61,10 +51,8 @@ public class TrackComplaintActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
-                    // Get the details of the complaint
                     Complaint complaint = snapshot.getValue(Complaint.class);
                     if (complaint != null) {
-                        // Populate the TableLayout with complaint details
                         ((TextView) findViewById(R.id.tvComplaintId)).setText(complaint.getComplaintId());
                         ((TextView) findViewById(R.id.tvName)).setText(complaint.getName());
                         ((TextView) findViewById(R.id.tvAddress)).setText(complaint.getAddress());
@@ -73,16 +61,16 @@ public class TrackComplaintActivity extends AppCompatActivity {
                         ((TextView) findViewById(R.id.tvComplaintDescription)).setText(complaint.getComplaintDescription());
                         ((TextView) findViewById(R.id.tvStatus)).setText(complaint.getStatus());
 
-                        tblComplaintDetails.setVisibility(View.VISIBLE);  // Show the table layout
+                        tblComplaintDetails.setVisibility(View.VISIBLE);
                     }
                 } else {
-                    Toast.makeText(TrackComplaintActivity.this, "तक्रार आयडी आढळले नाही.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TrackComplaintActivity.this, getString(R.string.complaint_id_not_found), Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(TrackComplaintActivity.this, "तक्रार ट्रॅक करण्यात अडचण आली.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(TrackComplaintActivity.this, getString(R.string.track_complaint_error), Toast.LENGTH_SHORT).show();
             }
         });
     }

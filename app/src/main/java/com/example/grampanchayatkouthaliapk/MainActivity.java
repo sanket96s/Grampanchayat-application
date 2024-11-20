@@ -20,14 +20,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
-
 
         FirebaseApp.initializeApp(this);
 
-
-        // Show splash screen with video
         setContentView(R.layout.activity_splash);
         playSplashVideo();
     }
@@ -39,22 +35,20 @@ public class MainActivity extends AppCompatActivity {
 
         videoView.setOnPreparedListener(mp -> videoView.start());
 
-        // Handle errors during playback
         videoView.setOnErrorListener((mp, what, extra) -> {
             proceedToCheckAuthentication();
-            return true; // Indicates that we handled the error
+            return true;
         });
 
-        // Transition after video playback ends or after 5 seconds
         videoView.setOnCompletionListener(mp -> proceedToCheckAuthentication());
-        new Handler().postDelayed(this::proceedToCheckAuthentication, 2000); // 2000 milliseconds = 5 seconds
+        new Handler().postDelayed(this::proceedToCheckAuthentication, 1000);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         if (videoView != null) {
-            videoView.pause(); // Pause video when activity is paused
+            videoView.pause();
         }
     }
 
@@ -63,13 +57,11 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent;
         if (currentUser == null) {
-            // User is not authenticated, go to login page
             intent = new Intent(MainActivity.this, LoginActivity.class);
         } else {
-            // User is authenticated, go to main page
             intent = new Intent(MainActivity.this, MainPageActivity.class);
         }
         startActivity(intent);
-        finish(); // Close this activity
+        finish();
     }
 }

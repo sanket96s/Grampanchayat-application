@@ -2,7 +2,6 @@ package com.example.grampanchayatkouthaliapk;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -23,37 +22,27 @@ public class ApplyForCertificateActivity extends AppCompatActivity {
         Button btnSubmitApplication = findViewById(R.id.btn_submit_application);
         Button btnTrackCertificate = findViewById(R.id.btn_track_certificate);
 
-        // Submit and navigate to the next activity
-        btnSubmitApplication.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Get the selected RadioButton's text
-                int selectedId = radioGroupCertificateTypes.getCheckedRadioButtonId();
+        btnSubmitApplication.setOnClickListener(v -> {
+            int selectedId = radioGroupCertificateTypes.getCheckedRadioButtonId();
 
-                if (selectedId != -1) {
-                    RadioButton selectedRadioButton = findViewById(selectedId);
-                    String selectedDocumentType = selectedRadioButton.getText().toString();
+            if (selectedId != -1) {
+                RadioButton selectedRadioButton = findViewById(selectedId);
+                String selectedDocumentType = selectedRadioButton.getText().toString();
 
-                    // Pass the selected document type to the next activity
-                    Intent intent = new Intent(ApplyForCertificateActivity.this, RegisterforCertificateActivity.class);
-                    intent.putExtra("DOCUMENT_TYPE", selectedDocumentType);
-                    startActivity(intent);
-                } else {
-                    showToast("कृपया प्रमाणपत्र प्रकार निवडा");
-                }
+                Intent intent = new Intent(ApplyForCertificateActivity.this, RegisterforCertificateActivity.class);
+                intent.putExtra("DOCUMENT_TYPE", selectedDocumentType);
+                startActivity(intent);
+            } else {
+                showToast(getString(R.string.select_certificate_type));
             }
         });
 
-        btnTrackCertificate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ApplyForCertificateActivity.this, TrackCertificateActivity.class);
-                startActivity(intent);
-            }
+        btnTrackCertificate.setOnClickListener(v -> {
+            Intent intent = new Intent(ApplyForCertificateActivity.this, TrackCertificateActivity.class);
+            startActivity(intent);
         });
     }
 
-    // Display a toast message
     private void showToast(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }

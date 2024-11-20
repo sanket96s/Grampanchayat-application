@@ -16,7 +16,6 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Infrastructure Page Title -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -26,7 +25,6 @@
                 android:paddingBottom="16dp"
                 android:textColor="#4B0082" />
 
-            <!-- Transport Services Section -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -48,7 +46,6 @@
                 android:layout_marginRight="4dp"
                 android:elevation="4dp">
 
-                <!-- Bus Services -->
                 <TableRow>
                     <TextView
                         android:layout_width="wrap_content"
@@ -82,7 +79,6 @@
                         android:textColor="#2E8B57" />
                 </TableRow>
 
-                <!-- Railway Stations -->
                 <TableRow>
                     <TextView
                         android:layout_width="wrap_content"
@@ -117,7 +113,6 @@
                 </TableRow>
             </TableLayout>
 
-            <!-- Roads Section -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -233,7 +228,6 @@
                 </TableRow>
             </TableLayout>
 
-            <!-- Communication Section -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -256,7 +250,6 @@
                 android:layout_marginRight="4dp"
                 android:elevation="4dp">
 
-                <!-- Internet Services -->
                 <TableRow>
                     <TextView
                         android:layout_width="wrap_content"
@@ -290,7 +283,6 @@
                         android:textColor="#2E8B57" />
                 </TableRow>
 
-                <!-- Telecommunication Services -->
                 <TableRow>
                     <TextView
                         android:layout_width="wrap_content"

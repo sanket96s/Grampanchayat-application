@@ -19,14 +19,12 @@
             android:layout_margin="16dp"
             android:textSize="16sp"
             android:textColor="@android:color/black"
-            android:text="प्रमाणपत्र प्रकार:" />
+            android:text="@string/document_type" />
 
-
-        <!-- वैयक्तिक माहिती -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="वैयक्तिक माहिती:"
+            android:text="@string/personal_info"
             android:textSize="18sp"
             android:textStyle="bold"
             android:paddingBottom="8dp" />
@@ -35,7 +33,8 @@
             android:id="@+id/full_name_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="पूर्ण नाव"
+            android:autofillHints=""
+            android:hint="@string/full_name_hint"
             android:padding="8dp"
             android:layout_marginBottom="8dp"
             android:background="@drawable/edit_text_border"
@@ -45,7 +44,8 @@
             android:id="@+id/parent_name_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="आईचा/वडिलांचा नाव"
+            android:autofillHints=""
+            android:hint="@string/parent_name_hint"
             android:padding="8dp"
             android:layout_marginBottom="8dp"
             android:background="@drawable/edit_text_border"
@@ -55,7 +55,8 @@
             android:id="@+id/dob_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="जन्मतारीख"
+            android:autofillHints=""
+            android:hint="@string/dob_hint"
             android:padding="8dp"
             android:layout_marginBottom="8dp"
             android:background="@drawable/edit_text_border"
@@ -71,21 +72,21 @@
                 android:id="@+id/male_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="पुरुष"
+                android:text="@string/male"
                 android:padding="8dp" />
 
             <RadioButton
                 android:id="@+id/female_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="महिला"
+                android:text="@string/female"
                 android:padding="8dp" />
 
             <RadioButton
                 android:id="@+id/other_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="इतर"
+                android:text="@string/other"
                 android:padding="8dp" />
         </RadioGroup>
 
@@ -93,7 +94,8 @@
             android:id="@+id/address_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="पत्ता"
+            android:autofillHints=""
+            android:hint="@string/address_hint"
             android:padding="8dp"
             android:layout_marginBottom="8dp"
             android:background="@drawable/edit_text_border"
@@ -103,51 +105,45 @@
             android:id="@+id/mobile_number_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="मोबाइल नंबर"
+            android:autofillHints=""
+            android:hint="@string/mobile_number_hint"
             android:padding="8dp"
             android:layout_marginBottom="8dp"
             android:background="@drawable/edit_text_border"
             android:inputType="phone" />
 
-        <!-- File Upload Buttons Redirecting to Google Form -->
         <Button
             android:id="@+id/upload_photo_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="फोटो अपलोड करा"
-            android:layout_marginBottom="8dp"
-            android:onClick="openPhotoGoogleForm" />
+            android:text="@string/upload_photo"
+            android:layout_marginBottom="8dp" />
 
         <Button
             android:id="@+id/upload_aadhar_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="आधार कार्ड अपलोड करा"
-            android:layout_marginBottom="8dp"
-            android:onClick="openAadharGoogleForm" />
+            android:text="@string/upload_aadhar"
+            android:layout_marginBottom="8dp" />
 
         <Button
             android:id="@+id/upload_ration_card_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="शिधापत्रिका अपलोड करा"
-            android:layout_marginBottom="8dp"
-            android:onClick="openRationCardGoogleForm" />
+            android:text="@string/upload_ration_card"
+            android:layout_marginBottom="8dp" />
 
-        <!-- Confirmation CheckBox -->
         <CheckBox
             android:id="@+id/confirm_check_box"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="सर्व माहिती योग्य आहे, याची पुष्टी करा"
+            android:text="@string/confirm_info"
             android:layout_marginBottom="16dp" />
 
-        <!-- Submit Button -->
         <Button
             android:id="@+id/submit_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="अर्ज करा" />
-
+            android:text="@string/submit_application" />
     </LinearLayout>
 </ScrollView>

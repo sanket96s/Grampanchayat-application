@@ -16,14 +16,12 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Public Facilities Heading -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/public_facilities"
                 style="@style/SectionTitle"/>
 
-            <!-- Healthcare Facilities Section -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -63,7 +61,6 @@
                 </TableRow>
             </TableLayout>
 
-            <!-- Education Section -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -103,7 +100,6 @@
                 </TableRow>
             </TableLayout>
 
-            <!-- Utilities Section -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

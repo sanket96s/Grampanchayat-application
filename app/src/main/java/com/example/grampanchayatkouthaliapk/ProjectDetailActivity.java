@@ -14,7 +14,6 @@ public class ProjectDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_project_detail);
 
-        // Initialize views
         ImageView projectImage = findViewById(R.id.sample_photo);
         TextView projectTitle = findViewById(R.id.project_title);
         TextView projectDescription = findViewById(R.id.project_description);
@@ -26,7 +25,6 @@ public class ProjectDetailActivity extends AppCompatActivity {
         TextView projectStakeholders = findViewById(R.id.project_stakeholders);
         TextView projectLocation = findViewById(R.id.project_location);
 
-        // Retrieve data passed to this activity
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             projectImage.setImageResource(extras.getInt("PROJECT_IMAGE"));
@@ -41,7 +39,6 @@ public class ProjectDetailActivity extends AppCompatActivity {
             projectLocation.setText(extras.getString("PROJECT_LOCATION"));
         }
 
-        // Set up the feedback button to open ProjectFormActivity
         Button feedbackButton = findViewById(R.id.feedback_button);
         feedbackButton.setOnClickListener(v -> {
             Intent intent = new Intent(ProjectDetailActivity.this, ProjectFormActivity.class);

@@ -27,7 +27,7 @@ public class TaxPayActivity extends AppCompatActivity {
     private DatabaseReference databaseReference;
     private TextView textHouseNumber, textTotalBill;
     private EditText inputHouseNumber;
-    private Button btnFetchBill, btnPayBill;
+    private Button btnPayBill, btnFetchBill;
     private TableLayout tableLayout;
     private int totalBillAmount = 0;
 
@@ -36,10 +36,8 @@ public class TaxPayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tax_pay);
 
-        // Initialize Firebase Database reference
         databaseReference = FirebaseDatabase.getInstance().getReference("taxRecords");
 
-        // Initialize Views
         textHouseNumber = findViewById(R.id.text_house_number);
         textTotalBill = findViewById(R.id.text_total_bill);
         inputHouseNumber = findViewById(R.id.input_house_number);
@@ -47,12 +45,9 @@ public class TaxPayActivity extends AppCompatActivity {
         btnPayBill = findViewById(R.id.btn_pay_bill);
         tableLayout = findViewById(R.id.table_layout);
 
-        // Set Pay Bill button to be initially hidden
         btnPayBill.setVisibility(View.GONE);
 
-        // Fetch Bill on button click
         btnFetchBill.setOnClickListener(view -> fetchBill());
-        // Pay Bill on button click (via UPI)
         btnPayBill.setOnClickListener(view -> initiateUPIPayment());
     }
 
@@ -76,7 +71,7 @@ public class TaxPayActivity extends AppCompatActivity {
         textHouseNumber.setText("");
         textTotalBill.setText("");
         tableLayout.removeAllViews();
-        btnPayBill.setVisibility(View.GONE); // Hide Pay Bill button on clearing data
+        btnPayBill.setVisibility(View.GONE);
         totalBillAmount = 0;
     }
 
@@ -126,7 +121,6 @@ public class TaxPayActivity extends AppCompatActivity {
         textTotalBillDisplay.setTextSize(18);
         tableLayout.addView(textTotalBillDisplay);
 
-        // Show the Pay Bill button
         btnPayBill.setVisibility(View.VISIBLE);
     }
 
@@ -136,7 +130,6 @@ public class TaxPayActivity extends AppCompatActivity {
         String note = getString(R.string.payment_note);
         String amount = String.valueOf(totalBillAmount);
 
-        // Create UPI Intent URI
         Uri uri = Uri.parse("upi://pay?pa=" + upiId +
                 "&pn=" + name +
                 "&mc=0000&tid=1234567890&url=upi&am=" + amount +
@@ -173,7 +166,6 @@ public class TaxPayActivity extends AppCompatActivity {
 
                 if ("Success".equalsIgnoreCase(status)) {
                     showMessageDialog(getString(R.string.payment_success) + totalBillAmount);
-                    // Optionally, update the database or UI based on payment status.
                     updateDatabaseAfterPayment(totalBillAmount);
                 } else {
                     showMessageDialog(getString(R.string.payment_failed));
@@ -188,7 +180,6 @@ public class TaxPayActivity extends AppCompatActivity {
         String houseNumberStr = inputHouseNumber.getText().toString().trim();
         int houseNumber = Integer.parseInt(houseNumberStr);
 
-        // Find the record in the database and reduce the total tax
         databaseReference.orderByChild("housenumber").equalTo(houseNumber)
                 .addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
@@ -197,8 +188,8 @@ public class TaxPayActivity extends AppCompatActivity {
                             Integer totalTax = snapshot.child("totaltax").getValue(Integer.class);
                             if (totalTax != null) {
                                 int updatedTax = totalTax - paidAmount;
-                                snapshot.getRef().child("totaltax").setValue(updatedTax); // Update the total tax in database
-                                textTotalBill.setText(getString(R.string.total_bill) + updatedTax); // Optionally update UI
+                                snapshot.getRef().child("totaltax").setValue(updatedTax);
+                                textTotalBill.setText(getString(R.string.total_bill) + updatedTax);
                                 fetchTotalBill(houseNumber);
                                 break;
                             }

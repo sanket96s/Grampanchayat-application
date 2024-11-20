@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="#FFDAB9"> <!-- Peach Background -->
+    android:background="@color/light_peach">
 
     <TextView
         android:id="@+id/help_title"
@@ -33,7 +33,6 @@
         android:textStyle="bold"
         android:layout_marginBottom="8dp"/>
 
-    <!-- ListView for displaying FAQs -->
     <ListView
         android:id="@+id/faq_list"
         android:layout_width="match_parent"

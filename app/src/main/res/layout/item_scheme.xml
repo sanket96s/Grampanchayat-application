@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/schemeItemLayout"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="@drawable/scheme_item_background"
+    android:layout_margin="8dp">
+
+    <ImageView
+        android:id="@+id/schemeImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/scheme"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/schemeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/scheme_title"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_alignParentTop="true"
+            android:padding="4dp" />
+
+        <TextView
+            android:id="@+id/schemeDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:layout_below="@id/schemeTitle"
+            android:layout_marginTop="8dp"
+            android:padding="4dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

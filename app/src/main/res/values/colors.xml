@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Primary and Accent Colors -->
     <color name="colorPrimary">#FF6200EE</color>
-    <color name="peach">#FFDAB9</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="your_custom_color">#FFDAB9</color>
-    <color name="green">#4CAF50</color>
-    <color name="light_peach">#F4CBA0</color>
-    <color name="background_color">#FFDAB9</color>
-    <color name="event_background">#FFE0B2</color>
+
+    <!-- Button and Text Colors -->
+    <color name="buttonPrimary">#3F51B5</color>
+    <color name="button_background">#FF7F50</color> <!-- Coral Button Background -->
+    <color name="primaryText">#37474F</color> <!-- Dark Gray for Text -->
+    <color name="secondaryText">#607D8B</color> <!-- Medium Gray for Secondary Text -->
+    <color name="tertiaryText">#90A4AE</color> <!-- Light Gray for Tertiary Text -->
+    <color name="primary_text">#4A4A4A</color> <!-- Dark Gray Text Color -->
+
+    <!-- Background Colors -->
+    <color name="background_color">#FFDAB9</color> <!-- Peach Background -->
+    <color name="event_background">#FFE0B2</color> <!-- Light Peach for Event Background -->
+    <color name="background">#FFF5F5F5</color> <!-- Light Gray Background -->
+
+    <!-- Event & Item Colors -->
     <color name="event_item_background">#FFFFFF</color>
-    <color name="event_title_color">#37474F</color>
-    <color name="event_desc_color">#607D8B</color>
-    <color name="border_color">#FFB74D</color>
-    <color name="blue">#2196F3</color>
-    <color name="red">#F44336</color>
+    <color name="event_title_color">#37474F</color> <!-- Dark Gray for Event Title -->
+    <color name="event_desc_color">#607D8B</color> <!-- Medium Gray for Event Description -->
+    
+    <!-- Border and Highlight Colors -->
+    <color name="border_color">#FFB74D</color> <!-- Light Orange Border -->
     <color name="colorItemPressed">#D3D3D3</color>
     <color name="colorItemSelected">#A9A9A9</color>
-    <color name="colorItemNormal">#FFFFFF</color>
-    <color name="background">#FFF5F5F5</color> <!-- Light gray background -->
-    <color name="primaryText">#37474F</color> <!-- Dark gray for text -->
-    <color name="secondaryText">#607D8B</color> <!-- Medium gray for secondary text -->
-    <color name="tertiaryText">#90A4AE</color> <!-- Light gray for tertiary text -->
-    <color name="buttonPrimary">#3F51B5</color>
-        <color name="peach_background">#FFDAB9</color> <!-- Peach Background -->
-        <color name="primary_text">#4A4A4A</color> <!-- Dark Gray Text Color -->
-        <color name="button_background">#FF7F50</color> <!-- Coral Button Background -->
+    <color name="colorItemNormal">#FFFFFF</color> <!-- Normal Item Color -->
+
+    <!-- Miscellaneous Colors -->
+    <color name="green">#4CAF50</color>
+    <color name="blue">#2196F3</color>
+    <color name="red">#F44336</color>
+    <color name="peach">#FFDAB9</color> <!-- Peach Color -->
 </resources>

@@ -31,31 +31,28 @@ public class PublicFacilitiesActivity extends AppCompatActivity {
 
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                int id = item.getItemId();
+        navigationView.setNavigationItemSelectedListener(item -> {
+            int id = item.getItemId();
 
-                if (id == R.id.nav_village_info_overview) {
-                    Intent intent = new Intent(PublicFacilitiesActivity.this, VillageActivity.class);
-                    startActivity(intent);
-                } else if (id == R.id.nav_public_facilities) {
-                    Intent intent = new Intent(PublicFacilitiesActivity.this, PublicFacilitiesActivity.class);
-                    startActivity(intent);
-                } else if (id == R.id.nav_community_cultural_info) {
-                    Intent intent = new Intent(PublicFacilitiesActivity.this, CommunityCulturalInfoActivity.class);
-                    startActivity(intent);
-                } else if (id == R.id.nav_economic_activities) {
-                    Intent intent = new Intent(PublicFacilitiesActivity.this, EconomicActivitiesActivity.class);
-                    startActivity(intent);
-                } else if (id == R.id.nav_infrastructure) {
-                    Intent intent = new Intent(PublicFacilitiesActivity.this, InfrastructureActivity.class);
-                    startActivity(intent);
-                }
-
-                drawerLayout.closeDrawer(GravityCompat.START);
-                return true;
+            if (id == R.id.nav_village_info_overview) {
+                Intent intent = new Intent(PublicFacilitiesActivity.this, VillageActivity.class);
+                startActivity(intent);
+            } else if (id == R.id.nav_public_facilities) {
+                Intent intent = new Intent(PublicFacilitiesActivity.this, PublicFacilitiesActivity.class);
+                startActivity(intent);
+            } else if (id == R.id.nav_community_cultural_info) {
+                Intent intent = new Intent(PublicFacilitiesActivity.this, CommunityCulturalInfoActivity.class);
+                startActivity(intent);
+            } else if (id == R.id.nav_economic_activities) {
+                Intent intent = new Intent(PublicFacilitiesActivity.this, EconomicActivitiesActivity.class);
+                startActivity(intent);
+            } else if (id == R.id.nav_infrastructure) {
+                Intent intent = new Intent(PublicFacilitiesActivity.this, InfrastructureActivity.class);
+                startActivity(intent);
             }
+
+            drawerLayout.closeDrawer(GravityCompat.START);
+            return true;
         });
     }
 
