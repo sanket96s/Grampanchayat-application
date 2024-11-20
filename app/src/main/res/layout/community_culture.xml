@@ -16,7 +16,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <!-- Festivals and Events Section -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -37,7 +36,6 @@
                     android:textColor="#000000"
                     android:paddingBottom="8dp" />
 
-                <!-- Diwali Section -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -49,7 +47,7 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:src="@drawable/diwali"
-                        android:contentDescription="Diwali image"
+                        android:contentDescription="@string/diwali"
                         android:layout_marginEnd="16dp" />
 
                     <LinearLayout
@@ -75,7 +73,6 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <!-- Holi Section -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -88,7 +85,7 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:src="@drawable/holi"
-                        android:contentDescription="Holi image"
+                        android:contentDescription="@string/holi"
                         android:layout_marginEnd="16dp" />
 
                     <LinearLayout
@@ -116,7 +113,6 @@
 
             </LinearLayout>
 
-            <!-- Local Attractions Section -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -137,7 +133,6 @@
                     android:textColor="#000000"
                     android:paddingBottom="8dp" />
 
-                <!-- Sunset Point -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -149,7 +144,7 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:src="@drawable/sunset"
-                        android:contentDescription="Sunset Point image"
+                        android:contentDescription="@string/sunset_point"
                         android:layout_marginEnd="16dp" />
 
                     <LinearLayout
@@ -175,7 +170,6 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <!-- Heritage Fort -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -188,7 +182,7 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:src="@drawable/fort"
-                        android:contentDescription="Heritage Fort image"
+                        android:contentDescription="@string/heritage_fort"
                         android:layout_marginEnd="16dp" />
 
                     <LinearLayout
@@ -214,7 +208,6 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <!-- River View Park -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -227,7 +220,7 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:src="@drawable/river"
-                        android:contentDescription="River View Park image"
+                        android:contentDescription="@string/river_view_park"
                         android:layout_marginEnd="16dp" />
 
                     <LinearLayout
@@ -255,7 +248,6 @@
 
             </LinearLayout>
 
-            <!-- Community Centers Section -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -276,7 +268,6 @@
                     android:textColor="#000000"
                     android:paddingBottom="8dp" />
 
-                <!-- Green Hall -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -288,7 +279,7 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:src="@drawable/hall"
-                        android:contentDescription="Green Hall image"
+                        android:contentDescription="@string/green_hall"
                         android:layout_marginEnd="16dp" />
 
                     <LinearLayout
@@ -314,7 +305,6 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <!-- Sunrise Center -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -327,7 +317,7 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:src="@drawable/center"
-                        android:contentDescription="Sunrise Center image"
+                        android:contentDescription="@string/sunrise_academy"
                         android:layout_marginEnd="16dp" />
 
                     <LinearLayout

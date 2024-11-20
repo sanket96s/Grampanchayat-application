@@ -2,11 +2,11 @@ package com.example.grampanchayatkouthaliapk;
 
 public class Scheme {
 
-    private String title;
-    private String description;
-    private int imageResId;
-    private String eligibility;
-    private String requiredDocs;
+    private final String title;
+    private final String description;
+    private final int imageResId;
+    private final String eligibility;
+    private final String requiredDocs;
 
     public Scheme(String title, String description, int imageResId, String eligibility, String requiredDocs) {
         this.title = title;

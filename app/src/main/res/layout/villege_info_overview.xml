@@ -5,19 +5,17 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- Main content view -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="16dp"
-        android:background="#FFDAB9"> <!-- Background set to peach -->
+        android:background="@color/peach">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Village Information Card -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -43,7 +41,7 @@
                         android:textColor="#000000"
                         android:gravity="center"
                         android:paddingBottom="16dp"
-                        android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
+                        android:lineSpacingExtra="4dp"/>
 
                     <View
                         android:layout_width="match_parent"
@@ -58,7 +56,7 @@
                         android:textSize="14sp"
                         android:textColor="#000000"
                         android:paddingTop="8dp"
-                        android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
+                        android:lineSpacingExtra="4dp"/>
 
                     <TextView
                         android:id="@+id/population"
@@ -68,7 +66,7 @@
                         android:textSize="14sp"
                         android:textColor="#000000"
                         android:paddingTop="4dp"
-                        android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
+                        android:lineSpacingExtra="4dp"/>
 
                     <TextView
                         android:id="@+id/area"
@@ -78,7 +76,7 @@
                         android:textSize="14sp"
                         android:textColor="#000000"
                         android:paddingTop="4dp"
-                        android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
+                        android:lineSpacingExtra="4dp"/>
 
                     <TextView
                         android:id="@+id/historical_background"
@@ -92,7 +90,6 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Administration Details Card -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -100,7 +97,7 @@
                 app:cardBackgroundColor="#FFFFFF"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="8dp"
-                android:foreground="?android:attr/selectableItemBackground"> <!-- Foreground for ripple effect -->
+                android:foreground="?android:attr/selectableItemBackground">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -133,7 +130,7 @@
                         android:textSize="14sp"
                         android:textColor="#000000"
                         android:paddingTop="4dp"
-                        android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
+                        android:lineSpacingExtra="4dp"/>
 
                     <TextView
                         android:id="@+id/office_address"
@@ -143,7 +140,7 @@
                         android:textSize="14sp"
                         android:textColor="#000000"
                         android:paddingTop="4dp"
-                        android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
+                        android:lineSpacingExtra="4dp"/>
 
                     <TextView
                         android:id="@+id/working_hours"
@@ -153,7 +150,7 @@
                         android:textSize="14sp"
                         android:textColor="#000000"
                         android:paddingTop="4dp"
-                        android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
+                        android:lineSpacingExtra="4dp"/>
 
                     <TextView
                         android:id="@+id/office_details"
@@ -163,13 +160,12 @@
                         android:textSize="14sp"
                         android:textColor="#000000"
                         android:paddingTop="4dp"
-                        android:lineSpacingExtra="4dp"/> <!-- Line spacing added -->
+                        android:lineSpacingExtra="4dp"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
     </ScrollView>
 
-    <!-- Navigation Drawer -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"

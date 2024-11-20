@@ -6,7 +6,6 @@
     android:background="#F4CBA0"
     android:padding="16dp">
 
-    <!-- ListView for displaying projects -->
     <ListView
         android:id="@+id/projectListView"
         android:layout_width="0dp"

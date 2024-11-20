@@ -6,6 +6,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DataSnapshot;
@@ -29,7 +30,6 @@ public class TrackCertificateActivity extends AppCompatActivity {
         tvCertificateDetails = findViewById(R.id.tvCertificateDetails);
         Button btnTrackCertificate = findViewById(R.id.btnTrackCertificate);
 
-        // Initialize Firebase Database reference
         databaseReference = FirebaseDatabase.getInstance().getReference("CertificateApplications");
 
         btnTrackCertificate.setOnClickListener(v -> {
@@ -44,12 +44,10 @@ public class TrackCertificateActivity extends AppCompatActivity {
     }
 
     private void fetchCertificateDetails(String certificateId) {
-        // Query Firebase Database
         databaseReference.child(certificateId).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
-                    // Fetch and display certificate details
                     StringBuilder details = new StringBuilder();
                     details.append(getString(R.string.enter_certificate_id)).append(": ").append(certificateId).append("\n");
                     for (DataSnapshot field : dataSnapshot.getChildren()) {
@@ -57,13 +55,12 @@ public class TrackCertificateActivity extends AppCompatActivity {
                     }
                     tvCertificateDetails.setText(details.toString());
                 } else {
-                    // No record found for the entered certificateId
                     tvCertificateDetails.setText(getString(R.string.certificate_details_not_found));
                 }
             }
 
             @Override
-            public void onCancelled(DatabaseError databaseError) {
+            public void onCancelled(@NonNull DatabaseError databaseError) {
                 Toast.makeText(TrackCertificateActivity.this, String.format(getString(R.string.error_occurred), databaseError.getMessage()), Toast.LENGTH_SHORT).show();
             }
         });

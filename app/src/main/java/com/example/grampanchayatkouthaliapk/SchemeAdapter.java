@@ -13,8 +13,8 @@ import java.util.List;
 
 public class SchemeAdapter extends RecyclerView.Adapter<SchemeAdapter.SchemeViewHolder> {
 
-    private List<Scheme> schemeList;
-    private Context context;
+    private final List<Scheme> schemeList;
+    private final Context context;
 
     public SchemeAdapter(List<Scheme> schemeList, Context context) {
         this.schemeList = schemeList;

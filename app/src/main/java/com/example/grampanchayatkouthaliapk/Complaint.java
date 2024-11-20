@@ -10,7 +10,6 @@ public class Complaint {
     private String status;
 
     public Complaint() {
-        // Default constructor required for calls to DataSnapshot.getValue(Complaint.class)
     }
 
     public Complaint(String complaintId, String name, String address, String mobileNumber, String category, String complaintDescription, String status) {
@@ -27,10 +26,6 @@ public class Complaint {
         return complaintId;
     }
 
-    public void setComplaintId(String complaintId) {
-        this.complaintId = complaintId;
-    }
-
     public String getName() {
         return name;
     }
@@ -43,39 +38,20 @@ public class Complaint {
         return address;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
     public String getMobileNumber() {
         return mobileNumber;
-    }
-
-    public void setMobileNumber(String mobileNumber) {
-        this.mobileNumber = mobileNumber;
     }
 
     public String getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
     public String getComplaintDescription() {
         return complaintDescription;
-    }
-
-    public void setComplaintDescription(String complaintDescription) {
-        this.complaintDescription = complaintDescription;
     }
 
     public String getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
-    }
 }

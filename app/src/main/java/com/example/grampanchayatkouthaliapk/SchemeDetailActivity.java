@@ -1,8 +1,6 @@
-// SchemeDetailActivity.java
 package com.example.grampanchayatkouthaliapk;
 
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,7 +18,6 @@ public class SchemeDetailActivity extends AppCompatActivity {
         TextView eligibility = findViewById(R.id.eligibility);
         TextView requiredDocs = findViewById(R.id.requiredDocs);
 
-        // Get data from intent
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             schemeTitle.setText(extras.getString("title"));

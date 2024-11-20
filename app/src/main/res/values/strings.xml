@@ -1,24 +1,76 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- English Strings -->
+<resources>
+
     <string name="enter_certificate_id">Enter Certificate ID</string>
     <string name="certificate_details_not_found">No certificate details found</string>
     <string name="error_occurred">Error: %1$s</string>
     <string name="toast_enter_certificate_id">Please enter certificate ID</string>
+    <string name="user_text">User</string>
+    <string name="full_name_required">Full name is required</string>
+    <string name="email_required">Email is required</string>
+    <string name="invalid_email">Please enter a valid email</string>
+    <string name="password_required">Password is required</string>
+    <string name="password_criteria">Password must be at least 8 characters long and include letters and numbers</string>
+    <string name="registration_failed">Registration failed: %1$s</string>
+    <string name="user_save_error">Error saving user: %1$s</string>
+    <string name="document_type_label_1">Document Type: %1$s</string>
+    <string name="please_select_document_1">Please select a document</string>
+    <string name="name_1">Name: %1$s</string>
+    <string name="house_number_1">House Number: %1$d</string>
+    <string name="total_bill_1">Total Bill: %1$d</string>
+    <string name="enter_complaint_id">Please enter Complaint ID</string>
+    <string name="complaint_id_not_found">Complaint ID not found</string>
+    <string name="track_complaint_error">Error tracking complaint</string>
+    <string name="track_complaint">Track Complaint</string>
+    <string name="project_title">Project Title</string>
+
 
     <string name="certificate_id_label">Certificate ID:</string>
     <string name="certificate_id_hint">Enter your certificate ID</string>
     <string name="certificate_details">Certificate details will appear here</string>
-
     <string name="document_type_label">Certificate Type:</string>
     <string name="personal_info_label">Personal Information:</string>
+    <string name="upload_error">Failed to upload %1$s</string>
+    <string name="question_format">Q%d: %s</string>
+    <string name="answer_format">--> %s</string>
+    <string name="age_hint">Enter Age</string>
+    <string name="identity_proof_selected">Identity Proof selected: %1$s</string>
+    <string name="address_proof_selected">Address Proof selected: %1$s</string>
+    <string name="land_ownership_selected">Land Ownership Proof selected: %1$s</string>
+    <string name="income_certificate_selected">Income Certificate selected: %1$s</string>
+    <string name="contact_hint">Enter Contact Number</string>
+    <string name="purpose_hint">Enter Purpose</string>
+    <string name="btn_submit">Submit</string>
 
+    <string name="btn_identity_proof">Upload Identity Proof</string>
+    <string name="btn_address_proof">Upload Address Proof</string>
+    <string name="btn_land_ownership">Upload Land Ownership</string>
+    <string name="btn_income_certificate">Upload Income Certificate</string>
+    <string name="error_name_invalid">Invalid name. Only letters and spaces allowed.</string>
+    <string name="error_age_invalid">Age must be between 18 and 60</string>
+    <string name="error_contact_invalid">Contact number must be 10 digits</string>
+    <string name="error_purpose_invalid">Purpose must be between 10 and 100 characters</string>
+    <string name="documents_missing">Please upload all required documents</string>
+    <string name="application_submitted">Application Submitted Successfully!</string>
+    <string name="age_label">Age</string>
+    <string name="contact_label">Contact</string>
+    <string name="purpose_label">Purpose</string>
+    <string name="identity_proof_button">Identity Proof</string>
+    <string name="address_proof_button">Address Proof</string>
+    <string name="land_ownership_button">Land Ownership</string>
+    <string name="income_certificate_button">Income Certificate</string>
+    <string name="select_document">Select Document</string>
+
+    <string name="fill_required_fields">Please fill in all required fields</string>
+    <string name="upload_all_documents">Please upload all required documents</string>
+    <string name="submission_success">Application submitted successfully!</string>
+    <string name="submission_failure">Failed to submit application</string>
+    <string name="application_id">Application ID: </string>
     <string name="please_select_document">Please select a certificate type</string>
     <string name="please_fill_fields">Please fill all fields</string>
     <string name="form_submission_success">Form submitted successfully</string>
     <string name="form_submission_error">Error in submitting form</string>
     <string name="please_select_gender">Please select gender</string>
     <string name="please_accept_terms">Please accept the terms</string>
-
     <string name="document_type">Document Type:</string>
     <string name="personal_info">Personal Information:</string>
     <string name="parent_name_hint">Parent\'\s Name</string>
@@ -38,51 +90,39 @@
     <string name="income_certificate">Income Certificate</string>
     <string name="submit_application">Submit Application</string>
     <string name="track_certificate">Track Certificate</string>
-
-
-    <!-- Housing Scheme -->
     <string name="housing_scheme_title">Housing Scheme</string>
     <string name="housing_scheme_description">This scheme provides affordable housing options for low-income families.</string>
     <string name="housing_scheme_eligibility">Eligibility: Low-income families, individuals without homes.</string>
     <string name="housing_scheme_required_docs">Required Docs: Aadhar card, income certificate, proof of residence.</string>
-
-    <!-- Water Supply Scheme -->
     <string name="water_scheme_title">Water Supply Scheme</string>
     <string name="water_scheme_description">This scheme provides clean drinking water to rural areas.</string>
     <string name="water_scheme_eligibility">Eligibility: Residents in rural or underserved areas.</string>
     <string name="water_scheme_required_docs">Required Docs: Aadhar card, proof of residence.</string>
 
-    <!-- Sanitation Scheme -->
     <string name="sanitation_scheme_title">Sanitation Scheme</string>
     <string name="sanitation_scheme_description">This scheme aims to improve sanitation facilities in rural areas.</string>
     <string name="sanitation_scheme_eligibility">Eligibility: Families in rural areas without proper sanitation.</string>
     <string name="sanitation_scheme_required_docs">Required Docs: Aadhar card, proof of residence.</string>
-
-    <!-- Health Scheme -->
     <string name="health_scheme_title">Health Scheme</string>
     <string name="health_scheme_description">This scheme provides healthcare benefits for rural and underprivileged populations.</string>
     <string name="health_scheme_eligibility">Eligibility: Low-income families, elderly citizens, children.</string>
     <string name="health_scheme_required_docs">Required Docs: Aadhar card, medical records (if any).</string>
-
-    <!-- Education Scheme -->
     <string name="education_scheme_title">Education Scheme</string>
     <string name="education_scheme_description">This scheme helps provide free education to children from economically weaker sections.</string>
     <string name="education_scheme_eligibility">Eligibility: Children of low-income families.</string>
     <string name="education_scheme_required_docs">Required Docs: Aadhar card, income certificate, school records.</string>
-
-    <!-- Employment Scheme -->
     <string name="employment_scheme_title">Employment Scheme</string>
     <string name="employment_scheme_description">This scheme provides job opportunities and skill development programs.</string>
     <string name="employment_scheme_eligibility">Eligibility: Unemployed youth, women, and marginalized communities.</string>
     <string name="employment_scheme_required_docs">Required Docs: Aadhar card, educational qualification certificates, resume.</string>
-        <string name="scheme_title">Scheme</string>
-        <string name="pm_ayushman_yojana">PM Jan Arogya Yojana</string>
-        <string name="gram_panchayat_yojana">Gram Panchayat Vikas Yojana</string>
-        <string name="pm_avas_yojana">PM Awas Yojana</string>
-        <string name="atal_bhujal_yojana">Atal Bhujal Yojana</string>
-        <string name="pm_jan_dhan_yojana">PM Jan Dhan Yojana</string>
-        <string name="smart_village_yojana">Smart Village Yojana</string>
-        <string name="track_application">Track Application</string>
+    <string name="scheme_title">Scheme</string>
+    <string name="pm_ayushman_yojana">PM Jan Arogya Yojana</string>
+    <string name="gram_panchayat_yojana">Gram Panchayat Vikas Yojana</string>
+    <string name="pm_avas_yojana">PM Awas Yojana</string>
+    <string name="atal_bhujal_yojana">Atal Bhujal Yojana</string>
+    <string name="pm_jan_dhan_yojana">PM Jan Dhan Yojana</string>
+    <string name="smart_village_yojana">Smart Village Yojana</string>
+    <string name="track_application">Track Application</string>
 
     <string name="please_enter_valid_house_number">Please enter a valid house number</string>
     <string name="total_bill_not_found">Total bill not found</string>
@@ -104,6 +144,7 @@
     <string name="scheme">Scheme</string>
     <string name="report_problem">Report Problem</string>
     <string name="apply_certificate">Apply for Certificate</string>
+
     <string name="government_schemes">Government Schemes</string>
     <string name="gramsabha">Gram Sabha</string>
     <string name="projects">Projects</string>
@@ -119,14 +160,11 @@
     <string name="faq_title">Frequently Asked Questions</string>
     <string name="faq_question_1">How to avail benefits of government schemes?</string>
     <string name="faq_answer_1">Please go to the \'Government Schemes\' section, click on the scheme, and fill out the application form.</string>
-
     <string name="faq_question_2">What are the contact numbers for reaching out?</string>
     <string name="faq_answer_2">Go to the \'Village Information\' section, select the \'Officials\' tab, and find the contact numbers.</string>
-
     <string name="faq_question_3">How to participate in Gram Panchayat meetings?</string>
     <string name="faq_answer_3">Go to the \'Gram Sabha\' section, check the date, and attend the meeting.</string>
     <string name="email_format">Email: %1$s</string>
-
     <string name="faq_question_4">Who to contact for queries or complaints?</string>
     <string name="faq_answer_4">Go to the \'File a Complaint\' section and fill out the form.</string>
     <string name="edit_profile_picture">Edit Profile Picture</string>
@@ -135,6 +173,7 @@
     <string name="profile_name">Name</string>
     <string name="profile_email">Email</string>
     <string name="email_prefix">Email: %s</string>
+
     <string name="username_format">Username: %s</string>
     <string name="username_not_set">Not set</string>
     <string name="no_user_logged_in">No user is currently logged in</string>
@@ -149,7 +188,6 @@
     <string name="water">Water</string>
     <string name="road">Road</string>
     <string name="electricity">Electricity</string>
-
     <string name="feedback_button">Give Feedback</string>
     <string name="other">Other</string>
     <string name="complaint_label">Complaint:</string>
@@ -170,16 +208,12 @@
     <string name="error_category">Please select a complaint category.</string>
     <string name="upload_button">Submit</string>
     <string name="project_title_1">Water Conservation Project</string>
-
     <string name="project_image_desc">Project Image</string>
     <string name="project_description_1">The objective of this project is to conserve water.</string>
-
     <string name="project_title_2">Road Construction Project</string>
     <string name="project_description_2">The objective of this project is to build new roads to improve transportation facilities.</string>
-
     <string name="project_title_3">School Reconstruction Project</string>
     <string name="project_description_3">This project aims to reconstruct and improve schools.</string>
-
     <string name="project_title_4">Agriculture Improvement Project</string>
     <string name="project_description_4">Use of advanced technology to increase agricultural production.</string>
 
@@ -190,13 +224,9 @@
     <string name="complaint_description">Complaint Description:</string>
     <string name="complaint_id">Complaint ID:</string>
     <string name="name1">Name:  </string>
-
-    <!-- Title -->
-
     <string name="upi_app_not_found">UPI app not found. Please install a UPI app like Google Pay.</string>
     <string name="organization_name">Grampanchayat Kouthali</string>
     <string name="payment_note">Payment for tax</string>
-
     <string name="fetch_bill">Fetch Bill</string>
     <string name="pay_bill">Pay Bill</string>
     <string name="enter_house_number">Please enter a valid house number.</string>
@@ -213,15 +243,13 @@
 
     <string name="event2_title">Road Construction Project</string>
     <string name="event2_description">This project aims to build new roads to improve transportation.</string>
-
     <string name="event3_title">Cleanliness Campaign</string>
     <string name="event3_description">The purpose of this project is to increase awareness about cleanliness in the village.</string>
-
     <string name="event4_title">Health Checkup Camp</string>
     <string name="event4_description">The purpose of this project is to provide health checkup services to the villagers.</string>
     <string name="event_title">Event Title</string>
-    <string name="event_description">Event description will go here...</string>
-    <string name="event_date_time">Date and Time: January 1, 2025 - 10:00 AM</string>
+    <string name="event_description">Event description will go here…</string>
+    <string name="event_date_time">Date and Time: January 1, 2025 – 10:00 AM</string>
     <string name="event_venue">Venue: Community Hall</string>
     <string name="event_agenda">Agenda: Discussion on development plans</string>
     <string name="event_organizers">Organizers: Gram Panchayat Office</string>
@@ -261,28 +289,20 @@
     <string name="telco_x">Telco X - Mobile Network</string>
     <string name="telco_y">Telco Y - 4G Services</string>
 
-    <!-- Local Businesses Section -->
     <string name="local_shop_name">Shanti General Store</string>
     <string name="local_shop_products">Groceries, Household Items</string>
     <string name="tailor_service_name">Ramesh Tailors</string>
     <string name="tailor_service_products">Custom Garments, Alterations</string>
-
-    <!-- Employment Opportunities Section -->
     <string name="job_position_farm_supervisor">Position: Farm Supervisor</string>
     <string name="job_description_farm_supervisor">Oversee crop production and manage farm operations. Required experience in agriculture.</string>
     <string name="job_position_carpenter">Position: Carpenter</string>
     <string name="job_description_carpenter">Skilled carpenter needed for local construction projects. Experience required.</string>
-
-    <!-- Training Centres Section -->
     <string name="training_centre_skillup">Centre: Skillup Institute</string>
     <string name="training_focus_skillup">Focus: Carpentry, Electrical Work, and Tailoring.</string>
     <string name="training_centre_village">Centre: Village Training Hub</string>
     <string name="training_courses_village">Courses: Basic IT Skills and Agricultural Techniques.</string>
-
     <string name="rice_description">Rice is a staple food crop in the village, cultivated using traditional methods to ensure high yield and quality.</string>
-
     <string name="wheat_description">Wheat is cultivated using crop rotation and organic fertilizer, ensuring high yield and sustainable farming.</string>
-
     <string name="local_shop">Local Shop</string>
     <string name="shop_name">Name: Shanti General Store</string>
     <string name="shop_products">Products: Groceries, Household Items</string>
@@ -312,6 +332,7 @@
     <string name="diwali">Diwali</string>
     <string name="diwali_description">Diwali, known as the Festival of Lights, is celebrated in October or November. It signifies the victory of light over darkness.</string>
     <string name="holi">Holi</string>
+
     <string name="holi_description">Holi is celebrated in March and marks the arrival of spring. Known for its vibrant colors, it symbolizes joy and unity.</string>
     <string name="local_attractions_title">Local Attractions</string>
     <string name="sunset_point">Sunset Point</string>
@@ -332,6 +353,7 @@
     <string name="nav_public_facilities">Public Facilities</string>
     <string name="nav_community_cultural_info">Community and Cultural Information</string>
     <string name="nav_economic_activities">Economic Activities</string>
+
     <string name="nav_infrastructure">Infrastructure</string>
     <string name="public_facilities">Public Facilities</string>
     <string name="healthcare_facilities">Healthcare Facilities</string>
@@ -352,6 +374,7 @@
     <string name="colleges">Colleges</string>
     <string name="city_college">City College</string>
     <string name="city_college_address">404 College Street, Cityville</string>
+
     <string name="riverdale_institute">Riverdale Institute</string>
     <string name="riverdale_institute_address">505 River Road, Riverdale</string>
     <string name="mountain_view_college">Mountain View College</string>
@@ -373,8 +396,8 @@
     <string name="complaint_description_label">Complaint Description:</string>
     <string name="success_message">You have successfully submitted.</string>
     <string name="track_complaint_title">Track Complaint</string>
-    <string name="project_title">Project Title</string>
     <string name="project_description">Project Description</string>
+
     <string name="project_objectives">Objectives</string>
     <string name="project_start_date">Start Date</string>
     <string name="project_completion_date">Completion Date</string>
@@ -389,48 +412,30 @@
     <string name="project_budget">Budget</string>
     <string name="project_location">Location</string>
     <string name="give_feedback">Give Feedback</string>
-
-    <!-- Complaint ID Label -->
     <string name="complaint_id_label">Complaint ID:</string>
-
-    <!-- Complaint ID Hint -->
     <string name="complaint_id_hint">Enter your complaint ID</string>
-
-
-    <!-- Complaint Details TextView -->
     <string name="complaint_details">Complaint details will be shown here.</string>
     <string name="language_label">Language</string>
     <string name="save_settings">Save Settings</string>
+
     <string-array name="language_options">
         <item>English</item>
         <item>Marathi</item>
     </string-array>
-    <!-- App Information -->
+
     <string name="app_name">Gram Panchayat APK</string>
     <string name="action_settings">Settings</string>
-
-
-    <!-- Navigation Fragment Labels -->
     <string name="first_fragment_label">First Section</string>
     <string name="second_fragment_label">Second Section</string>
-
-    <!-- Navigation Controls -->
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-
-    <!-- Default Values -->
     <string name="default_web_client_id">181236633370-7gf29i4la3lnrjb6kf3rjgpbu2k9216s.apps.googleusercontent.com</string>
-
-    <!-- Navigation Drawer -->
     <string name="nav_header_desc">Account</string>
     <string name="nav_header_title">User Name</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
-    <!-- User Input -->
     <string name="enter_details">Enter details</string>
 
-    <!-- Placeholder Text -->
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus

@@ -8,7 +8,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFDAB9"> <!-- Peach Background -->
+        android:background="#FFDAB9">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -16,7 +16,6 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Economic Activities Title -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -26,7 +25,6 @@
                 android:textColor="#000000"
                 android:paddingBottom="16dp" />
 
-            <!-- Agriculture Section -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -39,11 +37,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:baselineAligned="false"
                 android:orientation="horizontal"
                 android:weightSum="2"
-                android:padding="8dp"> <!-- Border for the section -->
+                android:padding="8dp">
 
-                <!-- Rice Farming -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -51,11 +49,12 @@
                     android:orientation="vertical"
                     android:padding="8dp"
                     android:layout_margin="1dp"
-                    android:background="@drawable/border"> <!-- Border for individual sections -->
+                    android:background="@drawable/border">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
+                        android:contentDescription="@string/rice_farming"
                         android:src="@drawable/rice"/>
 
                     <TextView
@@ -74,7 +73,6 @@
                         android:textColor="#000000" />
                 </LinearLayout>
 
-                <!-- Wheat Cultivation -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -82,12 +80,13 @@
                     android:orientation="vertical"
                     android:padding="8dp"
                     android:layout_marginStart="4dp"
-                    android:background="@drawable/border"> <!-- Border for individual sections -->
+                    android:background="@drawable/border">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        android:src="@drawable/wheat1" /> <!-- Replace with actual image -->
+                        android:contentDescription="@string/wheat_cultivation"
+                        android:src="@drawable/wheat1" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -107,7 +106,6 @@
 
             </LinearLayout>
 
-            <!-- Local Businesses Section -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -121,11 +119,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:baselineAligned="false"
                 android:orientation="horizontal"
                 android:weightSum="2"
-                android:padding="8dp"> <!-- Border for the section -->
+                android:padding="8dp">
 
-                <!-- Local Shop -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -133,7 +131,7 @@
                     android:orientation="vertical"
                     android:padding="8dp"
                     android:layout_margin="1dp"
-                    android:background="@drawable/border"> <!-- Border for individual sections -->
+                    android:background="@drawable/border">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -156,7 +154,6 @@
                         android:textColor="#000000" />
                 </LinearLayout>
 
-                <!-- Tailor Service -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -164,7 +161,7 @@
                     android:orientation="vertical"
                     android:padding="8dp"
                     android:layout_marginStart="4dp"
-                    android:background="@drawable/border"> <!-- Border for individual sections -->
+                    android:background="@drawable/border">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -189,7 +186,6 @@
 
             </LinearLayout>
 
-            <!-- Employment Opportunities Section -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -200,14 +196,13 @@
                 android:paddingTop="16dp"
                 android:paddingBottom="8dp" />
 
-            <!-- Job Opening 1 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="8dp"
                 android:layout_marginBottom="2dp"
-                android:background="@drawable/border"> <!-- Border for the section -->
+                android:background="@drawable/border">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -230,14 +225,13 @@
                     android:textColor="#000000" />
             </LinearLayout>
 
-            <!-- Job Opening 2 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="8dp"
                 android:layout_marginTop="4dp"
-                android:background="@drawable/border"> <!-- Border for the section -->
+                android:background="@drawable/border">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -260,7 +254,6 @@
                     android:textColor="#000000" />
             </LinearLayout>
 
-            <!-- Training Centres Section -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -271,14 +264,13 @@
                 android:paddingTop="16dp"
                 android:paddingBottom="8dp" />
 
-            <!-- Training Centre 1 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="8dp"
                 android:layout_marginBottom="2dp"
-                android:background="@drawable/border"> <!-- Border for the section -->
+                android:background="@drawable/border">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -295,14 +287,13 @@
                     android:textColor="#000000" />
             </LinearLayout>
 
-            <!-- Training Centre 2 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="8dp"
                 android:layout_marginTop="4dp"
-                android:background="@drawable/border"> <!-- Border for the section -->
+                android:background="@drawable/border">
 
                 <TextView
                     android:layout_width="wrap_content"

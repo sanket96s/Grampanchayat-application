@@ -7,7 +7,6 @@
     android:padding="16dp"
     android:background="#FFDAB9">
 
-    <!-- Profile Picture -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,11 +20,11 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_centerInParent="true"
+            android:contentDescription="@string/profile"
             android:scaleType="centerCrop"
             android:background="@drawable/circle_background" />
     </RelativeLayout>
 
-    <!-- Name -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -47,7 +46,6 @@
             android:layout_alignParentStart="true" />
     </RelativeLayout>
 
-    <!-- Email -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -15,7 +15,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class RegisterActivity extends AppCompatActivity {
 
     private EditText fullNameEditText, emailEditText, passwordEditText;
-    private Button registerButton;
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
 
@@ -25,12 +24,12 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         mAuth = FirebaseAuth.getInstance();
-        db = FirebaseFirestore.getInstance();  // Initialize Firestore
+        db = FirebaseFirestore.getInstance();
 
         fullNameEditText = findViewById(R.id.fullName);
         emailEditText = findViewById(R.id.email);
         passwordEditText = findViewById(R.id.password);
-        registerButton = findViewById(R.id.registerButton);
+        Button registerButton = findViewById(R.id.registerButton);
 
         registerButton.setOnClickListener(view -> {
             String fullName = fullNameEditText.getText().toString().trim();
@@ -38,7 +37,6 @@ public class RegisterActivity extends AppCompatActivity {
             String password = passwordEditText.getText().toString().trim();
 
             if (validateInputs(fullName, email, password)) {
-                // Handle registration logic
                 registerUser(fullName, email, password);
             }
         });
@@ -48,23 +46,23 @@ public class RegisterActivity extends AppCompatActivity {
         boolean isValid = true;
 
         if (fullName.isEmpty()) {
-            fullNameEditText.setError("पूर्ण नाव आवश्यक आहे");
+            fullNameEditText.setError(getString(R.string.full_name_required));
             isValid = false;
         }
 
         if (email.isEmpty()) {
-            emailEditText.setError("ई-मेल आवश्यक आहे");
+            emailEditText.setError(getString(R.string.email_required));
             isValid = false;
         } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            emailEditText.setError("कृपया वैध ई-मेल प्रविष्ट करा");
+            emailEditText.setError(getString(R.string.invalid_email));
             isValid = false;
         }
 
         if (password.isEmpty()) {
-            passwordEditText.setError("पासवर्ड आवश्यक आहे");
+            passwordEditText.setError(getString(R.string.password_required));
             isValid = false;
         } else if (password.length() < 8 || !password.matches(".*[A-Za-z].*") || !password.matches(".*[0-9].*")) {
-            passwordEditText.setError("पासवर्ड किमान 8 वर्णांचा असावा आणि त्यात अक्षरे व संख्यांचा समावेश असावा");
+            passwordEditText.setError(getString(R.string.password_criteria));
             isValid = false;
         }
 
@@ -75,22 +73,18 @@ public class RegisterActivity extends AppCompatActivity {
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
-                        // Registration success, update UI with the signed-in user's information
                         FirebaseUser user = mAuth.getCurrentUser();
 
-                        // Create a user object to store in Firestore
                         if (user != null) {
                             saveUserToFirestore(user.getUid(), fullName, email);
                         }
                     } else {
-                        // If registration fails, display a message to the user.
                         if (task.getException() != null) {
                             String errorMessage = task.getException().getMessage();
                             if (errorMessage != null && errorMessage.contains("email")) {
                                 emailEditText.setError(errorMessage);
                             } else {
-                                // Use a generic error message if the specific cause is unknown
-                                emailEditText.setError("नोंदणी अयशस्वी: " + errorMessage);
+                                emailEditText.setError(getString(R.string.registration_failed, errorMessage));
                             }
                         }
                     }
@@ -98,38 +92,30 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void saveUserToFirestore(String userId, String fullName, String email) {
-        // Create a user object
         User user = new User(fullName, email);
 
-        // Save the user to Firestore
         db.collection("users").document(userId)
                 .set(user)
                 .addOnSuccessListener(aVoid -> {
                     Intent intent = new Intent(RegisterActivity.this, MainPageActivity.class);
                     startActivity(intent);
-                    finish(); // Optional: Call finish() if you want to close RegisterActivity
+                    finish();
                 })
                 .addOnFailureListener(e -> {
-                    fullNameEditText.setError("वापरकर्ता जतन करताना त्रुटी: " + e.getMessage());
+                    fullNameEditText.setError(getString(R.string.user_save_error, e.getMessage()));
                 });
     }
 
-    // User class to model user data
     public static class User {
         private String fullName;
         private String email;
 
         public User() {
-            // Default constructor required for Firestore
         }
 
         public User(String fullName, String email) {
             this.fullName = fullName;
             this.email = email;
-        }
-
-        public String getFullName() {
-            return fullName;
         }
 
         public String getEmail() {

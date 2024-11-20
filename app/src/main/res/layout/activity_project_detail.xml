@@ -9,17 +9,16 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Image View with border -->
         <ImageView
             android:id="@+id/sample_photo"
             android:layout_width="match_parent"
             android:layout_height="250dp"
+            android:contentDescription="@string/projects"
             android:scaleType="centerCrop"
             android:layout_marginBottom="16dp"
             android:layout_gravity="center"
-            android:background="@drawable/rounded_border" />  <!-- Custom border for Image -->
+            android:background="@drawable/rounded_border" />
 
-        <!-- Project Title Section -->
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -39,7 +38,7 @@
                 android:id="@+id/project_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Project Title"
+                android:text="@string/project_title"
                 android:textSize="20sp"
                 android:padding="12dp"
                 android:layout_marginBottom="16dp"
@@ -47,7 +46,6 @@
                 android:background="@drawable/rounded_background" />
         </LinearLayout>
 
-        <!-- Project Description Section -->
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -67,7 +65,7 @@
                 android:id="@+id/project_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Project Description"
+                android:text="@string/project_description"
                 android:textSize="14sp"
                 android:padding="12dp"
                 android:layout_marginBottom="16dp"
@@ -75,7 +73,6 @@
                 android:background="@drawable/rounded_background" />
         </LinearLayout>
 
-        <!-- Project Objectives Section -->
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -95,14 +92,13 @@
                 android:id="@+id/project_objectives"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Objectives"
+                android:text="@string/project_objectives"
                 android:padding="12dp"
                 android:layout_marginBottom="16dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/rounded_background" />
         </LinearLayout>
 
-        <!-- Project Start Date Section -->
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -122,14 +118,13 @@
                 android:id="@+id/project_start_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Start Date"
+                android:text="@string/project_start_date"
                 android:padding="12dp"
                 android:layout_marginBottom="16dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/rounded_background" />
         </LinearLayout>
 
-        <!-- Project Completion Date Section -->
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -149,14 +144,13 @@
                 android:id="@+id/project_completion_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Completion Date"
+                android:text="@string/project_completion_date"
                 android:padding="12dp"
                 android:layout_marginBottom="16dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/rounded_background" />
         </LinearLayout>
 
-        <!-- Project Status Section -->
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -176,14 +170,13 @@
                 android:id="@+id/project_status"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Status"
+                android:text="@string/status"
                 android:padding="12dp"
                 android:layout_marginBottom="16dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/rounded_background" />
         </LinearLayout>
 
-        <!-- Project Budget Section -->
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -203,14 +196,13 @@
                 android:id="@+id/project_budget"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Budget"
+                android:text="@string/project_budget"
                 android:padding="12dp"
                 android:layout_marginBottom="16dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/rounded_background" />
         </LinearLayout>
 
-        <!-- Project Stakeholders Section -->
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -230,14 +222,13 @@
                 android:id="@+id/project_stakeholders"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Stakeholders"
+                android:text="@string/project_stakeholders"
                 android:padding="12dp"
                 android:layout_marginBottom="16dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/rounded_background" />
         </LinearLayout>
 
-        <!-- Project Location Section -->
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -257,19 +248,19 @@
                 android:id="@+id/project_location"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Location"
+                android:text="@string/project_location"
                 android:padding="12dp"
                 android:layout_marginBottom="16dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/rounded_background" />
         </LinearLayout>
 
-        <!-- Feedback Button with rounded corners -->
         <Button
             android:id="@+id/feedback_button"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/give_feedback"
+            android:gravity="center"
             android:background="@drawable/rounded_box"
             android:textColor="#FFFFFF"
             android:padding="12dp"

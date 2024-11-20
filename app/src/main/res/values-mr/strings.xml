@@ -1,39 +1,79 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
 
+    <string name="upload_error">%1$s अपलोड करण्यात अयशस्वी</string>
+    <string name="question_format">प्रश्न %d: %s</string>
+    <string name="user_text">वापरकर्ता</string>
+    <string name="full_name_required">पूर्ण नाव आवश्यक आहे</string>
+    <string name="email_required">ई-मेल आवश्यक आहे</string>
+    <string name="invalid_email">कृपया वैध ई-मेल प्रविष्ट करा</string>
+    <string name="password_required">पासवर्ड आवश्यक आहे</string>
+    <string name="password_criteria">पासवर्ड किमान 8 वर्णांचा असावा आणि त्यात अक्षरे व संख्यांचा समावेश असावा</string>
+    <string name="registration_failed">नोंदणी अयशस्वी: %1$s</string>
+    <string name="user_save_error">वापरकर्ता जतन करताना त्रुटी: %1$s</string>
+    <string name="document_type_label_1">दस्तऐवज प्रकार: %1$s</string>
+    <string name="please_select_document_1">कृपया दस्तऐवज निवडा</string>
+    <string name="name_1">नाव: %1$s</string>
+    <string name="house_number_1">घर क्रमांक: %1$d</string>
+    <string name="total_bill_1">एकूण बिल: %1$d</string>
+    <string name="enter_complaint_id">कृपया तक्रार आयडी भरा.</string>
+    <string name="complaint_id_not_found">तक्रार आयडी आढळले नाही.</string>
+    <string name="track_complaint_error">तक्रार ट्रॅक करण्यात अडचण आली.</string>
+    <string name="track_complaint">तक्रार ट्रॅक करा</string>
 
-<!--    title-->
-    <!-- Housing Scheme -->
-    <!-- Housing Scheme -->
+    <string name="answer_format">--> %s</string>
+    <string name="age_label">वय</string>
+    <string name="identity_proof_selected">ओळख पुरावा निवडला: %1$s</string>
+    <string name="address_proof_selected">पत्ता पुरावा निवडला: %1$s</string>
+    <string name="land_ownership_selected">जमिनीसंबंधी मालकी पुरावा निवडला: %1$s</string>
+    <string name="income_certificate_selected">आय प्रमाणपत्र निवडले: %1$s</string>
+    <string name="age_hint">वय प्रविष्ट करा</string>
+    <string name="contact_hint">संपर्क क्रमांक प्रविष्ट करा</string>
+    <string name="purpose_hint">उद्दिष्ट प्रविष्ट करा</string>
+    <string name="btn_submit">सादर करा</string>
+    <string name="btn_identity_proof">ओळख पुरावा अपलोड करा</string>
+    <string name="btn_address_proof">पत्ता पुरावा अपलोड करा</string>
+    <string name="btn_land_ownership">जमिनीसंबंधी मालकी पुरावा अपलोड करा</string>
+    <string name="btn_income_certificate">आय प्रमाणपत्र अपलोड करा</string>
+    <string name="error_name_invalid">अवैध नाव. फक्त अक्षरे आणि स्पेस allowed.</string>
+    <string name="error_age_invalid">वय १८ ते ६० दरम्यान असावे</string>
+    <string name="error_contact_invalid">संपर्क क्रमांक १० अंकांचा असावा</string>
+    <string name="error_purpose_invalid">उद्दिष्ट १० ते १०० अक्षरे असावे</string>
+    <string name="documents_missing">कृपया सर्व आवश्यक कागदपत्रे अपलोड करा</string>
+    <string name="application_submitted">अर्ज यशस्वीपणे सादर करण्यात आला!</string>
+    <string name="contact_label">संपर्क</string>
+    <string name="purpose_label">उद्दीष्ट</string>
+    <string name="identity_proof_button">ओळख प्रमाण</string>
+    <string name="address_proof_button">पत्त्याचे प्रमाण</string>
+    <string name="land_ownership_button">जमिनीचे मालकी</string>
+    <string name="income_certificate_button">आधार प्रमाणपत्र</string>
+    <string name="select_document">दस्तऐवज निवडा</string>
+    <string name="fill_required_fields">कृपया सर्व आवश्यक क्षेत्र भरावे</string>
+    <string name="upload_all_documents">कृपया सर्व आवश्यक दस्तऐवज अपलोड करा</string>
+    <string name="submission_success">अर्ज यशस्वीपणे सबमिट करण्यात आला!</string>
+    <string name="submission_failure">अर्ज सबमिट करण्यात अयशस्वी</string>
+    <string name="application_id">अर्ज क्रमांक: </string>
+
     <string name="housing_scheme_title">गृह योजना</string>
     <string name="housing_scheme_description">ही योजना कमी उत्पन्न असलेल्या कुटुंबांसाठी स्वस्त गृह उपलब्ध करणे.</string>
     <string name="housing_scheme_eligibility">पात्रता: कमी उत्पन्न असलेली कुटुंबे, घर नसलेली व्यक्ती.</string>
     <string name="housing_scheme_required_docs">आवश्यक कागदपत्रे: आधार कार्ड, उत्पन्न प्रमाणपत्र, निवासाचा पुरावा.</string>
-
-    <!-- Water Supply Scheme -->
     <string name="water_scheme_title">पाणी पुरवठा योजना</string>
     <string name="water_scheme_description">ही योजना ग्रामीण भागातील लोकांसाठी स्वच्छ पाणी पुरवठा सुनिश्चित करते.</string>
     <string name="water_scheme_eligibility">पात्रता: ग्रामीण किंवा दुर्गम भागातील रहिवासी.</string>
     <string name="water_scheme_required_docs">आवश्यक कागदपत्रे: आधार कार्ड, निवासाचा पुरावा.</string>
-
-    <!-- Sanitation Scheme -->
     <string name="sanitation_scheme_title">स्वच्छता योजना</string>
     <string name="sanitation_scheme_description">ही योजना ग्रामीण भागात स्वच्छता सुविधा सुधारण्यासाठी आहे.</string>
     <string name="sanitation_scheme_eligibility">पात्रता: ग्रामीण भागातील कुटुंबे ज्या ठिकाणी स्वच्छतेची सोय नाही.</string>
     <string name="sanitation_scheme_required_docs">आवश्यक कागदपत्रे: आधार कार्ड, निवासाचा पुरावा.</string>
-
-    <!-- Health Scheme -->
     <string name="health_scheme_title">आरोग्य योजना</string>
     <string name="health_scheme_description">ही योजना ग्रामीण आणि गरीब लोकांसाठी आरोग्य सेवांचा लाभ देते.</string>
     <string name="health_scheme_eligibility">पात्रता: कमी उत्पन्न असलेली कुटुंबे, वृद्ध नागरिक, मुले.</string>
     <string name="health_scheme_required_docs">आवश्यक कागदपत्रे: आधार कार्ड, वैद्यकीय रेकॉर्ड (असल्यास).</string>
-
-    <!-- Education Scheme -->
     <string name="education_scheme_title">शिक्षण योजना</string>
     <string name="education_scheme_description">ही योजना गरीब कुटुंबांच्या मुलांसाठी मोफत शिक्षण देण्याची मदत करते.</string>
     <string name="education_scheme_eligibility">पात्रता: कमी उत्पन्न असलेली कुटुंबे.</string>
     <string name="education_scheme_required_docs">आवश्यक कागदपत्रे: आधार कार्ड, उत्पन्न प्रमाणपत्र, शालेय रेकॉर्ड.</string>
 
-    <!-- Employment Scheme -->
     <string name="employment_scheme_title">रोजगार योजना</string>
     <string name="employment_scheme_description">ही योजना बेरोजगार तरुणांसाठी रोजगार आणि कौशल्य विकास कार्यक्रम उपलब्ध करते.</string>
     <string name="employment_scheme_eligibility">पात्रता: बेरोजगार तरुण, महिला, वंचित समाज.</string>
@@ -42,14 +82,11 @@
     <string name="certificate_details_not_found">प्रमाणपत्र माहिती सापडली नाही</string>
     <string name="error_occurred">त्रुटी: %1$s</string>
     <string name="toast_enter_certificate_id">कृपया प्रमाणपत्र आयडी भरा</string>
-
     <string name="certificate_id_label">प्रमाणपत्र आयडी :</string>
     <string name="certificate_id_hint">आपला प्रमाणपत्र आयडी भरा</string>
     <string name="certificate_details">प्रमाणपत्र तपशील इथे दिसतील</string>
-
     <string name="document_type_label">प्रमाणपत्र प्रकार:</string>
     <string name="personal_info_label">वैयक्तिक माहिती:</string>
-
     <string name="please_select_document">कृपया प्रमाणपत्र प्रकार निवडा</string>
     <string name="please_fill_fields">कृपया सर्व माहिती भरा</string>
     <string name="form_submission_success">अर्ज यशस्वीरित्या सबमिट केला गेला</string>
@@ -68,7 +105,6 @@
     <string name="upload_ration_card">शिधापत्रिका अपलोड करा</string>
     <string name="confirm_info">सर्व माहिती योग्य आहे, याची पुष्टी करा</string>
     <string name="select_certificate_type">कृपया प्रमाणपत्र प्रकार निवडा</string>
-
     <string name="header_text">प्रमाणपत्र प्रकार निवडा :</string>
     <string name="birth_certificate">जन्म प्रमाणपत्र</string>
     <string name="death_certificate">मृत्यू प्रमाणपत्र</string>
@@ -76,8 +112,6 @@
     <string name="income_certificate">उत्पन्न प्रमाणपत्र</string>
     <string name="submit_application">अर्ज सादर करा</string>
     <string name="track_certificate">प्रमाणपत्र शोधा</string>
-
-
     <string name="scheme_title">योजना</string>
     <string name="pm_ayushman_yojana">प्रधानमंत्री जन आरोग्य योजना</string>
     <string name="gram_panchayat_yojana">ग्राम पंचायत विकास योजना</string>
@@ -87,11 +121,9 @@
     <string name="smart_village_yojana">स्मार्ट ग्राम योजना</string>
     <string name="track_application">अर्ज ट्रॅक</string>
 
-
     <string name="upi_app_not_found">UPI अॅप सापडले नाही. कृपया Google Pay सारखे UPI अॅप इन्स्टॉल करा.</string>
     <string name="organization_name">ग्रामीण पंचायत कौथळी</string>
     <string name="payment_note">करासाठी पेमेंट</string>
-
     <string name="fetch_bill">बिल मिळवा</string>
     <string name="pay_bill">बिल भरा</string>
     <string name="enter_house_number">कृपया वैध घर क्रमांक द्या.</string>
@@ -105,17 +137,14 @@
     <string name="btn_pay_bill">बिल भरा</string>
     <string name="event1_title">पाणलोट व्यवस्थापन प्रकल्प</string>
     <string name="event1_description">या प्रकल्पाचा उद्देश पाण्याचे संवर्धन करणे आहे.</string>
-
     <string name="event2_title">रस्ता बांधणी प्रकल्प</string>
     <string name="event2_description">या प्रकल्पाचा उद्देश नवीन रस्ते बांधून वाहतुकीची सुविधा सुधारणे आहे.</string>
-
     <string name="event3_title">स्वच्छता मोहीम</string>
     <string name="event3_description">या प्रकल्पाचा उद्देश गावात स्वच्छता आणि स्वच्छतेचे महत्त्व वाढविणे आहे.</string>
-
     <string name="event4_title">आरोग्य तपासणी शिबिर</string>
     <string name="event4_description">या प्रकल्पाचा उद्देश गावातील नागरिकांचे आरोग्य तपासणी सेवा उपलब्ध करणे आहे.</string>
     <string name="event_title">कार्यक्रमाचे शीर्षक</string>
-    <string name="event_description">कार्यक्रमाचे वर्णन येथे येईल...</string>
+    <string name="event_description">कार्यक्रमाचे वर्णन येथे येईल…</string>
     <string name="event_date_time">तारीख आणि वेळ: १ जानेवारी २०२५ - १०:०० AM</string>
     <string name="event_venue">स्थळ: सामुदायिक सभागृह</string>
     <string name="event_agenda">कार्यसूची: विकास योजनांवर चर्चा</string>
@@ -156,40 +185,23 @@
     <string name="telco_x">टेल्को X - मोबाइल नेटवर्क</string>
     <string name="telco_y">टेल्को Y - 4G सेवा</string>
 
-    <!-- Local Businesses Section -->
-
-
     <string name="local_shop_name">शांती जनरल स्टोअर</string>
     <string name="local_shop_products">किराणा, घरगुती वस्तू</string>
-
     <string name="tailor_service_name">रामेश तळतार</string>
     <string name="tailor_service_products">कस्टम कपडे, बदलावे</string>
-
-    <!-- Employment Opportunities Section -->
-
-
     <string name="job_position_farm_supervisor">पद: शेती पर्यवेक्षक</string>
     <string name="job_description_farm_supervisor">पिक उत्पादन पाहा आणि शेती कामकाज व्यवस्थापित करा. कृषी क्षेत्रातील अनुभव आवश्यक.</string>
     <string name="job_position_carpenter">पद: कारपेंटर</string>
     <string name="job_description_carpenter">स्थानिक बांधकाम प्रकल्पासाठी कौशल्य असलेला कारपेंटर आवश्यक. अनुभव आवश्यक.</string>
-
-    <!-- Training Centres Section -->
-
     <string name="training_centre_skillup">केंद्र: Skillup संस्थान</string>
     <string name="training_focus_skillup">लक्ष: काष्ठकाम, इलेक्ट्रिकल काम, आणि शिंटिंग.</string>
     <string name="training_centre_village">केंद्र: गावी प्रशिक्षण केंद्र</string>
     <string name="training_courses_village">कोर्स: मूलभूत आयटी कौशल्ये आणि कृषी तंत्र.</string>
-
-
-
     <string name="rice_description">तांदूळ हे गावातील एक प्रमुख अन्नधान्य आहे, पारंपरिक पद्धतींनी उच्च उत्पादन आणि गुणवत्ता सुनिश्चित केली जाते.</string>
-
     <string name="wheat_description">गहू पीक फेडल चक्र आणि सेंद्रिय खतांचा वापर करून, उच्च उत्पादन आणि शाश्वत शेती केली जाते.</string>
-
     <string name="local_shop">स्थानिक दुकान</string>
     <string name="shop_name">नाव: शांती जनरल स्टोअर</string>
     <string name="shop_products">उत्पादने: किरकोळ वस्तू, गृहिणी वस्तू</string>
-
     <string name="tailor_name">नाव: रमेश टेलर्स</string>
     <string name="tailor_products">उत्पादने: कस्टम गारमेंट, दुरुस्ती</string>
 
@@ -216,6 +228,7 @@
     <string name="diwali">दिवाळी</string>
     <string name="diwali_description">दिवाळी, ज्याला प्रकाशाचा सण म्हणून ओळखले जाते, ऑक्टोबर किंवा नोव्हेंबरमध्ये साजरा केला जातो. हे अंधारावर प्रकाशाचा विजय दर्शवते.</string>
     <string name="holi">होळी</string>
+
     <string name="holi_description">होळी मार्चमध्ये साजरी केली जाते आणि वसंत ऋतूच्या आगमनाचे चिन्ह आहे. त्याच्या रंगीबेरंगी रंगांसाठी ओळखली जाते, ती आनंद आणि एकतेचे प्रतीक आहे.</string>
     <string name="local_attractions_title">स्थानिक आकर्षणे</string>
     <string name="sunset_point">सूर्यास्त बिंदू</string>
@@ -237,6 +250,7 @@
     <string name="nav_community_cultural_info">समुदाय आणि सांस्कृतिक माहिती</string>
     <string name="nav_economic_activities">आर्थिक क्रियाकलाप</string>
     <string name="nav_infrastructure">संपदा</string>
+
     <string name="please_enter_valid_house_number">कृपया वैध घर क्रमांक प्रविष्ट करा</string>
     <string name="total_bill_not_found">एकूण बिल सापडले नाही</string>
     <string name="record_not_found">तपशील सापडले नाही</string>
@@ -313,17 +327,15 @@
     <string name="no_user_logged_in">कोणताही वापरकर्ता सध्या लॉग इन केलेला नाही.</string>
     <string name="username_not_set">सेट केलेले नाही</string>
     <string name="help_title">सहाय्य आणि समर्थन</string>
+
     <string name="help_description">तुमच्याकडे काही प्रश्न असतील किंवा मदतीची आवश्यकता असेल, तर कृपया खालील FAQs तपासा किंवा आमच्याशी संपर्क साधा.</string>
     <string name="faq_title">वारंवार विचारले जाणारे प्रश्न</string>
     <string name="faq_question_1">सामान्य शासकीय योजनांचा लाभ कसा घ्यावा?</string>
     <string name="faq_answer_1">कृपया \'शासकीय योजना\' विभागात जा, योजना क्लिक करा आणि अर्ज भरा.</string>
-
     <string name="faq_question_2">संपर्क साधण्यासाठी कोणते नंबर आहेत?</string>
     <string name="faq_answer_2">\'ग्राम माहिती\' विभागात जा, \'अधिकाऱ्यांचा टॅब\' निवडा आणि सेल फोन नंबर शोधा.</string>
-
     <string name="faq_question_3">ग्रामपंचायतीच्या बैठकीत कसे सहभागी व्हावे?</string>
     <string name="faq_answer_3">\'ग्रामसभा\' विभागात जा, तारीख तपासा आणि उपस्थित राहा.</string>
-
     <string name="faq_question_4">प्रश्न किंवा तक्रारीसाठी कोणाकडे संपर्क करावा?</string>
     <string name="faq_answer_4">\'तक्रार दाखल करा\' विभागात जा आणि फॉर्म भरा.</string>
     <string name="edit_profile_picture">प्रोफाइल चित्र संपादित करा</string>
@@ -343,6 +355,7 @@
     <string name="water">पाणी</string>
     <string name="road">रस्ता</string>
     <string name="electricity">वीज</string>
+
     <string name="other">इतर</string>
     <string name="complaint_label">समस्या:</string>
     <string name="complaint_category_label">समस्या श्रेणी:</string>
@@ -353,25 +366,17 @@
     <string name="complaint_submitted_success">तक्रार यशस्वीरित्या नोंदवली गेली आहे</string>
     <string name="error_mobile_number">कृपया 10 अंकी मोबाईल नंबर प्रविष्ट करा.</string>
     <string name="error_category">कृपया समस्या श्रेणी निवडा.</string>
-
     <string name="mobile_number_hint">मोबाईल क्रमांक भरा</string>
     <string name="complaint_hint">आपली समस्या भरा</string>
-
     <string name="project_image_desc">प्रकल्प चित्र</string>
     <string name="submit_button">अपलोड करा</string>
     <string name="upload_button">अपलोड करा</string>
-    <!-- Title -->
     <string name="project_description_1">या प्रकल्पाचा उद्देश पाण्याचे संरक्षण करणे आहे.</string>
-
     <string name="project_title_2">रस्ता बांधणी प्रकल्प</string>
     <string name="project_description_2">या प्रकल्पाचा उद्देश नवीन रस्त्यांचे बांधकाम करून वाहतुकीची सुविधा सुधारणे आहे.</string>
-
     <string name="project_title_3">शाळा पुनर्निर्माण प्रकल्प</string>
     <string name="project_title_1">जल संवर्धन प्रकल्प</string>
-
     <string name="project_description_3">या प्रकल्पाच्या माध्यमातून शाळांचे पुनर्निर्माण व सुधारणे करण्यात येणार आहे.</string>
-
-
     <string name="address">पत्ता:</string>
     <string name="mobile_number">मोबाइल नंबर:</string>
     <string name="category">वर्ग:</string>
@@ -387,6 +392,7 @@
     <string name="project_start_date">सुरुवात तारीख</string>
     <string name="project_completion_date">पूर्णता तारीख</string>
     <string name="project_status">स्थिती</string>
+
     <string name="project_budget">बजेट</string>
     <string name="project_stakeholders">भागीदार</string>
     <string name="success_message">तुम्ही यशस्वीरित्या नोंदवले.</string>
@@ -400,59 +406,32 @@
     <string name="feedback_submit_button">सबमिट करा</string>
     <string name="project_location">स्थान</string>
     <string name="give_feedback">प्रतिक्रिया द्या</string>
-
     <string name="feedback_button">प्रतिसाद द्या</string>
-
-
-    <!-- Complaint ID Label -->
     <string name="complaint_id_label">तक्रार आयडी :</string>
-
-    <!-- Complaint ID Hint -->
     <string name="complaint_id_hint">आपला तक्रार आयडी भरा</string>
-
-    <!-- Track Button Text -->
     <string name="track_button">ट्रॅक करा</string>
-
-    <!-- Complaint Details TextView -->
     <string name="complaint_details">तक्रार तपशील इथे दर्शवले जातील.</string>
 
-
-    <!-- Language Options -->
-        <string name="language_label">भाषा</string>
+     <string name="language_label">भाषा</string>
         <string name="save_settings">सेटिंग्ज जतन करा</string>
         <string-array name="language_options">
             <item>इंग्रजी</item>
             <item>मराठी</item>
         </string-array>
 
-
-
-
-    <!-- App Information -->
     <string name="app_name">ग्रामपंचायत कोठली एपीके</string>
     <string name="action_settings">सेटिंग्ज</string>
-
-    <!-- Navigation Fragment Labels -->
     <string name="first_fragment_label">पहिला विभाग</string>
     <string name="second_fragment_label">दुसरा विभाग</string>
-
-    <!-- Navigation Controls -->
     <string name="next">पुढे</string>
     <string name="previous">मागे</string>
-
-    <!-- Default Values -->
     <string name="default_web_client_id">181236633370-7gf29i4la3lnrjb6kf3rjgpbu2k9216s.apps.googleusercontent.com</string>
-
-    <!-- Navigation Drawer -->
     <string name="nav_header_desc">खाते</string>
     <string name="nav_header_title">वापरकर्त्याचं नाव</string>
     <string name="navigation_drawer_open">नेव्हिगेशन ड्रॉअर उघडा</string>
     <string name="navigation_drawer_close">नेव्हिगेशन ड्रॉअर बंद करा</string>
-
-    <!-- User Input -->
     <string name="enter_details">तपशील प्रविष्ट करा</string>
 
-    <!-- Placeholder Text -->
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
