@@ -379,6 +379,7 @@
     <string name="project_description_3">या प्रकल्पाच्या माध्यमातून शाळांचे पुनर्निर्माण व सुधारणे करण्यात येणार आहे.</string>
     <string name="address">पत्ता:</string>
     <string name="mobile_number">मोबाइल नंबर:</string>
+    <string name="page_title1">माहितीचा मागोवा</string>
     <string name="category">वर्ग:</string>
     <string name="complaint_description">तक्रार वर्णन:</string>
     <string name="status">स्थिती:</string>
@@ -388,10 +389,27 @@
     <string name="track_complaint_title">तक्रार ट्रॅक करा</string>
     <string name="project_title">प्रकल्प शीर्षक</string>
     <string name="project_description">प्रकल्प वर्णन</string>
+    <string name="track_button_1">माहितीचा मागोवा</string>
     <string name="project_objectives">उद्दिष्टे</string>
     <string name="project_start_date">सुरुवात तारीख</string>
     <string name="project_completion_date">पूर्णता तारीख</string>
     <string name="project_status">स्थिती</string>
+
+    <string name="document_type_label1">प्रमाणपत्र प्रकार: %1$s</string>
+    <string name="info_not_available">माहिती उपलब्ध नाही</string>
+    <string name="google_form_photo_url">YOUR_GOOGLE_FORM_PHOTO_URL</string>
+    <string name="google_form_aadhar_url">YOUR_GOOGLE_FORM_AADHAR_URL</string>
+    <string name="google_form_ration_card_url">YOUR_GOOGLE_FORM_RATION_CARD_URL</string>
+    <string name="error_full_name">कृपया आपले पूर्ण नाव प्रविष्ट करा</string>
+    <string name="error_parent_name">कृपया आपल्या पालकांचे नाव प्रविष्ट करा</string>
+    <string name="error_dob">कृपया आपला जन्मतारीख प्रविष्ट करा</string>
+    <string name="error_address">कृपया आपला पत्ता प्रविष्ट करा</string>
+    <string name="error_gender">कृपया आपले लिंग निवडा</string>
+    <string name="error_confirm">कृपया तपशीलाची पुष्टी करा</string>
+    <string name="success_data_submit">डेटा यशस्वीरित्या सबमिट केला!</string>
+    <string name="error_data_submit">डेटा सबमिट करण्यात अयशस्वी. कृपया पुन्हा प्रयत्न करा.</string>
+    <string name="email_subject">प्रमाणपत्र अर्ज पुष्टी</string>
+    <string name="email_content">प्रिय %1$s,\n\nआपला %7$s प्रमाणपत्रासाठीचा अर्ज प्राप्त झाला आहे. तपशील:\n\nपूर्ण नाव: %1$s\nपालकांचे नाव: %2$s\nजन्मतारीख: %3$s\nपत्ता: %4$s\nमोबाइल नंबर: %5$s\nलिंग: %6$s\nअर्ज क्रमांक: %8$s\n\nधन्यवाद,\nग्रामपंचायत कौथळी</string>
 
     <string name="project_budget">बजेट</string>
     <string name="project_stakeholders">भागीदार</string>

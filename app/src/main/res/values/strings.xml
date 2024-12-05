@@ -82,7 +82,7 @@
     <string name="upload_ration_card">Upload Ration Card</string>
     <string name="confirm_info">Confirm that all information is correct</string>
     <string name="select_certificate_type">Please select a certificate type</string>
-
+    <string name="track_button_1">Track Information</string>
     <string name="header_text">Select Certificate Type:</string>
     <string name="birth_certificate">Birth Certificate</string>
     <string name="death_certificate">Death Certificate</string>
@@ -398,7 +398,24 @@
     <string name="track_complaint_title">Track Complaint</string>
     <string name="project_description">Project Description</string>
 
+    <string name="document_type_label1">Certificate Type: %1$s</string>
+    <string name="info_not_available">Info not available</string>
+    <string name="google_form_photo_url">YOUR_GOOGLE_FORM_PHOTO_URL</string>
+    <string name="google_form_aadhar_url">YOUR_GOOGLE_FORM_AADHAR_URL</string>
+    <string name="google_form_ration_card_url">YOUR_GOOGLE_FORM_RATION_CARD_URL</string>
+    <string name="error_full_name">Please enter your full name</string>
+    <string name="error_parent_name">Please enter your parent name</string>
+    <string name="error_dob">Please enter your date of birth</string>
+    <string name="error_address">Please enter your address</string>
+    <string name="error_gender">Please select your gender</string>
+    <string name="error_confirm">Please confirm the details</string>
+    <string name="success_data_submit">Data submitted successfully!</string>
+    <string name="error_data_submit">Failed to submit data. Please try again.</string>
+    <string name="email_subject">Certificate Application Confirmation</string>
+    <string name="email_content">Dear %1$s,\n\nYour application for the %7$s certificate has been received. Here are the details:\n\nFull Name: %1$s\nParent Name: %2$s\nDate of Birth: %3$s\nAddress: %4$s\nMobile Number: %5$s\nGender: %6$s\nApplication ID: %8$s\n\nThank you,\nGrampanchayat Kouthali</string>
+
     <string name="project_objectives">Objectives</string>
+    <string name="page_title1">Track Details</string>
     <string name="project_start_date">Start Date</string>
     <string name="project_completion_date">Completion Date</string>
     <string name="feedback_title">Submit Feedback</string>
