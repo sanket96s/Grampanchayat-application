@@ -5,6 +5,19 @@
     android:background="@color/background_color"
     android:padding="8dp">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="8dp">
+        </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,6 +60,7 @@
                         android:layout_marginTop="4dp" />
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/eventItem2"
                 android:layout_width="match_parent"
@@ -156,4 +170,6 @@
             </LinearLayout>
 
         </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
+
+</ScrollView>

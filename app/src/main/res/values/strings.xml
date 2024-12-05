@@ -1,5 +1,4 @@
 <resources>
-
     <string name="enter_certificate_id">Enter Certificate ID</string>
     <string name="certificate_details_not_found">No certificate details found</string>
     <string name="error_occurred">Error: %1$s</string>
@@ -22,7 +21,6 @@
     <string name="track_complaint_error">Error tracking complaint</string>
     <string name="track_complaint">Track Complaint</string>
     <string name="project_title">Project Title</string>
-
 
     <string name="certificate_id_label">Certificate ID:</string>
     <string name="certificate_id_hint">Enter your certificate ID</string>
@@ -125,131 +123,43 @@
     <string name="track_application">Track Application</string>
 
     <string name="please_enter_valid_house_number">Please enter a valid house number</string>
-    <string name="total_bill_not_found">Total bill not found</string>
-    <string name="record_not_found">Record not found</string>
-    <string name="database_error">Database error: %1$s</string>
-    <string name="house_number">House number: </string>
-    <string name="total_bill">Total bill: </string>
-    <string name="name">Name: </string>
-    <string name="login_title">Login</string>
-    <string name="email_hint">Email</string>
-    <string name="password_hint">Password</string>
-    <string name="login_button">Login</string>
-    <string name="register_button">Register</string>
-    <string name="google_sign_in_button">Google</string>
-    <string name="google_logo">Google logo</string>
-    <string name="register_title">Registration</string>
-    <string name="full_name_hint">Full Name</string>
-    <string name="register_button_text">Register</string>
-    <string name="scheme">Scheme</string>
-    <string name="report_problem">Report Problem</string>
-    <string name="apply_certificate">Apply for Certificate</string>
+    <string name="invalid_house_number_format">Invalid house number format</string>
+    <string name="payment_success_message">Payment successful! Amount paid: ₹</string>
+    <string name="payment_failed_message">Payment failed or cancelled</string>
 
-    <string name="government_schemes">Government Schemes</string>
-    <string name="gramsabha">Gram Sabha</string>
-    <string name="projects">Projects</string>
-    <string name="village_information">Village Information</string>
-    <string name="pay_tax">Pay Tax</string>
-    <string name="gram_panchayat">Gram Panchayat</string>
-    <string name="profile">Profile</string>
-    <string name="help_and_support">Help and Support</string>
-    <string name="settings">Settings</string>
-    <string name="logout">Logout</string>
-    <string name="help_title">Help and Support</string>
-    <string name="help_description">If you have any questions or need assistance, please check the FAQs below or contact us.</string>
-    <string name="faq_title">Frequently Asked Questions</string>
-    <string name="faq_question_1">How to avail benefits of government schemes?</string>
-    <string name="faq_answer_1">Please go to the \'Government Schemes\' section, click on the scheme, and fill out the application form.</string>
-    <string name="faq_question_2">What are the contact numbers for reaching out?</string>
-    <string name="faq_answer_2">Go to the \'Village Information\' section, select the \'Officials\' tab, and find the contact numbers.</string>
-    <string name="faq_question_3">How to participate in Gram Panchayat meetings?</string>
-    <string name="faq_answer_3">Go to the \'Gram Sabha\' section, check the date, and attend the meeting.</string>
-    <string name="email_format">Email: %1$s</string>
-    <string name="faq_question_4">Who to contact for queries or complaints?</string>
-    <string name="faq_answer_4">Go to the \'File a Complaint\' section and fill out the form.</string>
-    <string name="edit_profile_picture">Edit Profile Picture</string>
-    <string name="edit_profile_name">Edit Name</string>
-    <string name="edit_profile_email">Edit Email</string>
-    <string name="profile_name">Name</string>
-    <string name="profile_email">Email</string>
-    <string name="email_prefix">Email: %s</string>
+    <string name="house_number">House Number</string>
+    <string name="fetch_bill_button">Fetch Bill</string>
+    <string name="total_bill">Total Bill</string>
+    <string name="pay_bill_button">Pay Bill</string>
+    <string name="enter_house_number_hint">Enter your house number</string>
+    <string name="upi_app_not_found">UPI app not found. Please install a UPI app like Google Pay</string>
 
-    <string name="username_format">Username: %s</string>
-    <string name="username_not_set">Not set</string>
-    <string name="no_user_logged_in">No user is currently logged in</string>
-    <string name="page_title">Register Complaint</string>
-    <string name="name_label">Name:</string>
-    <string name="name_hint">Enter your name</string>
-    <string name="address_label">Address:</string>
-    <string name="address_hint">Enter your address</string>
-    <string name="mobile_label">Mobile Number:</string>
-    <string name="mobile_hint">Enter your mobile number</string>
-    <string name="category_label">Complaint Category:</string>
-    <string name="water">Water</string>
-    <string name="road">Road</string>
-    <string name="electricity">Electricity</string>
-    <string name="feedback_button">Give Feedback</string>
-    <string name="other">Other</string>
-    <string name="complaint_label">Complaint:</string>
-    <string name="mobile_number_hint">Enter mobile number</string>
-    <string name="complaint_hint">Describe your complaint</string>
-    <string name="project_status">Status</string>
-    <string name="project_stakeholders">Stakeholders</string>
-
-    <string name="submit_button">Submit</string>
-    <string name="track_button">Track Complaint</string>
-    <string name="complaint_category_label">Complaint Category:</string>
-    <string name="water_category">Water</string>
-    <string name="road_category">Road</string>
-    <string name="electricity_category">Electricity</string>
-    <string name="other_category">Other</string>
-    <string name="complaint_submitted_success">Complaint submitted successfully</string>
-    <string name="error_mobile_number">Please enter a 10-digit mobile number.</string>
-    <string name="error_category">Please select a complaint category.</string>
-    <string name="upload_button">Submit</string>
-    <string name="project_title_1">Water Conservation Project</string>
-    <string name="project_image_desc">Project Image</string>
-    <string name="project_description_1">The objective of this project is to conserve water.</string>
-    <string name="project_title_2">Road Construction Project</string>
-    <string name="project_description_2">The objective of this project is to build new roads to improve transportation facilities.</string>
-    <string name="project_title_3">School Reconstruction Project</string>
-    <string name="project_description_3">This project aims to reconstruct and improve schools.</string>
-    <string name="project_title_4">Agriculture Improvement Project</string>
-    <string name="project_description_4">Use of advanced technology to increase agricultural production.</string>
-
-
-    <string name="address">Address:</string>
-    <string name="mobile_number">Mobile Number:</string>
-    <string name="category">Category:</string>
-    <string name="complaint_description">Complaint Description:</string>
-    <string name="complaint_id">Complaint ID:</string>
-    <string name="name1">Name:  </string>
-    <string name="upi_app_not_found">UPI app not found. Please install a UPI app like Google Pay.</string>
     <string name="organization_name">Grampanchayat Kouthali</string>
     <string name="payment_note">Payment for tax</string>
     <string name="fetch_bill">Fetch Bill</string>
     <string name="pay_bill">Pay Bill</string>
-    <string name="enter_house_number">Please enter a valid house number.</string>
-    <string name="invalid_house_number">Invalid house number format.</string>
+    <string name="enter_house_number">Please enter a valid house number</string>
+    <string name="invalid_house_number">Invalid house number format</string>
     <string name="payment_success">Payment successful! Amount paid: ₹</string>
-    <string name="payment_failed">Payment failed or cancelled.</string>
+    <string name="payment_failed">Payment failed or cancelled</string>
     <string name="hint_house_number">House Number</string>
     <string name="btn_fetch_bill">Fetch Bill</string>
     <string name="text_house_number">House Number: </string>
     <string name="text_total_bill">Total Bill: </string>
     <string name="btn_pay_bill">Pay Bill</string>
+
     <string name="event1_title">Water Conservation Project</string>
     <string name="event1_description">The purpose of this project is to conserve water.</string>
-
     <string name="event2_title">Road Construction Project</string>
     <string name="event2_description">This project aims to build new roads to improve transportation.</string>
     <string name="event3_title">Cleanliness Campaign</string>
     <string name="event3_description">The purpose of this project is to increase awareness about cleanliness in the village.</string>
     <string name="event4_title">Health Checkup Camp</string>
     <string name="event4_description">The purpose of this project is to provide health checkup services to the villagers.</string>
+
     <string name="event_title">Event Title</string>
-    <string name="event_description">Event description will go here…</string>
-    <string name="event_date_time">Date and Time: January 1, 2025 – 10:00 AM</string>
+    <string name="event_description">Event description will go here...</string>
+    <string name="event_date_time">Date and Time: January 1, 2025 - 10:00 AM</string>
     <string name="event_venue">Venue: Community Hall</string>
     <string name="event_agenda">Agenda: Discussion on development plans</string>
     <string name="event_organizers">Organizers: Gram Panchayat Office</string>

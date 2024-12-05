@@ -11,7 +11,6 @@
         android:id="@+id/input_house_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:autofillHints=""
         android:hint="@string/hint_house_number"
         android:inputType="number" />
 
@@ -43,7 +42,7 @@
                 android:id="@+id/text_house_number_value"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
+                android:text=" "
                 android:textSize="18sp" />
         </TableRow>
 
