@@ -1,6 +1,112 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
 
     <!-- Title -->
+    <string name="scheme_title">योजना</string>
+    <string name="pm_ayushman_yojana">प्रधानमंत्री जन आरोग्य योजना</string>
+    <string name="gram_panchayat_yojana">ग्राम पंचायत विकास योजना</string>
+    <string name="pm_avas_yojana">प्रधानमंत्री आवास योजना</string>
+    <string name="atal_bhujal_yojana">अटल भूजल योजना</string>
+    <string name="pm_jan_dhan_yojana">प्रधानमंत्री जन धन योजना</string>
+    <string name="smart_village_yojana">स्मार्ट ग्राम योजना</string>
+    <string name="track_application">अर्ज ट्रॅक करा</string>
+
+    <string name="invalid_house_number_format">अवैध घर क्रमांक स्वरूप</string>
+    <string name="payment_success_message">पेमेंट यशस्वी! भरलेली रक्कम: ₹</string>
+    <string name="payment_failed_message">पेमेंट अयशस्वी किंवा रद्द केले गेले</string>
+
+    <string name="fetch_bill_button">बिल मिळवा</string>
+    <string name="pay_bill_button">बिल भरा</string>
+    <string name="enter_house_number_hint">आपला घर क्रमांक प्रविष्ट करा</string>
+
+    <string name="certificate_id_label">प्रमाणपत्र आयडी:</string>
+    <string name="certificate_id_hint">आपला प्रमाणपत्र आयडी प्रविष्ट करा</string>
+    <string name="certificate_details">प्रमाणपत्र तपशील येथे दिसतील</string>
+    <string name="document_type_label">प्रमाणपत्र प्रकार:</string>
+    <string name="personal_info_label">वैयक्तिक माहिती:</string>
+    <string name="upload_error">%1$s अपलोड करण्यात अयशस्वी</string>
+    <string name="question_format">प्र%1$d: %2$s</string>
+    <string name="answer_format">--> %s</string>
+    <string name="age_hint">वय प्रविष्ट करा</string>
+    <string name="identity_proof_selected">ओळख पुरावा निवडला: %1$s</string>
+    <string name="address_proof_selected">पत्ता पुरावा निवडला: %1$s</string>
+    <string name="land_ownership_selected">जमीन मालकीचा पुरावा निवडला: %1$s</string>
+    <string name="income_certificate_selected">उत्पन्न प्रमाणपत्र निवडले: %1$s</string>
+    <string name="contact_hint">संपर्क क्रमांक प्रविष्ट करा</string>
+    <string name="purpose_hint">उद्देश प्रविष्ट करा</string>
+    <string name="btn_submit">सबमिट करा</string>
+
+    <string name="btn_identity_proof">ओळख पुरावा अपलोड करा</string>
+    <string name="btn_address_proof">पत्ता पुरावा अपलोड करा</string>
+    <string name="btn_land_ownership">जमीन मालकीचा पुरावा अपलोड करा</string>
+    <string name="btn_income_certificate">उत्पन्न प्रमाणपत्र अपलोड करा</string>
+    <string name="error_name_invalid">अवैध नाव. फक्त अक्षरे आणि जागा अनुमत आहेत.</string>
+    <string name="error_age_invalid">वय 18 ते 60 दरम्यान असले पाहिजे</string>
+    <string name="error_contact_invalid">संपर्क क्रमांक 10 अंकांचा असावा</string>
+    <string name="error_purpose_invalid">उद्देश 10 ते 100 अक्षरांदरम्यान असावा</string>
+    <string name="documents_missing">कृपया सर्व आवश्यक कागदपत्रे अपलोड करा</string>
+    <string name="application_submitted">अर्ज यशस्वीरित्या सबमिट केला!</string>
+    <string name="age_label">वय</string>
+    <string name="contact_label">संपर्क</string>
+    <string name="purpose_label">उद्देश</string>
+    <string name="identity_proof_button">ओळख पुरावा</string>
+    <string name="address_proof_button">पत्ता पुरावा</string>
+    <string name="land_ownership_button">जमीन मालकी</string>
+    <string name="income_certificate_button">उत्पन्न प्रमाणपत्र</string>
+    <string name="select_document">कागदपत्र निवडा</string>
+
+    <string name="fill_required_fields">कृपया सर्व आवश्यक फील्ड भरावीत</string>
+    <string name="upload_all_documents">कृपया सर्व आवश्यक कागदपत्रे अपलोड करा</string>
+    <string name="submission_success">अर्ज यशस्वीरित्या सबमिट केला!</string>
+    <string name="submission_failure">अर्ज सबमिट करण्यात अयशस्वी</string>
+    <string name="application_id">अर्ज आयडी: </string>
+    <string name="please_select_document">कृपया प्रमाणपत्र प्रकार निवडा</string>
+    <string name="please_fill_fields">कृपया सर्व फील्ड भरावीत</string>
+    <string name="form_submission_success">फॉर्म यशस्वीरित्या सबमिट केला</string>
+    <string name="form_submission_error">फॉर्म सबमिट करण्यात त्रुटी</string>
+    <string name="please_select_gender">कृपया लिंग निवडा</string>
+    <string name="please_accept_terms">कृपया अटी स्वीकारा</string>
+    <string name="document_type">कागदपत्र प्रकार:</string>
+    <string name="personal_info">वैयक्तिक माहिती:</string>
+    <string name="parent_name_hint">पालकांचे नाव</string>
+    <string name="dob_hint">जन्मतारीख</string>
+    <string name="male">पुरुष</string>
+    <string name="female">महिला</string>
+    <string name="upload_photo">फोटो अपलोड करा</string>
+    <string name="upload_aadhar">आधार कार्ड अपलोड करा</string>
+    <string name="upload_ration_card">रेशन कार्ड अपलोड करा</string>
+    <string name="confirm_info">सर्व माहिती बरोबर असल्याची खात्री करा</string>
+    <string name="select_certificate_type">कृपया प्रमाणपत्र प्रकार निवडा</string>
+
+    <string name="header_text">प्रमाणपत्र प्रकार निवडा:</string>
+    <string name="birth_certificate">जन्म प्रमाणपत्र</string>
+    <string name="death_certificate">मृत्यू प्रमाणपत्र</string>
+    <string name="residence_certificate">रहिवासी प्रमाणपत्र</string>
+    <string name="income_certificate">उत्पन्न प्रमाणपत्र</string>
+    <string name="submit_application">अर्ज सबमिट करा</string>
+    <string name="track_certificate">प्रमाणपत्र ट्रॅक करा</string>
+
+    <string name="enter_certificate_id">प्रमाणपत्र आयडी प्रविष्ट करा</string>
+    <string name="certificate_details_not_found">प्रमाणपत्र तपशील आढळले नाहीत</string>
+    <string name="error_occurred">त्रुटी: %1$s</string>
+    <string name="toast_enter_certificate_id">कृपया प्रमाणपत्र आयडी प्रविष्ट करा</string>
+    <string name="user_text">वापरकर्ता</string>
+    <string name="full_name_required">पूर्ण नाव आवश्यक आहे</string>
+    <string name="email_required">ईमेल आवश्यक आहे</string>
+    <string name="invalid_email">कृपया वैध ईमेल प्रविष्ट करा</string>
+    <string name="password_required">पासवर्ड आवश्यक आहे</string>
+    <string name="password_criteria">पासवर्ड कमीत कमी ८ अक्षरे लांबीचा असावा आणि त्यात अक्षरे आणि संख्या असाव्यात</string>
+    <string name="registration_failed">नोंदणी अयशस्वी: %1$s</string>
+    <string name="user_save_error">वापरकर्ता जतन करताना त्रुटी: %1$s</string>
+    <string name="document_type_label_1">कागदपत्र प्रकार: %1$s</string>
+    <string name="please_select_document_1">कृपया एक कागदपत्र निवडा</string>
+    <string name="name_1">नाव: %1$s</string>
+    <string name="house_number_1">घर क्रमांक: %1$d</string>
+    <string name="total_bill_1">एकूण बिल: %1$d</string>
+    <string name="enter_complaint_id">कृपया तक्रार आयडी प्रविष्ट करा</string>
+    <string name="complaint_id_not_found">तक्रार आयडी सापडली नाही</string>
+    <string name="track_complaint_error">तक्रार ट्रॅक करताना त्रुटी</string>
+    <string name="track_complaint">तक्रार ट्रॅक करा</string>
+
     <string name="upi_app_not_found">UPI अॅप सापडले नाही. कृपया Google Pay सारखे UPI अॅप इन्स्टॉल करा.</string>
     <string name="organization_name">ग्रामीण पंचायत कौथळी</string>
     <string name="payment_note">करासाठी पेमेंट</string>
@@ -161,13 +267,12 @@
     <string name="nav_infrastructure">संपदा</string>
 
     <string name="please_enter_valid_house_number">कृपया वैध घर क्रमांक प्रविष्ट करा</string>
-    <string name="total_bill_not_found">एकूण बिल सापडले नाही</string>
-    <string name="record_not_found">तपशील सापडले नाही</string>
-    <string name="database_error">डाटाबेस त्रुटी: %1$s</string>
+
+
     <string name="house_number">घर क्रमांक: </string>
     <string name="total_bill">एकूण बिल: </string>
-    <string name="name">नाव: </string>
-    <string name="name1">नाव: </string>
+
+
     <string name="mobile_number_label">मोबाइल नंबर:</string>
     <string name="complaint_description_label">तक्रार वर्णन:</string>
     <string name="village_info_title">गावाची माहिती</string>
@@ -314,11 +419,14 @@
     <string name="error_dob">कृपया आपला जन्मतारीख प्रविष्ट करा</string>
     <string name="error_address">कृपया आपला पत्ता प्रविष्ट करा</string>
     <string name="error_gender">कृपया आपले लिंग निवडा</string>
+    <string name="name1">नाव</string>
     <string name="error_confirm">कृपया तपशीलाची पुष्टी करा</string>
     <string name="success_data_submit">डेटा यशस्वीरित्या सबमिट केला!</string>
     <string name="error_data_submit">डेटा सबमिट करण्यात अयशस्वी. कृपया पुन्हा प्रयत्न करा.</string>
     <string name="email_subject">प्रमाणपत्र अर्ज पुष्टी</string>
     <string name="email_content">प्रिय %1$s,\n\nआपला %7$s प्रमाणपत्रासाठीचा अर्ज प्राप्त झाला आहे. तपशील:\n\nपूर्ण नाव: %1$s\nपालकांचे नाव: %2$s\nजन्मतारीख: %3$s\nपत्ता: %4$s\nमोबाइल नंबर: %5$s\nलिंग: %6$s\nअर्ज क्रमांक: %8$s\n\nधन्यवाद,\nग्रामपंचायत कौथळी</string>
+    <string name="record_not_found">रेकॉर्ड आढळले नाही</string>
+    <string name="database_error">डेटाबेसमध्ये त्रुटी आली</string>
 
     <string name="project_budget">बजेट</string>
     <string name="project_stakeholders">भागीदार</string>
