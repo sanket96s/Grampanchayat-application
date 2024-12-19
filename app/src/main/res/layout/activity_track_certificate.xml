@@ -13,7 +13,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/page_title"
+            android:text="@string/page_title1"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="#000"
@@ -40,7 +40,7 @@
             android:id="@+id/btnTrackCertificate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/track_button"
+            android:text="@string/track_button_1"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
             android:backgroundTint="#4CAF50"
@@ -52,7 +52,6 @@
             android:id="@+id/tvCertificateDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/certificate_details"
             android:textSize="16sp"
             android:textColor="#000"
             android:padding="12dp"/>

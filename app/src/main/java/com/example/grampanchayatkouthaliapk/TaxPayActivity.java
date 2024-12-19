@@ -107,7 +107,7 @@ public class TaxPayActivity extends AppCompatActivity {
         tableLayout.removeAllViews();
 
         TextView textName = new TextView(this);
-        textName.setText(getString(R.string.name) + fullName);
+        textName.setText(getString(R.string.name1) + fullName);
         textName.setTextSize(18);
         tableLayout.addView(textName);
 
